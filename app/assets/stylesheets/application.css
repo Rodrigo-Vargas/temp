@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  font-family: 'Source Sans Pro';
+ }
+
+ #navbar {
+ 	float: right;
+ }
+
+ .content {
+  margin-top: 100px;
+ }
+
