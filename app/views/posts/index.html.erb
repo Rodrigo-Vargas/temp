@@ -1,0 +1,17 @@
+<div class="container">
+  <% @posts.each_slice(3) do |row_posts| %>
+    <div class="row">
+      <% row_posts.each do |post| %>
+        <article class="home-article-item col-md-4">
+          <div class="home-article-wrap">
+            <%= link_to raw("<h2 class='article-title'>")+post.title+raw("</h1>"), post_path(post) %>
+            <p class="home-article-body">
+              <%= strip_tags post.content[0..230] %>...
+            </p>
+            <%= link_to "Leia mais", post_path(post) %>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  <% end %>
+</div>
