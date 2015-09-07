@@ -1,4 +1,5 @@
 <div class="container">
   <h1><%= @post.title %></h1>
+  <p><%= @post.published_at.strftime("%d/%m/%Y") %></p>
   <p><%= raw @post.content %></p>
 </div>

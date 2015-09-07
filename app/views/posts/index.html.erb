@@ -4,11 +4,11 @@
       <% row_posts.each do |post| %>
         <article class="home-article-item col-md-4">
           <div class="home-article-wrap">
-            <%= link_to raw("<h2 class='article-title'>")+post.title+raw("</h1>"), post_path(post) %>
+            <%= link_to raw("<h2 class='article-title'>")+post.title+raw("</h1>"), post_path(post.title_slug) %>
             <p class="home-article-body">
               <%= strip_tags post.content[0..230] %>...
             </p>
-            <%= link_to "Leia mais", post_path(post) %>
+            <%= link_to "Leia mais", post_path(post.title_slug) %>
           </div>
         </article>
       <% end %>
