@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get "logout"              => "sessions#logout"
 
   get 'admin'               => 'admin#posts'
+  get 'admin/users'         => 'admin#users'
 end

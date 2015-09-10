@@ -11,22 +11,26 @@
     <div class="col-md-10">
       <table class="table">
         <tr>
-          <td>Titulo</td>
-          <td>Publicado em</td>
+          <td>Nome</td>
+          <td>Email</td>
+          <td>Administrador</td>
+          <td>Assinante</td>
           <td></td>
         </tr>
-        <% @posts.each do |post| %>
+        <% @users.each do |user| %>
           <tr>
-            <td><%= link_to post.title, edit_post_path(post) %></td>
-            <td><%= post.published_at.strftime("%d/%m/%Y") %></td>
-            <td><%= link_to "Excluir", post_path(post),
+            <td><%= link_to user.name, edit_user_path(user) %></td>
+            <td><%= user.email %></td>
+            <td><%= user.is_admin %></td>
+            <td><%= user.is_subscriber %></td>
+            <td><%= link_to "Excluir", user_path(user),
                     method: :delete,
                     data: { confirm: "Deseja excluir:" } %></td>
           </tr>
         <% end %>
       </table>
 
-      <%= link_to "Novo post", new_post_path, class: "btn btn-primary" %>
+      <%= link_to "Novo usuário", new_user_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>

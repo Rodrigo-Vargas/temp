@@ -26,3 +26,13 @@
   padding-top: 100px;
  }
 
+ .logged-user-area {
+  line-height: 50px;
+  vertical-align: middle;
+ }
+
+ .logged-user-area p {
+  color: #fff;
+  margin: 0;
+ }
+

@@ -1,8 +1,10 @@
 class AdminController < ApplicationController
+  before_filter :authenticate_user_admin, :only => :posts
   def posts
-    if (session[:user_name] == nil)
-      redirect_to '/'
-    end
     @posts = Post.all
+  end
+
+  def users
+    @users = User.all
   end
 end
