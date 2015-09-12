@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: rodrigovg_production
-  username: rodrigovg
+  username: root
   password: <%= ENV['RODRIGOVG_DATABASE_PASSWORD'] %>
