@@ -1,5 +1,7 @@
 <div class="container">
-  <h1><%= @post.title %></h1>
-  <p><%= @post.published_at.strftime("%d/%m/%Y") %></p>
-  <p><%= raw @post.content %></p>
+  <article class="internal">
+    <h1><%= @post.title %></h1>
+    <p>Publicado em: <%= @post.published_at.strftime("%d/%m/%Y") %></p>
+    <div class="post-content"><%= raw @post.content %></div>
+  </article>
 </div>

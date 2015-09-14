@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
   before_filter :authenticate_user_admin, :only => :posts
   def posts
-    @posts = Post.all
+    @posts = Post.all.order(published_at: :desc)
   end
 
   def users
