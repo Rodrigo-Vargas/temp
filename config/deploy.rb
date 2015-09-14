@@ -1,8 +1,8 @@
 # Change these
-server '104.131.180.26', port: 80, roles: [:web, :app, :db], primary: true
+server '104.131.180.26', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@bitbucket.org:rvargas/meu-blog.git'
-set :application,     'Meu-Blog'
+set :application,     'meu-blog'
 set :user,            'rodrigo'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
@@ -22,17 +22,26 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+set :rvm_ruby_version, '2.2.1'
+set :default_env, { rvm_bin_path: '~/.rvm/bin' }
+set :default_env, { 
+  'RODRIGOVG_DATABASE_PASSWORD' => 'a1b2c3Rodrigo32',
+  'SECRET_KEY_BASE' => '0cacbaf80cb2c0204b1bcd71aadd130284a07c163f7f3aaac7265dd8b09da6750a1b6d8e4277c4d705514ca60eeab67789e056eb783e4235245c9b8076aa5cd8'
+}
+
+require "rvm/capistrano"
 
 ## Defaults:
 # set :scm,           :git
 # set :branch,        :master
 # set :format,        :pretty
-# set :log_level,     :debug
+set :log_level,     :debug
 # set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
@@ -78,7 +87,7 @@ namespace :deploy do
   after  :finishing,    :cleanup
   after  :finishing,    :restart
 end
-
+#set :linked_files, fetch(:linked_files, []).push('config/secrets.yml')
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
 # kill -s SIGTERM pid   # Stop puma
