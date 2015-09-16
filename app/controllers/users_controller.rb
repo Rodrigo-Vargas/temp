@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user_admin, :only => [:new, :create, :edit]
   before_filter :save_login_state, :only => :new
   after_filter :save_login_state, :only => :create
 
