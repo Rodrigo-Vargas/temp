@@ -7,4 +7,8 @@ class AdminController < ApplicationController
   def users
     @users = User.all
   end
+
+  def images
+    @images = Image.all
+  end
 end

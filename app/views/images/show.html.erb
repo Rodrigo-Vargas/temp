@@ -1,0 +1,4 @@
+<div class="container">
+  <h1><%= @image.path.partition("/public").last %></h1>
+  <%= image_tag(@image.path.partition("/public").last) %>
+</div>
