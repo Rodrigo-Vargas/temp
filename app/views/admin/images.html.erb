@@ -12,22 +12,20 @@
     <div class="col-md-10">
       <table class="table">
         <tr>
-          <td>Titulo</td>
-          <td>Publicado em</td>
+          <td>Caminho</td>
           <td></td>
         </tr>
-        <% @posts.each do |post| %>
+        <% @images.each do |image| %>
           <tr>
-            <td><%= link_to post.title, edit_post_path(post) %></td>
-            <td><%= post.published_at.strftime("%d/%m/%Y") %></td>
-            <td><%= link_to "Excluir", post_path(post),
+            <td><%= link_to image.path, image_path(image.id) %></td>
+            <td><%= link_to "Excluir", image_path(image.id),
                     method: :delete,
                     data: { confirm: "Deseja excluir:" } %></td>
           </tr>
         <% end %>
       </table>
 
-      <%= link_to "Novo post", new_post_path, class: "btn btn-primary" %>
+      <%= link_to "Nova imagem", new_image_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>

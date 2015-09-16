@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Nova imagem</h1>
+  <div class="row">
+    <%= form_for @image do |form| %>
+      <%= form.file_field :path %>
+      <%= form.submit :class=> "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
