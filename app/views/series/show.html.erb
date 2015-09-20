@@ -1,0 +1,23 @@
+<div class="container">
+  <article class="internal">
+    <div class="row">
+      <div class="col-md-9">
+        <h1><%= @serie.title %></h1>
+        <table class="table table-bordered">
+          <% @serie.posts.order(:series_position).each do |post| %>
+            <tr>
+              <td><%= post.series_position %></td>
+              <td><%= link_to post.title, post_path(post.title_slug) %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+      <div class="col-md-3">
+        <div class="section">
+          <h4>Sobre esta série</h4>
+          <p><%= @serie.about %></p>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

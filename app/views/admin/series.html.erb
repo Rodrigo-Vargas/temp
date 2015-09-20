@@ -8,20 +8,20 @@
     <div class="col-md-10">
       <table class="table">
         <tr>
-          <td>Caminho</td>
+          <td>Título</td>
           <td></td>
         </tr>
-        <% @images.each do |image| %>
+        <% @series.each do |serie| %>
           <tr>
-            <td><%= link_to image.path, image_path(image.id) %></td>
-            <td><%= link_to "Excluir", image_path(image.id),
+            <td><%= link_to serie.title, edit_serie_path(serie) %></td>
+            <td><%= link_to "Excluir", serie_path(serie),
                     method: :delete,
                     data: { confirm: "Deseja excluir:" } %></td>
           </tr>
         <% end %>
       </table>
 
-      <%= link_to "Nova imagem", new_image_path, class: "btn btn-primary" %>
+      <%= link_to "Nova série", new_serie_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>

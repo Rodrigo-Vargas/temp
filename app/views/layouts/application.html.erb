@@ -35,6 +35,8 @@
         <ul class="nav navbar-nav">
           <li><%= link_to "Home", controller: "posts", action: "index" %></li>
           <li><%= link_to "About", controller: "pages", action: "about" %></li>
+          <li><%= link_to "Posts", posts_path %></li>
+          <li><%= link_to "Séries", series_path %></li>
           <li><%= link_to "Admin", "/admin" %></li>
           <!--
           <li class="dropdown">

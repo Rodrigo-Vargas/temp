@@ -1,0 +1,17 @@
+<div class="container">
+  <% @series.each_slice(3) do |row_series| %>
+    <div class="row">
+      <% row_series.each do |serie| %>
+        <article class="home-article-item col-md-4">
+          <div class="home-article-wrap">
+            <%= link_to raw("<h2 class='article-title'>")+serie.title+raw("</h1>"), serie_path(serie.title_slug) %>
+            <p class="home-article-body">
+              <%= serie.about %>
+            </p>
+            <%= link_to "Leia mais", serie_path(serie.title_slug) %>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  <% end %>
+</div>

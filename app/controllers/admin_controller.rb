@@ -11,4 +11,8 @@ class AdminController < ApplicationController
   def images
     @images = Image.all
   end
+
+  def series
+    @series = Series.all
+  end
 end
