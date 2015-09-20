@@ -10,13 +10,13 @@ Rails.application.routes.draw do
   delete '/posts/:id'         => 'posts#destroy'
   get    '/posts/:title_slug' => 'posts#show', :as => :post
 
-  get    'series'             => 'series#index', :as => :series
+  get    'series'             => 'series#index', :as => :series_index
   post   'series'             => 'series#create'
   get    'series/new'         => 'series#new', :as => :new_series
   get    'series/:id/edit'    => 'series#edit', :as => :edit_series
   patch  'series.:id'         => 'series#update'
   delete 'series/:id'         => 'series#destroy'
-  get    'series/:title_slug' => 'series#show', :as => :serie
+  get    'series/:title_slug' => 'series#show', :as => :series_show
   
   get    'series/:title_slug_serie/episodios/:title_slug_episode' => 'posts#show_episode', :as => :episode
 
