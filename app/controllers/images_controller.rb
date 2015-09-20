@@ -10,7 +10,11 @@ class ImagesController < ApplicationController
   end
 
   def create
-    path = File.join(Rails.root, "public/images", params[:image][:path].original_filename)
+    filename = params[:image][:path].original_filename
+
+    filename = Date.current().to_time.to_i.to_s + filename
+
+    path = File.join(Rails.root, "public/images", filename)
     
     File.open(path, "wb") do |f| 
       f.write(params[:image][:path].read)
@@ -19,7 +23,7 @@ class ImagesController < ApplicationController
     @image = Image.new(path: path)
 
     if @image.save
-      redirect_to images_path
+      redirect_to admin_images_path
     else 
       render 'new'
     end
@@ -30,7 +34,7 @@ class ImagesController < ApplicationController
     File.delete(@image.path)
     @image.destroy
    
-    redirect_to images_path
+    redirect_to admin_images_path
   end
 
   private 

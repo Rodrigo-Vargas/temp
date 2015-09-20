@@ -26,10 +26,10 @@ Rails.application.routes.draw do
   post   'login-attempt'      => "sessions#login_attempt"
   get    'logout'             => "sessions#logout"
 
-  get    'admin'              => 'admin#posts'
-  get    'admin/users'        => 'admin#users'
-  get    'admin/images'       => 'admin#images'
-  get    'admin/series'       => 'admin#series'
+  get    'admin'              => 'admin#posts', as: :admin_posts 
+  get    'admin/users'        => 'admin#users', as: :admin_users
+  get    'admin/images'       => 'admin#images', as: :admin_images
+  get    'admin/series'       => 'admin#series', as: :admin_series
 
   get    '/images/new'        => 'images#new', :as => :new_image
   get    '/images'            => 'images#index'
