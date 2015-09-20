@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   delete 'series/:id'         => 'series#destroy'
   get    'series/:title_slug' => 'series#show', :as => :serie
   
+  get    'series/:title_slug_serie/episodios/:title_slug_episode' => 'posts#show_episode', :as => :episode
+
   resources :users 
   get    'signup'             => "users#new"
   get    'login'              => "sessions#login"

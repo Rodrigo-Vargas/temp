@@ -1,0 +1,40 @@
+<div class="container">
+  <article class="internal">
+    <h1><%= @post.title %></h1>
+    <p>Publicado em: <%= @post.published_at.strftime("%d/%m/%Y") %></p>
+    <div class="post-content"><%= raw @post.content %></div>
+  </article>
+
+  <h3>
+    <%= link_to @post.series.title, serie_path(@post.series.title_slug) %>
+  </h3>
+
+  <div class="episodes-serie">
+    <table class="table table-bordered">
+      <% @post.series.posts.order(:series_position).each do |post| %>
+        <tr <% if post.id == @post.id %> class="active" <% end %>>
+          <td><%= post.series_position %></td>
+          <td><%= link_to post.title, episode_path(@post.series.title_slug, post.title_slug) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <div id="commentary-area">
+    <h2>Comentários</h2>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'rodrigovg';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</div>

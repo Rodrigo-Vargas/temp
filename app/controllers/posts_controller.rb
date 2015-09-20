@@ -9,6 +9,10 @@ class PostsController < ApplicationController
     @post = Post.find_by_title_slug(params[:title_slug])
   end 
 
+  def show_episode
+    @post = Post.find_by_title_slug(params[:title_slug_episode])
+  end
+
   def new
     @post = Post.new
   end
@@ -46,6 +50,7 @@ class PostsController < ApplicationController
 
   private 
   def post_params
-    params.require(:post).permit(:title, :title_slug, :content, :published_at, :series_id, :series_position )
+    params.require(:post)
+          .permit(:title, :title_slug, :content, :published_at, :series_id, :series_position )
   end
 end

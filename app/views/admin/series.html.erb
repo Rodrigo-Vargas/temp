@@ -13,7 +13,7 @@
         </tr>
         <% @series.each do |serie| %>
           <tr>
-            <td><%= link_to serie.title, edit_serie_path(serie) %></td>
+            <td><%= link_to serie.title, edit_series_path(serie) %></td>
             <td><%= link_to "Excluir", serie_path(serie),
                     method: :delete,
                     data: { confirm: "Deseja excluir:" } %></td>
@@ -21,7 +21,7 @@
         <% end %>
       </table>
 
-      <%= link_to "Nova série", new_serie_path, class: "btn btn-primary" %>
+      <%= link_to "Nova série", new_series_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>

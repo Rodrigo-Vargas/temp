@@ -25,7 +25,7 @@
 
       <div class="form-group">
         <%= f.label "Série" %>
-        <%= f.collection_select(:series_id, Series.all, :id, :title) %>
+        <%= f.collection_select(:series_id, Series.all, :id, :title, {:include_blank => 'Selecione'}) %>
       </div>
 
       <div class="form-group">
