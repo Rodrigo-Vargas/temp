@@ -3,6 +3,13 @@
     <h1><%= @post.title %></h1>
     <p>Publicado em: <%= @post.published_at.strftime("%d/%m/%Y") %></p>
     <div class="post-content"><%= raw @post.content %></div>
+    <div class="post-share-bottom">
+      <div class="post-share-bottom-wrapper">
+        <a href="//www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>" class="social-btn facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/share?text=<%=@post.title%>:&amp;url=<%= request.original_url %>" class="social-btn twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/cws/share?url=<%= request.original_url %>" class="social-btn linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+      </div>      
+    </div>
   </article>
   <div id="commentary-area">
     <h2>Comentários</h2>

@@ -41,3 +41,19 @@ article.internal p, article.internal li{
   background-color: #fff;
   margin: 30px 0;
 }
+
+.post-share-bottom {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 20px 30px;
+}
+
+.post-share-bottom-wrapper {
+  text-align: center;
+}
+
+.post-share-bottom-wrapper a{
+  display: inline;
+  margin: 0 15px;
+}
