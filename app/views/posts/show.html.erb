@@ -1,3 +1,5 @@
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.2/gist-embed.min.js"></script>
+ 
 <div class="container">
   <article class="internal">
     <h1><%= @post.title %></h1>
@@ -11,6 +13,20 @@
       </div>      
     </div>
   </article>
+
+  <% if @post.series != nil %>
+    <div class="episodes-serie">
+      <table class="table table-bordered">
+        <% @post.series.posts.order(:series_position).each do |post| %>
+          <tr <% if post.id == @post.id %> class="active" <% end %>>
+            <td><%= post.series_position %></td>
+            <td><%= link_to post.title, post_path(post.title_slug) %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+
   <div id="commentary-area">
     <h2>Comentários</h2>
 

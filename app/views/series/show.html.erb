@@ -7,7 +7,7 @@
           <% @serie.posts.order(:series_position).each do |post| %>
             <tr>
               <td><%= post.series_position %></td>
-              <td><%= link_to post.title, episode_path(@serie.title_slug, post.title_slug) %></td>
+              <td><%= link_to post.title, post_path(post.title_slug) %></td>
             </tr>
           <% end %>
         </table>

@@ -39,3 +39,22 @@
     </div>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  window.rodrigovg = window.rodrigovg || {}
+
+  rodrigovg.generate_slug = function(value, selector_destiny)
+  {
+    slug_value = value.toLowerCase()
+                      .replace(/ /g,'-')
+                      .replace(/\-+/g,'-')
+                      .replace('ç','c');
+                      .replace('ó','o');
+
+    $(selector_destiny).val(slug_value);
+  }
+
+  $("#post_title").blur(function(){
+    rodrigovg.generate_slug($("#post_title").val(), "#post_title_slug");
+  });
+</script>
