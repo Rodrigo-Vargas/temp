@@ -18,6 +18,14 @@ Rails.application.routes.draw do
   delete 'series/:id'         => 'series#destroy'
   get    'series/:title_slug' => 'series#show', :as => :series_show
   
+  get    '/categories'             => 'categories#index', :as => :categories
+  post   '/categories'             => 'categories#create'
+  get    '/categories/new'         => 'categories#new', :as => :new_category
+  get    '/categories/:id/edit'    => 'categories#edit', :as => :edit_category
+  patch  '/categories/:id'         => 'categories#update'
+  delete '/categories/:id'         => 'categories#destroy'
+  get    '/categories/:title_slug' => 'categories#show', :as => :category
+
   resources :users 
   get    'signup'             => "users#new"
   get    'login'              => "sessions#login"
@@ -28,6 +36,7 @@ Rails.application.routes.draw do
   get    'admin/users'        => 'admin#users', as: :admin_users
   get    'admin/images'       => 'admin#images', as: :admin_images
   get    'admin/series'       => 'admin#series', as: :admin_series
+  get    'admin/categories'   => 'admin#categories', as: :admin_categories
 
   get    '/images/new'        => 'images#new', :as => :new_image
   get    '/images'            => 'images#index'

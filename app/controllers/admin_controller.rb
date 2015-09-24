@@ -15,4 +15,8 @@ class AdminController < ApplicationController
   def series
     @series = Series.all
   end
+
+  def categories
+    @categories = Category.all
+  end
 end

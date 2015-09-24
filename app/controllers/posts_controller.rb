@@ -24,6 +24,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    params[:categories].each do |k,v|
+       @post.categores << Category.find(k)
+    end
+
     if @post.save
       redirect_to posts_path
     else 
@@ -33,6 +37,14 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+
+    #render json: params[:post][:categories]
+
+    params[:post][:categories].each do |k,v|
+      if (k != '')
+        @post.categories << Category.find(k)
+      end
+    end
 
     if @post.update(post_params)
       redirect_to posts_path
@@ -51,6 +63,6 @@ class PostsController < ApplicationController
   private 
   def post_params
     params.require(:post)
-          .permit(:title, :title_slug, :content, :published_at, :series_id, :series_position )
+          .permit(:title, :title_slug, :content, :published_at, :series_id, :series_position, :categories )
   end
 end

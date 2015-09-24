@@ -24,6 +24,12 @@
       </div>
 
       <div class="form-group">
+        <%= f.label "Categoria" %>
+        <%= f.collection_select(:categories, Category.all, :id, :title, { },  
+                                                                        { class: 'form-control', multiple: true}) %>
+      </div>
+
+      <div class="form-group">
         <%= f.label "Série" %>
         <%= f.collection_select(:series_id, Series.all, :id, :title, {:include_blank => 'Selecione'},  {:class=>'form-control'}) %>
       </div>
@@ -48,7 +54,7 @@
     slug_value = value.toLowerCase()
                       .replace(/ /g,'-')
                       .replace(/\-+/g,'-')
-                      .replace('ç','c');
+                      .replace('ç','c')
                       .replace('ó','o');
 
     $(selector_destiny).val(slug_value);
