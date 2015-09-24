@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   
     @posts = @category.posts
 
-    render template: "post/index" 
+    render template: "posts/index" 
   end 
 
   def new

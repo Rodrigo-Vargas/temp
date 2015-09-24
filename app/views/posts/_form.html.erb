@@ -25,9 +25,15 @@
 
       <div class="form-group">
         <%= f.label "Categoria" %>
-        <%= f.collection_select(:categories, Category.all, :id, :title, { },  
-                                                                        { class: 'form-control', multiple: true}) %>
-      </div>
+        
+        <%= select_tag "categories", 
+                      options_from_collection_for_select(Category.all, 
+                                                        :id, 
+                                                        :title,
+                                                        { selected: @post.categories.map(&:id) }),
+                      {class: 'form-control', 
+                      multiple: true} %>
+</div>
 
       <div class="form-group">
         <%= f.label "Série" %>

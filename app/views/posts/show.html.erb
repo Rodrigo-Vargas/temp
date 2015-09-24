@@ -4,6 +4,11 @@
   <article class="internal">
     <h1><%= @post.title %></h1>
     <p>Publicado em: <%= @post.published_at.strftime("%d/%m/%Y") %></p>
+    <p>Categorias: 
+      <% @post.categories.each do |category| %>
+        <%= link_to category.title, category_path(category.title_slug) %>
+      <% end %>
+    </p>
     <div class="post-content"><%= raw @post.content %></div>
     <div class="post-share-bottom">
       <div class="post-share-bottom-wrapper">

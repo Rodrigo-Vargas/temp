@@ -25,7 +25,9 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     params[:categories].each do |k,v|
-       @post.categores << Category.find(k)
+      if (k != '')
+        @post.categories << Category.find(k)
+      end
     end
 
     if @post.save
@@ -37,10 +39,9 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    @post.categories.delete_all
 
-    #render json: params[:post][:categories]
-
-    params[:post][:categories].each do |k,v|
+    params[:categories].each do |k,v|
       if (k != '')
         @post.categories << Category.find(k)
       end
@@ -63,6 +64,6 @@ class PostsController < ApplicationController
   private 
   def post_params
     params.require(:post)
-          .permit(:title, :title_slug, :content, :published_at, :series_id, :series_position, :categories )
+          .permit(:title, :title_slug, :content, :published_at, :series_id, :series_position)
   end
 end
