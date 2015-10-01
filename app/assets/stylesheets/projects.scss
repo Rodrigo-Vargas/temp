@@ -1,0 +1,31 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.project-container {
+  margin-bottom: 20px;
+}
+
+.project-wrapper {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 10px; 
+}
+
+.project-wrapper:hover {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #f15a23
+} 
+
+.project-image img {
+  max-width: 100%;
+  text-align: center;
+}
+
+.project-title {
+  font-weight: 700;
+}
+
+.project-title, .project-category {
+  display: block;
+  text-align: center;
+}

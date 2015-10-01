@@ -37,10 +37,13 @@ Rails.application.routes.draw do
   get    'admin/images'       => 'admin#images', as: :admin_images
   get    'admin/series'       => 'admin#series', as: :admin_series
   get    'admin/categories'   => 'admin#categories', as: :admin_categories
+  get    'admin/projects'     => 'admin#projects', as: :admin_projects
 
   get    '/images/new'        => 'images#new', :as => :new_image
   get    '/images'            => 'images#index'
   post   '/images'            => 'images#create'
   delete '/images/:id'        => 'images#destroy'
   get    '/images/:id'        => 'images#show', :as => :image
+
+  resources :projects
 end

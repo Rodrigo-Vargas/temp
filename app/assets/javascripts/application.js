@@ -15,3 +15,16 @@
 //= require turbolinks
 //= require_tree .
 //= require dropzone.js
+
+window.rodrigovg = window.rodrigovg || {}
+
+rodrigovg.generate_slug = function(value, selector_destiny)
+{
+  slug_value = value.toLowerCase()
+                    .replace(/ /g,'-')
+                    .replace(/\-+/g,'-')
+                    .replace('ç','c')
+                    .replace('ó','o');
+
+  $(selector_destiny).val(slug_value);
+}

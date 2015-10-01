@@ -19,4 +19,8 @@ class AdminController < ApplicationController
   def categories
     @categories = Category.all
   end
+
+  def projects
+    @projects = Project.all
+  end
 end
