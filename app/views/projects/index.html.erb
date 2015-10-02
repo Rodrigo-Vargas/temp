@@ -10,7 +10,7 @@
               <img src="<%= project.project_image %>">
             </div>
             <div class="project-meta">
-              <h5 class="project-title"><a href="#"><%= link_to project.title, project_path(project) %></a></h5>
+              <h5 class="project-title"><a href="#"><%= link_to project.title, project_show_path(project.title_slug) %></a></h5>
               <span class="project-category"><%= project.skills %></span>
             </div>
           </div>

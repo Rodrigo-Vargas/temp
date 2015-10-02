@@ -29,3 +29,30 @@
   display: block;
   text-align: center;
 }
+
+/* Internal Page */
+.image-slider-control-prev, .image-slider-control-next {
+  background-color: rgb(241, 90, 35);
+  position: absolute;
+  top: 190px;
+}
+
+.image-slider-control-prev a, .image-slider-control-next a {
+  color: #fff;
+  display: block;
+  font-weight: 700;
+  padding: 16px 10px;
+}
+
+.image-slider-control-prev a:hover, .image-slider-control-next a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.image-slider-control-prev {
+  left: 12px;
+}
+
+.image-slider-control-next {
+  right: 12px;
+}

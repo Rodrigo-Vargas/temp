@@ -39,11 +39,12 @@ Rails.application.routes.draw do
   get    'admin/categories'   => 'admin#categories', as: :admin_categories
   get    'admin/projects'     => 'admin#projects', as: :admin_projects
 
-  get    '/images/new'        => 'images#new', :as => :new_image
+  get    '/images/new'        => 'images#new', as: :new_image
   get    '/images'            => 'images#index'
   post   '/images'            => 'images#create'
   delete '/images/:id'        => 'images#destroy'
-  get    '/images/:id'        => 'images#show', :as => :image
+  get    '/images/:id'        => 'images#show', as: :image
 
-  resources :projects
+  resources :projects, :except => :show
+  get    'projects/:title_slug' => 'projects#show', as: :project_show
 end

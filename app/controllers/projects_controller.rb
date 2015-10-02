@@ -1,6 +1,12 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_user_admin, :only => [:new, :edit, :create, :update, :destroy]
+
   def index
     @projects = Project.all
+  end
+
+  def show
+    @project = Project.find_by_title_slug(params[:title_slug])
   end
 
   def new
@@ -29,6 +35,14 @@ class ProjectsController < ApplicationController
     else 
       render 'edit'
     end
+  end
+
+  def destroy
+    @project = Project.find(params[:id])
+
+    @project.destroy
+
+    redirect_to admin_projects_path
   end
 
   private
