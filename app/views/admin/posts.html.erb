@@ -10,12 +10,14 @@
         <tr>
           <td>Titulo</td>
           <td>Publicado em</td>
+          <td>Categoria</td>
           <td></td>
         </tr>
         <% @posts.each do |post| %>
           <tr>
             <td><%= link_to post.title, edit_post_path(post) %></td>
             <td><%= post.published_at.strftime("%d/%m/%Y") %></td>
+            <td><% post.categories.each do |category| %> <%= category.title + ";" %> <% end %></td>
             <td><%= link_to "Excluir", post_path(post),
                     method: :delete,
                     data: { confirm: "Deseja excluir:" } %></td>
