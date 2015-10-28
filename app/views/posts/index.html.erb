@@ -3,24 +3,23 @@
 <% end %>
 
 <div class="row">
-  <div class="col-md-offset-2 col-md-8">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
       <div class="boxed-content">
         <% @posts.each_slice(3) do |row_posts| %>
-    <div class="row">
-      <% row_posts.each do |post| %>
-        <article class="home-article-item col-md-4">
-          <div class="home-article-wrap">
-            <%= link_to raw("<h2 class='article-title'>")+post.title+raw("</h1>"), post_path(post.title_slug) %>
-            <p class="home-article-body">
-              <%= strip_tags post.content[0..230] %>...
-            </p>
-            <%= link_to "Leia mais", post_path(post.title_slug) %>
+          <div class="row">
+            <% row_posts.each do |post| %>
+              <article class="home-article-item col-sm-6 col-md-4">
+                <div class="home-article-wrap">
+                  <%= link_to raw("<h2 class='article-title'>")+post.title+raw("</h1>"), post_path(post.title_slug) %>
+                  <p class="home-article-body">
+                    <%= strip_tags post.content[0..230] %>...
+                  </p>
+                  <%= link_to "Leia mais", post_path(post.title_slug) %>
+                </div>
+              </article>
+            <% end %>
           </div>
-        </article>
-      <% end %>
-    </div>
-  <% end %>
-
+        <% end %>
       </div>
     </div>
   </div>

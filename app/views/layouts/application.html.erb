@@ -21,8 +21,8 @@
     ga('send', 'pageview');
   </script>
 </head>
-<body>      
-  <div class="side-widget">
+<body>
+  <div id="side-widget" class="side-widget visible-lg-block visible-md-block">
     <div class="container-container">
       <%= image_tag "avatar_author.jpg", class: "img-responsive" %>
     </div>
@@ -44,6 +44,10 @@
   </div>
   <div class="container-fluid">
     <div class="content">
+      <a id="trigger-nav" class="glyphicon glyphicon-menu-hamburger pull-right visible-xs-block visible-sm-block"></a>
+      <script type="text/javascript">
+        rodrigovg.init();
+      </script>
       <%= yield %>
     </div>
   </div>

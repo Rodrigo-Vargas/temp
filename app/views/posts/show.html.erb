@@ -2,9 +2,9 @@
   <title><%= @post.title %>|RodrigoVG %></title>
 <% end %>
 
- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.2/gist-embed.min.js"></script>
- 
-<div class="container">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.2/gist-embed.min.js"></script>
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
   <article class="internal">
     <h1><%= @post.title %></h1>
     <p>Publicado em: <%= @post.published_at.strftime("%d/%m/%Y") %></p>
@@ -55,4 +55,5 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
-</div>
+  </div>
+</script>

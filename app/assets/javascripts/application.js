@@ -29,3 +29,24 @@ rodrigovg.generate_slug = function(value, selector_destiny)
 
   $(selector_destiny).val(slug_value);
 }
+
+rodrigovg.init = function()
+{
+  rodrigovg.registerTriggerOnToogleNavButton();
+}
+
+rodrigovg.registerTriggerOnToogleNavButton = function()
+{
+  $("#trigger-nav").click(function(){
+    if ($("#side-widget").is(":hidden"))
+    {
+      $("#side-widget").attr("style", "display:block !important;");
+      $(".content").attr("style", "");
+    }
+    else
+    {
+      $("#side-widget").attr("style", "");
+      $(".content").attr("style", "margin-left:0px");
+    }
+  });
+}
