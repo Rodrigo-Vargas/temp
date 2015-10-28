@@ -2,13 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#about-container {
-  margin: 15px 0 30px 0;
+.resume-section {
+  margin-top: 20px;
 }
 
-#container-avatar-img {
-  margin-right: 15px;
+.box-header {
+  line-height: 26px;
+  margin-bottom: 10px;
+  vertical-align: center;
 }
-#about-container p{
-  font-size: 16px;
+
+.box-icon {
+  font-size: 26px;
+  margin-right: 10px;
+}
+
+.resume-container {
+  background-color: #FDFDFD;
+  padding: 50px;
+}
+
+.resume-container:hover {
+  box-shadow: 0 10px 40px #ddd;
+}
+
+.resume-row {
+  margin-bottom: 20px;
+}
+
+.resume-job {
+  margin-bottom: 20px;
 }

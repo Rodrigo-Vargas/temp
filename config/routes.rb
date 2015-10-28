@@ -1,30 +1,31 @@
 Rails.application.routes.draw do
 	get 'about' => "pages#about"
+  get 'resume' => "pages#resume", as: :resume
   root :to => 'posts#index'
 
-  get    '/posts'             => 'posts#index', :as => :posts
+  get    '/posts'             => 'posts#index', as: :posts
   post   '/posts'             => 'posts#create'
-  get    '/posts/new'         => 'posts#new', :as => :new_post
-  get    '/posts/:id/edit'    => 'posts#edit', :as => :edit_post
+  get    '/posts/new'         => 'posts#new', as: :new_post
+  get    '/posts/:id/edit'    => 'posts#edit', as: :edit_post
   patch  '/posts/:id'         => 'posts#update'
   delete '/posts/:id'         => 'posts#destroy'
-  get    '/posts/:title_slug' => 'posts#show', :as => :post
+  get    '/posts/:title_slug' => 'posts#show', as: :post
 
-  get    'series'             => 'series#index', :as => :series_index
+  get    'series'             => 'series#index', as: :series_index
   post   'series'             => 'series#create'
-  get    'series/new'         => 'series#new', :as => :new_series
-  get    'series/:id/edit'    => 'series#edit', :as => :edit_series
+  get    'series/new'         => 'series#new', as: :new_series
+  get    'series/:id/edit'    => 'series#edit', as: :edit_series
   patch  'series.:id'         => 'series#update'
   delete 'series/:id'         => 'series#destroy'
-  get    'series/:title_slug' => 'series#show', :as => :series_show
+  get    'series/:title_slug' => 'series#show', as: :series_show
   
-  get    '/categories'             => 'categories#index', :as => :categories
+  get    '/categories'             => 'categories#index', as: :categories
   post   '/categories'             => 'categories#create'
-  get    '/categories/new'         => 'categories#new', :as => :new_category
-  get    '/categories/:id/edit'    => 'categories#edit', :as => :edit_category
+  get    '/categories/new'         => 'categories#new', as: :new_category
+  get    '/categories/:id/edit'    => 'categories#edit', as: :edit_category
   patch  '/categories/:id'         => 'categories#update'
   delete '/categories/:id'         => 'categories#destroy'
-  get    '/categories/:title_slug' => 'categories#show', :as => :category
+  get    '/categories/:title_slug' => 'categories#show', as: :category
 
   resources :users 
   get    'signup'             => "users#new"

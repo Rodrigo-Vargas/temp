@@ -1,5 +1,7 @@
-<div class="container">
-  <% @posts.each_slice(3) do |row_posts| %>
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+      <div class="boxed-content">
+        <% @posts.each_slice(3) do |row_posts| %>
     <div class="row">
       <% row_posts.each do |post| %>
         <article class="home-article-item col-md-4">
@@ -14,4 +16,8 @@
       <% end %>
     </div>
   <% end %>
+
+      </div>
+    </div>
+  </div>
 </div>
