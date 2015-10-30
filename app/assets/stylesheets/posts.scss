@@ -26,9 +26,13 @@ h2.article-title a:hover {
 }
 
 article.internal p, article.internal li{
-  font-family: 'Lato';
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.6;
   padding: 8px 0;
+}
+
+article.internal pre {
+  font-size: 16px;
 }
 
 .post-content {

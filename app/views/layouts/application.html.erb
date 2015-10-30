@@ -3,6 +3,7 @@
 <head>
   <%= yield :page_head %>
 
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
@@ -22,9 +23,11 @@
   </script>
 </head>
 <body>
-  <div id="side-widget" class="side-widget visible-lg-block visible-md-block">
+  <div id="side-widget" class="side-widget">
     <div class="container-container">
-      <%= image_tag "avatar_author.jpg", class: "img-responsive" %>
+      <%= link_to "/" do %>
+        <%= image_tag "avatar_author.jpg", class: "img-responsive" %>
+      <% end %>
     </div>
     <div class="container-nav">
       <ul class="nav-menu">
@@ -44,13 +47,16 @@
   </div>
   <div class="container-fluid">
     <div class="content">
-      <a id="trigger-nav" class="glyphicon glyphicon-menu-hamburger pull-right visible-xs-block visible-sm-block"></a>
-      <script type="text/javascript">
-        rodrigovg.init();
-      </script>
+      <div class="container-trigger-nav clearfix">
+        <a id="trigger-nav" class="glyphicon glyphicon-menu-hamburger pull-right visible-xs-block visible-sm-block"></a>
+      </div>      
       <%= yield %>
     </div>
   </div>
+
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    rodrigovg.init();
+  </script>
 </body>
 </html>

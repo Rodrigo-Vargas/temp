@@ -55,19 +55,30 @@ h1 {
   position: fixed;
   bottom: 0px;
   top: 0px;
+  transform: translateX(-150px);
+  transition: transform 0.5s;
   width: 148px;
+  z-index: 999;  
 }
 
-.nav-menu {
-  padding: 0px 20px;
+.side-widget.is-active {
+  transform: translateX(0);
 }
 
 /* Navigation */
 .nav-item {
-  border-bottom: 1px solid #e1e1e1;
-  padding: 10px 0px;
+  border-bottom: 1px solid #e1e1e1; 
   list-style: none;
   text-align: right;
+}
+
+.nav-item a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.nav-item a:hover {
+  background-color: #e1e1e1;
 }
 
 /* Social Media */
@@ -85,6 +96,10 @@ h1 {
   padding: 0px 10px;
 }
 
+.container-trigger-nav a{
+  margin-bottom: 15px;
+}
+
 .content {
   margin-top: 20px;
 }
@@ -92,7 +107,11 @@ h1 {
 @media (min-width:992px)
 {
   .content {
-    margin-left: 200px;
+    margin-left: 150px;
+  }
+
+  .side-widget {
+    transform: translateX(0);
   }
 }
 

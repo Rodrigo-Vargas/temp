@@ -38,15 +38,15 @@ rodrigovg.init = function()
 rodrigovg.registerTriggerOnToogleNavButton = function()
 {
   $("#trigger-nav").click(function(){
-    if ($("#side-widget").is(":hidden"))
+    if ($("#side-widget").hasClass("is-active"))
     {
-      $("#side-widget").attr("style", "display:block !important;");
-      $(".content").attr("style", "");
+      $("#side-widget").removeClass("is-active");
+      //$(".content").removeClass("nav-active");
     }
     else
     {
-      $("#side-widget").attr("style", "");
-      $(".content").attr("style", "margin-left:0px");
+      $("#side-widget").addClass("is-active");
+      //$(".content").addClass("nav-active");      
     }
   });
 }
