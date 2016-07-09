@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: site
 ---
 
 <div class="home">
@@ -8,20 +8,20 @@ layout: home
 
     <div class="post-list row">
 
-    {% if site.post.size > 0 %}
-      {% for post in site.posts limit:4 %}
+    {% if site.articles.size > 0 %}
+      {% for article in site.articles limit:4 %}
         <div class="col-md-3">
-          <div class="post">
-            <div class="category">
-              <span>Javascript</span>
+          <div class="article">
+            <div class="category {{ article.category }}">
+              <span>{{ article.category }}</span>
             </div>
             <div class="body">
-              <a class="title" href="#">{{ post.title }}</a>
-              <span class="date">{{ post.date | date_to_string }}</span>
-              <p>{{ post.content | strip_html | slice: 1, 100 }}</p>  
+              <a class="title" href="#">{{ article.title }}</a>
+              <span class="date">{{ article.date | date_to_string }}</span>
+              <p>{{ article.content | strip_html | slice: 0, 100 }}</p>  
             </div>            
             <div>
-              <a class="btn" href="{{ post.url }}">Read more</a>
+              <a class="btn" href="{{ article.url }}">Read more</a>
             </div>
           </div>
         </div>

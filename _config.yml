@@ -18,3 +18,7 @@ github_username:  Rodrigo-Vargas
 
 # Build settings
 markdown: kramdown
+
+collections:
+  articles:
+    output: true
