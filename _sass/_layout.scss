@@ -4,12 +4,12 @@ a:hover {
 }
 
 body {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
 }
 
 .site-header .wrap {
     background-color: #33373b;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .site-header .logo {
@@ -34,7 +34,7 @@ body {
 }
 
 .top-nav {
-    padding: 28px 0;
+    padding: 30px 0;
 }
 
 .top-nav a {
@@ -47,21 +47,29 @@ body {
 }
 
 /* Home layout */
-.home {
-    padding: 40px 0;
-}
-
 .home .dark-section {
     background-color: #33373b;
     color: #fff;
 }
 
 .home h1.section-heading {
+    background-color: #2baab1;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
 }
 
-#articles, #about, #contact {
-    padding: 50px 0;
+.home h2 {
+    color: #ccc;
+    text-align: center;
+}
+
+#articles, #about, #employment, #contact {
+    padding-top: 100px;
+}
+
+.post-list {
+    margin-top: 40px;
 }
 
 .home .post {
@@ -72,19 +80,47 @@ body {
 
 .home .post .category {
     background-color: #f7df1e;
-    color: #000;
-    font-size: 12px;
+    color: #fff;
+    font-size: 16px;
     padding: 6px 10px;
-    width: 40%;
+    text-align: center;
 }
 
 .home .post .title {
     color: #222;
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     padding: 6px 10px;
+    text-align: center;
 }
 
 .home .post .title:hover {
-    color: #f4901e;
+    color: #33d1da;
 }
+
+.home .post .date {
+    color: #ccc;
+    display: block;
+    font-size: 10px;
+    padding-bottom: 15px;
+}
+
+.home .post .body {
+    padding: 0px 20px;
+}
+
+.home .post .btn {
+    background-color: #2baab1;
+    border-radius: 0px;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+
+.home .post .btn:hover {
+    background-color: #33d1da;
+}
+
+footer {
+    padding-top: 350px
+} 
