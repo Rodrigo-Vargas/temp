@@ -22,3 +22,4 @@ markdown: kramdown
 collections:
   articles:
     output: true
+    permalink: /articles/:categories/:path/

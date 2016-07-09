@@ -8,27 +8,24 @@ layout: site
 
     <div class="post-list row">
 
-    {% if site.articles.size > 0 %}
-      {% for article in site.articles limit:4 %}
-        <div class="col-md-3">
-          <div class="article">
-            <div class="category {{ article.category }}">
-              <span>{{ article.category }}</span>
-            </div>
-            <div class="body">
-              <a class="title" href="#">{{ article.title }}</a>
-              <span class="date">{{ article.date | date_to_string }}</span>
-              <p>{{ article.content | strip_html | slice: 0, 100 }}</p>  
-            </div>            
-            <div>
-              <a class="btn" href="{{ article.url }}">Read more</a>
-            </div>
+    {% assign articles = site.articles | sort: 'date' %}
+    {% for article in articles reversed limit:4 %}
+      <div class="col-md-3">
+        <div class="article">
+          <div class="category {{ article.category }}">
+            <span>{{ article.category | replace: '-', ' ' }}</span>
+          </div>
+          <div class="body">
+            <a class="title" href="{{ article.url }}">{{ article.title }}</a>
+            <span class="date">{{ article.date | date_to_string }}</span>
+            <p>{{ article.content | strip_html | slice: 0, 100 }}</p>  
+          </div>            
+          <div>
+            <a class="btn" href="{{ article.url }}">Read more</a>
           </div>
         </div>
-      {% endfor %}
-    {% else %}
-      <h2>Coming Soon</h2>
-    {% endif %}
+      </div>
+    {% endfor %}
     </div>
   </div>
   
@@ -68,7 +65,7 @@ layout: site
         <div class="box-header">
           <h3 class="resume-header">Another things</h3>
         </div>
-        <p>Since Feburary of 2015 i'm have a blog, when a post regularly about code and programming. This helps me to always standing learning about new things and works too like a repository of my experiences and learning.</p>
+        <p>Since Feburary of 2015 i'm have a blog, when a post regularly about code and programming. This helps me to always keep learning about new things and works too like a repository of my experiences and learning.</p>
       </div>
     </div>
   </div>
