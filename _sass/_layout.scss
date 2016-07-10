@@ -7,6 +7,16 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.dark-wrapper {
+    background-color: rgba(0,0,0, 0.5);
+    height: 100%;
+    transition: all 0.2s;
+}
+
+.dark-wrapper:hover {
+    background-color: rgba(0,0,0, 0.2);
+}
+
 .site-header .wrap {
     background-color: #33373b;
     padding: 10px 0;
@@ -131,6 +141,27 @@ body {
     background-color: #33d1da;
 }
 
+.home .work {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.home .work .title {
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.home .work .btn {
+    background-color: #2baab1;
+    color: #fff;
+    display: block;
+    margin: 20px auto;
+    width: 140px;
+}
+
 footer {
     padding-top: 350px
 } 
+
