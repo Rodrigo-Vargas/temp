@@ -1,0 +1,6 @@
+---
+title: "Hubspot inbound Certification"
+slugTitle: "hubspot-inbound-end"
+description: "A certification earned after complete the hubspot inbound marketing course"
+imageUrl: "/images/certifications/hubspot-inbound-marketing.png"
+---

@@ -33,7 +33,7 @@ body {
 }
 
 .site-header .logo:hover {
-    color: #f4901e;
+    color: #2baab1;
 }
 
 .site-header .sublogo {
@@ -53,7 +53,7 @@ body {
 }
 
 .top-nav a:hover {
-    color: #f4901e;
+    color: #2baab1;
 }
 
 /* Home layout */
@@ -74,7 +74,7 @@ body {
     text-align: center;
 }
 
-#articles, #about, #employment, #contact {
+#articles, #about, #employment, #contact, #portfolio, #certifications {
     padding-top: 100px;
 }
 
@@ -145,6 +145,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 200px;
+    margin-bottom: 25px;
 }
 
 .home .work .title {

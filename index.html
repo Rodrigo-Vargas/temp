@@ -172,7 +172,71 @@ layout: site
 
       {% endfor %}
     </div>
+  </div>
+  <!-- Portfolio -->
+
+  <div id="certifications" class="container seciton">
+    <h1 class="section-heading">Certifications</h1>
+
+    <div class="work-list row">
+      {% for certification in site.certifications %}
+        <div class="col-md-4">
+          <div class="work" style="background-image:url({{ certification.imageUrl}})">
+            <div class="dark-wrapper">
+              <h3 class="title">{{ certification.title }}</h3>
+              <a class="btn" data-toggle="modal" data-target="#{{ certification.slugTitle }}">See Certification</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="{{ certification.slugTitle }}">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="clearfix">
+                  <div class="pull-left image-container">
+                    <img src="{{ certification.imageUrl }}" alt="">                    
+                  </div>
+                  <div class="pull-right close-container">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                </div>
+
+                <h2 class="title">{{ certification.title }}</h2>
+                <p>{{ certification.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
 
   </div>
 
 </div>
+
+
+<script type="text/javascript">
+  registerTopNavLinksAnimation = function (){
+    $(".top-nav .link").click(function(){
+      var target = $(this).data("section");
+
+      var $target = $('#' + target);
+
+      $('html,body').stop().animate(  {
+                    'scrollTop': $target.offset().top
+                }, 
+                800, 
+                'swing', 
+                function () {
+              }); 
+    });
+  }
+
+  $(document).ready(function () {
+    registerTopNavLinksAnimation();
+  });
+
+</script>
