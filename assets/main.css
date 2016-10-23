@@ -1,0 +1,147 @@
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pull-right {
+  float: right;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+.content {
+  padding: 0 50px;
+}
+
+.internal {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 100px;
+}
+
+.logo a {
+  color: #000;
+  text-decoration: none;
+}
+
+.home {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* Pages */
+
+body {
+  /*background-image: asset-data-url("bg.jpg");*/
+  background-size: 50px 50px;
+  background-color: #2baab1;
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                    transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                    transparent 75%, transparent);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                    transparent 75%, transparent);
+  -pie-background: linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                   transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                   transparent 75%, transparent) 0 0 / 50px 50px, #2baab1;
+  behavior: url(/pie/PIE.htc);
+}
+
+.content {
+  padding: 0 50px
+}
+
+.intro {
+  background-color: #fff;
+  border-radius: 5px;
+  margin:  0 auto;
+  margin-top: 200px;
+  padding: 20px 35px;
+  text-align: center;
+  width: 300px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    margin-top: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .intro {
+    margin-top: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .intro {
+    margin-top: 350px;
+  }
+}
+
+
+.intro h1 {
+  color: #222;
+}
+
+.intro h2 {
+  color: #666;
+}
+
+footer {
+  background-color: #33373b;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #aaa;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-link {
+  color: #33373b;
+  font-size: 10px;
+}
+
+.bottom-nav ul {
+  list-style: none;
+}
+
+.bottom-nav li {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+
+.social-media ul {
+  list-style: none;
+}
+
+.social-media li {
+  display: inline-block;
+}
