@@ -31,3 +31,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+collections:
+  projects:
+    output: true
