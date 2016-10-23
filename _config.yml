@@ -34,4 +34,4 @@ exclude:
 
 collections:
   projects:
-    output: true
+    output: false

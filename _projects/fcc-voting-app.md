@@ -1,3 +1,10 @@
+---
+category: freecodecamp
+demo_url: https://rvg-book-trading-club.herokuapp.com/
+name: fcc-voting-app
+
+---
+
 <div class="col-md-4">
   <div class="project">
     "name": "fcc-voting-app",

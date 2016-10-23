@@ -1,3 +1,8 @@
+---
+category: freecodecamp
+name: fcc-nightlife-coordination
+---
+
 <div class="col-md-4">
   <div class="project">
     "name": "fcc-nightlife-coordination",

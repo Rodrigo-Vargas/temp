@@ -1,3 +1,8 @@
+---
+category: rails
+name: personal-site
+---
+
 <div class="col-md-4">
   <div class="project">
     "name": "personal-site",

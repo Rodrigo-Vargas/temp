@@ -1,3 +1,8 @@
+---
+category: freecodecamp
+name: fcc-stock-market
+---
+
 <div class="col-md-4">
   <div class="project">
     "name": "fcc-stock-market",

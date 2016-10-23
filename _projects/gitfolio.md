@@ -1,3 +1,7 @@
+---
+name: gitfolio
+---
+
 <div class="col-md-4">
   <div class="project">
     "name": "gitfolio",

@@ -1,27 +1,9 @@
-{
-    "id": 60472387,
+---
+name: pg-record
+---
+
     "name": "pg-record",
     "full_name": "Rodrigo-Vargas/pg-record",
-    "owner": {
-      "login": "Rodrigo-Vargas",
-      "id": 11018846,
-      "avatar_url": "https://avatars.githubusercontent.com/u/11018846?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Rodrigo-Vargas",
-      "html_url": "https://github.com/Rodrigo-Vargas",
-      "followers_url": "https://api.github.com/users/Rodrigo-Vargas/followers",
-      "following_url": "https://api.github.com/users/Rodrigo-Vargas/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Rodrigo-Vargas/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Rodrigo-Vargas/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Rodrigo-Vargas/subscriptions",
-      "organizations_url": "https://api.github.com/users/Rodrigo-Vargas/orgs",
-      "repos_url": "https://api.github.com/users/Rodrigo-Vargas/repos",
-      "events_url": "https://api.github.com/users/Rodrigo-Vargas/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Rodrigo-Vargas/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "private": false,
     "html_url": "https://github.com/Rodrigo-Vargas/pg-record",
     "description": "A ORM to postgres on node.js",
     "fork": false,

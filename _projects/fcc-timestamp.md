@@ -1,3 +1,8 @@
+---
+category: freecodecamp
+name: fcc-timestamp
+---
+
 <div class="col-md-4">
   <div class="project">
     "name": "fcc-timestamp",
