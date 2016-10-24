@@ -1,6 +1,36 @@
+/* Custom Bootstrap gutter */
+.gutter-20.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.gutter-0.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Generic classes */
 
 body {
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -23,8 +53,64 @@ a:hover {
   text-align: center;
 }
 
-.content {
-  padding: 0 50px;
+.mobile-menu {
+  background-color: #3c3f4f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility 0.7s 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.mobile-menu-inner {
+  padding: 200px 50px;
+}
+
+.mobile-menu .nav {
+  list-style: none;
+}
+
+.mobile-menu .nav a {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  padding: 15px 0;
+}
+
+.mobile-menu .nav a:hover {
+  color: #2baab1;
+}
+
+/* Header */
+.is-nav-opened .mobile-menu {
+  visibility: visible;
+  transition: visibility 0.7s 0s;
+}
+
+.menu-btn-wrapper {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  height: 32px;
+  width: 32px;
+  z-index: 3;
+}
+
+.menu-btn {
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.menu-btn .fa-circle {
+  color: #3c3f4f;
+}
+
+.menu-btn:hover .fa-bars {
+  font-size: 1.1em; 
 }
 
 .internal {
@@ -32,6 +118,12 @@ a:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 50px 100px;
+}
+
+@media (max-width: 991px){
+  .internal {
+    padding: 25px;
+  }
 }
 
 .logo a {
@@ -50,8 +142,7 @@ a:hover {
 
 /* Pages */
 
-body {
-  /*background-image: asset-data-url("bg.jpg");*/
+.content, .home {
   background-size: 50px 50px;
   background-color: #2baab1;
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
@@ -70,7 +161,15 @@ body {
 }
 
 .content {
-  padding: 0 50px
+  position: relative;
+  transform: translateX(0%);
+  transition: transform 0.7s;
+  z-index: 2;
+}
+
+.is-nav-opened .content {
+  transform: translateX(100%);
+  
 }
 
 .intro {
@@ -148,13 +247,14 @@ footer a:hover {
 
 .social-media li {
   display: inline-block;
+  margin: 0 5px;
 }
 
 
 /* Projects */
 
 .filter {
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .filter ul {
@@ -163,13 +263,9 @@ footer a:hover {
 }
 
 .filter-option {
-  display: inline-block;
-}
-
-.filter-option {
   border: 1px solid #2baab1;
   padding: 5px 10px;
-  margin: 0 5px;
+  margin: 10px 0;
 }
 
 .project .inner {

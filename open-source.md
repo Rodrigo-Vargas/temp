@@ -7,11 +7,23 @@ layout: page
 <div class="row">
   <div class="col-md-offset-3 col-md-6">
     <div class="filter">
-      <ul>
-        <li class="filter-option" data-filter="all">All</li>
-        <li class="filter-option" data-filter="freecodecamp" >Free Code Camp</li>
-        <li class="filter-option" data-filter="rails" >Ruby on Rails</li>
-      </ul>
+      <div class="row">
+        <div class="col-md-4" data-filter="all">
+          <div class="filter-option">
+            <span>All</span>
+          </div>
+        </div>
+        <div class="col-md-4" data-filter="freecodecamp">
+          <div class="filter-option">
+            <span>Free Code Camp</span>
+          </div>
+        </div>
+        <div class="col-md-4" data-filter="rails">
+          <div class="filter-option">
+            <span>Ruby on Rails</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

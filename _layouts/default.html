@@ -24,8 +24,78 @@
     <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="content">
-		{{ content }}
-	</div>
+  <div class="content">
+	 {{ content }}
+  </div>
+
+  <div class="menu-btn-wrapper pull-right">
+    <a class="menu-btn fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+    </a>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="container">
+      <div class="mobile-menu-inner">
+        <ul class="nav">
+          <li>
+            <a href="/">
+              <span class="tcenter">
+                <i class="fa fa-home"></i>
+              </span>
+              <span>Home</span>              
+            </a>
+          </li>
+          <!--<li>
+            <a href="/blog">
+              <div class="tcenter">
+                <i class="fa fa-pencil"></i>
+              </div>
+              <span>Blog</span>
+            </a>
+          </li>-->
+          <!--<li><a href="/portfolio">Portfolio</a></li>-->
+          <li>
+            <a href="/resume">
+              <span class="tcenter">
+                <i class="fa fa-copy"></i>
+              </span>
+              <span>Curriculo</span>
+            </a>
+          </li>
+          <li>
+            <a href="/open-source">
+              <span class="tcenter">
+                <i class="fa fa-github"></i>
+              </span>
+              <span>Open Source</span>
+            </a>
+          </li>
+          <!--
+          <li><a href="/certificacoes">Certificações</a></li>
+          
+          <li><a href="/contato">Contato</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </body>
+
+<script type="text/javascript">
+  registerMobileMenuAction = function(){
+    $(".menu-btn").click(function(){
+      if ($("body").hasClass("is-nav-opened"))
+        $("body").removeClass("is-nav-opened");
+      else
+        $("body").addClass("is-nav-opened");
+    });
+  }
+
+  $(document).ready(function(){
+    registerMobileMenuAction();
+  });
+</script>
+
 </html>
