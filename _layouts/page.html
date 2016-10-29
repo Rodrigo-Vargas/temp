@@ -3,13 +3,37 @@ layout: default
 ---
 
 <div class="container">
-  <header>
+  <header class="pull-left">
     <div class="logo">
       <h1>
         <a href="/">&lt;/&gt; Rodrigo Vargas</a>
       </h1>
     </div>
   </header>
+
+  <div class="pull-right">
+    <ul class="language-menu">
+      {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+      {% for post in posts %}
+        <li>
+          <a href="{{ post.url }}" class="{{ post.lang }}"></a>
+        </li>
+      {% endfor %}
+
+      {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+      {% for page in pages %}
+        <li>
+          <a href="{{ page.permalink }}" class="{{ page.lang }}">
+          {% if page.lang == 'en' %}
+            <span>English</span>
+          {% else %}
+            <span>Português</span>
+          {% endif %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>  
+  </div>  
 </div>
 
 <div class="container">

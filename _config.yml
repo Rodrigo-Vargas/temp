@@ -32,6 +32,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+permalink: pretty
+
 collections:
   projects:
+    output: false
+  certifications:
     output: false

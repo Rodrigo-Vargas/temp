@@ -5,23 +5,23 @@ layout: page
 <h1>My open source projects</h1>
 
 <div class="row">
-  <div class="col-md-offset-3 col-md-6">
+  <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
     <div class="filter">
       <div class="row">
-        <div class="col-md-4" data-filter="all">
-          <div class="filter-option">
-            <span>All</span>
-          </div>
+        <div class="col-md-4" >
+          <a class="filter-option" data-filter="all">
+            <span>All</span>  
+          </a>
         </div>
-        <div class="col-md-4" data-filter="freecodecamp">
-          <div class="filter-option">
+        <div class="col-md-4" >
+          <a class="filter-option" data-filter="freecodecamp">
             <span>Free Code Camp</span>
-          </div>
+          </a>
         </div>
-        <div class="col-md-4" data-filter="rails">
-          <div class="filter-option">
+        <div class="col-md-4">
+          <a class="filter-option" data-filter="rails">
             <span>Ruby on Rails</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>
