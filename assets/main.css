@@ -45,10 +45,6 @@ a:hover {
   text-decoration: none;
 }
 
-.pull-right {
-  float: right;
-}
-
 .tcenter {
   text-align: center;
 }
@@ -94,7 +90,7 @@ a:hover {
 .menu-btn-wrapper {
   position: fixed;
   top: 30px;
-  right: 30px;
+  right: 60px;
   height: 32px;
   width: 32px;
   z-index: 3;
@@ -115,6 +111,7 @@ a:hover {
 
 .language-menu {
   list-style: none;
+  padding: 15px 0;
 }
 
 .language-menu li:first-child {
@@ -198,6 +195,7 @@ a:hover {
 .modal-open .content {
   position: static;
   transform: none;
+  transition: transform 0s;
 }
 
 .is-nav-opened .content {
@@ -416,6 +414,49 @@ footer a:hover {
 /* Resume */
 .resume h2 {
   border-bottom: 1px solid #ccc;
+}
+
+.timeline .list {
+  position: relative;
+}
+
+.timeline a {
+  cursor: pointer;
+}
+
+.timeline .list:before {
+  background: #ddd;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  content: '';
+
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  width: 5px;  
+  left: 21px;
+
+  margin: 0;
+}
+
+.timeline .year .info span {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+}
+
+.card {
+  background-color: #eee;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card span {
+  color: #111;
 }
 
 .work {
