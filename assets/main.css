@@ -314,8 +314,8 @@ footer a:hover {
   border: 1px solid #ccc;
   border-radius: 3px;
   height: 200px;
-  padding: 15px;
   margin-bottom: 15px;
+  padding: 15px;
 }
 
 .project .link {
@@ -392,3 +392,12 @@ footer a:hover {
 .work a:hover span, .work a:hover h3 {
   color: #55bbc0; 
 }
+
+.project .ribbon {
+  position: absolute;
+  right: 0;
+  top: 0;
+} 
+
+
+asdasd

@@ -5,22 +5,27 @@ layout: page
 <h1>My open source projects</h1>
 
 <div class="row">
-  <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+  <div class="col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
     <div class="filter">
       <div class="row">
-        <div class="col-md-4" >
+        <div class="col-md-3" >
           <a class="filter-option" data-filter="all">
             <span>All</span>  
           </a>
         </div>
-        <div class="col-md-4" >
+        <div class="col-md-3" >
           <a class="filter-option" data-filter="freecodecamp">
             <span>Free Code Camp</span>
           </a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <a class="filter-option" data-filter="rails">
             <span>Ruby on Rails</span>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a class="filter-option" data-filter="">
+            <span>Others</span>
           </a>
         </div>
       </div>
@@ -33,6 +38,7 @@ layout: page
   {% for project in site.projects %}
     <div class="project col-md-4" data-category="{{ project.category }}">
       <div class="inner">
+        <div class="ribbon"><span>{{ project.name }}</span></div>
         <h2>{{ project.name }}</h2>
         <div class="info">
 
