@@ -1,5 +1,6 @@
 ---
 name: finanses-angular-client
+category: js
 ---
 
 <div class="col-md-4">

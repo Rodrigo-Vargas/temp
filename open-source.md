@@ -24,6 +24,11 @@ layout: page
           </a>
         </div>
         <div class="col-md-3">
+          <a class="filter-option" data-filter="jekyll">
+            <span>Jekyll</span>
+          </a>
+        </div>
+        <div class="col-md-3">
           <a class="filter-option" data-filter="">
             <span>Others</span>
           </a>
@@ -38,7 +43,12 @@ layout: page
   {% for project in site.projects %}
     <div class="project col-md-4" data-category="{{ project.category }}">
       <div class="inner">
-        <div class="ribbon"><span>{{ project.name }}</span></div>
+        <div class="ribbon">
+          <div class="inner">
+            <span class="{{ project.category }}"></span>
+            <span>{{ project }}</span>
+          </div>
+        </div>
         <h2>{{ project.name }}</h2>
         <div class="info">
 
