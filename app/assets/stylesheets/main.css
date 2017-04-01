@@ -1,0 +1,498 @@
+/* Custom Bootstrap gutter */
+.gutter-20.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.gutter-0.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Generic classes */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+.mobile-menu {
+  background-color: #3c3f4f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility 0.7s 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.mobile-menu-inner {
+  padding: 200px 50px;
+}
+
+.mobile-menu .nav {
+  list-style: none;
+}
+
+.mobile-menu .nav a {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  padding: 15px 0;
+}
+
+.mobile-menu .nav a:hover {
+  color: #2baab1;
+}
+
+/* Header */
+.is-nav-opened .mobile-menu {
+  visibility: visible;
+  transition: visibility 0.7s 0s;
+}
+
+.menu-btn-wrapper {
+  position: fixed;
+  top: 30px;
+  right: 60px;
+  height: 32px;
+  width: 32px;
+  z-index: 3;
+}
+
+.menu-btn {
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.menu-btn .fa-circle {
+  color: #3c3f4f;
+}
+
+.menu-btn:hover .fa-bars {
+  font-size: 1.1em; 
+}
+
+.language-menu {
+  list-style: none;
+  padding: 15px 0;
+}
+
+.language-menu li:first-child {
+  border-left: none;
+}
+
+.language-menu li {
+  border-left: 1px solid #000;
+  display: inline-block;
+}
+
+.language-menu a {
+  color: #000;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.language-menu a:hover {
+  color: #fff;
+}
+
+.internal {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 25px 0;
+  padding: 50px 100px;
+}
+
+@media (max-width: 991px){
+  .internal {
+    padding: 25px;
+  }
+}
+
+.logo a {
+  color: #000;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #fff;
+}
+
+.home {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* Pages */
+
+.content, .home {
+  background-size: 50px 50px;
+  background-color: #2baab1;
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                    transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                    transparent 75%, transparent);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                    transparent 75%, transparent);
+  -pie-background: linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                   transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                   transparent 75%, transparent) 0 0 / 50px 50px, #2baab1;
+  behavior: url(/pie/PIE.htc);
+}
+
+.content {
+  position: relative;
+  transform: translateX(0%);
+  transition: transform 0.7s;
+  z-index: 2;
+}
+
+.modal-open .content {
+  position: static;
+  transform: none;
+  transition: transform 0s;
+}
+
+.is-nav-opened .content {
+  transform: translateX(100%);
+  
+}
+
+.intro {
+  background-color: #fff;
+  border-radius: 5px;
+  margin:  0 auto;
+  margin-top: 200px;
+  padding: 20px 35px;
+  text-align: center;
+  width: 300px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    margin-top: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .intro {
+    margin-top: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .intro {
+    margin-top: 350px;
+  }
+}
+
+
+.intro h1 {
+  color: #222;
+}
+
+.intro h2 {
+  color: #666;
+}
+
+footer {
+  background-color: #33373b;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #aaa;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-link {
+  color: #33373b;
+  font-size: 10px;
+}
+
+.bottom-nav ul {
+  list-style: none;
+}
+
+.bottom-nav li {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+
+.social-media ul {
+  list-style: none;
+}
+
+.social-media li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+
+/* Projects */
+
+.filter {
+  margin: 20px auto;
+}
+
+.filter ul {
+  list-style: none;
+  text-align: center;
+}
+
+.filter-option {
+  border: 1px solid #2baab1;
+  color: #000;
+  cursor: pointer;  
+  display: block;  
+  margin: 10px 0;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.filter-option:hover {
+  background-color: #2baab1;
+  color: #fff;
+}
+
+.project > .inner {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 200px;
+  margin-bottom: 15px;
+  padding: 15px;
+  position: relative;
+}
+
+.project .ribbon {
+  height: 100px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  
+  position: absolute;
+  right: -0;
+  top: -0;
+  
+  width: 100px;
+}
+
+.project .ribbon .inner {
+  background: gray;
+  height: 26px;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 130px;
+  position: absolute;
+  top: 15px;
+  right: -35px;
+}
+
+.project .ribbon span {
+  color: #fff;
+  display: block;
+  line-height: 28px;
+}
+
+.project .ribbon span.freecodecamp {
+  background-color: #006400;
+}
+
+.project .ribbon span.freecodecamp:before {
+  content: "FCC";
+}
+
+/* Rails */
+.project .ribbon span.rails {
+  background-color: red
+}
+
+.project .ribbon span.rails:before {
+  content: "RAILS";
+}
+
+/* Jekyll */
+
+.project .ribbon span.jekyll {
+  background-color: black;
+}
+
+.project .ribbon span.jekyll:before {
+  content: 'JEKYLL';
+}
+
+.project .ribbon span:before {
+  content: "MISC";
+}
+
+.project .link {
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  width: 128px;
+}
+
+.link.source {
+  color: #9b80b1;  
+}
+
+.link.source:hover {
+  background-color: #9b80b1;
+  color: #fff;
+}
+
+.link.demo {
+  color: #79c9c4;
+}
+
+.link.demo:hover {
+  background-color: #79c9c4;
+  color: #fff;
+}
+
+.project .link .description {
+  color: #bbb;
+  display: block;
+}
+
+.project .link:hover .description {
+  color: #fff;
+}
+
+/* Resume */
+.resume h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+.timeline .list {
+  position: relative;
+}
+
+.timeline a {
+  cursor: pointer;
+}
+
+.timeline .list:before {
+  background: #ddd;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  content: '';
+
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  width: 5px;  
+  left: 21px;
+
+  margin: 0;
+}
+
+.timeline .year .info span {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+}
+
+.card {
+  background-color: #eee;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card span {
+  color: #111;
+}
+
+.work {
+  background-size: cover;
+  height: 220px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.dark-wrapper {
+  background: rgba(50, 50, 50, 0.6);
+  height: 100%;
+  padding: 30px 10px;
+  width: 100%;
+}
+
+.work h3 {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.work a {
+  cursor: pointer;
+}
+
+.work span {
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.work a:hover span, .work a:hover h3 {
+  color: #55bbc0; 
+}
+
+

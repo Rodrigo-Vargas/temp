@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RodrigovargasMe</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="content">
+      <%= yield %>
+    </div>
+
+    <div class="menu-btn-wrapper pull-right">
+      <a class="menu-btn fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+      </a>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-menu-inner">
+          <ul class="nav">
+            <li>
+              <a href="/">
+                <span class="tcenter">
+                  <i class="fa fa-home"></i>
+                </span>
+                <span>Home</span>              
+              </a>
+            </li>
+            <li>
+              <a href="/resume">
+                <span class="tcenter">
+                  <i class="fa fa-copy"></i>
+                </span>
+                <span>Curriculo</span>
+              </a>
+            </li>
+            <li>
+              <a href="/open-source">
+                <span class="tcenter">
+                  <i class="fa fa-github"></i>
+                </span>
+                <span>Open Source</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        registerMobileMenuAction();
+      });
+    </script>
+  </body>
+</html>
