@@ -1,0 +1,2 @@
+class TimelineCard < ApplicationRecord
+end
