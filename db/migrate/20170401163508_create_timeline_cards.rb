@@ -7,6 +7,7 @@ class CreateTimelineCards < ActiveRecord::Migration[5.0]
       t.date :end_date
       t.string :job_title
       t.integer :lcid
+      t.text :body
     end
   end
 end

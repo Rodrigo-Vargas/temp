@@ -1,10 +1,14 @@
 class PagesController < ApplicationController
-  layout "application"
+  layout "page"
   def home
         
   end
 
   def resume
 
+  end
+
+  def curriculo
+    @cards = TimelineCard.all
   end
 end

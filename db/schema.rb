@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170401163508) do
     t.date    "end_date"
     t.string  "job_title"
     t.integer "lcid"
+    t.text    "body"
   end
 
   create_table "users", force: :cascade do |t|
