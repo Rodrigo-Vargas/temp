@@ -1,5 +1,9 @@
 Olá <%= current_user.email %>
+<%= link_to destroy_user_session_path,  method: :delete do %>
+  Logout
+<% end %>
 
 <div class="content">
   <%= link_to "New timeline card", new_admin_timeline_card_path %>
 </div>
+
