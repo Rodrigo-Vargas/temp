@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'pages#home'
 
   get '/resume',              to: 'pages#resume'
@@ -8,5 +7,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'pages#home'
     resources :timeline_cards
+    devise_for :users
   end
 end

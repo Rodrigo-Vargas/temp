@@ -1,5 +1,5 @@
-Olá <%= current_user.email %>
-<%= link_to destroy_user_session_path,  method: :delete do %>
+Olá <%= current_admin_user.email %>
+<%= link_to destroy_admin_user_session_path,  method: :delete do %>
   Logout
 <% end %>
 
