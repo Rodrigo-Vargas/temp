@@ -13,3 +13,32 @@
  *= require bootstrap
  *= require font.awesome
  */
+
+.box {
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 300px;
+}
+
+.box h3 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.box .commands {
+  margin-top: 10px;
+}
+
+.box .commands a {
+  display: block;
+  text-align: center;
+}
+
+.admin-content .page-title {
+  color: #666;
+  font-size: 20px;
+  text-align: center;
+}

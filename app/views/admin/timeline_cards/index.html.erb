@@ -1,4 +1,11 @@
-<h2>Timeline Cards</h2>
+<div class="top-commands">
+  <h2 class="page-title">Timeline Cards</h2>
+  <div class="clearfix">
+    <div class="pull-right">
+      <%= link_to "New card", new_admin_timeline_card_path, class: "btn btn-new" %>    
+    </div>
+  </div>  
+</div>
 
 <table class="table table-stripped">
   <% @cards.each do | card | %>

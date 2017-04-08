@@ -8,6 +8,12 @@ class PagesController < ApplicationController
 
   end
 
+  # Portuguese
+
+  def inicial
+
+  end
+
   def curriculo
     @cards = TimelineCard.all
   end

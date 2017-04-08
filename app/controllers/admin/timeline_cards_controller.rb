@@ -7,6 +7,10 @@ class Admin::TimelineCardsController < Admin::BaseController
     @timeline_card = TimelineCard.new
   end
 
+  def edit
+    @timeline_card = TimelineCard.find(params[:id])
+  end
+
   def create
     @timeline_card = TimelineCard.new(timeline_card_params)
 
@@ -20,6 +24,7 @@ class Admin::TimelineCardsController < Admin::BaseController
   end
 
   def update
+    @timeline_card = TimelineCard.find(params[:id])
     respond_to do |format|
       if @timeline_card.update(timeline_card_params)
         format.html { redirect_to admin_timeline_cards_path, notice: 'Card updated successfully.' }
@@ -31,11 +36,12 @@ class Admin::TimelineCardsController < Admin::BaseController
 
   private
     def timeline_card_params
-      params.require(:timeline_card).permit(:name,
-                                                        :slug_name,
-                                                        :start_date,
-                                                        :end_date,
-                                                        :job_title,
-                                                        :lcid)
-    end
+      params.require(:timeline_card).permit(:body,
+                                            :name,
+                                            :slug_name,
+                                            :start_date,
+                                            :end_date,
+                                            :job_title,
+                                            :lcid)
+end
 end

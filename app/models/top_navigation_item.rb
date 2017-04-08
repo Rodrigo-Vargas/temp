@@ -1,0 +1,2 @@
+class TopNavigationItem < ApplicationRecord
+end
