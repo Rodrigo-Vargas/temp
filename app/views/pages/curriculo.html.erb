@@ -12,15 +12,15 @@
             <div class="row">
               <% cards.each do | card | %>
                 <div class="col-md-4">
-                  <a class="btn" data-backdrop="true" data-toggle="modal" data-target="#{{ card.slug_name }}">
-                    <div class="card" data-year="{{ card.year }}">
+                  <a class="btn" data-backdrop="true" data-toggle="modal" data-target="#<%= card.slug %>">
+                    <div class="card" data-year="<%= card.year %>">
                       <h3><%= card.job_title %> - <%= card.name %></h3>
                       <span><%= card.period %></span>
                     </div>
                   </a>
 
                   <!-- Modal -->
-                  <div class="modal fade" tabindex="-1" role="dialog" id="{{ card.slug_name }}">
+                  <div class="modal fade" tabindex="-1" role="dialog" id="<%= card.slug %>">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-body">

@@ -4,8 +4,8 @@
     <title>RodrigovargasMe</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
@@ -35,7 +35,7 @@
           <ul class="nav">
              <% @nav_items.each do | nav_item | %>
               <li>
-                <a href="<%= nav_item.url %>">
+                <a href="<%= nav_item.path %>">
                   <span>
                     <i class="fa fa-<%= nav_item.icon %>"></i>
                   </span>

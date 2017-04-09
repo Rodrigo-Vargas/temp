@@ -38,10 +38,10 @@ class Admin::TimelineCardsController < Admin::BaseController
     def timeline_card_params
       params.require(:timeline_card).permit(:body,
                                             :name,
-                                            :slug_name,
+                                            :slug,
                                             :start_date,
                                             :end_date,
                                             :job_title,
-                                            :lcid)
+                                            :locale)
     end
 end

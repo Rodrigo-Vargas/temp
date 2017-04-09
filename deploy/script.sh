@@ -1,0 +1,5 @@
+export APPNAME_DATABASE_USER='rodrigovargas_me'
+export RODRIGOVARGAS_ME_DATABASE_PASSWORD=a1b2c3RodrigoVargas32
+export RODRIGOVARGAS_ME_SECRET_KEY_BASE=103d6c6d03254c1601f2efd9b54771bb2e10a9dd2b754dadf318fbc580c54f5c7cff57e6fc4629031ab813deba9a5b0076ecd82335
+export RAILS_ENV=production
+sudo restart puma-manager
