@@ -2,7 +2,7 @@
   <div class="timeline">
     <h2>Timeline</h2>
     <div class="list">
-      <% @cards.group_by(&:year).each do |year, cards | %>
+      <% @cards.group_by(&:year).sort.reverse.each do | year, cards | %>
         <div class="year row ">    
           <div class="info col-xs-2 col-sm-1">
             <span><%= year %></span>
@@ -12,8 +12,8 @@
             <div class="row">
               <% cards.each do | card | %>
                 <div class="col-md-4">
-                  <a class="btn" data-backdrop="true" data-toggle="modal" data-target="#{{ card.slug }}">
-                    <div class="card" data-year="{{ card.year }}">
+                  <a class="" data-backdrop="true" data-toggle="modal" data-target="#<%= card.slug %>">
+                    <div class="card" data-year="<%= card.year %>">
                       <h3><%= card.job_title %> - <%= card.name %></h3>
                       <span><%= card.period %></span>
                     </div>
