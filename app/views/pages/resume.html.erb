@@ -1,14 +1,114 @@
-<div class="employment-content">
-  <h2>Employment</h2>
-  <div class="employment list">
-    <div class="item">
-      <h4>2013 - Present</h4>
-      <h3>Software Engineer - Conectt</h3>      
-    </div>
+<div class="resume">
+  <div class="timeline">
+    <h2>Timeline</h2>
+    <div class="list">
+      <% @cards.group_by(&:year).each do |year, cards | %>
+        <div class="year row ">    
+          <div class="info col-xs-2 col-sm-1">
+            <span><%= year %></span>
+          </div>
 
-    <div class="item">
-      <h4>2012 - 2013</h4>
-      <h3>Developer - Imediata Informática Empresarial</h3>
+          <div class="card-list col-xs-10 col-sm-11">
+            <div class="row">
+              <% cards.each do | card | %>
+                <div class="col-md-4">
+                  <a class="btn" data-backdrop="true" data-toggle="modal" data-target="#{{ card.slug_name }}">
+                    <div class="card" data-year="{{ card.year }}">
+                      <h3><%= card.job_title %> - <%= card.name %></h3>
+                      <span><%= card.period %></span>
+                    </div>
+                  </a>
+
+                  <!-- Modal -->
+                  <div class="modal fade" tabindex="-1" role="dialog" id="{{ card.slug_name }}">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                          </div>
+
+                          <h2 class="title"><%= card.name %></h2>
+                          <p>{{ card.content }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div> 
+      <% end %>
     </div>
   </div>
+
+  <div class="skills-content">
+    <h2>Skills</h2>
+    <ul>
+      <li>Ruby on Rails</li>
+      <li>C#</li>
+      <li>Cobol</li>
+      <li>Javascript</li>
+      <li>jQuery</li>
+      <li>Angular</li>
+      <li>CSS</li>
+      <li>HTML</li>
+      <li>Node.js</li>
+      <li>PHP</li>
+      <li>Laravel</li>
+      <li>SQL Server</li>
+      <li>PostgreSQL</li>
+      <li>Git, SVN and Team Foundation Server</li>
+      <li>User Experience</li>
+      <li>Responsible layout</li>
+      <li>Design of basic layout</li>
+    </ul>
+  </div>
+
+<!--  <div class="certifications-content">
+    <h2>Certificações</h2>
+    <div class="certifications list">
+      <div class="row">
+        {% for certification in site.certifications %}
+          <div class="col-md-4">
+            <div class="work" style="background-image:url(/assets/images/{{ certification.imageUrl}})">
+              <a class="btn" data-backdrop="true" data-toggle="modal" data-target="#{{ certification.slugTitle }}">
+                <div class="dark-wrapper">
+                  <h3 class="title">{{ certification.title }}</h3>
+                  <span>Ver certificação</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="modal fade" tabindex="-1" role="dialog" id="{{ certification.slugTitle }}">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-10">
+                      <img class="img-responsive" src="/assets/images/{{ certification.imageUrl }}" alt="">                    
+                    </div>
+                    <div class="col-xs-2">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                  </div>
+
+                  <h2 class="title">{{ certification.title }}</h2>
+                  <p>{{ certification.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+-->
+
+  <div class="my-modal-backdrop"></div>
 </div>
