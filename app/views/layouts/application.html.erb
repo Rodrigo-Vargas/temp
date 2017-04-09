@@ -16,41 +16,33 @@
       <%= yield(:content) %>
     </div>
 
-    <div class="menu-btn-wrapper pull-right">
-      <a class="menu-btn fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-      </a>
+    <div class="page-menu-wrapper">
+      <div class="language-menu inlineb">
+        <a href="/pt">Português</a>
+        <a href="/en">English</a>
+      </div>
+      <div class="menu-btn-wrapper inlineb">
+        <a class="menu-btn fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+        </a>
+      </div>  
     </div>
 
     <div class="mobile-menu">
       <div class="container">
         <div class="mobile-menu-inner">
           <ul class="nav">
-            <li>
-              <a href="/">
-                <span class="tcenter">
-                  <i class="fa fa-home"></i>
-                </span>
-                <span>Home</span>              
-              </a>
-            </li>
-            <li>
-              <a href="/resume">
-                <span class="tcenter">
-                  <i class="fa fa-copy"></i>
-                </span>
-                <span>Curriculo</span>
-              </a>
-            </li>
-            <li>
-              <a href="/open-source">
-                <span class="tcenter">
-                  <i class="fa fa-github"></i>
-                </span>
-                <span>Open Source</span>
-              </a>
-            </li>
+             <% @nav_items.each do | nav_item | %>
+              <li>
+                <a href="<%= nav_item.url %>">
+                  <span>
+                    <i class="fa fa-<%= nav_item.icon %>"></i>
+                  </span>
+                  <span><%= nav_item.name %></span>
+                </a>
+              </li>
+            <% end %>            
           </ul>
         </div>
       </div>

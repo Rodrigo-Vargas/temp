@@ -1,0 +1,29 @@
+<div class="top-commands">
+  <h2 class="page-title">Top navigation</h2>
+  <div class="clearfix">
+    <div class="pull-right">
+      <%= link_to "New Menu", new_admin_top_navigation_item_path, class: "btn btn-new" %>    
+    </div>
+  </div>  
+</div>
+
+<table class="table table-stripped">
+  <% @nav_items.each do | item | %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.position %></td>
+      <td><%= item.locale %></td>
+      <td><%= item.url %></td>
+      <td>
+        <%= link_to edit_admin_top_navigation_item_path(item) do %>
+          <i class="fa fa-pencil"></i>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to [:admin, item], data: { confirm: 'Are you sure?'}, method: :delete do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>

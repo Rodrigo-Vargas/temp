@@ -49,6 +49,10 @@ a:hover {
   text-align: center;
 }
 
+.inlineb {
+  display: inline-block;
+}
+
 .mobile-menu {
   background-color: #3c3f4f;
   position: fixed;
@@ -87,10 +91,14 @@ a:hover {
   transition: visibility 0.7s 0s;
 }
 
-.menu-btn-wrapper {
+.page-menu-wrapper {
   position: fixed;
   top: 30px;
   right: 60px;
+  z-index: 2;
+}
+
+.menu-btn-wrapper {
   height: 32px;
   width: 32px;
   z-index: 3;
@@ -107,6 +115,14 @@ a:hover {
 
 .menu-btn:hover .fa-bars {
   font-size: 1.1em; 
+}
+
+.is-nav-opened .menu-btn .fa-circle {
+  color: #fff;
+}
+
+.is-nav-opened .menu-btn .fa-bars {
+  color: #3c3f4f;
 }
 
 .language-menu {
@@ -131,6 +147,14 @@ a:hover {
 
 .language-menu a:hover {
   color: #fff;
+}
+
+.is-nav-opened .language-menu a {
+  color: #fff;
+}
+
+.is-nav-opened .language-menu a:hover {
+  color: #2baab1;
 }
 
 .internal {

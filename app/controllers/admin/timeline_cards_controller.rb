@@ -43,5 +43,5 @@ class Admin::TimelineCardsController < Admin::BaseController
                                             :end_date,
                                             :job_title,
                                             :lcid)
-end
+    end
 end

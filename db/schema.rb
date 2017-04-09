@@ -17,28 +17,32 @@ ActiveRecord::Schema.define(version: 20170408194410) do
 
   create_table "certifications", force: :cascade do |t|
     t.string "name"
-    t.string "slug_name"
+    t.string "slug"
     t.text   "description"
     t.string "image_url"
+    t.string "locale"
+    t.string "reference"
     t.text   "body"
   end
 
   create_table "timeline_cards", force: :cascade do |t|
-    t.string  "name"
-    t.string  "slug_name"
-    t.date    "start_date"
-    t.date    "end_date"
-    t.string  "job_title"
-    t.integer "lcid"
-    t.text    "body"
+    t.string "name"
+    t.string "slug"
+    t.date   "start_date"
+    t.date   "end_date"
+    t.string "job_title"
+    t.string "locale"
+    t.string "reference"
+    t.text   "body"
   end
 
   create_table "top_navigation_items", force: :cascade do |t|
     t.string   "name"
     t.text     "url"
-    t.integer  "lcid"
+    t.string   "locale"
     t.string   "reference"
     t.string   "icon"
+    t.integer  "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
