@@ -1,26 +1,35 @@
+---
+  title: Curriculo
+  lang: pt
+  ref: resume
+  permalink: /curriculo
+  layout: page
+---
+
 <div class="resume">
   <div class="timeline">
     <h2>Linha do tempo</h2>
     <div class="list">
-      <% @cards.group_by(&:year).sort.reverse.each do |year, cards | %>
+      <%= @cards.each do | card | %>
         <div class="year row ">    
           <div class="info col-xs-2 col-sm-1">
-            <span><%= year %></span>
+            <span>{{ year.name }}</span>
           </div>
 
           <div class="card-list col-xs-10 col-sm-11">
             <div class="row">
-              <% cards.each do | card | %>
+              {% assign cards = year.items %}
+              {% for card in cards  %}
                 <div class="col-md-4">
-                  <a class="" data-backdrop="true" data-toggle="modal" data-target="#<%= card.slug %>">
-                    <div class="card" data-year="<%= card.year %>">
-                      <h3><%= card.job_title %> - <%= card.name %></h3>
-                      <span><%= card.period %></span>
+                  <a class="btn" data-backdrop="true" data-toggle="modal" data-target="#{{ card.slug_name }}">
+                    <div class="card" data-year="{{ card.year }}">
+                      <h3>{{ card.job_title }} - {{ card.name }}</h3>
+                      <span>{{ card.period }}</span>
                     </div>
                   </a>
 
                   <!-- Modal -->
-                  <div class="modal fade" tabindex="-1" role="dialog" id="<%= card.slug %>">
+                  <div class="modal fade" tabindex="-1" role="dialog" id="{{ card.slug_name }}">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-body">
@@ -30,17 +39,17 @@
                             </div>
                           </div>
 
-                          <h2 class="title"><%= card.name %></h2>
-                          <p><%= card.body.html_safe %></p>
+                          <h2 class="title">{{ card.name }}</h2>
+                          <p>{{ card.content }}</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              <% end %>
+              {% endfor %}
             </div>
           </div>
-        </div> 
+        </div>  
       <% end %>
     </div>
   </div>
@@ -68,7 +77,7 @@
     </ul>
   </div>
 
-<!--  <div class="certifications-content">
+  <div class="certifications-content">
     <h2>Certificações</h2>
     <div class="certifications list">
       <div class="row">
@@ -84,6 +93,7 @@
             </div>
           </div>
 
+          <!-- Modal -->
           <div class="modal fade" tabindex="-1" role="dialog" id="{{ certification.slugTitle }}">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -108,7 +118,6 @@
       </div>
     </div>
   </div>
--->
 
   <div class="my-modal-backdrop"></div>
 </div>

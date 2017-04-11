@@ -34,6 +34,34 @@ class Admin::TimelineCardsController < Admin::BaseController
     end
   end
 
+  def get_from_disk
+    files = Dir.glob("#{Rails.root}/content/cards/*")
+
+    meta_data = ''
+    data = ''
+
+    files.each do | file |
+      data = File.read(file)
+
+      meta_data = data.match(/(---.+---)/m)[0]
+    end
+
+    lines = meta_data.split("\n")
+
+    meta = Hash.new
+
+    lines.each do | line |
+      if (line != "---")
+        results = line.match(/(.+)\s*:\s*(\S+)/)
+        logger.debug results
+        key = results[0]
+        meta[key] = results[1]
+      end
+    end
+
+    render json: meta
+  end
+
   private
     def timeline_card_params
       params.require(:timeline_card).permit(:body,

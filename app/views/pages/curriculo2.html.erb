@@ -1,8 +1,8 @@
 <div class="resume">
   <div class="timeline">
-    <h2>Timeline</h2>
+    <h2>Linha do tempo</h2>
     <div class="list">
-      <% @cards.group_by(&:year).sort.reverse.each do | year, cards | %>
+      <% @cards.group_by(&:year).sort.reverse.each do |year, cards | %>
         <div class="year row ">    
           <div class="info col-xs-2 col-sm-1">
             <span><%= year %></span>
@@ -31,7 +31,7 @@
                           </div>
 
                           <h2 class="title"><%= card.name %></h2>
-                          <p><%= card.content.html_safe %></p>
+                          <p><%= card.body.html_safe %></p>
                         </div>
                       </div>
                     </div>
@@ -43,11 +43,10 @@
         </div> 
       <% end %>
     </div>
-
   </div>
 
   <div class="skills-content">
-    <h2>Skills</h2>
+    <h2>Habilidades</h2>
     <ul>
       <li>Ruby on Rails</li>
       <li>C#</li>
@@ -62,10 +61,10 @@
       <li>Laravel</li>
       <li>SQL Server</li>
       <li>PostgreSQL</li>
-      <li>Git, SVN and Team Foundation Server</li>
+      <li>Git, SVN e Team Foundation Server</li>
       <li>User Experience</li>
-      <li>Responsible layout</li>
-      <li>Design of basic layout</li>
+      <li>Design responsivo</li>
+      <li>Criação de layouts básicos</li>
     </ul>
   </div>
 
