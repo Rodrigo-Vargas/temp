@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def resume
     @cards = Card.all
+    #@cards = TimelineCard.where(locale: 'pt')
 
     #@cards = TimelineCard.where(locale: 'en')
   end
@@ -15,6 +16,8 @@ class PagesController < ApplicationController
   end
 
   def curriculo
-    @cards = TimelineCard.where(locale: 'pt')
+    #@cards = Card.all
+    #@cards = Card.where(locale: 'pt')
+    @cards = Card.where(locale: 'pt')
   end
 end

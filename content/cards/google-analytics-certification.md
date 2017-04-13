@@ -2,6 +2,7 @@
   name: Certificação em Google Anaytics
   period:
   job_title: Certificação
+  locale: pt
   slug: google-analytics
   year: 2016
 ---

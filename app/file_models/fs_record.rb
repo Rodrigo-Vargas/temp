@@ -51,12 +51,37 @@ class FSRecord
 
     files.each do | file |
       data = File.read(file)
-      Rails.logger.debug data
       models << self.new(data)
     end
 
     return models
-  end 
+  end
+
+  def self.where(query)
+    @items = self.all
+    @filtered_items = Array.new
+
+    key = ''
+    value = ''
+
+    query.map { | k, v | 
+      key = k
+      value = v
+    }
+
+    Rails.logger.debug key
+    Rails.logger.debug value
+
+    @items.each do | item |
+      if (item.send(key) == value)
+        @filtered_items << item
+      end
+    end
+
+    Rails.logger.debug @filtered_items.length
+
+    return @filtered_items
+  end
 
   def get_file(file_name)
     files = Dir.glob("#{Rails.root}/content/blog/*")
