@@ -1,60 +1,6 @@
-<style>
-  .content {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
-
 <div class="home">
-<article>
   <div class="intro">
     <h1>Rodrigo Vargas</h1>
     <h2>Full Stack Web Developer</h2>
   </div>
-</article>
 </div>
-
-<footer class="hidden-xs hidden-sm">
-  <div class="row">
-    <div class="bottom-nav col-xs-7">
-      <ul>
-        <% @nav_items.each do | nav_item | %>
-          <li>
-            <a href="<%= nav_item.path %>">
-              <div class="tcenter">
-                <i class="fa fa-<%= nav_item.icon %>"></i>
-              </div>
-              <span><%= nav_item.name %></span>
-            </a>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="social-media col-xs-3">
-      <ul>
-        <li>
-          <a href="https://github.com/rodrigo-vargas" target="_blank">
-            <i class="fa fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://codepen.io/Rodrigo-Vargas/">
-            <i class="fa fa-codepen"></i>
-          </a>
-        </li>
-        <!--<li>
-          <a href="/twitter">Twitter</a>
-        </li>-->
-      </ul>
-    </div>
-
-    <div class="col-xs-2">
-      <a href="/admin">
-        <i class="fa fa-lock"></i>
-      </a>
-    </div>
-  </div>
-</footer>

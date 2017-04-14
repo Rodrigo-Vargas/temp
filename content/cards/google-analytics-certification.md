@@ -7,4 +7,4 @@
   year: 2016
 ---
 
-<img class="img-responsive" src="/assets/images/certifications/google-analytics.png" alt="">
+<img class="img-responsive" src="/images/certifications/google-analytics.png" alt="">

@@ -12,46 +12,69 @@
   </head>
 
   <body>
-    <div class="content">
-      <%= yield(:content) %>
-    </div>
-
-    <div class="page-menu-wrapper">
-      <div class="language-menu inlineb">
-        <a href="/pt">Português</a>
-        <a href="/en">English</a>
+    <header class="side-nav">
+      <div class="page-menu-wrapper">
+        <div class="language-menu">
+          <a href="/pt">Português</a>
+          <a href="/en">English</a>
+        </div>
+        <div class="menu-btn-wrapper inlineb">
+          <a class="menu-btn fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+          </a>
+        </div>  
       </div>
-      <div class="menu-btn-wrapper inlineb">
-        <a class="menu-btn fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-        </a>
-      </div>  
-    </div>
 
-    <div class="mobile-menu">
-      <div class="container">
-        <div class="mobile-menu-inner">
-          <ul class="nav">
-             <% @nav_items.each do | nav_item | %>
-              <li>
-                <a href="<%= nav_item.path %>">
-                  <span>
-                    <i class="fa fa-<%= nav_item.icon %>"></i>
-                  </span>
-                  <span><%= nav_item.name %></span>
-                </a>
-              </li>
-            <% end %>            
+      <nav>
+        <ul>
+          <% @nav_items.each do | nav_item | %>
+            <li>
+              <a href="<%= nav_item.path %>">
+                <i class="fa fa-<%= nav_item.icon %>"></i>
+                <span><%= nav_item.name %></span>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+
+    <article class="content">
+      <%= yield(:content) %>
+    </article>
+
+    <footer>
+      <div class="row">
+        <div class="bottom-nav col-xs-7">
+          <ul>
+            
           </ul>
         </div>
-      </div>
-    </div>
+        <div class="social-media col-xs-3">
+          <ul>
+            <li>
+              <a href="https://github.com/rodrigo-vargas" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://codepen.io/Rodrigo-Vargas/">
+                <i class="fa fa-codepen"></i>
+              </a>
+            </li>
+            <!--<li>
+              <a href="/twitter">Twitter</a>
+            </li>-->
+          </ul>
+        </div>
 
-    <script type="text/javascript">
-      $(document).ready(function(){
-        registerMobileMenuAction();
-      });
-    </script>
+        <div class="col-xs-2">
+          <a href="/admin">
+            <i class="fa fa-lock"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
