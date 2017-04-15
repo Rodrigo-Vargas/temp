@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def get_top_nav
-    @nav_items = TopNavigationItem.where(locale: I18n.locale).order(:position)
+    @nav_items = TopNavigation.where(locale: I18n.locale.to_s).sort_by{ | t | - t.position }
   end
 end

@@ -16,9 +16,23 @@
 
 registerMobileMenuAction = function(){
     $(".menu-btn").click(function(){
-      if ($("body").hasClass("is-nav-opened"))
-        $("body").removeClass("is-nav-opened");
+      if ($("body").hasClass("nav-closed"))
+      {
+        $("body").removeClass("nav-closed");
+        $("body").addClass("nav-opened");
+        return;
+      }
+      
+      if ($("body").hasClass("nav-opened"))
+      {
+        $("body").removeClass("nav-opened");
+        $("body").addClass("nav-closed");
+        return;
+      }
+      
+      if (window.innerWidth > 767)
+        $("body").addClass("nav-closed");
       else
-        $("body").addClass("is-nav-opened");
+        $("body").addClass("nav-opened");
     });
   }

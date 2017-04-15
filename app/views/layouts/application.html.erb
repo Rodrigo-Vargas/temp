@@ -9,21 +9,23 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
   </head>
 
   <body>
+    <div class="menu-btn-wrapper">
+      <a class="menu-btn fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+      </a>
+    </div>  
+
     <header class="side-nav">
       <div class="page-menu-wrapper">
         <div class="language-menu">
           <a href="/pt">Português</a>
           <a href="/en">English</a>
         </div>
-        <div class="menu-btn-wrapper inlineb">
-          <a class="menu-btn fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-          </a>
-        </div>  
       </div>
 
       <nav>
@@ -45,36 +47,16 @@
     </article>
 
     <footer>
-      <div class="row">
-        <div class="bottom-nav col-xs-7">
-          <ul>
-            
-          </ul>
-        </div>
-        <div class="social-media col-xs-3">
-          <ul>
-            <li>
-              <a href="https://github.com/rodrigo-vargas" target="_blank">
-                <i class="fa fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://codepen.io/Rodrigo-Vargas/">
-                <i class="fa fa-codepen"></i>
-              </a>
-            </li>
-            <!--<li>
-              <a href="/twitter">Twitter</a>
-            </li>-->
-          </ul>
-        </div>
-
-        <div class="col-xs-2">
-          <a href="/admin">
-            <i class="fa fa-lock"></i>
-          </a>
-        </div>
-      </div>
+        <a href="/admin">
+        <i class="fa fa-lock"></i>
+      </a>
     </footer>
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+        registerMobileMenuAction();
+      })
+    </script>
+    
   </body>
 </html>

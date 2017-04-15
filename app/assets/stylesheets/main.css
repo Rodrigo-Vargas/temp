@@ -56,11 +56,26 @@ a:hover {
 /* Side nav */
 .side-nav {
   background-color: #33373b;
+  padding-top: 50px;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 200px;
+}
+
+@media(max-width: 768px){
+  .side-nav {
+    left: -200px;
+  }
+}  
+
+.nav-opened .side-nav {
+  left: 0;
+}
+
+.nav-closed .side-nav {
+  left: -200px;
 }
 
 .side-nav ul {
@@ -96,8 +111,19 @@ a:hover {
                    transparent 75%, transparent) 0 0 / 50px 50px, #2baab1;
 }
 
+.nav-closed .content {
+  padding-left: 0
+}
+
 .content {
   padding-left: 200px;
+}
+
+
+@media(max-width: 767px){
+  .content {
+   padding-left: 0; 
+  }  
 }
 
 /* Header */
@@ -110,6 +136,20 @@ a:hover {
   height: 32px;
   width: 32px;
   z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 130px;
+}
+
+
+@media(max-width: 767px){
+  .menu-btn-wrapper {
+   left: 0; 
+  }  
+}
+
+.nav-closed .menu-btn-wrapper {
+    left: 0;
 }
 
 .menu-btn {
@@ -164,7 +204,7 @@ a:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 25px 0;
-  padding: 50px 100px;
+  padding: 50px 0;
 }
 
 @media (max-width: 991px){

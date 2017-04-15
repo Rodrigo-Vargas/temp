@@ -21,7 +21,38 @@
   color: #666;
 }
 
+.home .social-media {
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+}
 
+.home .social-media a {
+  border: 2px solid #333;
+  border-radius: 50%;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.home .social-media .github {
+  border-color: #333;
+}
+
+.home .social-media .github:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.home .social-media .codepen {
+  color: #333;
+}
+
+.home .social-media .codepen:hover {
+  background-color: #333;
+  color: #fff;
+}
 
 /* Projects */
 

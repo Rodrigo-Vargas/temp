@@ -69,20 +69,15 @@ class FSRecord
       value = v
     }
 
-    Rails.logger.debug key
-    Rails.logger.debug value
-
     @items.each do | item |
       if (item.send(key) == value)
         @filtered_items << item
       end
     end
 
-    Rails.logger.debug @filtered_items.length
-
     return @filtered_items
   end
-
+  
   def get_file(file_name)
     files = Dir.glob("#{Rails.root}/content/blog/*")
 
