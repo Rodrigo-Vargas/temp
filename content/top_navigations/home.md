@@ -1,7 +1,7 @@
 ---
   name: Home
   locale: en
-  path: /
+  path: /en
   icon: home
   position: 1
 ---

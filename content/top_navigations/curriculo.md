@@ -1,7 +1,7 @@
 ---
   name: Currículo
   locale: pt
-  path: /curriculo
+  path: /pt/curriculo
   icon: copy
   position: 2
 ---

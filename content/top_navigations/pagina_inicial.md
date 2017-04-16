@@ -1,7 +1,7 @@
 ---
   name: Página Inicial
   locale: pt
-  path: /
+  path: /pt
   icon: home
   position: 1
 ---

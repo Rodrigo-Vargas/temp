@@ -1,7 +1,7 @@
 ---
   name: Resumé
   locale:en
-  path: /resume
+  path: /en/resume
   icon: copy
   position: 2
 ---
