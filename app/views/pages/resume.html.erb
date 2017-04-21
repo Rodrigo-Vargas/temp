@@ -1,6 +1,6 @@
 <div class="resume">
   <div class="timeline">
-    <h2>Timeline</h2>
+    <h2>Linha do tempo</h2>
     <div class="list">
       <% @cards.group_by(&:year).sort.reverse.each do | year, cards | %>
         <div class="year row ">    
@@ -31,7 +31,7 @@
                           </div>
 
                           <h2 class="title"><%= card.name %></h2>
-                          <p><%= card.content.html_safe %></p>
+                          <p><%= card.content(I18n.locale, card.slug).html_safe %></p>
                         </div>
                       </div>
                     </div>
@@ -62,7 +62,7 @@
       <li>Laravel</li>
       <li>SQL Server</li>
       <li>PostgreSQL</li>
-      <li>Git, SVN and Team Foundation Server</li>
+      <li>Git, SVN e Team Foundation Server</li>
       <li>User Experience</li>
       <li>Responsible layout</li>
       <li>Design of basic layout</li>

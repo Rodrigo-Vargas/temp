@@ -1,11 +1,11 @@
 class TopNavigation < FSRecord
-   model_name = 'top_navigations'
+  MODEL_NAME = 'top_navigations'
    
-   def initialize file
-      super(file) 
-   end
-   
-   def self.model_name
-     return 'top_navigations'
-   end
+  def initialize path
+    super(path) 
+  end
+
+  def self.model_name
+    return MODEL_NAME
+  end
 end

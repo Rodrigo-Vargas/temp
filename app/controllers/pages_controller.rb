@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def resume
-    @cards = Card.where(locale: 'en')    
+    @cards = Card.all
   end
 
   # Portuguese
@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def curriculo
-    @cards = Card.where(locale: 'pt')
+    @cards = Card.all
     render 'pages/resume'
   end
 end

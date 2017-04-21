@@ -1,11 +1,27 @@
-class FSRecord
+ class FSRecord
   MODEL_NAME = ''
-  attr_accessor :content, :model_name
+  attr_accessor :body, :model_name, :file_path
 
-  def initialize(file_data)
+  def initialize path
+    @model_name = model_name
+    if (File.file?(path))
+      self.file_initialize(path)
+    else
+      self.directory_initialize(path)
+    end
+  end
+
+  def file_initialize file_path
+    file_data = File.read(file_path)
+
+    create_properties_from_file_data(file_data)    
+  end
+
+  def create_properties_from_file_data (file_data)
     results = file_data.match(/(---.+---)(.*)/m)
     meta_data = results[1]
-    @content = results[2]
+    @body = results[2]
+    @file_path = file_path
 
     lines = meta_data.split("\n")
 
@@ -18,6 +34,23 @@ class FSRecord
 
         self.create_attr(key)
         self.send("#{key}=", results[2].strip)
+      end
+    end
+  end
+
+  def directory_initialize dir_path
+    meta_file_data = File.read(dir_path + '/_meta.md')
+
+    create_properties_from_file_data(meta_file_data)
+
+    paths = Dir.glob(dir_path + "/*")
+
+    paths.each do | path |
+      extn = File.extname  path
+      name = File.basename path, extn
+      if (name != "_meta")
+        self.create_attr(name)
+        self.send("#{name}=", File.read(path))
       end
     end
   end
@@ -36,22 +69,41 @@ class FSRecord
     }
   end
 
-  def init
+  def get_file(file_name)
+    files = Dir.glob("#{Rails.root}/content/blog/*")
 
+    meta_data = ''
+    data = ''
+
+    files.each do | file |
+      data = '';
+      
+      if (file == "/vagrant/rodrigovargas.me/content/blog/" + file_name + ".md")
+        data = File.read(file)
+        break
+      else
+        continue
+      end
+    end
+
+    return data
   end
 
-  def self.model_name
-    return ''
+  def content (locale, slug)
+    if (self.send(locale))
+      return self.send(locale)
+    else
+      return self.body
+    end
   end
 
   def self.all
-    files = Dir.glob("#{Rails.root}/content/" + self.model_name + "/*")
+    paths = Dir.glob("#{Rails.root}/content/" + self.model_name + "/*")
 
     models = Array.new
 
-    files.each do | file |
-      data = File.read(file)
-      models << self.new(data)
+    paths.each do | path |
+      models << self.new(path)
     end
 
     return models
@@ -76,25 +128,5 @@ class FSRecord
     end
 
     return @filtered_items
-  end
-  
-  def get_file(file_name)
-    files = Dir.glob("#{Rails.root}/content/blog/*")
-
-    meta_data = ''
-    data = ''
-
-    files.each do | file |
-      data = '';
-      
-      if (file == "/vagrant/rodrigovargas.me/content/blog/" + file_name + ".md")
-        data = File.read(file)
-        break
-      else
-        continue
-      end
-    end
-
-    return data
   end
 end
