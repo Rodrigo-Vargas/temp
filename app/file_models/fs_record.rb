@@ -89,7 +89,7 @@
     return data
   end
 
-  def content (locale, slug)
+  def content (locale)
     if (self.send(locale))
       return self.send(locale)
     else
@@ -128,5 +128,13 @@
     end
 
     return @filtered_items
+  end
+
+  def self.find(file_name)
+    path = "#{Rails.root}/content/#{self.model_name}/#{file_name}"
+
+    if (File.exists?(path))
+      return self.new(path)
+    end
   end
 end

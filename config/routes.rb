@@ -8,14 +8,20 @@ Rails.application.routes.draw do
     devise_for :users
   end
 
-  scope '(:locale)', locale: /en/ do
+  get '/' => redirect('/en')
+
+  scope '/en' do
     root 'pages#home'
-    get '/resume',            to: 'pages#resume'  
+    get '/resume',            to: 'pages#resume'
+    get '/:slug',             to: 'pages#show'
   end
 
-  scope '(:locale)', locale: '/pt/' do
+  scope '/pt' do
     root 'pages#inicial'
     get '/curriculo',         to: 'pages#curriculo'
+    get '/cursos',            to: 'courses#index'
+    get '/cursos/(:slug)',    to: 'courses#show', as: 'en_course'
     get '/blog/:slug',        to: 'blog#show'
+    get '/:slug',             to: 'pages#show'
   end
 end

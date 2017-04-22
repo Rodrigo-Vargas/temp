@@ -1,0 +1,15 @@
+<h2>Cursos</h2>
+
+<div class="row">
+  <% @courses.each do | course | %>
+    <div class="col-md-4">
+      <a href="cursos/<%= course.slug %>">
+      <%= link_to get_translated_url_of_route('course', course.slug) do %>
+        <div class="course">
+          <h3><%= course.name %></h3>
+        </div>
+      <% end %>
+      </a>
+    </div>
+  <% end %>
+</div>

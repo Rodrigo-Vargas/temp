@@ -16,4 +16,8 @@ class PagesController < ApplicationController
     @cards = Card.all
     render 'pages/resume'
   end
+
+  def show
+    @page = Page.find(params[:slug])
+  end
 end

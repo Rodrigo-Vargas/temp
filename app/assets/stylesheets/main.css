@@ -80,7 +80,9 @@ a:hover {
   top: 0;
   left: 0;
   height: 100%;
+  transition: left 1s;
   width: 200px;
+  z-index: 2;
 }
 
 @media(max-width: 768px){
@@ -128,6 +130,7 @@ a:hover {
   -pie-background: linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
                    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
                    transparent 75%, transparent) 0 0 / 50px 50px, #2baab1;
+  transition: padding 1s;
 }
 
 .nav-closed .content {
@@ -146,11 +149,6 @@ a:hover {
 }
 
 /* Header */
-.is-nav-opened .mobile-menu {
-  visibility: visible;
-  transition: visibility 0.7s 0s;
-}
-
 .menu-btn-wrapper {
   height: 32px;
   width: 32px;
@@ -160,21 +158,9 @@ a:hover {
   left: 0;
 }
 
-.nav-closed .menu-btn-wrapper {
-    left: 0;
-}
-
 .menu-btn {
   cursor: pointer;
   font-size: 26px;
-}
-
-.nav-closed .menu-btn .fa-circle {
-  color: #fff;
-}
-
-.menu-btn .fa-circle {
-  color: #3c3f4f;
 }
 
 .menu-btn .fa-bars {
@@ -182,15 +168,45 @@ a:hover {
 }
 
 .menu-btn:hover .fa-bars {
-  color: #3c3f4f;
   font-size: 1.1em; 
 }
 
-.is-nav-opened .menu-btn .fa-circle {
+.menu-btn .fa-circle {
   color: #fff;
 }
 
-.is-nav-opened .menu-btn .fa-bars {
+@media(max-width: 767px){
+  .menu-btn .fa-bars {
+    color: #fff; 
+  }
+
+  .menu-btn:hover .fa-bars {
+    color: #3c3f4f;
+    font-size: 1.1em; 
+  }
+
+  .menu-btn .fa-circle {
+    color: #3c3f4f;
+  }
+}
+
+.nav-closed .menu-btn-wrapper {
+  left: 0;
+}
+
+.nav-closed .menu-btn .fa-bars {
+  color: #fff;
+}
+
+.nav-closed .menu-btn .fa-circle {
+  color: #3c3f4f;
+}
+
+.nav-opened .menu-btn .fa-bars {
+  color: #3c3f4f;
+}
+
+.nav-opened .menu-btn .fa-circle {
   color: #fff;
 }
 
@@ -288,4 +304,12 @@ footer a:hover {
 .social-media li {
   display: inline-block;
   margin: 0 5px;
+}
+
+/* Courses */
+.course {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
 }
