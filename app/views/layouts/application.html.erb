@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RodrigovargasMe</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+  </head>
+
+  <body>
+    <div class="menu-btn-wrapper">
+      <a class="menu-btn fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+      </a>
+    </div>  
+
+    <header class="side-nav">
+      <div class="page-menu-wrapper">
+        <div class="language-menu">
+          <a href="/pt">Português</a>
+          <a href="/en">English</a>
+        </div>
+      </div>
+
+      <!--<nav>
+        <ul>
+            
+        </ul>
+      </nav>-->
+    </header>
+
+    <article>
+      <div class="content">
+        <div class="container">
+          <div class="internal">
+            <%= yield(:content) %>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <div class="content">
+        <a href="/admin">
+          <i class="fa fa-lock"></i>
+        </a>
+      </div>
+    </footer>
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+        registerMobileMenuAction();
+      })
+    </script>
+    
+  </body>
+</html>
