@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     root 'pages#home'
-    devise_for :users, :skip => [:registrations]
+    devise_for :users
   end
 
   get '/',                                to: redirect('/en')
