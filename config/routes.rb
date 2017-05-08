@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    root 'pages#home'
+    devise_for :users, :skip => [:registrations]
+  end
+
   get '/',                                to: redirect('/en')
 
   get '/:locale',                         to: 'pages#route'
