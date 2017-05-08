@@ -2,4 +2,4 @@ Ola <%= current_admin_user.email %>
 <%= link_to('Logout', destroy_admin_user_session_path, :method => :delete) %>
 
 <h2>Environments variables</h2>
-<%= ENV["RAILS_ENV"] %>
+<%= Rails.env %>
