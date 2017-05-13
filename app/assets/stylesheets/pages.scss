@@ -15,10 +15,16 @@
 
 .intro h1 {
   color: #222;
+  font-family: 'Josefin Sans';
 }
 
 .intro h2 {
   color: #666;
+  font-family: 'Josefin Sans';
+}
+
+.intro h3 {
+  font-family: 'Josefin Sans';
 }
 
 .home {
@@ -230,6 +236,7 @@
 }
 
 .card h3 {
+  font-family: 'Josefin Sans';
   margin: 0;
 }
 
@@ -271,4 +278,15 @@
 
 .work a:hover span, .work a:hover h3 {
   color: #55bbc0; 
+}
+
+/* Internal Pages */
+.internal-title {
+  background-color: #07cb79;
+  color: #fff;
+  margin-top: -50px;
+  margin-left: -25px;
+  margin-right: -25px;
+  padding: 15px 0;
+  text-align: center;
 }

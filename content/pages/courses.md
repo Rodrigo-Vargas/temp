@@ -1,12 +1,19 @@
 ---
   layout: page
-  permalink: /courses
-  permalink_pt: /cursos
 ---
 
-<h2>Cursos</h2>
-<% Collection.find_by_name('Courses').items.each do | course | %>
-  <a href="/<%= I18n.locale %><%= course.get_permalink('pt') %>">
-    <span><%= course.name %></span>
-  </a>
-<% end %>
+<div class="container">
+  <div class="internal">
+    <h2 class="internal-title">Courses</h2>
+
+    <div class="row">
+      <% WOR::Collection.new('Courses').items.each do | course | %>
+        <div class="col-md-4">
+          <div class="course">
+            <a href="<%= course.url %>"><%= course.title %></a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
