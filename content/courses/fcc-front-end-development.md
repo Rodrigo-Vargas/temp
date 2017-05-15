@@ -182,7 +182,7 @@
           <h4>Basic</h4>
           <ul>
             <li>
-              <a href=""></a>
+              <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/basic/01-build-a-personal-portfolio-webpage">Build a personal portfolio page</a>
             </li>
           </ul>
         </div>
@@ -196,30 +196,38 @@
             </li>
 
             <li>
-              <a href=""></a>
+              <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/intermediate/02-show-local-weather">Show Local Weather</a>
+            </li>
+
+            <li>
+              <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/intermediate/03-build-wikipedia-viewer">Wikipedia Viewer</a>
+            </li>
+
+            <li>
+              <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/intermediate/04-twitch-tv-json-api">Twitch TV</a>
             </li>
           </ul>
         </div>
 
         <div class="col-md-4">
           <h4>Advanced</h4>
-            <ul>
-              <li>
-                <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/advanced/01-calculator">Calculator</a>
-              </li>
+          <ul>
+            <li>
+              <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/advanced/01-calculator">Calculator</a>
+            </li>
 
-              <li>
-                <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/advanced/02-pomodoro-timer">Pomodoro Timer</a>
-              </li>
+            <li>
+              <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/advanced/02-pomodoro-timer">Pomodoro Timer</a>
+            </li>
 
-              <li>
-                <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/advanced/03-tic-tae-toe">Tic Tac Toe Game</a>
-              </li>
+            <li>
+              <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/advanced/03-tic-tae-toe">Tic Tac Toe Game</a>
+            </li>
 
-              <li>
-                <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/advanced/04-simon-game">Simon Game</a>
-              </li>
-            </ul>
+            <li>
+              <a href="https://github.com/Rodrigo-Vargas/fcc-course/tree/master/front-end-certification/projects/advanced/04-simon-game">Simon Game</a>
+            </li>
+          </ul>
         </div>
       </div>
   </div>    

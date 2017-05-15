@@ -9,3 +9,5 @@
   <li>jQuery</li>
   <li>Bootstrap</li>
 </ul>
+
+<a href="/en/courses/fcc-front-end-development">More</a>
