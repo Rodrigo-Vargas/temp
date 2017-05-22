@@ -1,5 +1,5 @@
 ---
-  name: Certificação em Google Anaytics
+  name: Google Anaytics
   period:
   job_title: Certificação
   locale: pt

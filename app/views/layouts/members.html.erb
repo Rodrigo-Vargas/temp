@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RodrigovargasMe</title>
+    <%= csrf_meta_tags %>
+
+    <%= javascript_include_tag 'admin' %>
+  </head>
+
+  <body>
+    Ola <%= current_admin_user.email %>
+    <%= link_to('Logout', destroy_admin_user_session_path, :method => :delete) %>
+    <%= yield %>    
+  </body>
+</html>

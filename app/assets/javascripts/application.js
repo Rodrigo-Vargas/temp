@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jor
 //= require bootstrap
 
 registerMobileMenuAction = function(){

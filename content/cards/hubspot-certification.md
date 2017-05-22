@@ -1,8 +1,8 @@
 ---
+  categories : certificacao
   name: Certificação Inbound Marketing Hubspot
   period:
   job_title: Certificação
-  locale: pt
   slug: hubspot-certification
   year: 2016
 ---

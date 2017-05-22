@@ -28,9 +28,30 @@
     <div class="resume">
       <div class="timeline">
         <h2>Linha do tempo</h2>
+          
+        <div class="timeline-controls">
+          <div class="form-group">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="bootstrap" class="timeline-control">Bootstrap
+            </label>
+
+            <label class="checkbox-inline">
+              <input type="checkbox" id="ruby" class="timeline-control">Ruby
+            </label>
+
+            <label class="checkbox-inline">
+              <input type="checkbox" id="sharepoint" class="timeline-control">Sharepoint
+            </label>
+
+            <label class="checkbox-inline">
+              <input type="checkbox" id="php" class="timeline-control">PHP
+            </label>
+          </div>
+        </div>
+
         <div class="list">
           <% WOR::Collection.new('Cards').items.group_by(&:year).sort.reverse.each do | year, cards | %>
-            <div class="year row ">    
+            <div class="year row ">
               <div class="info col-xs-2 col-sm-1">
                 <span><%= year %></span>
               </div>
@@ -38,7 +59,7 @@
               <div class="card-list col-xs-10 col-sm-11">
                 <div class="row">
                   <% cards.each do | card | %>
-                    <div class="col-md-4">
+                    <div id="<%= card.name %>" class="col-md-4 card-wrap <%= card.categories %>">
                       <a class="" data-backdrop="true" data-toggle="modal" data-target="#<%= card.slug %>">
                         <div class="card" data-year="<%= card.year %>">
                           <h3><%= card.job_title %> - <%= card.name %></h3>
@@ -99,3 +120,47 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  var filterElements = function(){
+    var selectedValues = [];
+    var controls = jor(".timeline-control");
+
+    controls.forEach(function(control){
+      if (control.element.checked)
+        selectedValues.push(control.element.id);
+    });
+
+    var cards = jor(".card-wrap");
+
+    cards.forEach(function(card){
+      var showElement = false;
+      selectedValues.forEach(function(value){
+        if (card.hasClass(value))
+          showElement = true;
+      })
+
+      if (!showElement && selectedValues.length > 0)
+        card.hide();
+      else
+        card.show();
+    });
+  }
+  
+  jor("#bootstrap").on("click", function(){
+    filterElements();
+  });
+
+  jor("#ruby").on("click", function(){
+    filterElements();
+  });
+
+  jor("#sharepoint").on("click", function(){
+    filterElements();
+  });
+
+  jor("#php").on("click", function(){
+    filterElements();
+  });
+
+</script>
