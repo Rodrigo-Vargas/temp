@@ -3,6 +3,12 @@ OnePageNav = function(options) {
 
    /* ------- Functions --------- */
    
+   this.getPosition = function(element){
+      var rect = element.getBoundingClientRect();
+      
+      return { x: rect.left, y: rect.top + window.scrollY };
+   }
+
    this.init = function(){
       var nav = document.getElementById(options.menuElementId);
       var navItems = nav.getElementsByTagName('a');
@@ -13,8 +19,13 @@ OnePageNav = function(options) {
          var navItem = navItems[x];
          
          navItems[x].onclick = function(){
+            var targetElement = document.querySelector('#' + this.getAttribute("data-div"));
+            var position = that.getPosition(targetElement).y;
+            if (that.options.additionalOffset)
+               position -= that.options.additionalOffset;
+
             that.scrollIt(
-               document.querySelector('#' + this.getAttribute("data-div")),
+               position,
                600,
                'easeOutQuad');
 
@@ -24,6 +35,8 @@ OnePageNav = function(options) {
    }
 
    this.scrollIt = function(destination, duration = 200, easing = 'linear', callback) {
+      if (destination < 0)
+         destination = 0;
 
       const easings = {
          linear(t) {
@@ -73,8 +86,9 @@ OnePageNav = function(options) {
       const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
       const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
       const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
+      
       const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
-
+      
       if ('requestAnimationFrame' in window === false) {
          window.scroll(0, destinationOffsetToScroll);
          if (callback) {
@@ -87,7 +101,10 @@ OnePageNav = function(options) {
          const now = 'now' in window.performance ? performance.now() : new Date().getTime();
          const time = Math.min(1, ((now - startTime) / duration));
          const timeFunction = easings[easing](time);
-         window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
+
+         var targetY = Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start);
+
+         window.scroll(0, targetY);
 
          if (window.pageYOffset === destinationOffsetToScroll) {
             if (callback) {
