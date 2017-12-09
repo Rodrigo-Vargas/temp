@@ -1,0 +1,256 @@
+---
+---
+@import 'bootstrap';
+
+/* Variables */
+$primary-text-color: #2eca7f;
+
+body {
+   background-color: #eee;
+   font-family: Helvetica;
+}
+
+.gutter-20.row {
+   margin-right: -10px;
+   margin-left: -10px;
+ }
+ .gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+   padding-right: 10px;
+   padding-left: 10px;
+ }
+
+ .gutter-10.row {
+   margin-right: -5px;
+   margin-left: -5px;
+ }
+ .gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+   padding-right: 5px;
+   padding-left: 5px;
+ }
+
+.gutter-0.row {
+   margin-right: 0;
+   margin-left: 0;
+ }
+ .gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+   padding-right: 0;
+   padding-left: 0;
+ } 
+
+header {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  height: 50px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 999;
+}
+
+header .logo-wrap {
+  float: left;
+  padding: 15px;
+}
+
+header .mark {
+   color: $primary-text-color;
+   display: inline-block;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+header .logo-wrap .name {
+   color: $primary-text-color;
+   display: inline-block;
+   font-weight: bold;
+}
+
+header .top-nav {
+  float: right;
+}
+
+.top-nav ul {
+   color: #eee;
+   font-weight: bold;
+   list-style: none;
+   margin: 16px;
+   text-align: right;
+}
+
+.top-nav li {
+  display: inline-block;
+}
+
+.top-nav a {
+  color: #2eca7f;
+}
+
+/* ------------- End Header ------------- */
+
+/* ------------- Begin Content ------------ */
+#content {
+   background-color: #eee;
+}
+
+section {
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+section .title {
+  background-color: $primary-text-color;
+  color: #fff;
+  margin: 0;
+  padding: 40px;
+  text-align: center;
+}
+
+section .content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+
+.home {
+  padding: 150px 0;
+  height: 100%;
+}
+
+.home-vcard {
+   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+   border-radius: 15px;
+   margin: 100px auto;
+   overflow: hidden;
+   width: 600px;
+}
+
+.home-vcard .top {
+   background: #2eca7f;
+   padding: 30px;
+}
+
+.home-vcard .avatar-wrap {
+   background-color: #fff;
+   padding: 5px;
+   margin: 0 auto;
+   width: 175px;
+}
+
+.home-vcard .social-media {
+   margin: 30px auto;
+   width: 108px;
+}
+
+.home-vcard .social-media .icon {
+   background-color: #fff;
+   border-radius: 50%;
+   color: #ccc;
+   display: inline-block;
+   height: 32px;
+   line-height: 32px;
+   margin: 0 10px;
+   text-align: center;
+   vertical-align: middle;
+   width: 32px;
+}
+
+.home-vcard .social-media .icon:hover {
+   color: #2eca7f;
+}
+
+.home-vcard .top h1 {
+   color: #fff;
+   font-size: 22px;
+   font-weight: bold;
+   text-align: center;
+}
+
+.home-vcard .top h3 {
+   color: #fff;
+   font-size: 14px;
+   text-align: center;
+}
+
+.home-vcard .bottom {
+   background-color: #fff;
+   padding: 30px;
+}
+
+.home-vcard .bottom h2 {
+  color: #222;
+   font-size: 16px;
+   font-weight: bold;
+   margin-bottom: 15px;
+}
+
+.home-vcard .bottom .personal-info {
+  vertical-align: top;
+}
+
+.home-vcard .personal-info span {
+  color: #aaa;
+  padding-left: 3px;
+}
+
+.timeline {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 50px;
+  width: 500px;
+}
+
+.timeline .column {
+  display: inline-block;
+  width: 200px;
+}
+
+.timeline .list {
+  position: relative
+}
+
+.timeline a {
+  cursor: pointer
+}
+
+.timeline .list:before {
+  background: #ddd;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  width: 5px;
+  left: 21px;
+  margin: 0
+}
+
+.timeline .year .info span {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 3px 5px
+}
+
+.card {
+  background-color: #eee;
+  padding: 10px 20px;
+  margin: 10px;
+  min-height: 110px
+}
+
+.card h3 {
+  font-family: 'Josefin Sans';
+  margin: 0
+}
+
+.card span {
+  color: #111
+}
+
+#resume .item {
+  border-bottom: 1px solid #ccc;
+  margin: 30px 0;
+  padding: 20px 10px;
+}
