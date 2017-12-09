@@ -1,7 +1,0 @@
----
-  name: Free Code Camp Backend Development
-  period: 2016, Janeiro - 2016, Agosto
-  job_title: Certificação
-  slug: fcc-backend-certification
-  year: 2016
----
