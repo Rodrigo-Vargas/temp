@@ -11,34 +11,112 @@ $primary-text-color: #2eca7f;
 body {
    background-color: #eee;
    font-family: Helvetica;
+   position: relative;
+}
+
+body.modal-open {
+  padding-right: 17px;
 }
 
 .gutter-20.row {
    margin-right: -10px;
    margin-left: -10px;
- }
- .gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+}
+
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
    padding-right: 10px;
    padding-left: 10px;
- }
+}
 
- .gutter-10.row {
+.gutter-10.row {
    margin-right: -5px;
    margin-left: -5px;
- }
- .gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+}
+
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
    padding-right: 5px;
    padding-left: 5px;
- }
+}
 
 .gutter-0.row {
    margin-right: 0;
    margin-left: 0;
- }
- .gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
-   padding-right: 0;
-   padding-left: 0;
- } 
+}
+
+.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.modal-overlay {
+   background-color: rgba(0, 0, 0, 0.6);
+   display: none;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   z-index: 2;
+}
+
+body.modal-open .modal-overlay, body.modal-open .modal-placeholder {
+   display: block;
+}
+
+.modal-placeholder {
+  background-color: #fff;
+  color: #444;
+  display: none;
+  height: 50%;
+  left: 25%;
+  overflow: scroll;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  z-index: 99;  
+}
+
+/*
+  ********* Tabs *************
+*/
+.tab-panels {
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.modal-placeholder .tab-panel {
+  display: none;
+  padding: 20px;
+}
+
+.modal-placeholder .tab-panel.show {
+  display: block;
+}
+
+.tab-controls {
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+}
+
+.tab-controls li {
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+}
+
+.tab-controls li.active {
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #fff;  
+}
+
+.tab-controls a {
+  color: $primary-text-color;
+  display: block;
+  padding: 5px 10px;
+}
 
 header {
   background-color: #fff;
@@ -247,26 +325,23 @@ section .content {
   padding: 3px 5px
 }
 
-.card {
-  background-color: #eee;
-  padding: 10px 20px;
-  margin: 10px;
-  min-height: 110px
-}
-
-.card h3 {
-  font-family: 'Josefin Sans';
-  margin: 0
-}
-
-.card span {
-  color: #111
-}
-
-#resume .item {
-  border-bottom: 1px solid #ccc;
+#resume .card {
+  border: 1px solid #ccc;
+  display: block;
   margin: 30px 0;
   padding: 20px 10px;
+}
+
+#resume .card .additional-info {
+  display: none;
+}
+
+#resume .card .additional-info.show {
+  display: block;
+}
+
+#resume .card:hover {
+  box-shadow: #000 1px 1px 1px;
 }
 
 #resume .download-buttons {
