@@ -2,8 +2,13 @@ Modal = function(options){
    this.content = options.content;
    this.onShow = options.onShow;
    this.onHide = options.onHide;
+   this.processing = false;
 
    this.show = function(){
+      if (this.processing)
+         return;
+
+      this.processing = true;
       var body = document.querySelector("body");
       var modal = document.querySelector(".modal");
       var modalContent = document.querySelector(".modal-content");
@@ -18,6 +23,7 @@ Modal = function(options){
          toogleClass(body, "modal-open");
          body.style = "padding-right: 17px";
          toogleClass(modalBackdrop, "in");
+         this.processing = false;
       }, 1);
 
       modalContent.insertAdjacentHTML('afterbegin', this.content);
@@ -32,8 +38,13 @@ Modal = function(options){
 
    this.registerDismiss = function () {
       var modal = document.querySelector(".modal");
+      var context = this;
 
       modal.onclick = function () {
+         if (context.processing)
+            return;
+
+         context.processing = true;
          var body = document.querySelector("body");
          var modalContent = document.querySelector(".modal-content");
          var modal = document.querySelector(".modal");
@@ -51,6 +62,7 @@ Modal = function(options){
             toogleClass(modal, "show");
             modalBackdrop.remove();
             modalContent.innerHTML = "";
+            context.processing = false;
          }, 500);
       }
 

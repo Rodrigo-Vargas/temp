@@ -135,16 +135,18 @@
                   </span>
                   <h2>Education</h2>
                </div>
-                              
-               
-               <div class="item">
-                  <div class="date">
-                     <span>2008 - 2012</span>
+
+               {% assign courses = (site.education | sort: 'year') | reverse %}
+               {% for course in courses %} 
+                  <div class="item">
+                     <div class="date">
+                        <span>{{ course.period }}</span>
+                     </div>
+                     <div class="description">
+                        {{ course.name }}
+                     </div>
                   </div>
-                  <div class="description">
-                     Computer Engineering / Universidade de Santa Cruz do Sul
-                  </div>
-               </div>
+               {% endfor %}
             </div>
 
 

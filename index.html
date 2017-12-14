@@ -78,7 +78,7 @@
             <div class="row">
                <div class="col-sm-6">
                   <div class="career">
-                     <h3>Career</h3>
+                     <h3>Experience</h3>
                      <div class="jobs">
                         {% for job in site.career %}
                         <div class="card">
@@ -157,7 +157,16 @@
                </div>
 
                <div class="col-sm-6">
-                  <!--<h3>Education</h3>-->
+                  <div class="career">
+                     <h3>Experience</h3>
+                     <div class="jobs">
+                        {% assign courses = (site.education | sort: 'year') | reverse %}
+                        {% for course in courses %}
+                           {% include home/education-item.html course=course %}
+
+                        {% endfor %}
+                     </div>
+                  </div>
                </div>
 
             </div>   
