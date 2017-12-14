@@ -1,7 +1,9 @@
 ---
+  location: "Santa Cruz do Sul, RS , Brazil"  
   name: Conectt
   period: "2013 - Current"
-  job_title: "Software Engineer"
+  position: "Software Engineer"
+  logo_url: "/assets/img/career/conectt.png"
   skills:   [  "Sharepoint (2007, 2010, 2013, Online)",
                "Nintex Workflows for Sharepoint",
                "C# MVC and Web Forms",
@@ -24,14 +26,9 @@
 ---
 
 <div>
-   <p>As a full stack developer i'm worked mainly with Microsoft technologies, with focus in the Sharepoint plataform(2007, 2010, 2013). Because Sharepoint is a .NET based plataform, the backend is developed using C# as well, more precisally using .NET Web Forms. I also use a good variety front-end technologies, choosed based on the customer and projects requirements. Some of them are:</p>
-   <ul>
-      <li>Angular JS</li>
-      <li>jQuery</li>
-      <li>CSS</li>
-      <li>HTML</li>
-   </ul>
-   <p>At first, i worked as member of projects team, when i have the opportunity of learn a lot working with senior developers in projects with more than 600 hours of work. In that projects, i'm encountered some challenges like:
+   <p>As a full stack developer i'm worked mainly with Microsoft technologies, with focus in the Sharepoint plataform(2007, 2010, 2013). Because Sharepoint is a .NET based plataform, the backend is usually developed using C# as well, more precisally using .NET Web Forms. I also use a good variety front-end technologies, choosed based on the customer and projects requirements.</p>
+
+   <p>At first, i worked as member of projects team, when i had the opportunity of learn a lot working with senior developers in projects with more than 600 hours of work. In that projects, i'm encountered some challenges like:
    </p>
    <ul>
       <li>Stricted delivery deadlines;</li>

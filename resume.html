@@ -104,36 +104,26 @@
                   </span>
                   <h2>Experience</h2>
                </div>
-               
 
-               <div class="item">
-                  <div class="date">
-                     <span>2012 - present</span>
-                  </div>
-
-                  <div class="description">
-                     <h3 class="job-title">
-                        Fullstack Developer
-                     </h3>
-                     <span>Conectt / Santa Cruz do Sul, RS , Brazil</span>
-                     <div class="job-body">
-                        Here i work
+               {% for job in site.career %}
+                  <div class="item">
+                     <div class="date">
+                        <span>{{ job.period }}</span>
+                     </div>
+                  
+                     <div class="description">
+                        <h3 class="job-title">{{ job.position }}</h3>
+                        <span>{{ job.name }} / {{ job.location }}</span>
+                        <div class="job-body">
+                           <ul>
+                              {% for highlight in job.highlights %}
+                                 <li>{{ highlight }}</li>
+                              {% endfor %}
+                           </ul>
+                        </div>
                      </div>
                   </div>
-               </div>
-
-               <div class="item">
-                  <div class="date">
-                     <span>2011 - 2012</span>
-                  </div>
-
-                  <div class="description">
-                     <h3 class="job-title">
-                        Software developer
-                     </h3>
-                     <span>Imediata / Cachoeira do Sul, RS, Brazil</span>
-                  </div>
-               </div>
+               {% endfor %}
             </div>
 
 

@@ -14,10 +14,6 @@ body {
    position: relative;
 }
 
-body.modal-open {
-  padding-right: 17px;
-}
-
 .gutter-20.row {
    margin-right: -10px;
    margin-left: -10px;
@@ -48,49 +44,31 @@ body.modal-open {
   padding-left: 0;
 }
 
-.modal-overlay {
-   background-color: rgba(0, 0, 0, 0.6);
-   display: none;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
-   z-index: 2;
-}
-
-body.modal-open .modal-overlay, body.modal-open .modal-placeholder {
-   display: block;
-}
-
-.modal-placeholder {
-  background-color: #fff;
-  color: #444;
-  display: none;
-  height: 50%;
-  left: 25%;
-  overflow: scroll;
+/*
+  ************* Modal ************
+*/
+.modal-content {
   padding: 20px;
-  position: absolute;
-  top: 50%;
-  width: 50%;
-  z-index: 99;  
 }
 
 /*
   ********* Tabs *************
 */
+.tabs-wrap {
+  padding: 20px 0;
+}
+
 .tab-panels {
   border: 1px solid #ccc;
   border-top: none;
 }
 
-.modal-placeholder .tab-panel {
+.tab-panel {
   display: none;
   padding: 20px;
 }
 
-.modal-placeholder .tab-panel.show {
+.tab-panel.show {
   display: block;
 }
 
@@ -338,6 +316,12 @@ section .content {
 
 #resume .card .additional-info.show {
   display: block;
+}
+
+.additional-info-content h2 {
+  color: #666;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 #resume .card:hover {

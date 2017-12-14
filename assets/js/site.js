@@ -1,14 +1,10 @@
-registerCardClicks = function (doneCallback) {
+registerCardClicks = function () {
    var cards = document.querySelectorAll("#resume .card");
-   var body = document.querySelector("body");
-   var modalPlaceholder = document.querySelector(".modal-placeholder");
-
+   
    for (var x = 0; x < cards.length; x++) {
       cards[x].onclick = function () {
-         var additionalInfoElement = this.querySelector(".additional-info");
-         toogleClass(body, "modal-open");
-         modalPlaceholder.insertAdjacentHTML('afterbegin', additionalInfoElement.innerHTML);
-         doneCallback(additionalInfoElement);
+         modal.content = this.querySelector(".additional-info").innerHTML;
+         modal.show();
       }
    }
 }
@@ -25,35 +21,10 @@ removeClass = function(element, className){
       element.classList.remove(className);
 }
 
-registerModalDismiss = function(){
-   var modal = document.querySelector(".modal-overlay");
-
-   modal.onclick = function(){
-      var body = document.querySelector("body");
-      var modalPlaceholder = document.querySelector(".modal-placeholder");
-
-      var openedCards = document.querySelectorAll(".additional-info.show");
-
-      for(var x = 0; x < openedCards.length; x++)
-      {
-         toogleClass(openedCards[x], "show");
-      }
-
-      toogleClass(body, "modal-open");
-
-      modalPlaceholder.innerHTML = "";
-   }
-}
-
-var nav = new OnePageNav({
-   menuElementId: "nav-items",
-   additionalOffset: 50
-});
-
 hideTabs = function(){
-   var tabPanels = document.querySelectorAll(".modal-placeholder .tab-panel");
+   var tabPanels = document.querySelectorAll(".modal .tab-panel");
 
-   var tabButtons = document.querySelectorAll(".modal-placeholder .tab-controls li");
+   var tabButtons = document.querySelectorAll(".modal .tab-controls li");
 
    for (var x = 0; x < tabPanels.length; x++) {
       removeClass(tabPanels[x], "show");
@@ -69,13 +40,13 @@ tabClick = function(tabButtonElement){
 
    toogleClass(tabButtonElement.parentNode, "active");
 
-   var panelTab = document.querySelector(".modal-placeholder ." + tabButtonElement.getAttribute("data-tab"));
+   var panelTab = document.querySelector(".modal ." + tabButtonElement.getAttribute("data-tab"));
 
    toogleClass(panelTab, "show");
 }
 
 registerModalJobTabs = function(){
-   var tabButtons = document.querySelectorAll(".modal-placeholder .tab-btn");
+   var tabButtons = document.querySelectorAll(".modal .tab-btn");
 
    for(var x = 0; x < tabButtons.length; x++)
    {
@@ -89,5 +60,23 @@ registerModalJobTabs = function(){
    }
 }
 
-registerCardClicks(registerModalJobTabs);
-registerModalDismiss();
+hideCards = function(){
+   var openedCards = document.querySelectorAll(".additional-info.show");
+
+   for (var x = 0; x < openedCards.length; x++) {
+      toogleClass(openedCards[x], "show");
+   }
+}
+
+registerCardClicks();
+
+var modal = new Modal({
+   onShow: registerModalJobTabs,
+   onHide: hideCards,
+   content: ""
+})
+
+var nav = new OnePageNav({
+   menuElementId: "nav-items",
+   additionalOffset: 50
+});
