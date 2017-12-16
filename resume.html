@@ -136,7 +136,7 @@
                   <h2>Education</h2>
                </div>
 
-               {% assign courses = (site.education | sort: 'year') | reverse %}
+               {% assign courses = site.education | sort: 'year' | reverse %}
                {% for course in courses %} 
                   <div class="item">
                      <div class="date">

@@ -11,6 +11,7 @@
       <ul id="nav-items">
          <li><a href="" data-div="home">Home</a></li>
          <li><a href="" data-div="resume">Resume</a></li>
+         <li><a href="" data-div="portfolio">Portfólio</a></li>
       </ul>
    </div>
 </header>
@@ -66,6 +67,7 @@
          </div>
       </div>
    </section>
+   
    <!--  #################################
       End Home Section 
    #######################################-->
@@ -81,90 +83,22 @@
                      <h3>Experience</h3>
                      <div class="jobs">
                         {% for job in site.career %}
-                        <div class="card">
-                           <div class="mark">
-                              <div class="pin"></div>
-                              <div class="line"></div>
-                           </div>
-                           <h4>{{ job.name }}</h4>
-                           <h5>{{ job.period }}</h5>
-                           
-                           <div class="additional-info">
-                              <div class="additional-info-content">
-                                 <h2>{{ job.name }}</h2>
-                                 <div class="row">
-                                    <div class="col-sm-4">
-                                       <div class="logo">
-                                          <img class="img-responsive" src="{{ job.logo_url }}" alt="{{ job.name }}">
-                                       </div>
-                                    </div>
-
-                                    <div class="col-sm-8">
-
-                                    </div>
-                                    <div class="col-xs-12">
-
-                                    <div class="tabs-wrap">
-                                       <ul class="tab-controls">
-                                          <li>
-                                             <a href="" class="tab-btn" data-tab="job-highlights">Description</a>
-                                          </li>
-                                    
-                                          <li>
-                                             <a href="" class="tab-btn" data-tab="job-skills">Skills</a>
-                                          </li>
-                                    
-                                          <li>
-                                             <a href="" class="tab-btn" data-tab="job-description">More</a>
-                                          </li>
-                                       </ul>
-                                    
-                                       <div class="tab-panels">
-                                          <div class="job-highlights tab-panel">
-                                             <ul>
-                                                {% for highlight in job.highlights %}
-                                                <li>
-                                                   {{ highlight }}
-                                                </li>
-                                                {% endfor %}
-                                             </ul>
-                                          </div>
-                                    
-                                          <div class="job-skills tab-panel">
-                                             <ul>
-                                                {% for skill in job.skills %}
-                                                <li>
-                                                   {{ skill }}
-                                                </li>
-                                                {% endfor %}
-                                             </ul>
-                                          </div>
-                                    
-                                          <div class="job-description tab-panel">
-                                             {{ job.content }}
-                                          </div>
-                                       </div>
-                                    
-                                    </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                            {% include home/experience-item.html job=job %}
                         {% endfor %}
                      </div>
                   </div>
                </div>
 
                <div class="col-sm-6">
-                  <div class="career">
-                     <h3>Experience</h3>
-                     <div class="jobs">
-                        {% assign courses = (site.education | sort: 'year') | reverse %}
-                        {% for course in courses %}
-                           {% include home/education-item.html course=course %}
-
-                        {% endfor %}
+                  <div class="career education">
+                     <h3>Education</h3>
+                     <div class="card-scroll-wrap">
+                        <div class="jobs">
+                           {% assign courses = site.education | sort: 'year' | reverse %}
+                           {% for course in courses %}
+                              {% include home/education-item.html course=course %}
+                           {% endfor %}
+                        </div>
                      </div>
                   </div>
                </div>
@@ -181,6 +115,32 @@
             <div class="item">
                   
             </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="portfolio">
+      <div class="inner">
+         <h2 class="title">Portfolio</h2>
+   
+         <div class="content">
+            <div class="row">
+               {% for project in site.projects %}
+                  <div class="col-sm-4">
+                      {% if project.cover_url %} 
+                        {% assign cover_url = project.cover_url %} 
+                     {% else %} 
+                        {% assign cover_url = "/assets/img/no_cover.jpg" %}
+                     {% endif %}
+
+                     <a href="#" class="project">
+                        <div class="img" style="background-image: url({{ cover_url }})"></div>
+                        <div class="backdrop">
+                           <h3 class="title">{{ project.name }}</h3>
+                        </div>
+                     </a>
+                  </div>
+               {% endfor %}
          </div>
       </div>
    </section>
