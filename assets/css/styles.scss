@@ -369,6 +369,35 @@ section .content {
   width: 16px;  
 }
 
+#resume .skill {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+#resume .skill:hover {
+  background-color: #f5f5f5;
+}
+
+#resume .skill .name {
+  font-weight: bold;
+  float: left;
+  width: 60%;
+}
+
+#resume .skill .stars {
+  color: $primary-text-color;
+  float: right;
+}
+
+#resume .skill .stars i {
+  padding: 0;
+  transition: padding 0.5s;
+}
+
+#resume .skill:hover .stars i {
+  padding: 0 1px;
+}
+
 .project {
   display: block;
   height: 200px;

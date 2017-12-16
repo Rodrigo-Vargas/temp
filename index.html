@@ -102,8 +102,39 @@
                      </div>
                   </div>
                </div>
-
             </div>   
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="list">
+                           <div class="row">
+                              {% assign grouped_skills = site.skills | sort: 'stars' | reverse | group_by: 'stars' %}
+                                 {% for grouped_skill in grouped_skills %}
+                                    {% assign skills = grouped_skill.items | sort: 'name' %}
+                                    {% for skill in skills %}
+                                       <div class="col-sm-offset-3 col-sm-6">
+                                          <div class="skill clearfix">
+                                             <span class="name">
+                                                {{ skill.display_name }}
+                                             </span>
+
+                                             <div class="stars">
+                                                {% for i in (1..skill.stars) %}
+                                                <i class="fa fa-star"></i>
+                                                {% endfor %}
+                                             </div>
+                                          </div>
+                                       </div>
+                                    {% endfor %}
+                                 {% endfor %}
+                           </div>                                                     
+                        </div>
+                    </div>
+                </div>
+            </div>
          
             <div class="download-buttons">
                <a class="btn btn-default" href="/resume">Web version resume</a>
