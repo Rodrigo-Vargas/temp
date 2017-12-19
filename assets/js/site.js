@@ -80,3 +80,13 @@ var nav = new OnePageNav({
    menuElementId: "nav-items",
    additionalOffset: 50
 });
+
+var experienceTimeline = new Timeline({
+   selector: ".experience .card",
+   parent: ".experience .jobs"
+});
+
+var educationTimeline = new Timeline({
+   selector: ".education .card",
+   parent: ".education .jobs"
+});
