@@ -1,4 +1,5 @@
 ---
+  cover_url: "/assets/img/projects/tradicao-veiculos.png"
   name: Tradição Veículos
   job_title: Freelance
   period: 2016, Agosto - 2016, Outubro

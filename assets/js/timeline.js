@@ -59,5 +59,8 @@ Timeline = function (options) {
    }
 
    this.init(options);
-   window.addEventListener('resize', this.processItems)
+   var timelineContext = this;
+   window.addEventListener('resize', function(){
+         timelineContext.processItems();
+   })
 }

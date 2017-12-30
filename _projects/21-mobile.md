@@ -1,4 +1,5 @@
 ---
+  cover_url: "/assets/img/projects/21mobile.jpeg"
   name: 21 Mobile
   start_date: 2016/03/01
   end_date: 2016/08/01
