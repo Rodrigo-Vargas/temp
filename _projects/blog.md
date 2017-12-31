@@ -1,8 +1,9 @@
 ---
+  date: 2015-01-01
   cover_url: "/assets/img/projects/blog.png"
-  name: Blog
-  period: 2015 - Atual
-  job_title: Criação blog pessoal
+  name: Personal Site
+  period: 2015 - Current
+  job_title: Personal site
   slug: blog
   year: 2015
 ---

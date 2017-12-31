@@ -560,7 +560,7 @@ section.resume {
     
     &.odd {
       .card-inner {
-        margin-right: 5%;
+        margin-right: 0;
       }      
 
       .left.mark {
@@ -570,7 +570,7 @@ section.resume {
 
     &.couple {
       .card-inner {
-        margin-left: 5%;
+        margin-left: 0;
       }
 
       .right.mark {
@@ -736,7 +736,7 @@ section.portfolio {
   .project {
     display: block;
     height: 200px;
-    margin: 10px;
+    margin: 10px 0;
     overflow: hidden;
     text-decoration: none !important;
     width: 100%;

@@ -241,3 +241,19 @@ header {
       }
    }
 }
+
+section.resume {
+   .card {
+      &.odd {
+         .card-inner {
+            margin-right: 5%;
+         }
+      }
+
+      &.couple {
+         .card-inner {
+            margin-left: 5%;
+         }
+      }
+   }
+}

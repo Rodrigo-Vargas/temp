@@ -54,12 +54,22 @@
 
                <div class="info">
                   <label>Brazilian Portuguese</label>
-                  <span>XXXXX</span>
+                  <span>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                  </span>
                </div>
 
                <div class="info">
                   <label>English</label>
-                  <span>XXX</span>
+                  <span>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                  </span>
                </div>
             </div>
 
@@ -72,25 +82,20 @@
                   <h2>Technical skills</h2>
                </div>
 
-               <div class="info">
-                  <label>C#</label>
-                  <span>XXXXX</span>
-               </div>
-
-               <div class="info">
-                  <label>HTML/CSS</label>
-                  <span>XXXX</span>
-               </div>
-
-               <div class="info">
-                  <label>JavaScript</label>
-                  <span>XXXX</span>
-               </div>
-
-               <div class="info">
-                  <label>Angular.js</label>
-                  <span>XXXX</span>
-               </div>
+               {% assign grouped_skills = site.skills | sort: 'stars' | reverse | group_by: 'stars' %}
+               {% for grouped_skill in grouped_skills %}
+               {% assign skills = grouped_skill.items | sort: 'name' %}
+                  {% for skill in skills %}
+                     <div class="info">
+                        <label>{{ skill.display_name }}</label>
+                        <span>
+                           {% for i in (1..skill.stars) %}
+                              <i class="fa fa-star"></i>
+                           {% endfor %}
+                        </span>
+                     </div>
+                  {% endfor %}
+               {% endfor %}
             </div>
 
          </div>
@@ -150,23 +155,23 @@
             </div>
 
 
-            <div id="courses" class="section">
+            <div id="projects" class="section">
                <div class="title">
                   <span class="fa-stack fa-lg">
                      <i class="fa fa-circle fa-stack-2x"></i>
                      <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h2>Courses</h2>
+                  <h2>Projects</h2>
                </div>
-
-               <div class="item">
-                  <div class="date">
-                     <span>2008 - 2012</span>
+               {% assign projects = site.projects | sort: 'date' | reverse %}
+               {% for project in projects %}
+                  <div class="item">
+                     <div class="date">
+                        <span>{{ project.period }}</span>
+                     </div>
+                     <div class="description">{{ project.name }}</div>
                   </div>
-                  <div class="description">
-                     Computer Engineering / Universiade de Santa Cruz do Sul
-                  </div>
-               </div>
+               {% endfor %}
             </div>
          </div>
 

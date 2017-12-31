@@ -179,7 +179,7 @@
             <div class="content">
                <div class="row">
                   {% for project in site.projects %}
-                  <div class="col-sm-4">
+                  <div class="col-xs-6 col-sm-4">
                      {% if project.cover_url %} {% assign cover_url = project.cover_url %} {% else %} {% assign cover_url = "/assets/img/no_cover.jpg"
                      %} {% endif %}
             
@@ -215,7 +215,7 @@
                   </div>
 
                   <div class="form-group">
-                     <label for="name">Email</label>
+                     <label for="name">Message</label>
                      <textarea type="text" class="form-control" name="body"></textarea>
                   </div>
 
@@ -228,3 +228,20 @@
       </div>
    </section>
 </div>
+
+<div class="modal fade">
+   <div class="modal-dialog">
+      <div class="modal-content"></div>
+   </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/one-page-nav.js"></script>
+<script type="text/javascript" src="/assets/js/modal.js"></script>
+<script type="text/javascript" src="/assets/js/timeline.js"></script>
+<script type="text/javascript" src="/assets/js/site.js"></script>
+
+<footer>
+   <span>Build with Jekyll and
+      <i class="fa fa-music"></i>
+   </span>
+</footer>

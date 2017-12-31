@@ -15,10 +15,12 @@
       margin: 10px 0;
    }
 
-   .section > .title {
-      border-bottom: 1px solid #ccc;
-      color: #444;
-      margin: 15px 0;
+   .section {
+      >.title {
+         border-bottom: 1px solid #ccc;
+         color: #444;
+         margin: 15px 0;
+      }
    }
 
    .section > .title > * {
