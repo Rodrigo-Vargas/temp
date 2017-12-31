@@ -68,7 +68,64 @@ hideCards = function(){
    }
 }
 
+registerNavToogleButtonAction = function(){
+   var button = document.querySelector(".nav-toogle-btn a");
+
+   button.onclick = function(){
+      var body = document.querySelector("body");
+      
+      toogleClass(body, "opened-nav");
+
+      return false;
+   }
+}
+
+registerContactFormSubmit = function(){
+   console.log('registerContactFormSubmit');
+   var form = document.querySelector(".contact form");
+   form.addEventListener("submit", sendInfo, false);
+}
+
+function reqListener() {
+   console.log(this.response);
+}
+
+sendInfo = function(e){
+   e.preventDefault();
+
+   alert('Form send with success!');
+   // get new XHR object
+   var newXHR = new XMLHttpRequest();
+
+   // bind our event listener to the "load" event.
+   // "load" is fired when the response to our request is completed and without error.
+   newXHR.addEventListener('load', reqListener);
+
+   newXHR.open('POST', 'https://rodrigovargas-me-api.herokuapp.com/messages');
+   
+   newXHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+   var formFields = document.querySelectorAll(".contact form .form-control");
+
+   var formData = '';
+
+   for(var x = 0; x < formFields.length; x++)
+   {
+      if (x !== 0)
+         formData += "&";
+
+      formData += formFields[x].name + "=" + formFields[x].value;
+   }      
+
+   newXHR.send(formData);
+}
+
+
 registerCardClicks();
+
+registerNavToogleButtonAction();
+
+registerContactFormSubmit();
 
 var modal = new Modal({
    onShow: registerModalJobTabs,

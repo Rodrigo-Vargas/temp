@@ -367,10 +367,43 @@ header {
       display: inline-block;
     }
   }
+
+  .nav-toogle-btn a {
+      border: 1px solid $primary-text-color;
+      color: $primary-text-color;
+      font-size: 20px;
+      height: 40px;
+      padding: 6px;
+      position: absolute;
+      right: 25px;
+      top: 5px;
+      vertical-align: middle;
+      text-align: center;
+      transition: all 0.5s;
+      width: 40px;
+      z-index: 1;
+  }
 }
 
 header .top-nav {
-  float: right;
+   bottom: 0;
+   background-color: $primary-text-color;
+   position: fixed;
+   right: -50%;
+   transition: right 0.5s;
+   top: 0;
+   width: 50%;
+}
+
+.opened-nav {
+   .top-nav {
+      right: 0;
+   }
+
+   .nav-toogle-btn a {
+      border-color: #fff;
+      color: #fff;      
+   }
 }
 
 .top-nav ul {
@@ -378,15 +411,16 @@ header .top-nav {
    font-weight: bold;
    list-style: none;
    margin: 16px;
-   text-align: right;
+   padding: 0;   
+   text-align: left;
 }
 
 .top-nav li {
-  display: inline-block;
+  display: block;
 }
 
 .top-nav a {
-  color: $primary-text-color;
+  color: #fff;
 }
 
 /* ------------- End Header ------------- */

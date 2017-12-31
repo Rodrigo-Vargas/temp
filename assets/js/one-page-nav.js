@@ -106,7 +106,7 @@ OnePageNav = function(options) {
 
          window.scroll(0, targetY);
 
-         if (window.pageYOffset === destinationOffsetToScroll) {
+         if (Math.round(window.pageYOffset) === destinationOffsetToScroll) {
             if (callback) {
                callback();
             }

@@ -1,6 +1,10 @@
 ---
 ---
 
+/* Variables */
+$primary-text-color: #06A763;
+
+
 .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
    float: left
 }
@@ -211,5 +215,29 @@
 section.resume {
    .card {
       position: absolute;
+   }
+}
+
+header {
+   .top-nav {
+      background-color: #fff;
+      float: right;
+      position: static;
+      width: 100%;
+      
+      a {
+         color: $primary-text-color;
+      }
+
+      ul {
+         padding: 15px;
+         margin: 0;
+         text-align: right;
+      }
+
+      li {
+         display: inline-block;
+         padding: 0 5px;
+      }
    }
 }
