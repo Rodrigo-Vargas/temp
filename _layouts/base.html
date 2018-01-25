@@ -15,7 +15,19 @@
 </head>
 
 <body>
+   <!-- Jekyll Env: {{ jekyll.environment }} -->
    {{ content }}
+   {% if jekyll.environment != "development" %}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57180863-4"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+
+         gtag('config', 'UA-57180863-4');
+      </script>
+   {% endif %}
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </body>
