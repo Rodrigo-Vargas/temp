@@ -7,6 +7,7 @@
 
 /* Variables */
 $primary-text-color: #06A763;
+$primary-text-color-hover: #06bd71;
 
 /* Background colors */
 $first-bg-color: #f3efe0;
@@ -777,14 +778,44 @@ section.portfolio {
   }
 }
 
+/* Boxes */
+.box-with-shadow {
+   background-color: #fff;
+   padding: 20px;
+}
+
+
+/* Forms */
+.form-control {
+   box-shadow: none;
+   border-left: none;
+   border-radius: 0;
+   border-right: none;
+   border-top: none;
+}
+
+.form-control:focus {
+   border-color: $primary-text-color;
+   outline: 0;
+}
+
+.btn-primary {
+   background-color: $primary-text-color;
+   color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+   color: #fff;
+}
+
 footer {
   background-color: $primary-text-color;
   padding: 30px 10px;
 }
 
 footer span {
-  color: #fff;
-  display: block;
-  font-size: 16px;
-  text-align: center
+   color: #fff;
+   display: block;
+   font-size: 16px;
+   text-align: center
 }

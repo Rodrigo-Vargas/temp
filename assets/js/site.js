@@ -81,12 +81,16 @@ registerNavToogleButtonAction = function(){
 }
 
 registerContactFormSubmit = function(){
-   console.log('registerContactFormSubmit');
    var form = document.querySelector(".contact form");
    form.addEventListener("submit", sendInfo, false);
 }
 
 function reqListener() {
+   var fields = document.querySelectorAll(".contact form .form-control");
+   fiedls.forEach(function(field){
+      field.value = "";
+   });
+
    console.log(this.response);
 }
 
