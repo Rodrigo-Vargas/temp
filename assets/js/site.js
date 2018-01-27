@@ -87,7 +87,7 @@ registerContactFormSubmit = function(){
 
 function reqListener() {
    var fields = document.querySelectorAll(".contact form .form-control");
-   fiedls.forEach(function(field){
+   fields.forEach(function(field){
       field.value = "";
    });
 
@@ -95,6 +95,9 @@ function reqListener() {
 }
 
 sendInfo = function(e){
+   //var baseUrl = "https://rodrigovargas-me-api.herokuapp.com";
+   var baseUrl = "http://localhost:3000";
+
    e.preventDefault();
 
    alert('Form send with success!');
@@ -105,7 +108,7 @@ sendInfo = function(e){
    // "load" is fired when the response to our request is completed and without error.
    newXHR.addEventListener('load', reqListener);
 
-   newXHR.open('POST', 'https://rodrigovargas-me-api.herokuapp.com/messages');
+   newXHR.open('POST', baseUrl + '/messages');
    
    newXHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
@@ -151,3 +154,5 @@ var educationTimeline = new Timeline({
    selector: ".education .card",
    parent: ".education .jobs"
 });
+
+Inputmask().mask(document.querySelectorAll("input"));
