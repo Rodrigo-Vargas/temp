@@ -1,0 +1,75 @@
+h1,
+h2,
+h3 {
+   color: $primary;
+   font-family: 'Lato', sans-serif;
+   letter-spacing: -1px;
+   margin: 0;
+   text-align: left;
+}
+
+h4,
+h5 {
+   color: $primary;
+   font-family: 'Lato', sans-serif;
+   letter-spacing: -1px;
+   margin: 0;
+   text-align: left;
+}
+
+h1 {
+   font-size: 48px;
+}
+
+h2 {
+   font-size: 32px;
+}
+
+h3 {
+   font-size: 20px;
+}
+
+.section-title {
+   font-family: 'Lato', sans-serif;
+   font-weight: 400;
+   margin: 30px 0 0;
+   padding: 0 20px;
+   text-align: center;
+}
+
+.section-excerpt {
+   color: #888;
+   display: block;
+   font-size: 20px;
+   font-weight: 300;
+   margin-bottom: 10px;
+   text-align: center;
+}
+
+.section-subtitle {
+   font-weight: 400;
+   margin-bottom: 10px;
+}
+
+.article-title {
+   text-align: center;
+}
+
+label {
+   font-weight: bold;
+   margin: 0;
+}
+
+p,
+span,
+label,
+li {
+   font-size: 14px;
+}
+
+/* Article Type */
+.article-body {
+   h2 {
+      padding: 25px 0;
+   }
+}

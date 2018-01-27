@@ -9,9 +9,11 @@
             <h2>{{ course.name }}</h2>
             <div class="row">
                <div class="col-sm-4">
-                  <div class="logo">
-                     <img class="img-responsive" src="{{ course.logo_url }}" alt="{{ course.name }}">
-                  </div>
+                  {% if course.logo_url %}
+                     <div class="logo">
+                        <img class="img-responsive" src="{{ course.logo_url }}" alt="{{ course.name }}">
+                     </div>
+                  {% endif %}
                </div>
 
                <div class="col-sm-8">

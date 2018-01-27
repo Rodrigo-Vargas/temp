@@ -9,9 +9,11 @@
             <h2>{{ job.name }}</h2>
             <div class="row">
                <div class="col-sm-4">
-                  <div class="logo">
-                     <img class="img-responsive" src="{{ job.logo_url }}" alt="{{ job.name }}">
-                  </div>
+                  {% if job.logo_url != "" %}
+                     <div class="logo">
+                        <img class="img-fluid" src="{{ job.logo_url }}" alt="{{ job.name }}">
+                     </div>
+                  {% endif %}
                </div>
       
                <div class="col-sm-8">

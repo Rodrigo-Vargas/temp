@@ -17,12 +17,14 @@ Modal = function(options){
       modalBackdrop.className = "modal-backdrop fade";
       document.body.appendChild(modalBackdrop);
 
+      modal.style = "display: block;";
+
       toogleClass(modal, "show");
       setTimeout(() => {
-         toogleClass(modal, "in");
+         //toogleClass(modal, "show");
          toogleClass(body, "modal-open");
          body.style = "padding-right: 17px";
-         toogleClass(modalBackdrop, "in");
+         toogleClass(modalBackdrop, "show");
          this.processing = false;
       }, 1);
 
@@ -53,13 +55,13 @@ Modal = function(options){
          if(this.onHide)
             this.onHide();
 
-         toogleClass(modal, "in");
-         toogleClass(modalBackdrop, "in");
+         toogleClass(modalBackdrop, "show");
+         toogleClass(modal, "show");
 
          setTimeout(() => {
             body.style = "";
             toogleClass(body, "modal-open");
-            toogleClass(modal, "show");
+            modal.style = "";
             modalBackdrop.remove();
             modalContent.innerHTML = "";
             context.processing = false;

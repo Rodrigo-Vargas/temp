@@ -69,7 +69,7 @@ hideCards = function(){
 }
 
 registerNavToogleButtonAction = function(){
-   var button = document.querySelector(".nav-toogle-btn a");
+   var button = document.querySelector(".btn.nav-toggle");
 
    button.onclick = function(){
       var body = document.querySelector("body");

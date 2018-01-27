@@ -36,10 +36,13 @@ sass:
   style: compressed
 
 collections:
-- career
-- education
-- projects
-- skills
+  articles:
+    output: true
+    permalink: /blog/:path
+  career:
+  education:
+  projects:
+  skills:
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,5 +1,6 @@
 OnePageNav = function(options) {
    this.options = options;
+   this.options.debug = true;
 
    /* ------- Functions --------- */
    
@@ -97,21 +98,55 @@ OnePageNav = function(options) {
          return;
       }
 
+      console.log(window.pageYOffset, destinationOffset);
+
+      const toUp = (window.pageYOffset > destinationOffset);
+
       function scroll() {
+         var debug = true;
          const now = 'now' in window.performance ? performance.now() : new Date().getTime();
          const time = Math.min(1, ((now - startTime) / duration));
          const timeFunction = easings[easing](time);
 
          var targetY = Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start);
 
+         if (toUp)
+            targetY = Math.trunc(targetY);
+         else
+            targetY = Math.trunc(targetY) + 1;
+
+         if (targetY > documentHeight)
+            targetY = documentHeight;
+
+         if (debug) {
+            console.log('time:' + time);
+            console.log('targetY:' + targetY);
+            console.log('window.pageYOffset:' + window.pageYOffset);
+            console.log('destinationOffsetToScroll:' + destinationOffsetToScroll);
+            console.log('destinationOffset:' + destinationOffset);
+            console.log('toUp:' + toUp);
+         }
+
          window.scroll(0, targetY);
 
-         if (Math.round(window.pageYOffset) === destinationOffsetToScroll) {
-            if (callback) {
-               callback();
+         if (toUp)
+         {
+            if (window.pageYOffset <= destinationOffsetToScroll) {
+               if (callback) {
+                  callback();
+               }
+               return;
             }
-            return;
-         }
+         }            
+         else
+         {
+            if (window.pageYOffset >= destinationOffsetToScroll) {
+               if (callback) {
+                  callback();
+               }
+               return;
+            }
+         }            
 
          requestAnimationFrame(scroll);
       }
