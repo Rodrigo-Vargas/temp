@@ -90,13 +90,11 @@ function reqListener() {
    fields.forEach(function(field){
       field.value = "";
    });
-
-   console.log(this.response);
 }
 
 sendInfo = function(e){
-   //var baseUrl = "https://rodrigovargas-me-api.herokuapp.com";
-   var baseUrl = "http://localhost:3000";
+   var baseUrl = "https://rodrigovargas-me-api.herokuapp.com";
+   //var baseUrl = "http://localhost:3000";
 
    e.preventDefault();
 
