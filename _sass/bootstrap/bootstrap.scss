@@ -8,13 +8,37 @@
 @import "functions";
 @import "variables";
 @import "mixins";
-@import "reboot";
-//@import "code";
+@import "root";
+@import "reboot"; // 4KB
+//@import "type";
 @import "images";
-@import "grid";
+//@import "code";
+@import "grid"; // 5KB
+//@import "tables";
+//@import "forms";
+@import "buttons";
 @import "transitions";
-//@import "close";
-@import "modal";
-//@import "utilities";
-@import "utilities/display";
-@import "utilities/flex";
+//@import "dropdown";
+//@import "button-group";
+//@import "input-group";
+//@import "custom-forms";
+//@import "nav";
+//@import "navbar";
+//@import "card";
+//@import "breadcrumb";
+//@import "pagination";
+//@import "badge";
+//@import "jumbotron";
+//@import "alert";
+//@import "progress";
+//@import "media";
+//@import "list-group";
+//@import "close"; //0,4 KB
+@import "modal"; // 1.7KBKB
+//@import "tooltip";
+//@import "popover";
+//@import "carousel";
+@import "utilities";
+@import "utilities/display"; //3KB
+@import "utilities/flex"; // 2KB
+//@import "print";

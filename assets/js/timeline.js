@@ -1,14 +1,22 @@
 Timeline = function (options) {
    this.init = function(options){
-      this.selector = options.selector;
-      this.parent = options.parent;
+      const selector = ".timeline";
+      const timelineAttribute = "data-timeline";
+      var context = this;
 
-      this.processItems();
+      var timelines = document.querySelectorAll(selector);
+
+      for(var x = 0; x < timelines.length; x++)
+      {
+         if (timelines[x].getAttribute(timelineAttribute) === "true")
+         {
+            context.processItems(timelines[x]);
+         }
+      }
    }
 
-   this.processItems = function(){
-      console.log('processItems');
-      var items = document.querySelectorAll(this.selector);
+   this.processItems = function(timeline){
+      var items = timeline.querySelectorAll(".timeline-item");
 
       var margin = 30;
       var firstColumnHeight = 0;
@@ -53,14 +61,16 @@ Timeline = function (options) {
       }
 
       if (viewportWidth < 750)
-         document.querySelector(this.parent).style = "height: auto;";
+         timeline.style = "height: auto;";
       else
-         document.querySelector(this.parent).style = "height: " + secondColumnHeight + "px;";
+         timeline.style = "height: " + secondColumnHeight + "px;";
    }
 
    this.init(options);
    var timelineContext = this;
    window.addEventListener('resize', function(){
-         timelineContext.processItems();
+      timelineContext.init();
    })
 }
+
+var timeline = new Timeline();

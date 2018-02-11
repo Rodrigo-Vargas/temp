@@ -71,21 +71,22 @@
             <div class="content">
                <div class="career experience">
                   <h2 class="section-subtitle">Experience</h2>
-                  <div class="jobs">
+                  <div class="jobs timeline" data-timeline="true">
                      {% for job in site.career %} 
                         {% include home/experience-item.html job=job %} 
                      {% endfor %}
-                        <div class="baseline"></div>
+                     <div class="baseline"></div>
                   </div>                  
                </div>
 
                <div class="career education">
                   <h2 class="section-subtitle">Education</h2>
-                  <div class="jobs">
-                     {% assign courses = site.education | sort: 'year' | reverse %} {% for course in courses %} {% include home/education-item.html
-                     course=course %} 
+                  <div class="jobs timeline" data-timeline="true">
+                     {% assign courses = site.education | sort: 'year' | reverse %} 
+                     {% for course in courses %} 
+                        {% include home/education-item.html course=course %} 
                      {% endfor %}
-                        <div class="baseline"></div>
+                     <div class="baseline"></div>
                   </div>
                </div>
 

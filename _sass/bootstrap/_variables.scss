@@ -107,6 +107,17 @@ $enable-hover-media-query:  false !default; // Deprecated, no longer affects any
 $enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
 
+// Custom options. Added by Rodrigo Vargas
+$enable-complete-reboot:      true !default;
+$enable-flex-justify-content: true !default;
+$enable-flex-align-items:   true !default;
+$enable-flex-align-content: true !default;
+$enable-flex-align-self:    true !default;
+
+$enable-grid-order: true !default;
+$enable-grid-offset: true !default;
+
+
 
 // Spacing
 //
