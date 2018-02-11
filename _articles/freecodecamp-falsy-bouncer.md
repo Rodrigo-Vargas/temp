@@ -3,6 +3,8 @@
    title: FreeCodeCamp Falsy Bouncer Algorhytm
 ---
 
+## Introduction
+
 Hi guys, in that article I will explain one way to do that algorhytm. But first, it is how it looks like in the end.
 
 ```js
@@ -21,6 +23,8 @@ Hi guys, in that article I will explain one way to do that algorhytm. But first,
 
    bouncer([7, "ate", "", false, 9]);
 ```
+
+## Explanation
 
 The function "filter" from JavaScript, make things simple in that case. This function will iterate the array "arr" and executing the anonymous function that i pass as argument to it. This function that i'm talking about would be:
 
