@@ -7,10 +7,16 @@ layout: null
       <url>
          <loc>{{ page.url | prepend: site.baseurl | prepend: site.url }}</loc>
       </url>
-    {% endfor %}
-    {% for post in site.posts %}
+   {% endfor %}
+   {% for post in site.posts %}
       <url>
          <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
       </url>
-  {% endfor %}
+   {% endfor %}
+
+   {% for article in site.articles %}
+      <url>
+         <loc>{{ article.url | prepend: site.baseurl | prepend: site.url }}</loc>
+      </url>
+   {% endfor %}
 </urlset>

@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
-@import '_variables';
-@import 'buttons';
+@import 'framework/_variables';
+@import 'framework/buttons';
 @import 'resume';
-@import 'code';
-@import 'forms';
-@import 'type';
+@import 'framework/code';
+@import 'framework/forms';
+@import 'framework/type';
 @import 'utils';
-@import 'tabs';
+@import 'framework/tabs';
 @import 'components/_card';
 @import 'components/header';
 

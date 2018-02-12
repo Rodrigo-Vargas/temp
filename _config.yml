@@ -32,8 +32,12 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
-sass:
-  style: compressed
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
 
 collections:
   articles:

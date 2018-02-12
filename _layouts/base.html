@@ -9,11 +9,11 @@
    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico" />
 
    {% capture styles %} 
-      {% include main.scss %} 
+      {% include inline-main.css %} 
    {% endcapture %}
 
    <style>
-      {{ styles | scssify }}
+      {{ styles }}
    </style>
 
    <link rel="stylesheet" href="/assets/css/bootstrap.css">

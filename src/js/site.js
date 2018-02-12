@@ -1,6 +1,6 @@
 registerCardClicks = function () {
    var cards = document.querySelectorAll("#resume .card");
-   
+
    for (var x = 0; x < cards.length; x++) {
       cards[x].onclick = function () {
          modal.content = this.querySelector(".additional-info").innerHTML;
@@ -9,19 +9,19 @@ registerCardClicks = function () {
    }
 }
 
-toogleClass = function(element, className){
+toogleClass = function (element, className) {
    if (element.classList.contains(className))
       element.classList.remove(className);
    else
       element.classList.add(className);
 }
 
-removeClass = function(element, className){
+removeClass = function (element, className) {
    if (element.classList.contains(className))
       element.classList.remove(className);
 }
 
-hideTabs = function(){
+hideTabs = function () {
    var tabPanels = document.querySelectorAll(".modal .tab-panel");
 
    var tabButtons = document.querySelectorAll(".modal .tab-controls li");
@@ -35,7 +35,7 @@ hideTabs = function(){
    }
 }
 
-tabClick = function(tabButtonElement){
+tabClick = function (tabButtonElement) {
    hideTabs();
 
    toogleClass(tabButtonElement.parentNode, "active");
@@ -45,12 +45,11 @@ tabClick = function(tabButtonElement){
    toogleClass(panelTab, "show");
 }
 
-registerModalJobTabs = function(){
+registerModalJobTabs = function () {
    var tabButtons = document.querySelectorAll(".modal .tab-btn");
 
-   for(var x = 0; x < tabButtons.length; x++)
-   {
-      tabButtons[x].onclick = function(){
+   for (var x = 0; x < tabButtons.length; x++) {
+      tabButtons[x].onclick = function () {
          tabClick(this);
          return false;
       }
@@ -60,7 +59,7 @@ registerModalJobTabs = function(){
    }
 }
 
-hideCards = function(){
+hideCards = function () {
    var openedCards = document.querySelectorAll(".additional-info.show");
 
    for (var x = 0; x < openedCards.length; x++) {
@@ -68,31 +67,31 @@ hideCards = function(){
    }
 }
 
-registerNavToogleButtonAction = function(){
+registerNavToogleButtonAction = function () {
    var button = document.querySelector(".btn.nav-toggle");
 
-   button.onclick = function(){
+   button.onclick = function () {
       var body = document.querySelector("body");
-      
+
       toogleClass(body, "opened-nav");
 
       return false;
    }
 }
 
-registerContactFormSubmit = function(){
+registerContactFormSubmit = function () {
    var form = document.querySelector(".contact form");
    form.addEventListener("submit", sendInfo, false);
 }
 
 function reqListener() {
    var fields = document.querySelectorAll(".contact form .form-control");
-   fields.forEach(function(field){
+   fields.forEach(function (field) {
       field.value = "";
    });
 }
 
-sendInfo = function(e){
+sendInfo = function (e) {
    var baseUrl = "https://rodrigovargas-me-api.herokuapp.com";
    //var baseUrl = "http://localhost:3000";
 
@@ -107,20 +106,19 @@ sendInfo = function(e){
    newXHR.addEventListener('load', reqListener);
 
    newXHR.open('POST', baseUrl + '/messages');
-   
+
    newXHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
    var formFields = document.querySelectorAll(".contact form .form-control");
 
    var formData = '';
 
-   for(var x = 0; x < formFields.length; x++)
-   {
+   for (var x = 0; x < formFields.length; x++) {
       if (x !== 0)
          formData += "&";
 
       formData += formFields[x].name + "=" + formFields[x].value;
-   }      
+   }
 
    newXHR.send(formData);
 }

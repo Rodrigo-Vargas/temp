@@ -1,10 +1,10 @@
-Modal = function(options){
+function Modal(options) {
    this.content = options.content;
    this.onShow = options.onShow;
    this.onHide = options.onHide;
    this.processing = false;
 
-   this.show = function(){
+   this.show = function () {
       if (this.processing)
          return;
 
@@ -21,7 +21,6 @@ Modal = function(options){
 
       toogleClass(modal, "show");
       setTimeout(() => {
-         //toogleClass(modal, "show");
          toogleClass(body, "modal-open");
          body.style = "padding-right: 17px";
          toogleClass(modalBackdrop, "show");
@@ -35,7 +34,7 @@ Modal = function(options){
    }
 
    this.hide = function () {
-      
+
    }
 
    this.registerDismiss = function () {
@@ -52,7 +51,7 @@ Modal = function(options){
          var modal = document.querySelector(".modal");
          var modalBackdrop = document.querySelector(".modal-backdrop");
 
-         if(this.onHide)
+         if (this.onHide)
             this.onHide();
 
          toogleClass(modalBackdrop, "show");
@@ -69,10 +68,9 @@ Modal = function(options){
       }
 
       var modalInnerElements = document.querySelectorAll(".modal *");
-      for(var x = 0; x < modalInnerElements.length; x++)
-      {
+      for (var x = 0; x < modalInnerElements.length; x++) {
          modalInnerElements[x].onclick = function (ev) {
-            ev.stopPropagation();            
+            ev.stopPropagation();
          }
       }
    }

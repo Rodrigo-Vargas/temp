@@ -1,8 +1,6 @@
-OnePageNav = function(options) {
+function OnePageNav(options) {
    this.options = options;
    this.options.debug = true;
-
-   /* ------- Functions --------- */
    
    this.getPosition = function(element){
       var rect = element.getBoundingClientRect();
@@ -35,60 +33,66 @@ OnePageNav = function(options) {
       }
    }
 
-   this.scrollIt = function(destination, duration = 200, easing = 'linear', callback) {
+   this.scrollIt = function(destination, duration, easing, callback) {
       if (destination < 0)
          destination = 0;
 
-      const easings = {
-         linear(t) {
+      if (!easing)
+         easing = 'linear';
+
+      if(!duration)
+         duration = 200;
+
+      var easings = {
+         linear: function(t) {
             return t;
          },
-         easeInQuad(t) {
+         easeInQuad: function(t) {
             return t * t;
          },
-         easeOutQuad(t) {
+         easeOutQuad: function(t) {
             return t * (2 - t);
          },
-         easeInOutQuad(t) {
+         easeInOutQuad: function(t) {
             return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
          },
-         easeInCubic(t) {
+         easeInCubic: function(t) {
             return t * t * t;
          },
-         easeOutCubic(t) {
+         easeOutCubic: function(t) {
             return (--t) * t * t + 1;
          },
-         easeInOutCubic(t) {
+         easeInOutCubic: function(t) {
             return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
          },
-         easeInQuart(t) {
+         easeInQuart: function(t) {
             return t * t * t * t;
          },
-         easeOutQuart(t) {
+         easeOutQuart: function(t) {
             return 1 - (--t) * t * t * t;
          },
-         easeInOutQuart(t) {
+         easeInOutQuart: function(t) {
             return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
          },
-         easeInQuint(t) {
+         easeInQuint: function(t) {
             return t * t * t * t * t;
          },
-         easeOutQuint(t) {
+         easeOutQuint: function(t) {
             return 1 + (--t) * t * t * t * t;
          },
-         easeInOutQuint(t) {
+         easeInOutQuint: function(t) {
             return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
          }
       };
 
-      const start = window.pageYOffset;
-      const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+      var start = window.pageYOffset;
+      var startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
 
-      const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-      const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
+      var documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+      var destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
       
-      const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+      var destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
       
       if ('requestAnimationFrame' in window === false) {
          window.scroll(0, destinationOffsetToScroll);
@@ -100,13 +104,13 @@ OnePageNav = function(options) {
 
       console.log(window.pageYOffset, destinationOffset);
 
-      const toUp = (window.pageYOffset > destinationOffset);
+      var toUp = (window.pageYOffset > destinationOffset);
 
       function scroll() {
          var debug = true;
-         const now = 'now' in window.performance ? performance.now() : new Date().getTime();
-         const time = Math.min(1, ((now - startTime) / duration));
-         const timeFunction = easings[easing](time);
+         var now = 'now' in window.performance ? performance.now() : new Date().getTime();
+         var time = Math.min(1, ((now - startTime) / duration));
+         var timeFunction = easings[easing](time);
 
          var targetY = Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start);
 

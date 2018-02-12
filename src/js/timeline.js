@@ -1,7 +1,7 @@
 Timeline = function (options) {
    this.init = function(options){
-      const selector = ".timeline";
-      const timelineAttribute = "data-timeline";
+      var selector = ".timeline";
+      var timelineAttribute = "data-timeline";
       var context = this;
 
       var timelines = document.querySelectorAll(selector);
