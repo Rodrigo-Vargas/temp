@@ -1,60 +1,8 @@
 ---
    layout: base
 ---
-<header>
-   <div class="container">
-      <div class="row no-gutters">
-         <div class="col-4 col-sm-6">
-            <div class="d-none d-sm-block logo-wrap">
-               <a href="/">
-                  <div class="mark">&lt;/&gt;</div>
-                  <div class="name">Rodrigo Vargas</div>
-               </a>
-            </div>
-      
-            <div class="d-block d-sm-none logo-wrap">
-               <a href="/">
-                  <div class="mark">&lt;/&gt;</div>
-                  <div class="name">RV</div>
-               </a>
-            </div>
-         </div>
-      
-         <div class="col-8 col-sm-6">
-            <div class="d-block d-md-none nav-btn-wrap">
-               <a href="" class="btn nav-toggle">
-                  <!--<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px"
-                     xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                     <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
-                     />
-                  </svg>-->
-                  <i class="fa fa-bars"></i>
-               </a>
-            </div>
-      
-            <div class="top-nav">
-               <ul id="nav-items">
-                  <li class="active">
-                     <a href="/" data-div="home">Profile</a>
-                  </li>
-                  <li>
-                     <a href="/" data-div="resume">Resume</a>
-                  </li>
-                  <li>
-                     <a href="/" data-div="portfolio">Portfólio</a>
-                  </li>
-                  <li>
-                     <a href="/" data-div="contact">Contact</a>
-                  </li>
-                  <li>
-                     <a href="/blog">Blog</a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </div>
-   </div>
-</header>
+
+{% include header.html %} 
 
 {{ content }}
 
