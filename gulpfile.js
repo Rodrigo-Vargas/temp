@@ -34,9 +34,9 @@ gulp.task('browser-sync', ['jekyll-build'], function () {
 
 gulp.task('js', function () {
    return gulp.src((env.p) ? 'src/js/**/*.js' : ['src/js/**/*.js', '!src/js/analytics.js'])
-      .pipe(plumber())
-      .pipe(concat('main.js'))
-      .pipe(uglify())
+      //.pipe(plumber())
+      //.pipe(concat('main.js'))
+      //.pipe(uglify())
       .pipe(gulp.dest('assets/js/'));
 });
 
