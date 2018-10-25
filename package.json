@@ -1,34 +1,35 @@
 {
-  "name": "rodrigo-vargas.github.io",
-  "version": "1.0.0",
-  "description": "A blog about web development",
-  "main": "gulpfile.js",
-  "dependencies": {},
-  "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "minimist": "^1.2.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rodrigo-Vargas/rodrigo-vargas.github.io.git"
-  },
-  "keywords": [
-    "blog",
-    "personal",
-    "site"
-  ],
-  "author": "Rodrigo Vargas",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rodrigo-Vargas/rodrigo-vargas.github.io/issues"
-  },
-  "homepage": "https://github.com/Rodrigo-Vargas/rodrigo-vargas.github.io#readme"
+   "name": "rodrigo-vargas.github.io",
+   "version": "1.0.0",
+   "description": "A blog about web development",
+   "main": "gulpfile.js",
+   "dependencies": {},
+   "devDependencies": {
+      "browser-sync": "^2.23.6",
+      "gulp": "^3.9.1",
+      "gulp-concat": "^2.6.1",
+      "gulp-plumber": "^1.2.0",
+      "gulp-sass": "^3.1.0",
+      "gulp-uglify": "^3.0.0",
+      "minimist": "^1.2.0"
+   },
+   "scripts": {
+      "start": "gulp",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Rodrigo-Vargas/rodrigo-vargas.github.io.git"
+   },
+   "keywords": [
+      "blog",
+      "personal",
+      "site"
+   ],
+   "author": "Rodrigo Vargas",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/Rodrigo-Vargas/rodrigo-vargas.github.io/issues"
+   },
+   "homepage": "https://github.com/Rodrigo-Vargas/rodrigo-vargas.github.io#readme"
 }
