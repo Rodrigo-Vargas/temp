@@ -6,5 +6,6 @@
    period: 2017, June - 2017, August
    slug: tche-multimarcas
    year: 2017
+   featured: true
 ---
   

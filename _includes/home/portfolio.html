@@ -1,0 +1,44 @@
+<section class="portfolio ">
+   <div class="inner">
+      <div class="container">
+         <h2 class="section-title font-weight-bold">Portfolio</h2>
+         <hr class="bg-primary" />
+         
+         <div class="content">
+            <div class="row">
+               {% assign featured_projects = site.projects | where:"featured", true %}
+               {% for project in featured_projects %}
+                  <div class="col-md-4">
+                     {% if project.cover_url %} 
+                        {% assign cover_url = project.cover_url %} 
+                     {% else %} 
+                        {% assign cover_url = "/assets/img/no_cover.jpg" %}
+                     {% endif %}
+            
+                     <a class="card">
+                        <div class="card-background position-relative" style="background-image: url({{ cover_url }})">
+                           <h4 class="fixed-bottom gradient m-0 text-white font-weight-bold">{{ project.name }}</h4>
+                        </div>                        
+
+                        <div class="bg-primary text-center pt-2">
+                           <hr class="m-0 d-block bg-white" />
+
+                           <ul class="list-inline text-left p-2">
+                              {% for category in project.categories %}
+                                 <li class="rounded list-inline-item border border-white text-white p-2">{{ category }}</li>
+                              {% endfor %}
+                           </ul>
+
+                           <span class="btn rounded border border-white p-2 m-2 text-white">
+                              See more
+                           </span>         
+                        </div>
+                           
+                     </a>
+                  </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

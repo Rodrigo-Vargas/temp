@@ -6,6 +6,8 @@
   job_title: Personal site
   slug: blog
   year: 2015
+  featured: true
+  categories: [Html, Jekyll]
 ---
 
 <p>Since 2015, I manage and build my own personal blog. I have tried a few plataforms to build it, with the objective of found the plataform that I feel more confortable to use. In the very beggining I used Wordpress, migrating to Jekyll, a static site generator few months later.</p>

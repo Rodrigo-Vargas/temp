@@ -56,13 +56,13 @@ gulp.task("sass", function () {
 });
 
 gulp.task("watch", function () {
-   gulp.watch("src/sass/**/*.scss", ["sass"]);
+   gulp.watch("src/sass/**/*.scss", ["sass", "jekyll-rebuild"]);
    gulp.watch("src/js/**/*.js", ["js", "jekyll-rebuild"]);
    gulp.watch(
                   [
                      "**/*.md",
                      "index.html", 
-                     "_includes/*.html", 
+                     "_includes/*/**.html", 
                      "_layouts/*.html", 
                      //"_posts/*",
                      "!_site/*/**}"

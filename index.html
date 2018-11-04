@@ -1,162 +1,42 @@
 --- 
    layout: default 
 ---
-<div id="content">
-   <section id="home" class="home">
-      <div class="inner">
-         <div class="container">
-            
-            <div class="title">
-               <h2 class="section-title">Profile</h2>
-               <span class="section-excerpt">A small introduction about myself</span>
-            </div>
 
-            <div class="row">
-               <div class="col-12 col-sm-4">
-                  <div class="about">
-                     <h3>About me</h3>
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+         {% include home/vcard.html %} 
+      </div>
 
-                     <p>Hi, my name is Rodrigo Vargas and i'm a Full Stack Developer. I work with many web technologies,
-                        in both backend and front end sides.</p>
-                     <p>Car enthusiast when i have free time.</p>
-                  </div>
-               </div>
+      <div class="col-md-6">
+         <section class="latest-blog pt-5">
+            <h2 class="font-weight-bold">Blog</h2>
+            <hr class="bg-primary" />
 
-               <div class="col-12 col-sm-4">
-                  <div class="avatar-wrap">
-                     <img class="img-responsive" src="/assets/img/avatar.jpg" alt="">
-                  </div>
-               </div>
+            {% for article in site.articles %}
+               <a href="{{ article.url }}" class="card rounded mb-3">
+                  <div class="card-body">
+                     <h3 class="font-weight-bold">{{ article.title }}</h3>
+                     <span class="lead font-weight-bold mb-3 d-block">18/01/2018</span>
 
-               <div class="col-12 col-sm-4">
-                  <h3>Rodrigo Vargas</h3>
-                  <h4>Full Stack Web Developer</h4>
+                     <p>{{ article.excerpt }}</p>
 
-                  <div class="personal-infos">
-                     <div class="info">
-                        <label>Age: </label>
-                        <span>27 years</span>
-                     </div>
-
-                     <div class="info">
-                        <label>Email: </label>
-                        <span>rodrigo@rodrigovargas.me</span>
+                     <div class="tags">
+                        <ul class="list-inline">
+                           {% for category in article.categories %}
+                              <li class="rounded list-inline-item border border-primary p-2">{{ category }}</li>
+                           {% endfor %}
+                        </ul>
                      </div>
                   </div>
-
-                  <div class="social-media">
-                     <a class="icon" href="mailto:rodrigo@rodrigovargas.me">
-                        <i class="fa fa-envelope"></i>
-                     </a>
-
-                     <a class="icon" href="https://github.com/Rodrigo-Vargas">
-                        <i class="fa fa-github"></i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            
-         </div>
-
+               </a>
+            {% endfor %}
+         </section>
       </div>
-   </section>
-
-   <section id="resume" class="resume">
-      <div class="inner">
-         <div class="container">
-            <div class="title">
-               <h2 class="section-title">Resumé</h2>               
-            </div>
-            
-            <div class="content">
-               <div class="career experience">
-                  <h2 class="section-subtitle">Experience</h2>
-                  <div class="jobs timeline" data-timeline="true">
-                     {% for job in site.career %} 
-                        {% include home/experience-item.html job=job %} 
-                     {% endfor %}
-                     <div class="baseline"></div>
-                  </div>                  
-               </div>
-
-               <div class="career education">
-                  <h2 class="section-subtitle">Education</h2>
-                  <div class="jobs timeline" data-timeline="true">
-                     {% assign courses = site.education | sort: 'year' | reverse %} 
-                     {% for course in courses %} 
-                        {% include home/education-item.html course=course %} 
-                     {% endfor %}
-                     <div class="baseline"></div>
-                  </div>
-               </div>
-
-            
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="skills">
-                        <h2 class="section-subtitle">Skills</h2>
-                        <div class="list">
-                           <div class="row">
-                              {% assign grouped_skills = site.skills | sort: 'stars' | reverse | group_by: 'stars' %} {% for grouped_skill in grouped_skills
-                              %} {% assign skills = grouped_skill.items | sort: 'name' %} {% for skill in skills %}
-                              <div class="col-sm-offset-3 col-sm-6">
-                                 <div class="skill row">
-                                    <span class="name col">
-                                       {{ skill.display_name }}
-                                    </span>
-            
-                                    <div class="stars col">
-                                       {% for i in (1..skill.stars) %}
-                                       <i class="fa fa-star"></i>
-                                       {% endfor %}
-                                    </div>
-                                 </div>
-                              </div>
-                              {% endfor %} {% endfor %}
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            
-               <div class="download-buttons">
-                  <a class="btn default" href="/resume">Web version resume</a>
-            
-                  <a class="btn default" href="/assets/resume.pdf">Download in pdf format</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <section id="portfolio" class="portfolio ">
-      <div class="inner">
-         <div class="container">
-            <div class="title">
-               <h2 class="section-title">Portfolio</h2>
-            </div>
-            
-            <div class="content">
-               <div class="row">
-                  {% for project in site.projects %}
-                  <div class="col-xs-6 col-sm-4">
-                     {% if project.cover_url %} {% assign cover_url = project.cover_url %} {% else %} {% assign cover_url = "/assets/img/no_cover.jpg"
-                     %} {% endif %}
-            
-                     <a href="#" onclick="javascript: return false;" class="project">
-                        <div class="img" style="background-image: url({{ cover_url }})"></div>
-                        <div class="backdrop">
-                           <h3 class="title">{{ project.name }}</h3>
-                        </div>
-                     </a>
-                  </div>
-                  {% endfor %}
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
+   </div>
 </div>
+
+{% include home/portfolio.html %}
 
 <div class="modal fade">
    <div class="modal-dialog">

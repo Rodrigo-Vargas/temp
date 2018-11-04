@@ -6,4 +6,5 @@
   period: 2017, March - 2017, May
   slug: kmw-veiculos
   year: 2017
+  featured: true
 ---

@@ -1,6 +1,7 @@
 ---
    layout: article
    title: FreeCodeCamp Falsy Bouncer Algorhytm
+   excerpt: My solution to that algorhytm
 ---
 
 ## Introduction
