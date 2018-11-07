@@ -16,7 +16,8 @@
                      {% endif %}
             
                      <a class="card">
-                        <div class="card-background position-relative" style="background-image: url({{ cover_url }})">
+                        <div class="card-background position-relative">
+                           <img data-src="{{ cover_url }}" class="lazy img-fluid" alt="">
                            <h4 class="fixed-bottom gradient m-0 text-white font-weight-bold">{{ project.name }}</h4>
                         </div>                        
 

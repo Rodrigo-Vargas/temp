@@ -9136,6 +9136,7 @@ footer span {
   height: 230px;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .gradient {
