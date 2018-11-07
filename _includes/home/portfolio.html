@@ -8,7 +8,7 @@
             <div class="row">
                {% assign featured_projects = site.projects | where:"featured", true %}
                {% for project in featured_projects %}
-                  <div class="col-md-4">
+                  <div class="col-lg-4 mb-2">
                      {% if project.cover_url %} 
                         {% assign cover_url = project.cover_url %} 
                      {% else %} 
@@ -23,15 +23,15 @@
                         <div class="bg-primary text-center pt-2">
                            <hr class="m-0 d-block bg-white" />
 
-                           <ul class="list-inline text-left p-2">
+                           <ul class="list-inline text-left p-2 m-0">
                               {% for category in project.categories %}
                                  <li class="rounded list-inline-item border border-white text-white p-2">{{ category }}</li>
                               {% endfor %}
                            </ul>
 
-                           <span class="btn rounded border border-white p-2 m-2 text-white">
+                           <!--<span class="btn rounded border border-white p-2 m-2 text-white">
                               See more
-                           </span>         
+                           </span>         -->
                         </div>
                            
                      </a>

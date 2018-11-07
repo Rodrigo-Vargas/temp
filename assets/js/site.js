@@ -126,7 +126,7 @@ sendInfo = function (e) {
 
 registerCardClicks();
 
-registerNavToogleButtonAction();
+//registerNavToogleButtonAction();
 
 registerContactFormSubmit();
 

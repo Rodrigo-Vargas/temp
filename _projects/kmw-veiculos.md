@@ -7,4 +7,5 @@
   slug: kmw-veiculos
   year: 2017
   featured: true
+  categories: [Html, PHP]
 ---

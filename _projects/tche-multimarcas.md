@@ -7,5 +7,6 @@
    slug: tche-multimarcas
    year: 2017
    featured: true
+   categories: [Html, Ruby on Rails]
 ---
   
