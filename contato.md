@@ -1,6 +1,6 @@
 --- 
    layout: default
-   permalink: /contato/
+   permalink: /contact/
 ---
 
 <div id="content">
@@ -17,7 +17,7 @@
             <div class="row">
                <div class="col-12">
                   <div class="box-with-shadow">
-                     <form action="">
+                     <form action="https://formspree.io/rodrigo@rodrigovargas.me" method="POST">
                         <div class="form-group">
                            <input required type="text" class="form-control" name="name" placeholder="Name">
                         </div>

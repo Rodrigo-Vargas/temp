@@ -79,11 +79,6 @@ registerNavToogleButtonAction = function () {
    }
 }
 
-registerContactFormSubmit = function () {
-   var form = document.querySelector(".contact form");
-   form.addEventListener("submit", sendInfo, false);
-}
-
 function reqListener() {
    var fields = document.querySelectorAll(".contact form .form-control");
    fields.forEach(function (field) {
@@ -153,22 +148,12 @@ document.addEventListener("DOMContentLoaded", function() {
    window.addEventListener("orientationChange", lazyload);
 });
 
-
 registerCardClicks();
-
-//registerNavToogleButtonAction();
-
-registerContactFormSubmit();
 
 var modal = new Modal({
    onShow: registerModalJobTabs,
    onHide: hideCards,
    content: ""
 })
-
-var nav = new OnePageNav({
-   menuElementId: "nav-items",
-   additionalOffset: 50
-});
 
 Inputmask().mask(document.querySelectorAll("input"));
