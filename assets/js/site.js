@@ -148,12 +148,4 @@ document.addEventListener("DOMContentLoaded", function() {
    window.addEventListener("orientationChange", lazyload);
 });
 
-registerCardClicks();
-
-var modal = new Modal({
-   onShow: registerModalJobTabs,
-   onHide: hideCards,
-   content: ""
-})
-
 Inputmask().mask(document.querySelectorAll("input"));
