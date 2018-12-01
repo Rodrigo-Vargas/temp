@@ -3,7 +3,7 @@
    title: Criando um site estático com Jekyll
    excerpt: Aprenda todas as funcionalidades do Jekyll criando um site do zero
    categories: [Jekyll]
-   published: true
+   published: false
 ---
 
 Oi pessoal, hoje vou criar um site portfólio com blog do zero utilizando jekyll, um gerador de sites estaticos escrito em ruby. Este é a primeira parte de uma série de posts no qual irei construir um site.
