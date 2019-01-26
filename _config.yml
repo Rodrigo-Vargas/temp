@@ -13,16 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Rodrigo Vargas
+title: Rodrigo Vargas Personal Website
 email: rodrigo@rodrigovargas.me
 description: >- # this means to ignore newlines until "baseurl:"
-  The personal blog of Rodrigo Vargas, a full stack developer that write 
-  about my experience using many technologies, like Angular, C#, JavaScript and
-  more.
+  Blog pessoal de Rodrigo Vargas, um desenvolvedor fullstack que escreve sobre suas experiênciasusando várias tecnologias
+  como C#, JavaScript, CSS entre outras.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://rodrigovargas.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  rodrigo-vargas
 author_name: Rodrigo Vargas
 author_job: Full stack developer
 

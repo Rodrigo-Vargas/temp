@@ -1,9 +1,9 @@
 ---
    layout: article
    title: Configurando um ambiente ruby on rails
-   excerpt: Aprenda a configurar um ambiente para desenvolver ruby on rails com vagrant
+   description: Aprenda a configurar um ambiente para desenvolver ruby on rails com vagrant
    categories: [Devops, Ruby on Rails]
-   publish_date: 2019-01-07
+   date: 2019-01-07
 ---
 
 Se você quer aprender sobre Ruby on Rails, nesta série iremos falar desde como configurar um ambiente para desenvolvimento no Rails, passando pela criação dos controles, models, rotas e todas as configurações necessárias para construirmos nossas primeiras aplicações em Rails. 

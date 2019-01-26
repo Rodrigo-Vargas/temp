@@ -1,7 +1,7 @@
 ---
    layout: article
    title: Criando um site estático com Jekyll
-   excerpt: Aprenda todas as funcionalidades do Jekyll criando um site do zero
+   description: Aprenda todas as funcionalidades do Jekyll criando um site do zero
    categories: [Jekyll]
    published: false
 ---

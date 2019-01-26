@@ -4,22 +4,7 @@
 
 <div id="content">
    <div class="container">
-      <section id="blog-posts">
-         <div class="inner">
-            <h2>Blog</h2>
-
-            <div class="row">
-               {% for article in site.articles %}
-                  <div class="col-12 col-sm-6 col-md-4">
-                     <a class="card box-with-shadow" href="{{ article.url }}">
-                        <div class="card-inner">
-                           {{ article.title }}                        
-                        </div>
-                     </a>
-                  </div>
-               {% endfor %}
-            </div>
-         </div>
-      </section>
-   </div>   
+      {% assign limit = 99 %}
+      {% include home/blog.html %}
+   </div>
 </div>
