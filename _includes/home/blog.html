@@ -1,0 +1,29 @@
+<section class="latest-blog pt-5">
+    <h2 class="font-weight-bold">Blog</h2>
+    <hr class="bg-primary" />
+
+    {% assign articles = site.articles | sort: 'publish_date' | reverse %}
+
+    <div class="row">
+        {% for article in articles limit:3 %}
+            <div class="col-md-4">
+                <a href="{{ article.url }}" class="card rounded mb-3">
+                    <div class="card-body">
+                        <h3 class="font-weight-bold">{{ article.title }}</h3>
+                        <!--<span class="lead font-weight-bold mb-3 d-block">18/01/2018</span>-->
+    
+                        <p>{{ article.excerpt }}</p>
+    
+                        <div class="tags">
+                            <ul class="list-inline">
+                            {% for category in article.categories %}
+                                <li class="rounded list-inline-item border border-primary p-2">{{ category }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+ </section>

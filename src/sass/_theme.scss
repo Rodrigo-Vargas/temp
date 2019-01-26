@@ -21,6 +21,7 @@
 @import 'theme/tabs';
 @import 'components/_card';
 @import 'components/header';
+@import 'components/_article';
 
 /* Background colors */
 
@@ -376,7 +377,7 @@ footer span {
 /* Articles */
 .article-head {
    background-color: $primary;
-   padding: 50px;
+   padding: 100px 50px;
 
    h1 {
       color: #fff;

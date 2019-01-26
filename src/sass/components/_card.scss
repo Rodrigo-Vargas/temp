@@ -1,7 +1,12 @@
 .card {
   display: block;
+  height: 300px;
 
    &:hover {
       text-decoration: none;
+   }
+
+   h3 {
+      font-size: 1.25rem;
    }
 }

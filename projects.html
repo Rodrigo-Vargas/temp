@@ -1,0 +1,10 @@
+---
+    layout: default
+    title: Projetos
+---
+
+<div class="container mt-5">
+    {% for project in site.projects %}
+        <h2>{{ project.title }}</h2>
+    {% endfor %}
+</div>

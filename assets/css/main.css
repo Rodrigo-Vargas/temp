@@ -8941,10 +8941,15 @@ pre.highlight {
 
 .card {
   display: block;
+  height: 300px;
 }
 
 .card:hover {
   text-decoration: none;
+}
+
+.card h3 {
+  font-size: 1.25rem;
 }
 
 header {
@@ -9010,6 +9015,13 @@ header .nav-btn-wrap {
   position: absolute;
   right: 6px;
   z-index: 2;
+}
+
+.article img {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem !important;
+  margin: 20px 0;
+  max-width: 100%;
 }
 
 /* Background colors */
@@ -9393,7 +9405,7 @@ footer span {
 /* Articles */
 .article-head {
   background-color: #35ACEB;
-  padding: 50px;
+  padding: 100px 50px;
 }
 
 .article-head h1 {
