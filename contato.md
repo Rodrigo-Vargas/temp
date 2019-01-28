@@ -1,6 +1,7 @@
 --- 
    layout: default
-   permalink: /contact/
+   permalink: /contato
+   date: 2018-01-28
 ---
 
 <div id="content">
@@ -8,9 +9,9 @@
       <div class="inner">
          <div class="container">
             <div class="title">
-               <h2 class="section-title">Contact</h2>
+               <h2 class="section-title">Contato</h2>
                <span class="section-excerpt">
-                  Say hello!
+                  Diga um olá!
                </span>
             </div>
             
@@ -19,7 +20,7 @@
                   <div class="box-with-shadow">
                      <form action="https://formspree.io/rodrigo@rodrigovargas.me" method="POST">
                         <div class="form-group">
-                           <input required type="text" class="form-control" name="name" placeholder="Name">
+                           <input required type="text" class="form-control" name="name" placeholder="Nome">
                         </div>
                      
                         <div class="form-group">
@@ -30,11 +31,11 @@
                         </div>
                      
                         <div class="form-group">
-                           <textarea required type="text" class="form-control" name="body" rows="6" placeholder="Message"></textarea>
+                           <textarea required type="text" class="form-control" name="body" rows="6" placeholder="Mensagem"></textarea>
                         </div>
                      
                         <div class="form-group">
-                           <button type="submit" href="#" class="btn btn-primary">Send</button>
+                           <button type="submit" href="#" class="btn btn-primary">Enviar</button>
                         </div>
                      </form>
                   </div>

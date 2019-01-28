@@ -1,5 +1,6 @@
 ---
    layout: default
+   published: false
 ---
 
    <section id="resume" class="resume">

@@ -16,7 +16,12 @@
 -- 
 
 
-- Blade Layout files
+- Razor Layout files
+-- Masterpages
+-- Content Place Holders
+-- Como setar um title
+
+
 - Sending Data to Your Views
 - Controllers
 - Database and Migrations
