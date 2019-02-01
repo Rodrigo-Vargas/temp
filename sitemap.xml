@@ -9,7 +9,9 @@
    {% for page in pages %}
       <url>
          <loc>{{ page.url | prepend: site.baseurl | prepend: site.url }}</loc>
-         <lastmod>{{ page.date | date: "%Y-%m-%dT%H:%M:%S-02:00"}}</lastmod>
+         {% if page.date %}
+            <lastmod>{{ page.date | date: "%Y-%m-%dT%H:%M:%S-02:00"}}</lastmod>
+         {% endif %}
       </url>
    {% endfor %}
 
