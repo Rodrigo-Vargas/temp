@@ -45,3 +45,5 @@
       </div>
    </section>
 </div>
+
+<script type="text/javascript" src="/assets/js/contact-min.js"></script>

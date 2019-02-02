@@ -3,4 +3,21 @@ $primary-darken: #1B4965;
 $border-color: #ccc;
 $background-color: #f1f1f1;
 
-$spacing-unit:     30px !default; 
+$blue: #35ACEB;
+$blue-dark: #1B4965;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "blue-dark":  $blue-dark   
+  ),
+  $colors
+);
+
+$dark:          $blue-dark !default;
+
+$headings-color: $primary;
+
+$spacing-unit:   30px !default; 

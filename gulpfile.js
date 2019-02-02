@@ -1,12 +1,10 @@
-var env           = require("minimist")(process.argv.slice(2));
 var gulp          =  require("gulp");
-var plumber       = require("gulp-plumber");
 var browserSync   = require("browser-sync");
 var cp            = require("child_process");
 var concat        = require("gulp-concat");
-var uglify        = require("gulp-uglify");
+var minify        = require('gulp-minify');
+var cleanCss      = require('gulp-clean-css');
 var sass          = require("gulp-sass");
-
 
 
 var messages = {
@@ -33,10 +31,15 @@ gulp.task("browser-sync", ["jekyll-build"], function () {
 });
 
 gulp.task("js", function () {
-   return gulp.src((env.p) ? "src/js/**/*.js" : ["src/js/**/*.js", "!src/js/analytics.js"])
-      //.pipe(plumber())
-      //.pipe(concat("main.js"))
-      //.pipe(uglify())
+   gulp.src(["src/js/site.js"])
+      .pipe(concat("site.js"))
+      .pipe(minify())
+      .pipe(gulp.dest("assets/js/"));
+
+
+   return gulp.src(["src/js/vendor/jquery.js", "src/js/vendor/inputmask.dev.js", "src/js/vendor/inputmask.js", "src/js/contact.js"])
+      .pipe(concat("contact.js"))
+      .pipe(minify())
       .pipe(gulp.dest("assets/js/"));
 });
 
