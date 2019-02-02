@@ -2,6 +2,13 @@
  * Syntax highlighting styles
  */
 
+ h1, h2, h3, h4, h5, h6,
+ p, blockquote, pre,
+ ul, ol, dl, figure,
+ %vertical-rhythm {
+   margin-bottom: $spacing-unit / 2;
+ }
+
  pre.highlight {
     padding: 20px 0;
  }

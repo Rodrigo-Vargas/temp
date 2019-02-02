@@ -1,8 +1,4 @@
-@import "bootstrap/functions";
 @import "theme/variables";
 
-@import "bootstrap";
-@import "theme";
-
-@import "resume";
- 
+@import "vendor/bootstrap";
+@import "theme/theme";
