@@ -3,7 +3,10 @@ $primary-darken: #1B4965;
 $border-color: #ccc;
 $background-color: #f1f1f1;
 
-$blue: #35ACEB;
+// Color system
+$white:     #fff !default;
+
+$blue:      #35ACEB;
 $blue-dark: #1B4965;
 
 $colors: () !default;
@@ -16,7 +19,8 @@ $colors: map-merge(
   $colors
 );
 
-$dark:          $blue-dark !default;
+$dark:          $blue-dark;
+$light:         $white;
 
 $headings-color: $primary;
 

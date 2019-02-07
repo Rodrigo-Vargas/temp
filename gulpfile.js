@@ -12,12 +12,16 @@ var messages = {
 };
 
 gulp.task("jekyll-build", function (done) {
+   console.log("Running jekyll rebuild");
+
    browserSync.notify(messages.jekyllBuild);
    return cp.spawn("bundle", ["exec", "jekyll build"], { stdio: "inherit" })
       .on("close", done);
 });
 
 gulp.task("jekyll-rebuild", ["jekyll-build"], function () {
+   console.log("Running jekyll rebuild");
+
    browserSync.reload();
 });
 
@@ -31,6 +35,8 @@ gulp.task("browser-sync", ["jekyll-build"], function () {
 });
 
 gulp.task("js", function () {
+   console.log("Running JS task");
+
    gulp.src(["src/js/site.js"])
       .pipe(concat("site.js"))
       .pipe(minify())
@@ -44,6 +50,8 @@ gulp.task("js", function () {
 });
 
 gulp.task("sass", function () {
+   console.log("Running sass task");
+   
    var sassDevOptions = {
       outputStyle: "expanded"
    }
@@ -62,15 +70,14 @@ gulp.task("watch", function () {
    gulp.watch("src/sass/**/*.scss", ["sass", "jekyll-rebuild"]);
    gulp.watch("src/js/**/*.js", ["js", "jekyll-rebuild"]);
    gulp.watch(
-                  [
-                     "**/*.md",
-                     "index.html", 
-                     "_includes/*/**.html", 
-                     "_layouts/*.html", 
-                     //"_posts/*",
-                     "!_site/*/**}"
-                  ],
-                  ["jekyll-rebuild"]
+               [
+                  "**/*.md",
+                  "*.html", 
+                  "_includes/*/**.html",
+                  "_layouts/*.html",
+                  "!_site/*/**"
+               ],
+               ["jekyll-rebuild"]
             );
 });
 
