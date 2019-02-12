@@ -1,0 +1,22 @@
+<div class="card project-card mb-3 shadow">
+    <a href="{{ project.url }}">
+        <div class="background position-absolute" 
+            style="background-image: url({{ project.cover_url }})"></div>
+
+        <div class="meta position-absolute">
+            <div class="p-5">
+                <h2 class="font-weight-bold text-white">{{ project.title }}</h2>
+
+                <div class="categories">
+                    <ul class="list-unstyled">
+                        {% for category in project.categories %}
+                            <li class="text-white very-rounded border border-white p-1 pl-3 pr-3 list-inline-item">
+                                {{ category }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

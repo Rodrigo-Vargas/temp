@@ -1,0 +1,20 @@
+---
+    layout: internal
+    title: Projetos
+    breadcrumb: [
+        {
+            text: "Projetos",
+            link: "/projetos"
+        }
+    ]
+---
+
+<div class="container">
+    <div class="row">
+        {% for project in site.projects %}
+            <div class="col-sm-6">
+                {% include projects/card.html %}
+            </div>
+        {% endfor %}
+    </div>
+</div>

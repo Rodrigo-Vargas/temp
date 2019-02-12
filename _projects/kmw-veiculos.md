@@ -1,11 +1,11 @@
 ---
+  categories: [HTML, PHP]
   cover_url: "/assets/img/projects/kmw-veiculos.png"
   date: 2017-03-01
-  name: KMW Veículos
+  featured: true
   job_title: Freelance
   period: 2017, March - 2017, May
-  slug: kmw-veiculos
+  published: false
+  title: KMW Veículos
   year: 2017
-  featured: true
-  categories: [Html, PHP]
 ---

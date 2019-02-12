@@ -25,7 +25,6 @@ gulp.task("jekyll-rebuild", ["jekyll-build"], function () {
    browserSync.reload();
 });
 
-
 gulp.task("browser-sync", ["jekyll-build"], function () {
    browserSync({
       server: {
@@ -37,7 +36,10 @@ gulp.task("browser-sync", ["jekyll-build"], function () {
 gulp.task("js", function () {
    console.log("Running JS task");
 
-   gulp.src(["src/js/site.js"])
+   gulp.src([
+               "src/js/vendor/rv.carousel.js", 
+               "src/js/site.js"
+            ])
       .pipe(concat("site.js"))
       .pipe(minify())
       .pipe(gulp.dest("assets/js/"));

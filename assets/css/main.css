@@ -81,7 +81,7 @@ ul ol {
 }
 
 dt {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 dd {
@@ -4505,7 +4505,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-bold {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .font-italic {
@@ -5278,6 +5278,34 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
 }
 
+.project-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover .meta {
+  top: 0;
+  bottom: 0;
+}
+
+.project-card .background {
+  background-position: center;
+  background-size: cover;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.project-card .meta {
+  background-color: rgba(53, 172, 235, 0.8);
+  left: 0;
+  top: -200px;
+  bottom: 300px;
+  width: 100%;
+  transition: all 0.5s;
+}
+
 pre {
   background: #222;
   color: #ffffff;
@@ -5930,6 +5958,10 @@ footer span {
   display: block;
   font-size: 16px;
   text-align: center;
+}
+
+.nav-spacing {
+  height: 56px;
 }
 
 /* Articles */

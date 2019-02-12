@@ -7,6 +7,7 @@ $background-color: #f1f1f1;
 $white:     #fff !default;
 
 $blue:      #35ACEB;
+$blue-rgba: rgba(53, 172, 235, 0.8);
 $blue-dark: #1B4965;
 
 $colors: () !default;
@@ -24,4 +25,6 @@ $light:         $white;
 
 $headings-color: $primary;
 
-$spacing-unit:   30px !default; 
+$font-weight-bold:  600 !default;
+
+$spacing-unit:      30px !default; 

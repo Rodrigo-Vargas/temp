@@ -1,0 +1,18 @@
+<div class="col-md-4">
+    <a href="{{ article.url }}" class="card rounded mb-3 shadow">
+        <div class="card-body">
+            <h3 class="font-weight-bold">{{ article.title }}</h3>
+            <span class="lead small font-weight-bold mb-3 d-block"> {{ article.date | date: "%d/%m/%y" }}</span>
+
+            <p>{{ article.description }}</p>
+
+            <div class="tags">
+                <ul class="list-inline">
+                {% for category in article.categories %}
+                    <li class="very-rounded list-inline-item border border-primary p-2">{{ category }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </a>
+</div>

@@ -1,10 +1,20 @@
 ---
-   layout: default
+   breadcrumb: [
+      {
+         text: "Blog",
+         link: "/blog"
+      }
+   ]
+   layout: internal
+   title: Blog
 ---
 
-<div id="content">
-   <div class="container">
-      {% assign limit = 99 %}
-      {% include home/blog.html %}
-   </div>
+{% assign articles = site.articles | sort: 'publish_date' | reverse %}
+
+<div class="container">
+   <div class="row">
+      {% for article in articles %}
+         {% include blog/card.html %}
+      {% endfor %}
+   </div> 
 </div>

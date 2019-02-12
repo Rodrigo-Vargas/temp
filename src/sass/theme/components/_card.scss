@@ -10,3 +10,33 @@
       font-size: 1.25rem;
    }
 }
+
+.project-card {
+   overflow: hidden;
+   position: relative;
+
+   &:hover {
+      .meta {
+         top: 0;
+         bottom: 0;
+      }
+   }
+
+   .background {
+      background-position: center;
+      background-size: cover;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+   }
+
+   .meta {
+      background-color: $blue-rgba;
+      left: 0;
+      top: -200px;
+      bottom: 300px;
+      width: 100%;
+      transition: all 0.5s;
+   }
+}

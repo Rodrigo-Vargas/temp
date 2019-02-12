@@ -1,3 +1,10 @@
+Carousel = function(element) {
+    this.init = function() {
+        alert("Carousel inited");
+    }
+
+    this.init();
+}
 toogleClass = function (element, className) {
    if (element.classList.contains(className))
       element.classList.remove(className);
@@ -128,3 +135,5 @@ registerDynamicText = function() {
 
 registerCollapse();
 registerDynamicText();
+
+//Carousel(document.querySelector(".carousel"));

@@ -46,6 +46,7 @@ collections:
   education:
   projects:
     output: true
+    permalink: /projetos/:path:output_ext
   skills:
 
 # Exclude from processing.

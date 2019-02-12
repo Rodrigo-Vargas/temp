@@ -3,6 +3,7 @@
   name: Veracruz Multimarcas
   job_title: Freelance
   period: 2017, February - 2017, April
+  published: false
   slug: vera-cruz-multimarcas
   year: 2017
 ---

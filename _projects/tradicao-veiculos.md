@@ -1,10 +1,11 @@
 ---
+  categories: "PHP"
   cover_url: "/assets/img/projects/tradicao-veiculos.png"
   date: 2016-08-01
   name: Tradição Veículos
   job_title: Freelance
   period: 2016, August - 2016, October
-  slug: tradicao-veiculos
+  published: false
   year: 2016
 ---
 

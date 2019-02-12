@@ -128,3 +128,5 @@ registerDynamicText = function() {
 
 registerCollapse();
 registerDynamicText();
+
+//Carousel(document.querySelector(".carousel"));
