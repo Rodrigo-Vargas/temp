@@ -1,0 +1,26 @@
+---
+    breadcrumb: 
+        - {
+            text: "Series",
+            link: "/series"
+        }
+    layout: internal
+    permalink: /series/
+    title: Series
+---
+<div class="container">
+    <div class="row">
+        {% for serie in site.series %}
+        
+            <div class="col-md-4 mb-3">
+                <a href="{{ serie.url }}" class="card rounded mb-3 shadow">
+                    <div class="card-body">
+                        <h3 class="font-weight-bold">{{ serie.title }}</h3>
+
+                        <p>{{ serie.description }}</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

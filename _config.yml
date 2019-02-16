@@ -20,7 +20,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   como C#, JavaScript, CSS entre outras.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://rodrigovargas.me" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
 github_username:  rodrigo-vargas
 author_name: Rodrigo Vargas
 author_job: Full stack developer
@@ -45,6 +44,16 @@ collections:
   projects:
     output: true
     permalink: /projetos/:path
+  series:
+    output: true
+    permalink: /series/:path
+
+defaults:
+  -scope:
+    path: "/blog"
+    type: "articles"
+  values:
+    layout: article
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -57,3 +66,12 @@ collections:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude:
+  - src
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile
+  - package-lock.json
+  - package.json

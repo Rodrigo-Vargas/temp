@@ -1,9 +1,16 @@
 ---
-   layout: article
-   title: Configurando um ambiente para desenvolvimento .NET Core
-   description: Aprenda a configurar um ambiente para desenvolver .Net Core
+   breadcrumb:
+        -
+            text: "Blog"
+            link: "/blog"
+        -             
+            text: "Configurando um ambiente para desenvolvimento .NET Core"
+            link: "/blog/configurando-ambiente-desenvolvimento-net-core"
    categories: [Devops, .NET Core]
    date: 2019-01-14
+   description: Aprenda a configurar um ambiente para desenvolver .Net Core
+   layout: article
+   title: Configurando um ambiente para desenvolvimento .NET Core
 ---
 
 Olá pessoal, tudo bom? Neste post, irei realizar a instalação e configuração de um ambiente de desenvolvimento para .NET Core, além de mostrar como fazer algumas operações interessantes com o code generator do .Net Core.

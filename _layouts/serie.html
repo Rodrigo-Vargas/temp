@@ -1,0 +1,19 @@
+---
+    layout: internal
+---
+
+<div class="container">
+    <h2>Episódios</h2>
+
+    <ul class="list-unstyled">
+        {% for episode in page.episodes %}
+            <li class="bg-white p-3 rounded shadow mb-3">
+                <a href="{{ episode.url }}">
+                    <h4>{{ episode.title }}</h4>
+                    <small>{{ episode.url }}</small>
+                </a>
+            </li>
+        {% endfor %}
+
+    </ul>
+</div>

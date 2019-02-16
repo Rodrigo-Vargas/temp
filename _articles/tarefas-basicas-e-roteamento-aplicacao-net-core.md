@@ -1,9 +1,17 @@
 ---
-   layout: article
-   categories: [.NET Core]
-   description: Primeiros passos para entender o funcionamento de uma aplicação MVC .Net Core
-   date: 2019-01-21
-   title: Tarefas Básicas e Roteamento em uma aplicação .Net Core
+    breadcrumb:
+        -
+            text: "Blog"
+            link: "/blog"
+        -
+            text: "Tarefas Básicas e Roteamento em uma aplicação .Net Core"
+            link: "/blog/tarefas-basicas-e-roteamento-aplicacao-net-core"
+    categories: 
+        - .NET Core
+    date: 2019-01-21
+    description: Primeiros passos para entender o funcionamento de uma aplicação MVC .Net Core
+    layout: article
+    title: Tarefas Básicas e Roteamento em uma aplicação .Net Core
 ---
 
 [web-app-started]: /cdn/images/basic-tasks-net-mvc-application/web-app-started.png "Webapp Started"
