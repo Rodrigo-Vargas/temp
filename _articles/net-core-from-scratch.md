@@ -23,6 +23,9 @@
 
 
 - Sending Data to Your Views
+
+
+
 - Controllers
 - Database and Migrations
 - Eloquent, Namespacing, and MVC

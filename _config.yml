@@ -42,12 +42,9 @@ collections:
   articles:
     output: true
     permalink: /blog/:path
-  career:
-  education:
   projects:
     output: true
-    permalink: /projetos/:path:output_ext
-  skills:
+    permalink: /projetos/:path
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

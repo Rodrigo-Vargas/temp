@@ -1,6 +1,7 @@
 ---
    layout: base
    permalink: /resume/
+   published: false
 ---
 
 <div class="web-resume">

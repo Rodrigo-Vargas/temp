@@ -28,7 +28,11 @@ gulp.task("jekyll-rebuild", ["jekyll-build"], function () {
 gulp.task("browser-sync", ["jekyll-build"], function () {
    browserSync({
       server: {
-         baseDir: "_site"
+         baseDir: "_site",
+         watch: true,
+         serveStaticOptions: {
+            extensions: ["html"]
+         }
       }
    });
 });

@@ -1,9 +1,19 @@
 ---
-    layout: article
-    title: Definindo arquivos layout no Razor
-    description: Aprenda como funcionam as views no MVC .NET Core, que utilizam a engine de template chamada Razor.
+    breadcrumb: [
+        {
+            text: "Blog",
+            link: "/blog"
+        },
+        {
+            text: "Definindo arquivos layout no Razor",
+            link: "/blog/definindo-arquivos-layout-razor"
+        }
+    ]
     categories: [Razor, .NET Core]
     date: 2019-01-28
+    description: Aprenda como funcionam as views no MVC .NET Core, que utilizam a engine de template chamada Razor.
+    layout: article
+    title: Definindo arquivos layout no Razor
 ---
 
 Olá, neste post irei mostrar como funcionam as views no MVC .NET Core. Por padrão, utilizamos uma engine de template chamada "Razor", que nos permite simplificar o modo como definimos componentes HTML na nossa view.
