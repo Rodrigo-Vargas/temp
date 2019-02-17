@@ -25,9 +25,16 @@
 - Sending Data to Your Views
 
 
-
-- Controllers
 - Database and Migrations
+-- Arquivo de configuração
+-- Comandos para migrar e Migration inicial
+-- Alterando migration
+-- Revertendo migration
+-- Criando uma migration e convenções
+
+
+
+
 - Eloquent, Namespacing, and MVC
 - Directory Structure Review
 - Form Handling and CSRF Protection

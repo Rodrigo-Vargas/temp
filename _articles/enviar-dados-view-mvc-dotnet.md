@@ -1,20 +1,18 @@
 ---
-    breadcrumb: [
-        {
-            text: "Blog",
+    breadcrumb:
+        -
+            text: "Blog"
             link: "/blog"
-        },
-        {
-            text: "Enviando dados para uma view em uma aplicação .Net Core MVC",
+        -
+            text: "Enviando dados para uma view em uma aplicação .Net Core MVC"
             link: "/blog/enviar-dados-view-mvc-dotnet"
-        }
-    ]
-    categories: [Razor, .NET Core]
+    categories:
+        - Razor
+        - .NET Core
     date: 2019-02-04
     description: Avançando no aprendizado do MVC, confira como enviar dados de controller para uma view em uma aplicação .Net Core MVC
     layout: article
     title: Enviando dados para views em uma aplicação .NET Core MVC
-
 ---
 
 Olá, continuando esta série de posts sobre .Net Core MVC, vamos aprimorar o post passado, explorando como podemos passar dados para uma view.

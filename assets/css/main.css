@@ -4620,6 +4620,10 @@ a.text-dark:hover, a.text-dark:focus {
   max-width: 100%;
 }
 
+.article h2 {
+  margin-top: 2.5rem;
+}
+
 .very-rounded {
   border-radius: 1.25rem !important;
 }
@@ -5593,7 +5597,7 @@ pre.highlight {
 }
 
 .highlight .nn {
-  color: #555;
+  color: #3bd43b;
 }
 
 .highlight .nt {

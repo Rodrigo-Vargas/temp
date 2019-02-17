@@ -8,6 +8,7 @@
             link: "/blog/tarefas-basicas-e-roteamento-aplicacao-net-core"
     categories: 
         - .NET Core
+        - MVC
     date: 2019-01-21
     description: Primeiros passos para entender o funcionamento de uma aplicação MVC .Net Core
     layout: article
