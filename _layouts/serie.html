@@ -9,7 +9,7 @@
         {% for episode in page.episodes %}
             <li class="bg-white p-3 rounded shadow mb-3">
                 <a href="{{ episode.url }}">
-                    <h4>{{ episode.title }}</h4>
+                    <h4>{{episode.number }} - {{ episode.title }}</h4>
                     <small>{{ episode.url }}</small>
                 </a>
             </li>
