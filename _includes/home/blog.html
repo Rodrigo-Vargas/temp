@@ -6,9 +6,11 @@
 
     {% assign articles = site.articles | sort: 'publish_date' | reverse %}
 
-    <div class="row">
-        {% for article in articles limit: 3 %}
-            {% include blog/card.html %}
-        {% endfor %}
+    <div class="blog-list">
+        <div class="row">
+            {% for article in articles limit: 3 %}
+                {% include blog/card.html %}
+            {% endfor %}
+        </div>    
     </div>
  </section>

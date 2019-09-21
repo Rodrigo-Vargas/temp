@@ -1,6 +1,11 @@
 @import "theme/variables";
 
+/* ++++++++++++++++++++++ Boostrap ++++++++++++++++++++++++++++ */
+
 @import "vendor/bootstrap";
+
+/* ====================== Boostrap =========================== */
+
 
 /* Variables */
 
@@ -26,6 +31,9 @@ $primary: $primary-500;
 @import "theme/components/spacing";
 @import "theme/components/type";
 @import "theme/components/vcard";
+
+@import "theme/components/blog-list";
+@import "theme/components/project-list";
 
 @import "vendor/font-awesome.scss";
 

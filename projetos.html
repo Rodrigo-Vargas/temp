@@ -11,11 +11,13 @@
 ---
 
 <div class="container">
-    <div class="row">
-        {% for project in site.projects %}
-            <div class="col-sm-6">
-                {% include projects/card.html %}
-            </div>
-        {% endfor %}
-    </div>
+    <div class="project-list">
+        <div class="row">
+            {% for project in site.projects %}
+                <div class="col">
+                    {% include projects/card.html %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>    
 </div>

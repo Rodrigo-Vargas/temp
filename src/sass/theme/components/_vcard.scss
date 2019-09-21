@@ -1,5 +1,6 @@
 .v-card {
     background-image: linear-gradient(110deg,$primary-500 35%,$gray-100 calc(35% + 2px));
+    display: none;
     padding: 35vh;
     height: 100vh;
 
@@ -51,4 +52,11 @@
             }
         }
     }
+}
+
+@media(min-width: map-get($grid-breakpoints, lg)) {
+    .v-card {
+        display: block;
+    }
+
 }

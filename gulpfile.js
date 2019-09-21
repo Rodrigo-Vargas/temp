@@ -89,7 +89,7 @@ function compileScss (done) {
                .on("error", sass.logError))
                .pipe(gulp.dest("assets/css/"))
                .pipe(gulp.dest("_site/assets/css/")) // Force overwrite on build site folder
-               .pipe(sourcemaps.write('.')); 
+               .pipe(sourcemaps.write('_site/assets/css/')); 
 
    browserSync.reload();
    done();
@@ -102,6 +102,7 @@ function watch () {
                [
                   "**/*.md",
                   "*.html", 
+                  "blog/*",
                   "_includes/*/**.html",
                   "_layouts/*.html",
                   "!_site/*/**"

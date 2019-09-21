@@ -6,18 +6,18 @@
          </h2>
          <hr class="bg-primary" />
          
-         <div class="content">
+         <div class="project-list">
             <div class="row">
                {% assign featured_projects = site.projects | where:"featured", true %}
                {% for project in featured_projects %}
-                  <div class="col-lg-4 mb-2">
+                  <div class="col">
                      {% if project.cover_url %} 
                         {% assign cover_url = project.cover_url %} 
                      {% else %} 
                         {% assign cover_url = "/assets/img/no_cover.jpg" %}
                      {% endif %}
             
-                     <a class="card" href="{{ project.url }}">
+                     <a class="card mb-3" href="{{ project.url }}">
                         <div class="card-background position-relative">
                            <img data-src="{{ cover_url }}" class="lazy img-fluid" alt="">
                            <h4 class="fixed-bottom gradient m-0 text-white font-weight-bold">{{ project.name }}</h4>
