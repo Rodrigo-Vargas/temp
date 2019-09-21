@@ -1,15 +1,15 @@
-@import "utilities/align";
-@import "utilities/background";
+/* Start borders */
 @import "utilities/borders";
-@import "utilities/clearfix";
-@import "utilities/display";
-@import "utilities/embed";
-@import "utilities/flex";
-@import "utilities/float";
+/* End */
+
+/* Start position */
 @import "utilities/position";
+/* End */
+
+/* Start text */
+@import "utilities/text";
+/* End */
+
+@import "utilities/background";
 @import "utilities/screenreaders";
 @import "utilities/shadows";
-@import "utilities/sizing";
-@import "utilities/spacing";
-@import "utilities/text";
-@import "utilities/visibility";

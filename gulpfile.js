@@ -78,9 +78,9 @@ function compileScss (done) {
    }
 
    /* Compile inline styles and put on includes*/
-   // gulp.src(["./src/sass/inline-*.scss"])
-   //    .pipe(sass(sassDevOptions).on("error", sass.logError))
-   //    .pipe(gulp.dest("_includes/"));
+   gulp.src(["./src/sass/inline-*.scss"])
+      .pipe(sass(sassDevOptions).on("error", sass.logError))
+      .pipe(gulp.dest("_includes/"));
 
    gulp.src(["./src/sass/*.scss", "!src/sass/inline-*.scss"])
                .pipe(plumber())

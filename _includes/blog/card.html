@@ -2,7 +2,7 @@
     <a href="{{ article.url }}" class="card rounded mb-3 shadow">
         <div class="card-body">
             <h3 class="font-weight-bold">{{ article.title }}</h3>
-            <span class="lead small font-weight-bold mb-3 d-block"> {{ article.date | date: "%d/%m/%y" }}</span>
+            <span class="lead small font-weight-bold mb-3"> {{ article.date | date: "%d/%m/%y" }}</span>
 
             <p>{{ article.description }}</p>
 
