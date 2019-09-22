@@ -735,6 +735,7 @@ template {
 .card.blog .tag-list .tag {
   background-color: #5714B4;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #fff;
   display: inline-block;
   font-size: 12px;
@@ -787,6 +788,14 @@ template {
 
 .card.blog .tag-list .tag.mvc::after {
   content: "MVC";
+}
+
+.card.blog .tag-list .tag.wordpress {
+  background-color: #32373c;
+}
+
+.card.blog .tag-list .tag.wordpress::after {
+  content: "WordPress";
 }
 
 .card.blog:hover {
