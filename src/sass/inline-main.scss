@@ -1,9 +1,8 @@
 @import "theme/variables";
 
-@import "vendor/bootstrap/functions";
-@import "vendor/bootstrap/variables";
-@import "vendor/bootstrap/mixins";
-
+@import "functions";
+@import "theme/variables.old";
+@import "mixins/lists";
 
 @import "theme/utilities/container";
 @import "theme/components/header";

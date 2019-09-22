@@ -1,10 +1,24 @@
 @import "theme/variables";
 
-@import "vendor/bootstrap";
+@import "functions";
+@import "theme/variables.old";
 
+@import "mixins/hover";
+@import "mixins/screen-reader";
+@import "mixins/text-truncate";
+@import "mixins/transition";
+
+@import "theme/utilities/backgrounds";
+@import "theme/utilities/borders";
+@import "theme/utilities/position";
 @import "theme/utilities/spacing";
+@import "theme/utilities/screenreaders";
+@import "theme/utilities/shadows";
+@import "theme/utilities/text";
 
-@import "theme/theme";
+@import "theme/components/reboot";
+@import "theme/components/transitions";
+
 @import "theme/components/article";
 @import "theme/components/breadcrumb";
 @import "theme/components/card";
@@ -20,8 +34,15 @@
 
 @import "vendor/font-awesome.scss";
 
+@import "theme/theme";
+
 /* Header */
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
