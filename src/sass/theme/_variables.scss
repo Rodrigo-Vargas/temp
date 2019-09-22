@@ -11,7 +11,7 @@ $blue-rgba: rgba(53, 172, 235, 0.8);
 $blue-dark: #2D1263;
 
 $colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
+
 $colors: map-merge(
   (
     "blue":       $blue,
@@ -27,4 +27,26 @@ $headings-color: $primary;
 
 $font-weight-bold:  600 !default;
 
-$spacing-unit:      30px !default; 
+$spacing-unit:      30px !default;
+
+// Variables
+
+$primary-900: #0E024A;
+$primary-800: #20084E;
+$primary-700: #2D1263;
+$primary-600: #3E2277;
+$primary-500: #5714B4;
+
+$gray-100: #ECF1F3;
+
+$spacer: 1rem !default;
+
+$spacer-1: $spacer * 0.25;
+$spacer-2: $spacer * 0.5;
+$spacer-3: $spacer * 1;
+$spacer-4: $spacer * 1.5;
+$spacer-5: $spacer * 3;
+
+$background-color: $gray-100;
+$border-color: $gray-100;
+$primary: $primary-500;

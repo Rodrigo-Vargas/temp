@@ -1,34 +1,6 @@
 @import "theme/variables";
 
-/* ++++++++++++++++++++++ Boostrap ++++++++++++++++++++++++++++ */
-
 @import "vendor/bootstrap";
-
-/* ====================== Boostrap =========================== */
-
-
-/* Variables */
-
-$primary-900: #0E024A;
-$primary-800: #20084E;
-$primary-700: #2D1263;
-$primary-600: #3E2277;
-$primary-500: #5714B4;
-
-$gray-100: #ECF1F3;
-
-$spacer: 1rem !default;
-
-$spacer-1: $spacer * 0.25;
-$spacer-2: $spacer * 0.5;
-$spacer-3: $spacer * 1;
-$spacer-4: $spacer * 1.5;
-$spacer-5: $spacer * 3;
-
-$background-color: $gray-100;
-$border-color: $gray-100;
-$primary: $primary-500;
-
 
 @import "theme/utilities/spacing";
 
@@ -39,13 +11,9 @@ $primary: $primary-500;
 @import "theme/components/code";
 @import "theme/components/forms";
 @import "theme/components/grid";
-@import "theme/components/header";
 @import "theme/components/reset";
-//@import "theme/components/syntax-highlighting";
-//@import "theme/components/tabs";
+@import "theme/components/syntax-highlighting";
 @import "theme/components/text";
-@import "theme/components/type";
-@import "theme/components/vcard";
 
 @import "theme/components/blog-list";
 @import "theme/components/project-list";
@@ -56,36 +24,4 @@ $primary: $primary-500;
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-}
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-  
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
 }

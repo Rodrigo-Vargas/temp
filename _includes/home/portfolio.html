@@ -17,10 +17,10 @@
                         {% assign cover_url = "/assets/img/no_cover.jpg" %}
                      {% endif %}
             
-                     <a class="card mb-3" href="{{ project.url }}">
+                     <a class="card mb-3" aria-label="{{ project.title }}" href="{{ project.url }}">
                         <div class="card-background position-relative">
                            <img data-src="{{ cover_url }}" class="lazy img-fluid" alt="">
-                           <h4 class="fixed-bottom gradient m-0 text-white font-weight-bold">{{ project.name }}</h4>
+                           <h4 class="fixed-bottom gradient m-0 text-white font-weight-bold">{{ project.title }}</h4>
                         </div>                        
 
                         <div class="bg-primary text-center pt-2">
@@ -31,10 +31,6 @@
                                  <li class="rounded list-inline-item border border-white text-white p-2">{{ category }}</li>
                               {% endfor %}
                            </ul>
-
-                           <!--<span class="btn rounded border border-white p-2 m-2 text-white">
-                              See more
-                           </span>         -->
                         </div>
                            
                      </a>
