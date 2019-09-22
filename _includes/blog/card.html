@@ -1,18 +1,32 @@
 <div class="col">
-    <a href="{{ article.url }}" class="card rounded mb-3 shadow">
+    <a href="{{ article.url }}" class="card blog mb-5">
+        {% if article.cover_url %} 
+            {% assign cover_url = article.cover_url %} 
+         {% else %} 
+            {% assign cover_url = "no_cover.jpg" %}
+         {% endif %}
+
+        <div class="card-header position-relative">
+            <img class="img-fluid" src="/cdn/images/{{ cover_url }}" alt="{{ article.title }}">
+
+            <ul class="tag-list position-absolute">
+                {% for category in article.categories %}
+                    <li class="tag {{ category }}"></li>
+                {% endfor %}
+            </ul>
+        </div>
+
         <div class="card-body">
             <h3 class="font-weight-bold">{{ article.title }}</h3>
-            <span class="lead small font-weight-bold mb-3"> {{ article.date | date: "%d/%m/%y" }}</span>
+            <span class="meta mb-3">
+                {{ article.date | date: "%d/%m/%y" }}
+            </span>
 
             <p>{{ article.description }}</p>
+        </div>
 
-            <div class="tags">
-                <ul class="list-inline">
-                {% for category in article.categories %}
-                    <li class="very-rounded list-inline-item border border-primary p-2">{{ category }}</li>
-                {% endfor %}
-                </ul>
-            </div>
+        <div class="card-footer">
+            <div class="btn">Veja Mais</div>
         </div>
     </a>
 </div>

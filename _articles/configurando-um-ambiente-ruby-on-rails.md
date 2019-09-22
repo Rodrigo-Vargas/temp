@@ -7,7 +7,7 @@
             text: "Configurando um ambiente ruby on rails"
             link: "/blog/configurando-um-ambiente-ruby-on-rails"
 
-    categories: [Devops, Ruby on Rails]
+    categories: [devops, ruby-on-rails]
     date: 2019-01-07
     description: Aprenda a configurar um ambiente para desenvolver ruby on rails com vagrant
     layout: article

@@ -1,19 +1,64 @@
 .card {
-  display: block;
-  height: 300px;
-
-  position: relative;
-   display: flex;
-   flex-direction: column;
-   min-width: 0;
-   word-wrap: break-word;
    background-color: #fff;
    background-clip: border-box;
-   border: 1px solid rgba(0, 0, 0, 0.125);
    border-radius: 0.25rem;
+   display: flex;
+   flex-direction: column;
 
    &:hover {
       text-decoration: none;
+   }
+
+   &.blog {
+      box-shadow: $shadow;
+      border-radius: $border-radius;
+      transition: box-shadow 0.4s;
+
+      .card-footer {
+         text-align: center;
+
+         .btn {
+            background: $gray-200;
+            border-radius: 0 0 $border-radius $border-radius;
+            color: $primary-500;
+            font-weight: 700;
+            padding: $spacer-3;
+         }
+      }
+
+      .tag-list {
+         padding: $spacer-2;
+         top: 0;
+         right: 0;
+
+         .tag {
+            background-color: $primary-500;
+            border-radius: $border-radius;
+            color: $white;
+            display: inline-block;
+            font-size: 12px;
+            padding: $spacer-1 $spacer-2;
+
+            @each $tag, $color, $displayName in $tags {
+               &.#{$tag} {
+                  background-color: $color;
+
+                  &::after {
+                     content: $displayName;
+                  }                  
+               }
+            }
+         }
+      }
+
+      &:hover {
+         box-shadow: $shadow-deep;
+      }
+   }
+
+   .card-body {
+      flex: 1 1 auto;
+      padding: 1.25rem;
    }
 
    h3 {
@@ -22,6 +67,16 @@
 
    span {
       display: block;
+   }
+
+   p {
+      color: $gray-400;
+      font-size: 18px;
+   }
+
+   .meta {
+      color: $gray-200;
+      font-size: 14px;
    }
 }
 
@@ -54,26 +109,3 @@
       transition: all 0.5s;
    }
 }
-
-.card-body {
-   flex: 1 1 auto;
-   padding: 1.25rem;
-}
-
-.card {
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   min-width: 0;
-   word-wrap: break-word;
-   background-color: #fff;
-   background-clip: border-box;
-   border: 1px solid rgba(0, 0, 0, 0.125);
-   border-radius: 0.25rem;
- }
-
-
- .card-body {
-   flex: 1 1 auto;
-   padding: 1.25rem;
- }

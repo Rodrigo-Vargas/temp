@@ -75,11 +75,11 @@
 }
 
 .border-light {
-  border-color: #fff !important;
+  border-color: #ECF1F3 !important;
 }
 
 .border-dark {
-  border-color: #2D1263 !important;
+  border-color: #343a40 !important;
 }
 
 .border-white {
@@ -87,27 +87,27 @@
 }
 
 .rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 10px !important;
 }
 
 .rounded-top {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
 }
 
 .rounded-right {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 .rounded-bottom {
-  border-bottom-right-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
 }
 
 .rounded-left {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
 }
 
 .rounded-circle {
@@ -697,21 +697,105 @@ template {
 }
 
 .card {
-  display: block;
-  height: 300px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
   text-decoration: none;
+}
+
+.card.blog {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: box-shadow 0.4s;
+}
+
+.card.blog .card-footer {
+  text-align: center;
+}
+
+.card.blog .card-footer .btn {
+  background: #D1DBE0;
+  border-radius: 0 0 10px 10px;
+  color: #5714B4;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.card.blog .tag-list {
+  padding: 0.5rem;
+  top: 0;
+  right: 0;
+}
+
+.card.blog .tag-list .tag {
+  background-color: #5714B4;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0.25rem 0.5rem;
+}
+
+.card.blog .tag-list .tag.devops {
+  background-color: #14c553;
+}
+
+.card.blog .tag-list .tag.devops::after {
+  content: "Devops";
+}
+
+.card.blog .tag-list .tag.ruby-on-rails {
+  background-color: #e81919;
+}
+
+.card.blog .tag-list .tag.ruby-on-rails::after {
+  content: "Ruby on Rails";
+}
+
+.card.blog .tag-list .tag.entity-framework {
+  background-color: #c3e01a;
+}
+
+.card.blog .tag-list .tag.entity-framework::after {
+  content: "Entity Framework";
+}
+
+.card.blog .tag-list .tag.net-core {
+  background-color: #ef731c;
+}
+
+.card.blog .tag-list .tag.net-core::after {
+  content: "NET Core";
+}
+
+.card.blog .tag-list .tag.razor {
+  background-color: #3e414a;
+}
+
+.card.blog .tag-list .tag.razor::after {
+  content: "Razor";
+}
+
+.card.blog .tag-list .tag.mvc {
+  background-color: #0089ff;
+}
+
+.card.blog .tag-list .tag.mvc::after {
+  content: "MVC";
+}
+
+.card.blog:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7) !important;
+}
+
+.card .card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
 }
 
 .card h3 {
@@ -720,6 +804,16 @@ template {
 
 .card span {
   display: block;
+}
+
+.card p {
+  color: #93A8B4;
+  font-size: 18px;
+}
+
+.card .meta {
+  color: #D1DBE0;
+  font-size: 14px;
 }
 
 .project-card {
@@ -748,28 +842,6 @@ template {
   bottom: 300px;
   width: 100%;
   transition: all 0.5s;
-}
-
-.card-body {
-  flex: 1 1 auto;
-  padding: 1.25rem;
-}
-
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-
-.card-body {
-  flex: 1 1 auto;
-  padding: 1.25rem;
 }
 
 pre {

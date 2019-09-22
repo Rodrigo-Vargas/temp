@@ -1,29 +1,4 @@
-$primary: #5714B4;
-$primary-darken: #2D1263;
-$border-color: #ccc;
-$background-color: #f1f1f1;
-
-// Color system
 $white:     #fff !default;
-
-$blue:      #35ACEB;
-$blue-rgba: rgba(53, 172, 235, 0.8);
-$blue-dark: #2D1263;
-
-$colors: () !default;
-
-$colors: map-merge(
-  (
-    "blue":       $blue,
-    "blue-dark":  $blue-dark   
-  ),
-  $colors
-);
-
-$dark:          $blue-dark;
-$light:         $white;
-
-$headings-color: $primary;
 
 $font-weight-bold:  600 !default;
 
@@ -37,6 +12,9 @@ $primary-700: #2D1263;
 $primary-600: #3E2277;
 $primary-500: #5714B4;
 
+$gray-400: #93A8B4;
+$gray-300: #B3C3CB;
+$gray-200: #D1DBE0;
 $gray-100: #ECF1F3;
 
 $spacer: 1rem !default;
@@ -49,4 +27,18 @@ $spacer-5: $spacer * 3;
 
 $background-color: $gray-100;
 $border-color: $gray-100;
-$primary: $primary-500;
+$border-radius: 10px;
+
+$headings-color: $primary-500;
+
+$shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+$shadow-deep: 0 0 20px rgba(0, 0, 0, 0.7) !important;
+
+$tags: 
+    "devops" #14c553 "Devops",
+    "ruby-on-rails" #e81919 "Ruby on Rails",
+    "entity-framework" #c3e01a "Entity Framework",
+    "net-core" #ef731c "NET Core",
+    "razor" #3e414a "Razor",
+    "mvc" #0089ff "MVC"
+;

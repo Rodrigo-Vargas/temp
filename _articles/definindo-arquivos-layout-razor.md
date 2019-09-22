@@ -9,7 +9,7 @@
             link: "/blog/definindo-arquivos-layout-razor"
         }
     ]
-    categories: [Razor, .NET Core]
+    categories: [razor, net-core]
     date: 2019-01-28
     description: Aprenda como funcionam as views no MVC .NET Core, que utilizam a engine de template chamada Razor.
     layout: article

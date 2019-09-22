@@ -7,8 +7,8 @@
             text: "Migrations em um aplicação .NET Core MVC"
             link: "/blog/migrations-em-uma-aplicacao-dotnet-mvc"
     categories: 
-        - Entity Framework
-        - .NET Core
+        - entity-framework
+        - net-core
     date: 2019-02-11
     description: Utilizando o Entity Framework, vamos configurar um banco de dados em uma aplicação .NET Core MVC
     layout: article

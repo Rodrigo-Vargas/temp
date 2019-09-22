@@ -7,9 +7,10 @@
             text: "Criando um tema WordPress do zero"
             link: "/blog/configurando-um-ambiente-ruby-on-rails"
 
-    categories: [Devops, Ruby on Rails]
+    categories: [devops, ruby-on-rails]
     date: 2019-06-24
     description: Criando um tema WordPress do zero
+    cover_url: "getting-started-wp-theme-thumb.png"
     layout: article
     title: Criando um tema WordPress do zero
 ---
