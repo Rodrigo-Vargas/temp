@@ -3,11 +3,13 @@
 const gulp          = require("gulp");
 const browserSync   = require("browser-sync");
 const cp            = require("child_process");
-const concat        = require("gulp-concat");
-const minify        = require("gulp-minify");
 const plumber       = require("gulp-plumber");
 var sourcemaps      = require("gulp-sourcemaps");
 const sass          = require("gulp-sass");
+
+const webpack = require("webpack");
+const webpackconfigDev = require("./webpack.dev.config.js");
+const webpackstream = require("webpack-stream");
 
 var messages = {
    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -51,23 +53,13 @@ function browserSyncInit() {
 function js() {
    console.log("Running JS task");
 
-   gulp.src([
-               "src/js/vendor/rv.carousel.js", 
-               "src/js/site.js"
-            ])
-      .pipe(concat("site.js"))
-      .pipe(minify())
-      .pipe(gulp.dest("assets/js/"));
-
-
-   return gulp.src([
-                     "src/js/vendor/jquery.js", 
-                     "src/js/vendor/inputmask.dev.js", 
-                     "src/js/vendor/inputmask.js", 
-                     "src/js/contact.js"])
-      .pipe(concat("contact.js"))
-      .pipe(minify())
-      .pipe(gulp.dest("assets/js/"));
+  return (
+    gulp
+    .src("src/js/index.js")
+    .pipe(plumber())
+    .pipe(webpackstream(webpackconfigDev, webpack))
+    .pipe(gulp.dest("./"))
+  );
 }
 
 function compileScss (done) {
