@@ -802,6 +802,10 @@ template {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7) !important;
 }
 
+.card .card-header {
+  overflow: hidden;
+}
+
 .card .card-body {
   flex: 1 1 auto;
   padding: 1.25rem;

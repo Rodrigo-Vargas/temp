@@ -5,40 +5,46 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
+
    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+   <meta name="description"
+      content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico" />
 
-   {% capture styles %} 
-      {% include inline-main.css %} 
+   {% capture styles %}
+   {% include inline-main.css %}
    {% endcapture %}
 
    <style>
       {{ styles }}
    </style>
 
-   <link rel="preload" href="/assets/css/main.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+   <link rel="preload" rel="stylesheet" href="/assets/css/main.css" as="style"
+      onload="this.onload=null; console.log('Loaded stylesheet'); this.rel='stylesheet'">
 </head>
 
 <body>
    <!-- Jekyll Env: {{ jekyll.environment }} -->
    {{ content }}
    {% if jekyll.environment != "development" %}
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57180863-4"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag() { dataLayer.push(arguments); }
-         gtag('js', new Date());
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57180863-4"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
 
-         gtag('config', 'UA-57180863-4');
-      </script>
+      function gtag() {
+         dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-57180863-4');
+   </script>
    {% endif %}
 
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:500,700" rel="stylesheet">
 
-   <script type="text/javascript" src="/assets/js/site.min.js"></script>
+   <script type="text/javascript" src="/assets/js/site.js"></script>
 </body>
+
 </html>
