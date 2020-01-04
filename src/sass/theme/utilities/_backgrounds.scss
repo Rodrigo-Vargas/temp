@@ -9,3 +9,16 @@
 .bg-white {
     background-color: #fff !important;
 }
+
+@each $name, $color in $grays {
+  .bg-gray-#{$name} {
+    background-color: $color;
+  }
+}
+
+@each $name,
+$color in $theme-colors {
+  .bg-primary-#{$name} {
+    background-color: $color;
+  }
+}

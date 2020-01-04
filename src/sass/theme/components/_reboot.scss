@@ -111,27 +111,6 @@ p {
   margin-bottom: $paragraph-margin-bottom;
 }
 
-// Abbreviations
-//
-// 1. Remove the bottom border in Firefox 39-.
-// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-// 3. Add explicit cursor to indicate changed behavior.
-// 4. Duplicate behavior to the data-* attribute for our tooltip plugin
-
-abbr[title],
-abbr[data-original-title] { // 4
-  text-decoration: underline; // 2
-  text-decoration: underline dotted; // 2
-  cursor: help; // 3
-  border-bottom: 0; // 1
-}
-
-address {
-  margin-bottom: 1rem;
-  font-style: normal;
-  line-height: inherit;
-}
-
 ol,
 ul,
 dl {
@@ -146,21 +125,8 @@ ul ol {
   margin-bottom: 0;
 }
 
-dt {
-  font-weight: $dt-font-weight;
-}
-
-dd {
-  margin-bottom: .5rem;
-  margin-left: 0; // Undo browser default
-}
-
 blockquote {
   margin: 0 0 1rem;
-}
-
-dfn {
-  font-style: italic; // Add the correct font style in Android 4.3-
 }
 
 // stylelint-disable font-weight-notation

@@ -1,19 +1,21 @@
 ---
-    layout: internal
+layout: internal
 ---
 
 <div class="container">
-    <h2>Episódios</h2>
+   <h2>Episódios</h2>
 
-    <ul class="list-unstyled">
-        {% for episode in page.episodes %}
-            <li class="bg-white p-3 rounded shadow mb-3">
-                <a href="{{ episode.url }}">
-                    <h4>{{episode.number }} - {{ episode.title }}</h4>
-                    <small>{{ episode.url }}</small>
-                </a>
-            </li>
-        {% endfor %}
+   <ul class="list-unstyled">
+      {% for episode in page.episodes %}
+      <li class="card bg-white p-3 rounded shadow mb-3">
+         <div class="card-body">
+            <a href="{{ episode.url }}">
+               <h4>{{episode.number }} - {{ episode.title }}</h4>
+               <small>{{ episode.url }}</small>
+            </a>
+         </div>
+      </li>
+      {% endfor %}
 
-    </ul>
+   </ul>
 </div>

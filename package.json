@@ -3,7 +3,9 @@
    "version": "1.0.0",
    "description": "A blog about web development",
    "main": "gulpfile.js",
-   "dependencies": {},
+   "dependencies": {
+      "bootstrap": "^4.4.1"
+   },
    "devDependencies": {
       "@babel/core": "^7.7.7",
       "@babel/preset-env": "^7.7.7",

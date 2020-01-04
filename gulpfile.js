@@ -17,7 +17,7 @@ var messages = {
 
 function jekyllInit(done) {
    return cp.spawn("bundle", 
-                     ["exec", "jekyll build"], 
+                     ["exec", "jekyll build", "--JEKYLL_ENV=production"], 
                      { stdio: "inherit" }
             )
             .on("close", done);
@@ -27,8 +27,10 @@ function jekyllBuild (done) {
    console.log("Running jekyll rebuild");
 
    browserSync.notify(messages.jekyllBuild);
-   return cp.spawn("bundle", ["exec", "jekyll build"], { stdio: "inherit" })
-      .on("close", done);
+   return cp.spawn("bundle", ["exec", "jekyll build", "--JEKYLL_ENV=production"], {
+     stdio: "inherit"
+   })
+  .on("close", done);
 }
 
 function jekyllRebuild (done) {
