@@ -14,7 +14,7 @@
   date: 2015-01-01
   featured: true
   layout: project
-  period: 2015 - Current
+  period: 2015 - Atual
   title: Site pessoal
   url: http://rodrigovargas.me
   year: 2015

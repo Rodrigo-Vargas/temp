@@ -2,11 +2,11 @@
   categories: [Html, Jekyll]
   cover_url: "/assets/img/projects/21mobile.jpeg"
   date: 2016-03-01
-  name: 21 Mobile
   end_date: 2016/08/01
   job_title: Freelancer PHP
-  period: 2016, March - 2016, July
+  period: 2016, Março - 2016, Julho
   published: false
+  title: 21 Mobile
   year: 2016  
 ---
 

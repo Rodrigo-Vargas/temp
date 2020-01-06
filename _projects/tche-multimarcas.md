@@ -4,7 +4,7 @@
    date: 2017-06-01
    featured: true
    layout: "internal"
-   period: 2017, June - 2017, August
+   period: 2017, Junho - 2017, Agosto
    published: false
    title: Tchê Multimarcas
    year: 2017

@@ -1,5 +1,5 @@
 ---
-  location: "Santa Cruz do Sul, RS , Brazil"  
+  location: "Santa Cruz do Sul - Porto Alegre, RS , Brasil"  
   name: Conectt
   period: "2013 - Current"
   position: "Software Engineer"
@@ -14,6 +14,19 @@
                "Web Center and Lucene"]
   slug: conectt
   highlights: [ 
+                "Desenvolvedor júnior para líder técnico em cerca de 3 anos",
+                "Desenvolvedor Fullstack para plataformas Sharepoint e C #.",
+                "Líder técnico em dois projetos",
+                "Evangelista de boas práticas entre os membros da equipe local",
+                "Responsável pela entrevista técnica de novos candidatos",
+                "Entreguei cerca de 6 projetos de sucesso como membro da equipe de desenvolvedores",
+                "Membro da equipe de manutenção com alta satisfação do cliente"
+              ]
+  year: 2013
+---
+
+<div>
+highlights: [ 
                 "Junior developer to lead developer in about 3 years",
                 "Fullstack developer for Sharepoint and C# plataforms.", 
                 "Lead developer on two projects",
@@ -22,10 +35,6 @@
                 "Delivered about 6 successfull projects as developer team member",
                 "Member of manutenance team with high customer satisfaction"
               ]
-  year: 2013
----
-
-<div>
    <p>As a full stack developer i'm worked mainly with Microsoft technologies, with focus in the Sharepoint plataform(2007, 2010, 2013). Because Sharepoint is a .NET based plataform, the backend is usually developed using C# as well, more precisally using .NET Web Forms. I also use a good variety front-end technologies, choosed based on the customer and projects requirements.</p>
 
    <p>At first, i worked as member of projects team, when i had the opportunity of learn a lot working with senior developers in projects with more than 600 hours of work. In that projects, i'm encountered some challenges like:

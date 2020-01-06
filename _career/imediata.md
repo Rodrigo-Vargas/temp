@@ -5,8 +5,8 @@
   position: Developer
   logo_url: "/assets/img/career/imediata.jpg"
   highlights: [
-                "Get a full time position after college internalship",
-                "Help to develop a file storage to MySQL Cobol driver"
+                "Consiga um cargo em período integral após o estágio na faculdade",
+                "Ajudei a desenvolver um driver para acesso ao banco MySQL para Cobol"
               ]
   skills: [
             "Cobol",

@@ -13,6 +13,7 @@
     cover_url: "/cdn/images/projects/favorita-veiculos/home.png"
     layout: project
     featured: true
+    period: 2018
     title: "Favorita Veículos"
 ---
 

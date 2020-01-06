@@ -4,7 +4,7 @@
   date: 2017-03-01
   featured: true
   job_title: Freelance
-  period: 2017, March - 2017, May
+  period: 2017, Março - 2017, Maio
   published: false
   title: KMW Veículos
   year: 2017
