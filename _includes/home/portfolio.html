@@ -1,10 +1,10 @@
 <section class="portfolio ">
    <div class="inner">
       <div class="container">
-         <h2 class="section-title font-weight-bold">
-            <a href="/projetos">Projetos Recentes</a>
+         <h2 class="font-weight-bold iconed">
+            <i class="fas fa-flask"></i>
+            Labs
          </h2>
-         <hr class="bg-primary" />
          
          <div class="project-list">
             <div class="row">
@@ -17,22 +17,23 @@
                         {% assign cover_url = "/assets/img/no_cover.jpg" %}
                      {% endif %}
             
-                     <a class="card mb-3" aria-label="{{ project.title }}" href="{{ project.url }}">
+                     <a class="card portfolio mb-3" aria-label="{{ project.title }}" href="{{ project.url }}">
                         <div class="card-background position-relative">
                            <img data-src="{{ cover_url }}" class="lazy img-fluid" alt="">
-                           <h4 class="fixed-bottom gradient m-0 text-white font-weight-bold">{{ project.title }}</h4>
                         </div>                        
 
-                        <div class="bg-primary text-center pt-2">
-                           <hr class="m-0 bg-white" />
+                        <div class="text-center pt-2 card-meta">
+                           <h4 class="mt-5 text-white font-weight-bold">{{ project.title }}</h4>
 
-                           <ul class="list-inline text-left p-2 m-0">
+                           <span class="" href="{{ project.link }}">{{ project.link }}</span>
+
+                           <ul class="list-inline text-center p-2 m-0">
                               {% for category in project.categories %}
-                                 <li class="rounded list-inline-item border border-white text-white p-2">{{ category }}</li>
+                                 <li class="font-size-md text-white p-1 pl-2 pr-2">
+                                    {{ category }}</li>
                               {% endfor %}
                            </ul>
-                        </div>
-                           
+                        </div>                           
                      </a>
                   </div>
                {% endfor %}

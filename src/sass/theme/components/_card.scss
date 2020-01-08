@@ -57,6 +57,32 @@
       }
    }
 
+   &.portfolio {
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+         .card-meta {
+            top: 0;
+         }
+      }
+
+      .card-meta {
+         background-color: rgba(14, 12, 74, 0.8);
+         height: 100%;
+         left: 0;
+         position: absolute;
+         top: -100%;
+         transition: all 0.5s;
+         width: 100%;
+
+         li {
+            border: 1px solid $white;
+            border-radius: 25px;
+         }
+      }
+   }
+
    .card-header {
      overflow: hidden;
    }
@@ -82,35 +108,5 @@
    .meta {
       color: $gray-200;
       font-size: 14px;
-   }
-}
-
-.project-card {
-   overflow: hidden;
-   position: relative;
-
-   &:hover {
-      .meta {
-         top: 0;
-         bottom: 0;
-      }
-   }
-
-   .background {
-      background-position: center;
-      background-size: cover;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-   }
-
-   .meta {
-      background-color: $primary-500;
-      left: 0;
-      top: -200px;
-      bottom: 300px;
-      width: 100%;
-      transition: all 0.5s;
    }
 }

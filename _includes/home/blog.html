@@ -1,9 +1,8 @@
 <section class="latest-blog pt-5">
-    <a href="/blog/">
-        <h2 class="font-weight-bold">Blog</h2>
-    </a>
-
-    <hr class="bg-primary" />
+   <h2 class="font-weight-bold iconed">
+      <i class="fas fa-book"></i>
+      Blog
+   </h2>
 
     {% assign articles = site.articles | sort: 'publish_date' | reverse %}
 

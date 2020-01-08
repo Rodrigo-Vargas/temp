@@ -17,7 +17,7 @@ var messages = {
 
 function jekyllInit(done) {
    return cp.spawn("bundle", 
-                     ["exec", "jekyll build", "--JEKYLL_ENV=production"], 
+                     ["exec", "jekyll build"], 
                      { stdio: "inherit" }
             )
             .on("close", done);
@@ -27,7 +27,7 @@ function jekyllBuild (done) {
    console.log("Running jekyll rebuild");
 
    browserSync.notify(messages.jekyllBuild);
-   return cp.spawn("bundle", ["exec", "jekyll build", "--JEKYLL_ENV=production"], {
+   return cp.spawn("bundle", ["exec", "jekyll build"], {
      stdio: "inherit"
    })
   .on("close", done);
@@ -83,14 +83,12 @@ function compileScss (done) {
                .on("error", sass.logError))
                .pipe(gulp.dest("assets/css/"))
                .pipe(gulp.dest("_site/assets/css/")) // Force overwrite on build site folder
-               .pipe(sourcemaps.write('_site/assets/css/')); 
-
-   browserSync.reload();
+               .pipe(sourcemaps.write('_site/assets/css/'));
    done();
 }
 
 function watch () {
-   gulp.watch("src/sass/**/*.scss", gulp.series(compileScss));
+   gulp.watch("src/sass/**/*.scss", gulp.series(compileScss, jekyllRebuild));
    gulp.watch("src/js/**/*.js", gulp.series(js, jekyllRebuild));
    gulp.watch(
                [

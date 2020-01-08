@@ -397,7 +397,7 @@
 }
 
 .v-card {
-  background-image: linear-gradient(110deg, #603BAB 35%, #ECF1F3 calc(35% + 2px));
+  background-image: linear-gradient(110deg, #5714B4 35%, #ECF1F3 calc(35% + 2px));
   display: none;
   padding: 35vh;
   height: 100vh;
@@ -431,8 +431,8 @@
 }
 
 .v-card .social-media li a {
-  background-color: #603BAB;
-  border: 2px solid #603BAB;
+  background-color: #5714B4;
+  border: 2px solid #5714B4;
   border-radius: 50%;
   color: #fff;
   display: block;
@@ -446,8 +446,8 @@
 
 .v-card .social-media li a:hover {
   background-color: #fff;
-  border-color: #603BAB;
-  color: #603BAB;
+  border-color: #5714B4;
+  color: #5714B4;
 }
 
 @media (min-width: 992px) {
@@ -460,37 +460,80 @@
   font-weight: 100;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   margin-bottom: 0.5rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   line-height: 1.2;
-  color: #603BAB;
+  color: #5714B4;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 40px;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 32px;
 }
 
-h3, .h3 {
+h2.iconed,
+.h2.iconed {
+  border-bottom: 3px solid #5714B4;
+  margin: 40px;
+  max-width: 300px;
+  padding: 10px 30px;
+  position: relative;
+}
+
+h2.iconed svg,
+.h2.iconed svg {
+  background-color: #5714B4;
+  border-radius: 10px 10px 0 10px;
+  color: #fff;
+  display: inline-block;
+  height: 60px;
+  left: -40px;
+  padding: 16px;
+  position: absolute;
+  top: 1px;
+  width: 60px !important;
+}
+
+h3,
+.h3 {
   font-size: 28px;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 24px;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 20px;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 16px;
+}
+
+.font-size-md {
+  font-size: 8px;
 }
 
 hr {
@@ -502,7 +545,7 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
+  font-size: 12px;
   font-weight: 400;
 }
 

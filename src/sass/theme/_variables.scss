@@ -8,7 +8,7 @@ $primary-900: #0E024A;
 $primary-800: #20084E;
 $primary-700: #2D1263;
 $primary-600: #3E2277;
-$primary-500: #603BAB;
+$primary-500: #5714B4;
 $primary-400: #7750C3;
 $primary-300: #8C63DE;
 $primary-200: #B698F0;
@@ -129,6 +129,10 @@ $h4-font-size: $font-size-base * 1.5;
 $h5-font-size: $font-size-base * 1.25;
 $h6-font-size: $font-size-base;
 
+$font-size-md: $font-size-base * 0.75;
+$font-size-md: $font-size-base * 0.5;
+
+
 $headings-margin-bottom: $spacer / 2;
 
 $headings-font-family: 'Open Sans', sans-serif;
@@ -140,7 +144,7 @@ $hr-border-width: $border-width;
 
 $hr-margin-y: $spacer;
 
-$small-font-size: 80%;
+$small-font-size: $font-size-base * 0.75;
 
 $list-inline-padding: .5rem;
 
