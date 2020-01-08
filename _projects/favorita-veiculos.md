@@ -12,6 +12,7 @@
     categories: ["PHP", "Laravel", "HTML"]
     cover_url: "/cdn/images/projects/favorita-veiculos/home.png"
     layout: project
+    link: http://favoritaveiculos.com.br
     featured: true
     period: 2018
     title: "Favorita Veículos"

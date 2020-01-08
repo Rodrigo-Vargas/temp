@@ -87,6 +87,12 @@
      overflow: hidden;
    }
 
+   .card-tag {
+      font-size: $font-size-md;
+      margin: 0 $spacer-2;
+      padding: $spacer-2;
+   }
+
    .card-body {
       flex: 1 1 auto;
       padding: 1.25rem;

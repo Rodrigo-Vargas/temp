@@ -3,15 +3,26 @@
   border: 1px solid #ccc;
   color: #222;
   font-family: 'Lato', sans-serif;
+  padding: 20px 0 0 0;
+}
+
+.web-resume .fa-stack {
+  font-size: 20px;
 }
 
 .web-resume h1 {
+  color: #222;
   font-size: 32px;
   font-weight: bold;
-  margin: 20px 0 0 0;
+  margin: 0;
+}
+
+.web-resume h2 {
+  color: #222;
 }
 
 .web-resume h3 {
+  color: #222;
   font-size: 20px;
   margin: 10px 0;
 }
@@ -30,6 +41,8 @@
 .web-resume .section > .title h2 {
   font-size: 22px;
   font-weight: bold;
+  line-height: 22px;
+  vertical-align: sub;
 }
 
 .web-resume .section .info {
@@ -38,6 +51,7 @@
 
 .web-resume .section .info label {
   display: block;
+  font-weight: bold;
 }
 
 .web-resume .section .item {
@@ -59,4 +73,22 @@
 .web-resume .section .job-title {
   font-weight: bold;
   margin: 0;
+}
+
+@media (min-width: 576px) {
+  .web-resume .col.meta {
+    max-width: 30%;
+  }
+  .web-resume .col.resume {
+    max-width: 70%;
+  }
+}
+
+@media (print) {
+  .web-resume .col.meta {
+    width: 30%;
+  }
+  .web-resume .col.resume {
+    width: 70%;
+  }
 }

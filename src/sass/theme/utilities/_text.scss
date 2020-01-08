@@ -26,3 +26,10 @@
 // Contextual colors
 
 .text-white { color: $white !important; }
+
+@each $name,
+$color in $theme-colors {
+  .text-primary-#{$name} {
+    color: $color;
+  }
+}

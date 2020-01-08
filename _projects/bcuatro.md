@@ -13,6 +13,7 @@
     cover_url: "/cdn/images/projects/bcuatro/home.png"
     featured: true
     layout: project
+    link: http://bcuatro.com.br
     period: 2018
     title: B Cuatro Comunicação Visual
 ---

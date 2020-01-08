@@ -8,7 +8,7 @@
 @import "mixins/transition";
 
 @import "theme/utilities/backgrounds";
-@import "theme/utilities/borders";
+@import "theme/utilities/display";
 @import "theme/utilities/position";
 @import "theme/utilities/spacing";
 @import "theme/utilities/screenreaders";
@@ -30,8 +30,6 @@
 
 @import "theme/components/blog-list";
 @import "theme/components/project-list";
-
-@import "vendor/font-awesome.scss";
 
 @import "theme/theme";
 

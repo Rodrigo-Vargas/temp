@@ -1,16 +1,30 @@
+@import "functions";
+@import "theme/variables";
+   
 .web-resume {
    background-color: #fff;
    border: 1px solid #ccc;
    color: #222;
    font-family: 'Lato', sans-serif;
+   padding: 20px 0 0 0;
+
+   .fa-stack {
+      font-size: 20px;
+   }
 
    h1 {
+      color: #222;
       font-size: 32px;
       font-weight: bold;
-      margin: 20px 0 0 0;
+      margin: 0;
+   }
+
+   h2 {
+      color: #222;
    }
 
    h3 {
+      color: #222;
       font-size: 20px;
       margin: 10px 0;
    }
@@ -31,6 +45,8 @@
    .section > .title h2 {
       font-size: 22px;
       font-weight: bold;
+      line-height: 22px;
+      vertical-align: sub;
    }
 
    .section .info {
@@ -39,6 +55,7 @@
 
    .section .info label {
       display: block;
+      font-weight: bold;
    }
 
    .section .item {
@@ -61,5 +78,28 @@
       font-weight: bold;
       margin: 0;
    }
-}
 
+   @media(min-width: map-get($grid-breakpoints, sm)) {
+      .col {
+         &.meta {
+            max-width: 30%;
+         }
+      
+         &.resume {
+            max-width: 70%;
+         }
+      }
+   }
+
+   @media(print) {
+      .col {
+         &.meta {
+            width: 30%;
+         }
+      
+         &.resume {
+            width: 70%;
+         }
+      }
+   }
+}

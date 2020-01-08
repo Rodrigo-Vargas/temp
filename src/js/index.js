@@ -30,11 +30,11 @@ let loadFontAwesome = function () {
    );
 
    dom.watch();
-}
+};
 
 let main = function () {
    loadFontAwesome();
-}
+};
 
 if (new RetroCompat().Check()) {
    console.log("Your browser is fully compatible!");

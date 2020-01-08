@@ -12,6 +12,10 @@
     line-height: 1;
 }
 
+.fa-link:before {
+    content: "\f0c1"
+}
+
 .fa-linkedin:before {
     content: "\f08c"
 }
@@ -30,6 +34,76 @@
 
 .fa-heart:before {
     content: "\f004"
+}
+
+.fa-star:before {
+    content: "\f005"
+}
+
+.fa-inverse {
+    color: #fff
+}
+
+.fa-lg {
+    font-size: 1.33333em;
+    line-height: .75em;
+    vertical-align: -.0667em
+}
+
+.fa-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2.5em
+}
+
+.fa-stack-1x,.fa-stack-2x {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
+
+.fa-stack-1x {
+    line-height: inherit
+}
+
+.fa-stack-2x {
+    font-size: 2em
+}
+
+.fa-briefcase:before {
+    content: "\f0b1"
+}
+
+.fa-circle:before {
+    content: "\f111"
+}
+
+.fa-user:before {
+    content: "\f007"
+}
+
+.fa-graduation-cap:before {
+    content: "\f19d"
+}
+
+.fa-lightbulb:before {
+    content: "\f0eb"
+}
+
+.fa-flag:before {
+    content: "\f024"
+}
+
+.fa-desktop:before {
+    content: "\f108"
+}
+
+.fa-phone:before {
+    content: "\f095"
 }
 
 .fab {

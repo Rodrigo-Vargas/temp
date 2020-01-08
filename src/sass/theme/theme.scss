@@ -1,8 +1,5 @@
 /* Background colors */
 
-$first-bg-color: #f3efe0;
-$second-bg-color: #efefef;
-
 body {
    background-color: $background-color;
    font-family: 'Montserrat', sans-serif;
@@ -11,14 +8,6 @@ body {
 
 a:hover {
    text-decoration: none;
-}
-
-/*
-  ************* Modal ************
-*/
-
-.modal-content {
-   padding: 20px;
 }
 
 /* ------------- Begin Content ------------ */
@@ -119,17 +108,4 @@ footer span {
    background-position: center;
    background-size: cover;
    overflow: hidden;
-}
-
-.gradient {
-   background: linear-gradient(to bottom, 
-   rgba(53, 172, 235, 0) 0%, 
-   rgb(87, 20, 180) 50%, 
-   rgb(87, 20, 180) 100%);
-
-   background-repeat: no-repeat;
-   position: absolute;
-   left: 0;
-   width: 100%;
-   padding: 9px;
 }
