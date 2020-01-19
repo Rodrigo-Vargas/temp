@@ -1,31 +1,39 @@
 ---
    layout: internal
 ---
-<div class="article">
-   <div class="container">
-      <div class="box-with-shadow article-body">
-         
-         {{ page.content }}
+<div class="article-detail">
+   <aside class="bg-white">
+      <div class="aside-body">
+         <h4 class="gray-500">Sumário</h4>
+         <ul class="subtitles"></ul>
       </div>
 
-      <div id="disqus_thread"></div>
-         <script>
+      <a class="toggle-button" data-aside-toggle>
+         <i class="fas fa-chevron-left"></i>
+      </a>
+   </aside>
 
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function () { // DON'T EDIT BELOW THIS LINE
-               var d = document, s = d.createElement('script');
-               s.src = 'https://rodrigovargasme.disqus.com/embed.js';
-               s.setAttribute('data-timestamp', +new Date());
-               (d.head || d.body).appendChild(s);
-            })();
-         </script>
-         <noscript>Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-         </noscript>
-   </div>
+   <article>
+      <ul class="box-with-shadow article-body">            
+         {{ page.content }}
+      </div>
+   
+      <div id="disqus_thread"></div>
+      <script>
+         var disqus_config = function () {
+            this.page.url = "{{ page.url }}";
+            this.page.identifier = "{{ page.title }}";
+         };
+   
+         (function() {
+         var d = document, s = d.createElement('script');
+         s.src = 'https://rodrigovargas-com-br.disqus.com/embed.js';
+         s.setAttribute('data-timestamp', +new Date());
+         (d.head || d.body).appendChild(s);
+         })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    
+   </article>
 </div>
+

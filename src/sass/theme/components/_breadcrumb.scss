@@ -1,5 +1,13 @@
 .breadcrumb {
-    li {
-        display: inline;
-    }
+   li {
+      display: inline;
+
+      a {
+         transition: all 0.5s;
+
+         &:hover {
+            color: $white;
+         }
+      }
+   }
 }

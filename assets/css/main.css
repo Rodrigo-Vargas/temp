@@ -165,11 +165,15 @@
   padding: 3rem !important;
 }
 
-.pl-3, .px-3 {
+.pl-3 {
   padding-left: 1rem !important;
 }
 
-.pr-3, .px-3 {
+.pr-2 {
+  padding-right: 0.5rem !important;
+}
+
+.pr-3 {
   padding-right: 1rem !important;
 }
 
@@ -642,19 +646,125 @@ template {
   }
 }
 
-.article img {
+body.aside-closed aside {
+  left: -400px;
+}
+
+body.aside-closed aside svg {
+  transform: rotate(180deg) !important;
+}
+
+body.aside-closed article {
+  padding-left: 0;
+}
+
+.page-meta {
+  padding: 150px 0;
+}
+
+.article-detail {
+  position: relative;
+}
+
+.article-detail aside {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0 10px 10px 0;
+  height: 300px;
+  left: 0;
+  position: fixed;
+  transition: left 0.5s;
+  width: 400px;
+}
+
+.article-detail aside .aside-body {
+  padding: 1rem;
+}
+
+.article-detail aside ul {
+  padding-left: 1rem;
+}
+
+.article-detail aside .toggle-button {
+  background-color: #5714B4;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  height: 60px;
+  padding: 19px 8px;
+  position: absolute;
+  right: -25px;
+  top: calc(50% - 30px);
+  width: 25px;
+}
+
+.article-detail aside .toggle-button svg {
+  color: #fff;
+  transition: transform 0.5s;
+}
+
+.article-detail article {
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.article-detail article .article-body {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 90%;
+}
+
+.article-detail article h2 {
+  margin-top: -60px;
+  padding-top: 90px;
+}
+
+.article-detail img {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem !important;
   margin: 20px 0;
   max-width: 100%;
 }
 
-.article h2 {
+.article-detail h2 {
   margin-top: 2.5rem;
+}
+
+@media (min-width: 576px) {
+  .article-detail article {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .article-detail article {
+    padding-left: 400px;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .article-detail article {
+    padding-left: 400px;
+    max-width: 1360px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article-detail article {
+    max-width: 1540px;
+  }
 }
 
 .breadcrumb li {
   display: inline;
+}
+
+.breadcrumb li a {
+  transition: all 0.5s;
+}
+
+.breadcrumb li a:hover {
+  color: #fff;
 }
 
 .card {

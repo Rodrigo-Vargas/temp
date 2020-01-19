@@ -49,3 +49,9 @@
   max-width: 100%;
   height: auto;
 }
+
+@media(min-width: map-get($grid-breakpoints, sm)) {
+  .content {
+    padding-top: 72px;
+  }  
+}
