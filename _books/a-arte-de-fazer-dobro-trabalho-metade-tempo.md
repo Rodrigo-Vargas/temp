@@ -1,5 +1,6 @@
 ---
     author: Jeff Sutherland
+    date: 2020-01-21
     layout: book
     title: A arte de fazer o dobro do trabalho na metade do tempo
     year: 2014

@@ -21,4 +21,11 @@
          <lastmod>{{ article.date | date: "%Y-%m-%dT%H:%M:%S-02:00"}}</lastmod>
       </url>
    {% endfor %}
+
+   {% for book in site.books %}
+      <url>
+         <loc>{{ book.url | prepend: site.baseurl | prepend: site.url }}</loc>
+         <lastmod>{{ book.date | date: "%Y-%m-%dT%H:%M:%S-02:00"}}</lastmod>
+      </url>
+   {% endfor %}
 </urlset>
