@@ -41,6 +41,9 @@ collections:
   articles:
     output: true
     permalink: /blog/:path
+  books:
+    output: true
+    permalink: /bookshelf/:path
   projects:
     output: true
     permalink: /projetos/:path
