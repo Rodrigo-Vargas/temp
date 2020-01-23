@@ -1,9 +1,18 @@
 ---
-    author: Jeff Sutherland
-    date: 2020-01-21
-    layout: book
-    title: A arte de fazer o dobro do trabalho na metade do tempo
-    year: 2014
+   author: Jeff Sutherland
+   breadcrumb:
+      -
+         text: "Bookshelf"
+         link: "/bookshelf"
+      -
+         text: "A arte de fazer o dobro do trabalho na metade do tempo"
+         link: "/bookshelf/a-arte-de-fazer-dobro-trabalho-metade-tempo"
+   cover_url: /cdn/images/books/a-arte-fazer-dobro-trabalho-metade-tempo.png
+   date: 2020-01-21
+   layout: book
+   rating: 5
+   title: A arte de fazer o dobro do trabalho na metade do tempo
+   year: 2014
 ---
 
 O livro "A arte de fazer o dobro do trabalho na metade do tempo" é escrito por Jeff Sutherland, um dos criadores do processo de desenvolvimento Scrum. Acredito ser um livro essencial para quem quer começar com Scrum, visto que "aplicar a metodologia" pode parecer algo trivial, mas entender a razão por trás de cada rito é algo que faz muita diferença. Abaixo vou citar as 11 principais lições que aprendi com este livro.

@@ -672,7 +672,7 @@ body.aside-closed article {
   height: 300px;
   left: 0;
   position: fixed;
-  transition: left 0.5s;
+  transition: all 0.5s;
   width: 400px;
 }
 
@@ -681,6 +681,7 @@ body.aside-closed article {
 }
 
 .article-detail aside ul {
+  list-style: none;
   padding-left: 1rem;
 }
 
@@ -702,7 +703,7 @@ body.aside-closed article {
 }
 
 .article-detail article {
-  transition: all 0.5s;
+  transition: all 0.8s;
   width: 100%;
 }
 
@@ -747,11 +748,19 @@ body.aside-closed article {
     padding-left: 400px;
     max-width: 1360px;
   }
+  body.aside-closed article {
+    padding-left: 200px;
+    max-width: 1560px;
+  }
 }
 
 @media (min-width: 1200px) {
   .article-detail article {
     max-width: 1540px;
+  }
+  body.aside-closed article {
+    padding-left: 200px;
+    max-width: 1740px;
   }
 }
 

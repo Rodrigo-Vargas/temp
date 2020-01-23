@@ -30,6 +30,8 @@ export default class AsideHandler {
          document.querySelector("body").classList.add("aside-closed");
       else
          document.querySelector("body").classList.remove("aside-closed");
+
+      this.onScroll(aside);
    }
 
    onScroll(aside) {
@@ -37,8 +39,11 @@ export default class AsideHandler {
 
       let targetScroll = article.getBoundingClientRect().top;
 
-      if (targetScroll < 100)
+      if (targetScroll < 110)
+      {
+         aside.setAttribute("style", "top: 110px");
          return;
+      }
 
       aside.setAttribute("style", "top: " + targetScroll + "px");
    }

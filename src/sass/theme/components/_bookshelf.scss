@@ -1,0 +1,15 @@
+.bookshelf {
+   img {
+      display: block;
+      margin: 0 auto;
+      max-height: 200px;
+   }
+}
+
+@media(min-width: map-get($grid-breakpoints, md)) {
+   .bookshelf {
+      .col {
+         max-width: 25% !important;
+      }
+   }
+}
