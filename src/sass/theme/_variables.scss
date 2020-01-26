@@ -127,6 +127,7 @@ $h2-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.5;
 $h4-font-size: $font-size-base * 1.25;
 
+$font-size-lg: $font-size-base * 1.125;
 $font-size-md: $font-size-base * 0.75;
 $font-size-sm: $font-size-base * 0.5;
 
@@ -134,7 +135,7 @@ $font-size-sm: $font-size-base * 0.5;
 $headings-margin-bottom: $spacer / 2;
 
 $headings-font-family: 'Open Sans', sans-serif;
-$headings-font-weight: 500;
+$headings-font-weight: 700;
 $headings-line-height: 1.2;
 
 $hr-border-color: rgba($black, .1);
