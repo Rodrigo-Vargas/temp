@@ -1,6 +1,6 @@
 ---
   name: FCC Data Visualization
-  period: 2017, February - 2017, April
+  period: 2017, Fevereiro - 2017, Abril
   slug: fcc-data-visualization-certification
   year: 2017
 ---

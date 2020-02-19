@@ -1,62 +1,61 @@
 .v-card {
-    background-image: linear-gradient(110deg,$primary-500 35%,$gray-100 calc(35% + 2px));
-    display: none;
-    padding: 35vh;
-    height: 100vh;
+   background-image: linear-gradient(110deg, $primary-500 35%, $gray-100 calc(35% + 2px));
+   display: none;
+   padding: 35vh;
+   height: 100vh;
 
-    h1, h2 {
-        color: $primary-700;
-    }
+   h1,
+   h2 {
+      color: $primary-700;
+   }
 
-    .avatar-wrap {
-        background-position: center;
-        background-size: cover;
-        border: 5px solid $primary-700;
-        border-radius: 50%;
-        height: 200px;
-        margin: 0 auto;
-        overflow: hidden;
-        width: 200px;
+   .avatar-wrap {
+      background-position: center;
+      background-size: cover;
+      border: 5px solid $primary-700;
+      border-radius: 50%;
+      height: 200px;
+      margin: 0 auto;
+      overflow: hidden;
+      width: 200px;
 
-        img {
-            display: none;
-        }
-    }
+      img {
+         display: none;
+      }
+   }
 
-    .social-media {
-        ul {
-            list-style: none;
-        }
+   .social-media {
+      ul {
+         list-style: none;
+      }
 
-        li {
-            display: inline-block;
+      li {
+         display: inline-block;
 
-            a {
-                background-color: $primary-500;
-                border: 2px solid $primary-500;
-                border-radius: 50%;
-                color: #fff;
-                display: block;
-                font-size: 22px;
-                height: 45px;
-                line-height: 45px;
-                text-align: center;
-                transition: all 0.25s;
-                width: 45px;
+         a {
+            background-color: $primary-500;
+            border: 2px solid $primary-500;
+            border-radius: 50%;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 45px;
+            text-align: center;
+            transition: all 0.25s;
+            width: 49px;
 
-                &:hover {
-                    background-color: #fff;
-                    border-color: $primary-500;
-                    color: $primary-500;
-                }
+            &:hover {
+               background-color: #fff;
+               border-color: $primary-500;
+               color: $primary-500;
             }
-        }
-    }
+         }
+      }
+   }
 }
 
 @media(min-width: map-get($grid-breakpoints, lg)) {
-    .v-card {
-        display: block;
-    }
-
+   .v-card {
+      display: block;
+   }
 }

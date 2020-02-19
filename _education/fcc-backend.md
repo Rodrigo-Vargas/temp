@@ -1,6 +1,6 @@
 ---
   name: FCC Backend Development
-  period: 2016, January - 2016, August
+  period: 2016, Janeiro - 2016, Agosto
   slug: fcc-backend-certification
   year: 2016
 ---

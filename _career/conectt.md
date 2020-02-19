@@ -1,8 +1,8 @@
 ---
   location: "Santa Cruz do Sul - Porto Alegre, RS , Brasil"  
   name: Conectt
-  period: "2013 - Current"
-  position: "Software Engineer"
+  period: "2013 - Atual"
+  position: "Desenvolvedor Sênior"
   logo_url: "/assets/img/career/conectt.png"
   skills:   [  "Sharepoint (2007, 2010, 2013, Online)",
                "Nintex Workflows for Sharepoint",
@@ -16,10 +16,9 @@
   highlights: [ 
                 "Desenvolvedor júnior para líder técnico em cerca de 3 anos",
                 "Desenvolvedor Fullstack para plataformas Sharepoint e C #.",
-                "Líder técnico em dois projetos",
                 "Evangelista de boas práticas entre os membros da equipe local",
                 "Responsável pela entrevista técnica de novos candidatos",
-                "Entreguei cerca de 6 projetos de sucesso como membro da equipe de desenvolvedores",
+                "Entrega de mais de 10 projetos bem sucedidos como membro da equipe de desenvolvedores, entre esses, dois desses como líder técnico",
                 "Membro da equipe de manutenção com alta satisfação do cliente"
               ]
   year: 2013

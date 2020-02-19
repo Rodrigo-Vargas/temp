@@ -1,7 +1,7 @@
 ---
   categories : certificacao
   name: Hubspot Inbound Marketing
-  period:
+  period: 2016
   slug: hubspot-certification
   year: 2016
 ---

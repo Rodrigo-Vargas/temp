@@ -1,7 +1,7 @@
 ---
   categories: bootstrap
   name: FCC Frontend Development
-  period: 2015, September - 2016, January
+  period: 2015, Setembro - 2016, Janeiro
   slug: fcc-frontend-certification
   year: 2015
 ---

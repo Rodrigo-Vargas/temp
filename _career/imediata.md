@@ -2,11 +2,13 @@
   location: "Cachoeira do Sul, RS , Brazil"
   name: Imediata
   period: 2012 - 2013
-  position: Developer
+  position: Desenvolvedor Cobol
   logo_url: "/assets/img/career/imediata.jpg"
   highlights: [
-                "Consiga um cargo em período integral após o estágio na faculdade",
-                "Ajudei a desenvolver um driver para acesso ao banco MySQL para Cobol"
+                "Conquistei um cargo em período integral após estágio de 8 meses na faculdade",
+                "Ajudei a desenvolver um driver para acesso ao banco MySQL para Cobol",
+                "No estágio, gerei valor para a empresa logo após as primeiras semanas de trabalho",
+                "Conquistei a confiança da equipe para realizar atendimento outsourcing nos clientes após 3 meses de estágio"
               ]
   skills: [
             "Cobol",

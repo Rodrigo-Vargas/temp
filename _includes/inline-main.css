@@ -151,7 +151,8 @@ header .navbar-nav .nav-item svg {
   height: 100vh;
 }
 
-.v-card h1, .v-card h2 {
+.v-card h1,
+.v-card h2 {
   color: #2D1263;
 }
 
@@ -185,11 +186,10 @@ header .navbar-nav .nav-item svg {
   color: #fff;
   display: block;
   font-size: 22px;
-  height: 45px;
   line-height: 45px;
   text-align: center;
   transition: all 0.25s;
-  width: 45px;
+  width: 49px;
 }
 
 .v-card .social-media li a:hover {
