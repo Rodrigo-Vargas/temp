@@ -747,6 +747,18 @@ body.aside-closed article {
   list-style-type: disc;
 }
 
+.article-detail article blockquote {
+  background-color: #ECF1F3;
+  border-left: 4px solid #738D9C;
+  color: #738D9C;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+.article-detail article blockquote p {
+  margin: 0;
+}
+
 .article-detail img {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem !important;

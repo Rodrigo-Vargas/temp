@@ -98,6 +98,18 @@ body.aside-closed {
             list-style-type: disc;
          }
       }
+
+      blockquote {
+         background-color: $gray-100;
+         border-left: 4px solid $gray-500;
+         color: $gray-500;
+         margin: $spacer-4 0;
+         padding: $spacer-4;
+
+         p {
+            margin: 0;
+         }
+      }
    }
 
    img {
