@@ -759,6 +759,11 @@ body.aside-closed article {
   margin: 0;
 }
 
+.article-detail article img {
+  display: block;
+  margin: 0 auto;
+}
+
 .article-detail img {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem !important;
@@ -864,6 +869,7 @@ body.aside-closed article {
 
 .card.blog .tag-list .tag.devops {
   background-color: #14c553;
+  color: #fff;
 }
 
 .card.blog .tag-list .tag.devops::after {
@@ -872,6 +878,7 @@ body.aside-closed article {
 
 .card.blog .tag-list .tag.ruby-on-rails {
   background-color: #e81919;
+  color: #fff;
 }
 
 .card.blog .tag-list .tag.ruby-on-rails::after {
@@ -880,6 +887,7 @@ body.aside-closed article {
 
 .card.blog .tag-list .tag.entity-framework {
   background-color: #c3e01a;
+  color: #fff;
 }
 
 .card.blog .tag-list .tag.entity-framework::after {
@@ -888,6 +896,7 @@ body.aside-closed article {
 
 .card.blog .tag-list .tag.net-core {
   background-color: #ef731c;
+  color: #fff;
 }
 
 .card.blog .tag-list .tag.net-core::after {
@@ -896,6 +905,7 @@ body.aside-closed article {
 
 .card.blog .tag-list .tag.razor {
   background-color: #3e414a;
+  color: #fff;
 }
 
 .card.blog .tag-list .tag.razor::after {
@@ -904,6 +914,7 @@ body.aside-closed article {
 
 .card.blog .tag-list .tag.mvc {
   background-color: #0089ff;
+  color: #fff;
 }
 
 .card.blog .tag-list .tag.mvc::after {
@@ -912,10 +923,38 @@ body.aside-closed article {
 
 .card.blog .tag-list .tag.wordpress {
   background-color: #32373c;
+  color: #fff;
 }
 
 .card.blog .tag-list .tag.wordpress::after {
   content: "WordPress";
+}
+
+.card.blog .tag-list .tag.react {
+  background-color: #61dafb;
+  color: #fff;
+}
+
+.card.blog .tag-list .tag.react::after {
+  content: "React";
+}
+
+.card.blog .tag-list .tag.fitness {
+  background-color: #13cf55;
+  color: #fff;
+}
+
+.card.blog .tag-list .tag.fitness::after {
+  content: "Fitness";
+}
+
+.card.blog .tag-list .tag.personal {
+  background-color: #fff;
+  color: #5714B4;
+}
+
+.card.blog .tag-list .tag.personal::after {
+  content: "Pessoal";
 }
 
 .card.blog:hover {

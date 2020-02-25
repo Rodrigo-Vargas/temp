@@ -40,9 +40,10 @@
             font-size: 12px;
             padding: $spacer-1 $spacer-2;
 
-            @each $tag, $color, $displayName in $tags {
+            @each $tag, $color, $textColor, $displayName in $tags {
                &.#{$tag} {
                   background-color: $color;
+                  color: $textColor;
 
                   &::after {
                      content: $displayName;

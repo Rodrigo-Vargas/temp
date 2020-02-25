@@ -8,7 +8,7 @@
             link: "/blog/configurando-um-ambiente-ruby-on-rails"
 
     categories: [wordpress]
-    cover_url: handling-css-wp-theme-thumb.png
+    cover_url: handling-css-wp-theme.png
     date: 2019-07-02
     description: Como gosto de organizar o front-end dos meus projetos.
     layout: article
