@@ -1,21 +1,24 @@
-<section class="portfolio ">
-   <div class="inner">
-      <div class="container">
-         <h2 class="font-weight-bold iconed">
-            <i class="fas fa-flask"></i>
-            Labs
-         </h2>
-         
-         <div class="project-list">
-            <div class="row">
-               {% assign featured_projects = site.projects | where:"featured", true %}
-               {% for project in featured_projects %}
-                  <div class="col">
-                     {% include cards/labs.html %}
-                  </div>
-               {% endfor %}
+{% assign featured_projects = site.projects | where:"featured", true | where: "lang", page.lang %}
+
+{% if featured_projects.size > 0 %}
+   <section class="portfolio ">
+      <div class="inner">
+         <div class="container">
+            <h2 class="font-weight-bold iconed">
+               <i class="fas fa-flask"></i>
+               Labs
+            </h2>
+            
+            <div class="project-list">
+               <div class="row">
+                  {% for project in featured_projects %}
+                     <div class="col">
+                        {% include cards/labs.html %}
+                     </div>
+                  {% endfor %}
+               </div>
             </div>
          </div>
       </div>
-   </div>
-</section>
+   </section>
+{% endif %}
