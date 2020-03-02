@@ -14,6 +14,7 @@
   date: 2015-01-01
   featured: true
   layout: project
+  lang: pt
   link: https://rodrigovargas.com.br
   period: 2015 - Atual
   title: Site pessoal

@@ -12,6 +12,7 @@
     categories: [HTML, Wordpress]
     cover_url: "/cdn/images/projects/bcuatro/home.png"
     featured: true
+    lang: pt
     layout: project
     link: http://bcuatro.com.br
     period: 2018
