@@ -1,12 +1,13 @@
 .v-card {
-   background-image: linear-gradient(110deg, $primary-500 35%, $gray-100 calc(35% + 2px));
-   display: none;
-   padding: 35vh;
-   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-height: 100vh;
 
    h1,
    h2 {
       color: $primary-700;
+      text-align: center;
    }
 
    .avatar-wrap {
@@ -27,6 +28,7 @@
    .social-media {
       ul {
          list-style: none;
+         text-align: center;
       }
 
       li {
@@ -56,6 +58,17 @@
 
 @media(min-width: map-get($grid-breakpoints, lg)) {
    .v-card {
-      display: block;
+      background-image: linear-gradient(110deg, $primary-500 35%, $gray-100 calc(35% + 2px));
+
+      h1,
+      h2 {
+         text-align: left;
+      }
+
+      .social-media {
+         ul {
+            text-align: left;
+         }
+      }
    }
 }
