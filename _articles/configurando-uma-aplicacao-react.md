@@ -10,6 +10,7 @@
    cover_url: "configuring-react.png"
    date: 2020-01-20
    description: Como criar uma aplicação React do zero e entendendo os conceitos por trás dessa biblioteca
+   lang: pt
    layout: article
    title: Configurando uma aplicação React
    update_date: 2020-02-02

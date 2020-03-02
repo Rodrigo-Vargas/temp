@@ -11,6 +11,7 @@
     date: 2019-06-24
     description: Criando um tema WordPress do zero
     cover_url: "getting-started-wp-theme.png"
+    lang: pt
     layout: article
     title: Criando um tema WordPress do zero
 ---

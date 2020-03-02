@@ -11,6 +11,7 @@
         - mvc
     date: 2019-01-21
     description: Primeiros passos para entender o funcionamento de uma aplicação MVC .Net Core
+    lang: pt
     layout: article
     title: Tarefas Básicas e Roteamento em uma aplicação .Net Core
 ---

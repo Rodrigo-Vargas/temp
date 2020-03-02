@@ -11,6 +11,7 @@
     cover_url: configuring-ruby-on-rails-environment.png
     date: 2019-01-07
     description: Aprenda a configurar um ambiente para desenvolver ruby on rails com vagrant
+    lang: pt
     layout: article
     title: Configurando um ambiente ruby on rails
 ---

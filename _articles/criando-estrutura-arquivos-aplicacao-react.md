@@ -10,6 +10,7 @@
    cover_url: defining-code-structure-react-app.png
    date: 2020-01-25
    description: Code splitting é fundamental em aplicações modernas. Neste post compartilho com você como gosto de definir a estrutura de uma aplicação React
+   lang: pt
    layout: article
    title: Criando a estrutura de pastas de uma aplicação React
 ---

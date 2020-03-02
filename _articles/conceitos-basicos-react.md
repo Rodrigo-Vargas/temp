@@ -10,6 +10,7 @@
    cover_url: react-basic-concepts.png
    date: 2020-02-02
    description: Antes de avançarmos, que tal olharmos alguns conceitos muito importantes da biblioteca React?
+   lang: pt
    layout: article
    title: Conceitos básicos de uma aplicação React
 ---

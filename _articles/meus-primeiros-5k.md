@@ -10,6 +10,7 @@
    cover_url: "my-first-5k.jpg"
    date: 2020-02-16
    description: Minha primeira corrida amadora
+   lang: pt
    layout: article
    title: Meus primeiros 5K
 ---

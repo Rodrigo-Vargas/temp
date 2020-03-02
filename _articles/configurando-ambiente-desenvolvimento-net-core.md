@@ -10,6 +10,7 @@
    cover_url: configuring-dot-net-core-environment.png
    date: 2019-01-14
    description: Aprenda a configurar um ambiente para desenvolver .Net Core
+   lang: pt
    layout: article
    title: Configurando um ambiente para desenvolvimento .NET Core
 ---

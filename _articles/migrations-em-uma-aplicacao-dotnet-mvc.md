@@ -11,6 +11,7 @@
         - net-core
     date: 2019-02-11
     description: Utilizando o Entity Framework, vamos configurar um banco de dados em uma aplicação .NET Core MVC
+    lang: pt
     layout: article
     title: Migrations em um aplicação .NET Core MVC
 ---
