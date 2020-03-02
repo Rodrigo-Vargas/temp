@@ -24,6 +24,7 @@
 @import "theme/components/reboot";
 @import "theme/components/transitions";
 
+@import "theme/components/alert";
 @import "theme/components/article";
 @import "theme/components/bookshelf";
 @import "theme/components/breadcrumb";
@@ -49,10 +50,4 @@
 .img-fluid {
   max-width: 100%;
   height: auto;
-}
-
-@media(min-width: map-get($grid-breakpoints, sm)) {
-  .content {
-    padding-top: 72px;
-  }  
 }

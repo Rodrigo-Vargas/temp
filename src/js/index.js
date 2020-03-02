@@ -2,6 +2,7 @@ import RetroCompat from "./retro-compat";
 import LazyImageLoad from "./lazy-image-load";
 import AsideHandler from "./aside-handler";
 import TopNavHandler from "./top-nav-handler";
+import LanguageDetector from "./language-detector";
 
 /* Font Awesome */
 
@@ -27,7 +28,7 @@ import { faLayerGroup } from "@fortawesome/free-solid-svg-icons/faLayerGroup";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
 import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
-
+import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes";
 
 import { faFileAlt } from "@fortawesome/free-regular-svg-icons/faFileAlt";
 
@@ -58,7 +59,8 @@ let loadFontAwesome = function () {
       faLinkedin,
       faPaperPlane,
       faPhone,
-      faStar
+      faStar,
+      faTimes
    );
 
    dom.watch();
@@ -79,3 +81,4 @@ if (new RetroCompat().Check()) {
 new LazyImageLoad();
 new AsideHandler();
 new TopNavHandler();
+new LanguageDetector();

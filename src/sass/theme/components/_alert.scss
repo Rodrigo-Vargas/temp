@@ -1,0 +1,33 @@
+.alert {
+   background-color: $white;
+   border: 2px solid $primary-500;
+   border-radius: 10px;
+   box-shadow: $shadow-deep;
+   bottom: -200px;
+   padding: $spacer-3 $spacer-5 $spacer-3 $spacer-3;
+   left: 0;
+   position: fixed;
+   right: 0;
+   transition: bottom 0.5s;
+
+   &.show {
+      bottom: 65px;
+   }
+
+   .close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+   }
+}
+
+@media(min-width: map-get($grid-breakpoints, md)) {
+   .alert {
+      left: auto;
+      right: 10px;
+
+      &.show {
+         bottom: 20px;
+      }
+   }
+}
