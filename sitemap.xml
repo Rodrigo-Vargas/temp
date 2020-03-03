@@ -15,6 +15,13 @@
       </url>
    {% endfor %}
 
+   {% for post in site.posts %}
+      <url>
+         <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
+         <lastmod>{{ post.date | date: "%Y-%m-%dT%H:%M:%S-02:00"}}</lastmod>
+      </url>
+   {% endfor %}
+
    {% for article in site.articles %}
       <url>
          <loc>{{ article.url | prepend: site.baseurl | prepend: site.url }}</loc>

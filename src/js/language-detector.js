@@ -26,7 +26,7 @@ export default class LazyImageLoad {
    }
 
    showLanguageModal(alert) {
-      if (navigator.language.indexOf("en-") < 0)
+      if (navigator.language.indexOf("en-") < 0 || window.location.href.indexOf("/en") >= 0)
          return;
 
       if (this.getCookie("language-alert-closed"))

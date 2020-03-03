@@ -11,11 +11,16 @@
 ---
 
 {% assign articles = site.articles | sort: 'date' | reverse %}
+{% assign posts = site.posts | where:"lang", page.lang %}
 
 <div class="container">
    <div class="blog-list">
       <div class="row">
-         {% for article in articles %}
+         {% for article in posts %}
+            {% include blog/card.html %}
+         {% endfor %}
+
+         {% for article in articles  %}
             {% include blog/card.html %}
          {% endfor %}
       </div> 

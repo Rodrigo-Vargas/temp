@@ -19,14 +19,14 @@
         <div class="card-body">
             <h3 class="font-weight-bold">{{ article.title }}</h3>
             <span class="meta mb-3">
-                {{ article.date | date: "%d/%m/%y" }}
+                {{ article.date | date: "%d/%m/%Y" }}
             </span>
 
             <p>{{ article.description }}</p>
         </div>
 
         <div class="card-footer">
-            <div class="btn">Veja Mais</div>
+            <div class="btn">{{ site.data.t.[page.lang].see_more }}</div>
         </div>
     </a>
 </div>

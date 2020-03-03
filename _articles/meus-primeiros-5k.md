@@ -48,11 +48,11 @@ Como havia corrido apenas em esteira durante os meus treinos, correr com várias
 
 Ao correr me lembrava constantemente de duas coisas, manter os ombros e braços relaxados e não começar com muita sede, então começei com um ritmo bem tranquilo no primeiro KM de prova, afinal ainda não sabia o quanto correr na rua dificultaria a corrida.
 
-Até a placa fiz um pace de aproxidamente 06:28 e passada a placa do 1KM de corrida, tudo transcorria bem: meus pés não doiam, não estava ofegante, a chuva era tranquila, e não havia dor em nenhuma parte das pernas ou joelhos. Assim aumentei levemente o ritmo, rumo a placa de 2KM, a um pace de 06:23.
+Até a placa de 1KM fiz um pace de aproxidamente 06:28 e passado este ponto, tudo transcorria bem: meus pés não doiam, não estava ofegante, a chuva era tranquila, e não havia dor em nenhuma parte das pernas ou joelhos. Assim aumentei levemente o ritmo, rumo a placa de 2KM, a um pace de 06:23.
 
 Ao chegar perto da mesma, havia o primeiro posto de água, onde os atletas podem se rehidratar ou jogar sob o corpo para se refrigerar, fiquei impressionado com a quantidade de copos no chão, sério, era MUITO copo. Não lembro da última vez que atirei algo no chão, então não peguei a água neste posto, pois sabia que se pegasse iria segurar o copinho até o final da corrida hahahaha, além do mais, não havia necessidade, então rumo a placa dos 3KM.
 
-Mantendo o ritmo consegui alcançar vários competidores ao longo do caminho, alguns já caminhavam, principalmente após a única subida do percurso, que fiz em um ritmo mais lento, pensando em economizar energia.
+Mantendo o ritmo, consegui alcançar vários competidores ao longo do caminho, alguns já caminhavam, principalmente após a única subida do percurso, que fiz em um ritmo mais lento, pensando em economizar energia.
 
 Antes da placa dos 4KM, vi um competidor com deficiência visual em um ritmo impressionante, acompanhando de um rapaz que o guiava por uma fita entre as mãos. Consegui acompanha-lo por um tempo, mas logo se distanciou. Realmente impressionante.
 
@@ -73,4 +73,3 @@ Consegui terminar a prova com o tempo final de 31:04, o que estava dentro da min
 Era isso pessoal, agora é focar no treino de 10K e que venham as próximas corridas!
 
 ![run-finish]
-

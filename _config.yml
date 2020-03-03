@@ -55,6 +55,9 @@ collections:
     output: false
   career:
     output: false
+  posts:
+    layout: article
+    permalink: /:lang/:title:output_ext
 defaults:
   -scope:
     path: "/blog"

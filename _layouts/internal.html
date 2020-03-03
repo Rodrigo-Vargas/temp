@@ -2,6 +2,11 @@
    layout: default
 ---
 
+{% if page.lang == "en" %}
+    {% assign baseUrl = "en/" %}
+{% else %}
+    {% assign baseUrl = "" %}
+{% endif %}
 <div class="bg-primary-900 nav-padding mb-4 pt-5 pb-5">
     <div class="container">
         <div class="page-meta text-center">
@@ -9,7 +14,7 @@
             <div class="breadcrumb">
                 <ul class="list-unstyled d-inline">
                     <li class="d-inline p-2">
-                        <a class="text-primary-100" href="/">Home</a>
+                        <a class="text-primary-100" href="/{{ baseUrl }}">Home</a>
                     </li>
                     {% for level in page.breadcrumb %}
                         <li class="d-inline text-primary-100 p-2">

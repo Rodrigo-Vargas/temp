@@ -1,6 +1,7 @@
 {% assign articles = site.articles | where: 'lang', page.lang | sort: 'date' | reverse %}
+{% assign posts = site.posts | where: 'lang', page.lang | sort: 'date' | reverse %}
 
-{% if articles.size > 0 %}
+{% if articles.size > 0 or posts.size > 0 %}
    <div class="bg-white">
       <div class="container">
 
@@ -12,6 +13,10 @@
 
             <div class="blog-list">
                <div class="row">
+                  {% for article in posts limit: 6 %}
+                     {% include blog/card.html %}
+                  {% endfor %}
+
                   {% for article in articles limit: 6 %}
                      {% include blog/card.html %}
                   {% endfor %}
