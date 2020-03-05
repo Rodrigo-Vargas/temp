@@ -1,0 +1,28 @@
+---
+   breadcrumb: [
+      {
+         text: "Blog",
+         link: "/en/blog"
+      }
+   ]
+   lang: en
+   layout: internal
+   title: Blog
+---
+
+{% assign articles = site.articles | where:"lang", page.lang | sort: 'date' | reverse %}
+{% assign posts = site.posts | where:"lang", page.lang %}
+
+<div class="container">
+   <div class="blog-list">
+      <div class="row">
+         {% for article in posts %}
+            {% include blog/card.html %}
+         {% endfor %}
+
+         {% for article in articles  %}
+            {% include blog/card.html %}
+         {% endfor %}
+      </div> 
+   </div>
+</div>

@@ -3,6 +3,9 @@ en:
     - icon: fas fa-home
       title: Home
       url: /
+    - icon: fas fa-edit
+      title: Blog
+      url: /en/blog
 pt:
   pages:
   - icon: "fas fa-home"
