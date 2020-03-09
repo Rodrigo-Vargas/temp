@@ -1,6 +1,16 @@
 ---
+   lang: pt
    layout: base
    permalink: /resume/
+   languages:
+      - 
+         description: Nativo
+         stars: 5
+         title: Português
+      - 
+         description: (Proficiente em leitura, fala básica)
+         stars: 3
+         title: Inglês
 ---
 
 <link rel="stylesheet" href="/assets/css/resume.css">

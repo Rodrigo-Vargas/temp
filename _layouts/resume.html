@@ -1,0 +1,58 @@
+---
+   layout: base
+---
+
+<link rel="stylesheet" href="/assets/css/resume.css">
+
+<div class="web-resume">
+   <div class="container">
+      <div class="row">
+         <div class="col left">
+            <h1>{{ site.author_name }}</h1>
+
+            <div class="about">
+               {{ site.data.t[page.lang].author_job_position }}
+            </div>         
+         </div>
+
+         <div class="col right">
+            <div id="personal-info" class="section">
+               <div class="info">
+                  <i class="fa fa-phone"></i>
+                  <span>+55 51 997838846</span>
+               </div>
+
+               <div class="info">
+                  <i class="fa fa-envelope"></i>
+                  <span>rodrigovargas123@gmail.com</span>
+               </div>
+
+               <div class="info">
+                  <i class="fa fa-link"></i>
+                  <span>http://rodrigovargas.com.br</span>
+               </div>
+
+               <div class="info">
+                  <i class="fab fa-linkedin"></i>
+                  <span>linkedin.com/in/rodrigo-vargas-894a3637/</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col left">
+            {% include resume/skills.html %}
+
+            {% include resume/languages.html %}
+         </div>
+
+         <div class="col right">
+            {% include resume/experience.html %}
+
+            {% include resume/education.html %}
+            
+         </div>
+      </div>
+   </div>
+</div>

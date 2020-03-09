@@ -1,0 +1,21 @@
+<div id="education" class="section">
+    <div class="title">
+       <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+       </span>
+       <h2>{{ site.data.t[page.lang].education }}</h2>
+    </div>
+
+    {% assign courses = site.education | sort: 'year' | reverse %}
+    {% for course in courses %} 
+       <div class="item">
+          <div class="date">
+             <span>{{ course.period }}</span>
+          </div>
+          <div class="description">
+             {{ course.name }}
+          </div>
+       </div>
+    {% endfor %}
+ </div>

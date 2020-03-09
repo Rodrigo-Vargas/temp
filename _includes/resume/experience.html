@@ -1,0 +1,31 @@
+<div id="experience" class="section">
+   <div class="title">
+      <span class="fa-stack fa-lg">
+         <i class="fa fa-circle fa-stack-2x"></i>
+         <i class="fa fa-briefcase fa-stack-1x fa-inverse"></i>
+      </span>
+      <h2>{{ site.data.t[page.lang].experience }}</h2>
+   </div>
+
+   {% assign careers = site.career  | where: "lang", page.lang %}
+
+   {% for job in careers %}
+      <div class="item">
+         <div class="date">
+            <span>{{ job.period }}</span>
+         </div>
+      
+         <div class="description">
+            <h3 class="job-title">{{ job.position }}</h3>
+            <span>{{ job.name }} / {{ job.location }}</span>
+            <div class="job-body">
+               <ul>
+                  {% for highlight in job.highlights %}
+                     <li>{{ highlight }}</li>
+                  {% endfor %}
+               </ul>
+            </div>
+         </div>
+      </div>
+   {% endfor %}
+</div>

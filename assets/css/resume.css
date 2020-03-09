@@ -27,6 +27,10 @@
   margin: 10px 0;
 }
 
+.web-resume .section {
+  margin-right: 1rem;
+}
+
 .web-resume .section > .title {
   border-bottom: 1px solid #ccc;
   color: #444;
@@ -75,20 +79,10 @@
   margin: 0;
 }
 
-@media (min-width: 576px) {
-  .web-resume .col.meta {
-    max-width: 30%;
-  }
-  .web-resume .col.resume {
-    max-width: 70%;
-  }
+.web-resume .col.left {
+  max-width: 30%;
 }
 
-@media (print) {
-  .web-resume .col.meta {
-    width: 30%;
-  }
-  .web-resume .col.resume {
-    width: 70%;
-  }
+.web-resume .col.right {
+  max-width: 70%;
 }

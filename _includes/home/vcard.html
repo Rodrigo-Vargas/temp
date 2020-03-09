@@ -37,14 +37,12 @@
                      </a>
                   </li>
 
-                  {% if page.hideResume == "true" %}
-                     <li class="list-inline-item">
-                        <a href="/resume/" 
-                              title="Currículo Online">
-                           <i class="far fa-file-alt"></i>
-                        </a>
-                     </li>
-                  {% endif %}
+                  <li class="list-inline-item">
+                     <a href="{{ page.links.resume }}" 
+                           title="Currículo Online">
+                        <i class="far fa-file-alt"></i>
+                     </a>
+                  </li>
                </ul>
             </div>
          </div>
