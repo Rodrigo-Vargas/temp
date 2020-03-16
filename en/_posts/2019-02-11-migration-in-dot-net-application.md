@@ -10,7 +10,7 @@
       - entity-framework
       - net-core
    date: 2019-02-11
-   description: Utilizando o Entity Framework, vamos configurar um banco de dados em uma aplicação .NET Core MVC
+   description: Using Entity Framework, we gonna work a database on a .Net Core MVC application
    lang: en
    layout: article
    title: Migrations in .Net Core MVC application
