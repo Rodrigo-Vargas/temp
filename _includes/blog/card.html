@@ -7,7 +7,7 @@
          {% endif %}
 
         <div class="card-header position-relative">
-            <img class="img-fluid" src="/cdn/images/thumbs/{{ cover_url }}" alt="{{ article.title }}">
+            <img class="img-fluid lazy" data-src="/cdn/images/thumbs/{{ cover_url }}" alt="{{ article.title }}">
 
             <ul class="tag-list position-absolute">
                 {% for category in article.categories %}

@@ -6,6 +6,12 @@
 @import "mixins/screen-reader";
 @import "mixins/text-truncate";
 @import "mixins/transition";
+@import "mixins/lists";
+
+@import "theme/utilities/container";
+@import "theme/components/header";
+@import "theme/components/vcard";
+@import "theme/components/type";
 
 @import "theme/utilities/backgrounds";
 @import "theme/utilities/display";
@@ -18,7 +24,9 @@
 @import "theme/components/reboot";
 @import "theme/components/transitions";
 
+@import "theme/components/alert";
 @import "theme/components/article";
+@import "theme/components/bookshelf";
 @import "theme/components/breadcrumb";
 @import "theme/components/card";
 @import "theme/components/code";
@@ -32,6 +40,7 @@
 @import "theme/components/project-list";
 
 @import "theme/theme";
+
 /* Header */
 .nav-link {
   display: block;

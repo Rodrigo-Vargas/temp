@@ -10,7 +10,7 @@
         }
     ]
     categories: ["PHP", "Laravel", "HTML"]
-    cover_url: "/cdn/images/projects/favorita-veiculos/home.png"
+    cover_url: "/cdn/images/projects/favorita-veiculos/thumb-home.png"
     lang: pt
     layout: project
     link: http://favoritaveiculos.com.br
