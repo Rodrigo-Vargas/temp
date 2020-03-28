@@ -24,3 +24,19 @@
     layout: serie
     title: .NET Core MVC do início
 ---
+
+Série DotNet
+
+1. Pré requisitos
+2. Roteamento
+3. Acesso ao banco de dados
+4. Views
+5. Forms
+6. Controller Techniques
+7. Entity Framework
+8. Autenticação
+9. Conceitos core
+10. Mail
+11. Notifications
+
+Criando um site institucional em .net Core
