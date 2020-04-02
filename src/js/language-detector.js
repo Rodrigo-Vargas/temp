@@ -21,7 +21,8 @@ export default class LazyImageLoad {
 
       alert.querySelector(".close").addEventListener("click", function(){
          alert.classList.remove("show");
-         context.setCookie("language-alert-closed", "true");
+
+         context.setCookie("language-alert-closed", "true", 900);
       });
    }
 
