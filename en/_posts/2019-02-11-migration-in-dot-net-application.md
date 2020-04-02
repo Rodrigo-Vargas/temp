@@ -9,6 +9,7 @@
    categories: 
       - entity-framework
       - net-core
+   cover_url: en/working-with-migrations.png
    date: 2019-02-11
    description: Using Entity Framework, we gonna work a database on a .Net Core MVC application
    lang: en
@@ -25,8 +26,8 @@ The Entity Framework, or just **EF**, is the most famous ORM in the C# community
 Without further conversation, let's get to work. In a terminal, execute the commands below to install the DLLs related to EF in our project:
 
 ```bash
-    dotnet add package Microsoft.EntityFrameworkCore.Design
-    dotnet add package Pomelo.EntityFrameworkCore.MySql
+   dotnet add package Microsoft.EntityFrameworkCore.Design
+   dotnet add package Pomelo.EntityFrameworkCore.MySql
 ```
 
 Note that in this case, we are configuring EF to connect with a MySQL database, but you will found providers for many other databases. A very nice list is available from the [Framework documentation](https://docs.microsoft.com/pt-br/ef/core/providers/index){: target = "_blank"}.

@@ -7,7 +7,7 @@
             text: "Configuring a .Net Core development environment"
             link: "/en/blog/configuring-dot-net-core-environment"
    categories: [devops, net-core]
-   cover_url: configuring-dot-net-core-environment.png
+   cover_url: en/configuring-dot-net-core-environment.png
    date: 2019-01-14
    description: Learn how to configure a .Net core environment for development
    lang: en

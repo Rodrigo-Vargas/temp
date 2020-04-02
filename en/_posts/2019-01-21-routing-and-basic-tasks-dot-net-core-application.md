@@ -9,6 +9,7 @@
    categories: 
       - net-core
       - mvc
+   cover_url: en/basic-tasks-and-routing.png
    date: 2019-01-21
    description: First steps into the basic concepts of a .NET Core application
    lang: en
@@ -31,7 +32,7 @@ This command will create an MVC project with just the basics
 Before finalizing this part, we'll add the new project to our solution, maintaining compatibility with other developers who are going to open this project with Visual Studio:
 
 ```shell
-    dotnet sln my.blog.sln add my.blog.web/my.blog.web.csproj
+   dotnet sln my.blog.sln add my.blog.web/my.blog.web.csproj
 ```
 
 Made this, now let's go to the **my.blog.web** folder and see the generated file structure.
@@ -124,12 +125,12 @@ After that, we already have our application running. Now let's see how we can ed
 For a MVC application work, it needs to know where to look for the information that the user given URL is accessing. To  this task, every MVC framework has a logic for the creation of **routes**. The route will tell which **controller** and which **view** will be used to load a given page. In the case of .Net, we have this logic described in the file **startup.cs**:
 
 ```c#
-    app.UseMvc(routes =>
-    {
-        routes.MapRoute(
-            name: "default",
-            template: "{controller=Home}/{action=Index}/{id?}");
-    });
+   app.UseMvc(routes =>
+   {
+      routes.MapRoute(
+         name: "default",
+         template: "{controller=Home}/{action=Index}/{id?}");
+   });
 ```
 
 By default the controller name always will be the first part of the URL, followed by the view name. For example, if you access a URL "/users/show/2", the controller will be "users" and try to get the file "UsersController" inside the controller folder. "show" will be the name of the method in this controller(also called **action**), which will call a view whose name is show.cshtml and will be inside the "Views/Users" folder. Can you understood the logic? The last parameter will be passed to the show method as a string or integer parameter.
@@ -168,14 +169,14 @@ Now let's go back to the home page, and edit the text "Welcome". As we already k
 
 
 ```html
-    @{
-        ViewData["Title"] = "Home Page";
-    }
+   @{
+      ViewData["Title"] = "Home Page";
+   }
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    </div>
+   <div class="text-center">
+      <h1 class="display-4">Welcome</h1>
+      <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   </div>
 ```
 
 When editing the text inside the h1, it is reflected on the page automatically.
