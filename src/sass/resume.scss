@@ -1,6 +1,10 @@
 @import "functions";
 @import "theme/variables";
-   
+
+body {
+   font-size: 16px;
+}
+
 .web-resume {
    background-color: #fff;
    border: 1px solid #ccc;
@@ -78,6 +82,10 @@
       .job-title {
          font-weight: bold;
          margin: 0;
+      }
+
+      .job-address {
+         font-size: 0.75rem;
       }
    }
 

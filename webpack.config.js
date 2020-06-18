@@ -7,7 +7,8 @@ module.exports = {
    entry: [
       './src/js/index.js',
       './src/js/polyfills.js',
-      './src/sass/main.scss'
+      './src/sass/main.scss',
+      './src/sass/resume.scss'
    ],
    output: {
       path: __dirname + '/assets',
