@@ -63,7 +63,7 @@ h4,
 }
 
 .font-size-md {
-   font-size: $font-size-md;
+   font-size: map-get($font-sizes, "4");
 }
 
 

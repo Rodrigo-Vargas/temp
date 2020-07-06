@@ -14,6 +14,6 @@ export default class TopNavHandler {
             selectedIndex = x;
       }
 
-      navLinks[selectedIndex].parentElement.classList.add("active");
+      navLinks[selectedIndex].classList.add("active");
    }
 }

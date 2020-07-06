@@ -1,48 +1,71 @@
+// @import "theme/components/code";
+// @import "theme/components/reset";
+// @import "theme/components/text";
+
+/****************************************************** 
+  Configuration
+*******************************************************/
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+//@import "../../node_modules/bootstrap/scss/utilities";
+
 @import "theme/variables";
+@import "theme/utilities";
 
-@import "functions";
+/*********************************************************
+   Boostrap Files
+**********************************************************/
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/toasts";
 
-@import "mixins/hover";
-@import "mixins/screen-reader";
-@import "mixins/text-truncate";
-@import "mixins/transition";
-@import "mixins/lists";
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
 
-@import "theme/utilities/container";
-@import "theme/components/header";
-@import "theme/components/vcard";
-@import "theme/components/type";
+// Utilities
+@import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
 
-@import "theme/utilities/backgrounds";
-@import "theme/utilities/display";
-@import "theme/utilities/position";
-@import "theme/utilities/spacing";
-@import "theme/utilities/screenreaders";
-@import "theme/utilities/shadows";
-@import "theme/utilities/text";
-
-@import "theme/components/reboot";
-@import "theme/components/transitions";
-
-@import "theme/components/alert";
-@import "theme/components/article";
-@import "theme/components/bookshelf";
-@import "theme/components/breadcrumb";
-@import "theme/components/card";
-@import "theme/components/code";
-@import "theme/components/forms";
-@import "theme/components/grid";
-@import "theme/components/reset";
-@import "theme/components/syntax-highlighting";
-@import "theme/components/text";
+/*********************************************************
+  Theme Files
+**********************************************************/
+@import "theme/components/nav";
 
 @import "theme/components/blog-list";
 @import "theme/components/project-list";
+@import "theme/components/card";
+@import "theme/components/article";
+@import "theme/components/breadcrumb";
+//@import "theme/components/syntax-highlighting";
+@import "theme/components/header";
+@import "theme/components/alert";
+@import "theme/components/bookshelf";
+@import "theme/components/vcard";
+@import "theme/components/type";
 
-@import "theme/theme";
+
+.avatar-wrap {
+  margin: 0 auto;
+  width: 200px;
+}
 
 /* Header */
 .nav-link {
+  color: $primary-300;
   display: block;
   padding: 0.5rem 1rem;
 }
@@ -50,4 +73,64 @@
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.side-nav {
+  height: 100%;
+  position: fixed;
+  width: $side-nav-width;
+}
+
+.side-nav-spacer {
+  margin-left: $side-nav-width;
+}
+
+.btn-social-media {
+  border: 1px solid $white;
+  border-radius: 50%;
+  color: $white;
+  line-height: 38px;
+  height: 50px;
+  vertical-align: middle;
+  width: 50px;
+
+  &:hover {
+    background-color: $white;
+    color: $primary-900;
+  }
+
+  svg {
+    font-size: 1.25rem;
+  }
+}
+
+.home-content {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero {
+  align-items: center;
+  background: url('/assets/svg/home-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+
+  .inner {
+    margin-top: -4rem;
+  }
+
+  .hero-title {
+    margin-bottom: 8rem;
+  }
+}
+
+a {
+  text-decoration: none;
 }

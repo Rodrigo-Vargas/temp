@@ -1,22 +1,21 @@
-$font-weight-bold:  600;
+// $font-weight-bold:  600;
 
-$spacing-unit:      30px;
+// $spacing-unit:      30px;
 
 // Variables
 
-$primary-900: #0E024A;
-$primary-800: #20084E;
-$primary-700: #2D1263;
-$primary-600: #3E2277;
-$primary-500: #5714B4;
-$primary-400: #7750C3;
-$primary-300: #8C63DE;
-$primary-200: #B698F0;
-$primary-100: #D3B8F9;
+$primary-900: #0D47A1;
+$primary-800: #1565C0;
+$primary-700: #1976D2;
+$primary-600: #1E88E5;
+$primary-500: #4299E1;
+$primary-400: #63B3ED;
+$primary-300: #90CDF4;
+$primary-200: #BEE3F8;
+$primary-100: #EBF8FF;
 
 $primary: $primary-500;
 
-$theme-colors: () !default;
 $theme-colors: map-merge((
   "100": $primary-100,
   "200": $primary-200,
@@ -31,15 +30,15 @@ $theme-colors);
 
 
 $black: #000000;
-$gray-900: #101619;
-$gray-800: #27333A;
-$gray-700: #40545E;
-$gray-600: #58717E;
-$gray-500: #738D9C;
-$gray-400: #93A8B4;
-$gray-300: #B3C3CB;
-$gray-200: #D1DBE0;
-$gray-100: #ECF1F3;
+$gray-900: #1A202C;
+$gray-800: #2D3748;
+$gray-700: #4A5568;
+$gray-600: #718096;
+$gray-500: #A0AEC0;
+$gray-400: #CBD5E0;
+$gray-300: #E2E8F0;
+$gray-200: #EDF2F7;
+$gray-100: #F7FAFC;
 $white: #fff;
 
 
@@ -57,7 +56,58 @@ $grays: map-merge((
   "900": $gray-900),
 $grays);
 
-$spacer: 1rem;
+
+
+// Background colors
+$bg-colors: () !default;
+$bg-colors: map-merge((
+  //"white": $gray-100,
+  "gray-100": $gray-100,
+  "900": $primary-900),
+$bg-colors);
+
+
+// Text colors
+$text-colors: () !default;
+$text-colors: map-merge((
+  "white": $gray-100,
+  // "primary-100": $primary-100,
+  // "primary-200": $primary-200,
+  // "primary-300": $primary-300,
+  "primary-400": $primary-400,
+  // "primary-500": $primary-500,
+  // "primary-600": $primary-600,
+  // "primary-700": $primary-700,
+  // "primary-800": $primary-800,
+  "primary-900": $primary-900,
+  "gray-100": $gray-100,
+  // "gray-200": $gray-200,
+  // "gray-300": $gray-300,
+  // "gray-400": $gray-400,
+  // "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  // "gray-700": $gray-700,
+  // "gray-800": $gray-800,
+  // "gray-900": $gray-900
+  ),
+$text-colors);
+
+// Font sizes
+$font-sizes: (
+  "1": 12px,
+  "2": 14px,
+  "3": 1rem,
+  "4": 18px,
+  "5": 20px,
+  "6": 1.5rem,
+  "7": 30px,
+  "8": 2rem,
+  "9": 3rem,
+  "10": 5rem,
+  "11": 9rem,
+);
+
+// $spacer: 1rem;
 
 $spacer-1: $spacer * 0.25;
 $spacer-2: $spacer * 0.5;
@@ -70,105 +120,106 @@ $spacer-5: $spacer * 3;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-transitions: true;
+// $enable-transitions: true;
 
 
 // Body
 //
 // Settings for the `<body>` element.
-$body-bg: $white;
-$body-color: $gray-900;
+// $body-bg: $white;
+// $body-color: $gray-900;
 
 
 // Paragraphs
 //
 // Style p element.
 
-$paragraph-margin-bottom: 1rem;
+// $paragraph-margin-bottom: 1rem;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color: $gray-500;
-$link-decoration: none;
-$link-hover-color: $gray-700;
-$link-hover-decoration: underline;
+// $link-color: $gray-500;
+// $link-decoration: none;
+// $link-hover-color: $gray-700;
+// $link-hover-decoration: underline;
 
 // Components
 //
 // Define common padding and border radius sizes and more.
-$border-width: 1px;
+$border-width: 5px;
+$border-color: $gray-100;
 
 $box-shadow: 0 .5rem 1rem rgba($black, .15);
 
-$transition-fade: opacity .15s linear;
+// $transition-fade: opacity .15s linear;
 
-$transition-collapse: height .35s ease !default;
+// $transition-collapse: height .35s ease !default;
 
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif: 'Open Sans', sans-serif;
-$font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// $font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
 
-$font-weight-light: 300;
-$font-weight-normal: 400;
+// $font-weight-light: 300;
+// $font-weight-normal: 400;
 
-$font-weight-base: $font-weight-normal;
-$line-height-base: 1.5;
+// $font-weight-base: $font-weight-normal;
+// $line-height-base: 1.5;
 
-$font-size-base: 16px;
+// $font-size-base: 16px;
 
-$h1-font-size: $font-size-base * 2.5;
-$h2-font-size: $font-size-base * 2;
-$h3-font-size: $font-size-base * 1.5;
-$h4-font-size: $font-size-base * 1.25;
+// $h1-font-size: $font-size-base * 2.5;
+// $h2-font-size: $font-size-base * 2;
+// $h3-font-size: $font-size-base * 1.5;
+// $h4-font-size: $font-size-base * 1.25;
 
-$font-size-lg: $font-size-base * 1.125;
-$font-size-md: $font-size-base * 0.75;
-$font-size-sm: $font-size-base * 0.5;
+// $font-size-lg: $font-size-base * 1.125;
+// $font-size-md: $font-size-base * 0.75;
+// $font-size-sm: $font-size-base * 0.5;
 
 
-$headings-margin-bottom: $spacer / 2;
+// $headings-margin-bottom: $spacer / 2;
 
-$headings-font-family: 'Open Sans', sans-serif;
-$headings-font-weight: 700;
-$headings-line-height: 1.2;
+// $headings-font-family: 'Open Sans', sans-serif;
+// $headings-font-weight: 700;
+// $headings-line-height: 1.2;
 
 $hr-border-color: rgba($black, .1);
 $hr-border-width: $border-width;
 
-$hr-margin-y: $spacer;
+// $hr-margin-y: $spacer;
 
-$small-font-size: $font-size-base * 0.75;
+// $small-font-size: $font-size-base * 0.75;
 
-$list-inline-padding: .5rem;
+// $list-inline-padding: .5rem;
 
 
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding: .75rem;
-$table-caption-color: $black;
+// $table-cell-padding: .75rem;
+// $table-caption-color: $black;
 
 
 // Forms
 
-$label-margin-bottom: .5rem;
+// $label-margin-bottom: .5rem;
 
 
 // Others
 
 
-$background-color: $gray-100;
-$border-color: $gray-100;
-$border-radius: 10px;
+// $background-color: $gray-100;
+// $border-color: $gray-100;
+// $border-radius: 10px;
 
-$headings-color: $primary-500;
+// $headings-color: $primary-500;
 
 $shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 $shadow-deep: 0 0 20px rgba(0, 0, 0, 0.7) !important;
@@ -191,16 +242,23 @@ $tags:
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
-$zindex-sticky: 1020;
-$zindex-fixed: 1030;
+// $zindex-sticky: 1020;
+// $zindex-fixed: 1030;
 
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-$grid-breakpoints: (xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px);
+// $grid-breakpoints: (xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px);
+
+// Navs
+
+$nav-pills-link-active-color:       $gray-100;
+$nav-pills-link-hover-color:        $gray-100;
+
+$side-nav-width: 20%;
