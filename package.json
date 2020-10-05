@@ -25,13 +25,15 @@
       "tailwindcss": "^1.8.10",
       "webpack": "^4.42.0",
       "webpack-cli": "^3.3.11",
+      "webpack-dev-server": "^3.11.0",
       "webpack-manifest-plugin": "^2.2.0"
    },
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "build": "NODE_ENV=development npx webpack",
       "build:prod": "NODE_ENV=production npx webpack",
-      "watch": "NODE_ENV=development npx webpack --watch"
+      "watch": "NODE_ENV=development npx webpack --watch",
+      "dev": "NODE_ENV=development webpack-dev-server"
    },
    "repository": {
       "type": "git",

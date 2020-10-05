@@ -10,7 +10,17 @@ module.exports = {
       index: path.resolve(__dirname, './src/js/index.js'),
       polyfills: path.resolve(__dirname, './src/js/polyfills.js'),
       main: path.resolve(__dirname, './src/sass/main.scss'),
+      tailwind: path.resolve(__dirname, './src/sass/tailwind.scss'),
       //resume: path.resolve(__dirname, './src/sass/resume.scss'),
+   },
+   devServer: {
+      contentBase: path.join(__dirname, '_site'),
+      contentBasePublicPath: '/',
+      publicPath: '/dist/',
+      port: 9000,
+      watchContentBase: true,
+      writeToDisk: true,
+      hot: true
    },
    output: {
       path: path.resolve(__dirname, './dist/'),
