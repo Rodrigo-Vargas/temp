@@ -1,39 +1,37 @@
 const path = require('path');
-const isDevelopment = process.env.NODE_ENV !== 'production'
+const isProduction = process.env.NODE_ENV === 'production'
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
-   mode: isDevelopment ? 'development' : 'production',
-   entry: [
-      './src/js/index.js',
-      './src/js/polyfills.js',
-      './src/sass/main.scss',
-      './src/sass/resume.scss'
-   ],
-   output: {
-      path: __dirname + '/assets',
-      filename: 'js/bundle.js'
+   mode: isProduction ? 'development' : 'production',
+   entry: {
+      index: path.resolve(__dirname, './src/js/index.js'),
+      polyfills: path.resolve(__dirname, './src/js/polyfills.js'),
+      main: path.resolve(__dirname, './src/sass/main.scss'),
+      //resume: path.resolve(__dirname, './src/sass/resume.scss'),
    },
-   optimization: {
-      runtimeChunk: {
-         name: entrypoint => `${entrypoint.name}`
-      },
-      namedModules: true,
-      namedChunks: true
+   output: {
+      path: path.resolve(__dirname, './dist/'),
+      filename: isProduction ? '[name].[hash].js' : '[name].js',
+      chunkFilename: isProduction ? '[id].[hash].js' : '[id].js'
    },
    plugins: [
+      new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-         // Options similar to the same options in webpackOptions.output
-         // both options are optional
-         filename: '/../_includes/[name].css',
-         chunkFilename: '[id].css',
+         filename: isProduction ? '[name].[hash].css' : '[name].css'
+      }),
+      new ManifestPlugin({
+         fileName: '../_data/manifest.yml',
+         publicPath: './dist/',
       }),
    ],
    module: {
       rules: [
          {
             test: /\.js$/,
-            exclude: /node_modules\/(?!(error-overlay-webpack-plugin)\/).*/,
+            exclude: /node_modules\//,
             use:
             {
                loader: require.resolve('babel-loader'),
@@ -52,10 +50,10 @@ module.exports = {
                   options: {
                      sourceMap: true
                   }
-               }
+               },
+               'postcss-loader'
             ]
          }
       ]
-   },
-   //plugins: [new ErrorOverlayPlugin()],
+   }
 };

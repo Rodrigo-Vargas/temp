@@ -1,0 +1,6 @@
+{
+  "index.js": "./dist/index.js",
+  "main.css": "./dist/main.css",
+  "main.js": "./dist/main.js",
+  "polyfills.js": "./dist/polyfills.js"
+}

@@ -1,6 +1,6 @@
-// @import "theme/components/code";
-// @import "theme/components/reset";
-// @import "theme/components/text";
+/* @import "theme/components/code"; */
+/* @import "theme/components/reset"; */
+/* @import "theme/components/text"; */
 
 /****************************************************** 
   Configuration
@@ -9,10 +9,17 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
-//@import "../../node_modules/bootstrap/scss/utilities";
+/* @import "../../node_modules/bootstrap/scss/utilities"; */
 
 @import "theme/variables";
 @import "theme/utilities";
+
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 
 /*********************************************************
    Boostrap Files
@@ -33,12 +40,12 @@
 @import "../../node_modules/bootstrap/scss/close";
 @import "../../node_modules/bootstrap/scss/toasts";
 
-// Helpers
+/* Helpers */
 @import "../../node_modules/bootstrap/scss/helpers";
 
-// Utilities
+/* Utilities */
 @import "../../node_modules/bootstrap/scss/utilities/api";
-// scss-docs-end import-stack
+/* scss-docs-end import-stack */
 
 /*********************************************************
   Theme Files
@@ -50,7 +57,7 @@
 @import "theme/components/card";
 @import "theme/components/article";
 @import "theme/components/breadcrumb";
-//@import "theme/components/syntax-highlighting";
+/*@import "theme/components/syntax-highlighting"; */
 @import "theme/components/header";
 @import "theme/components/alert";
 @import "theme/components/bookshelf";
