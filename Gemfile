@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 
-gem "jekyll"
+gem "jekyll", "~> 4.1.1"
 gem "rouge"
 gem "kramdown"
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-feed", "~> 0.12"
 end
 
