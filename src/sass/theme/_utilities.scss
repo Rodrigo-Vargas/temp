@@ -33,6 +33,10 @@ $utilities: map-merge(
         0: 0,
       )
     ),
+    "position": (
+      property: position,
+      values: static relative absolute fixed sticky
+    ),
     "flex-direction": (
       responsive: true,
       property: flex-direction,
