@@ -4,7 +4,7 @@ export default class AsideHandler {
    }
 
    init() {
-      var aside = document.querySelector("aside");
+      var aside = document.querySelector('[data-aside-nav]');
 
       if (!aside)
          return;
@@ -40,6 +40,9 @@ export default class AsideHandler {
    onScroll(aside) {
       let article = document.querySelector("article");
 
+      if (!article)
+         return;
+
       let targetScroll = article.getBoundingClientRect().top;
 
       if (targetScroll < 110) {
@@ -56,8 +59,11 @@ export default class AsideHandler {
    }
 
    registerToggler(aside) {
-      var toggler = aside.querySelector("[data-aside-toggle");
+      var toggler = aside.querySelector("[data-aside-toggle]");
       var context = this;
+
+      if (!toggler)
+         return;
 
       toggler.addEventListener("click", function () {
          if (document.querySelector("body").classList.contains("aside-closed"))
