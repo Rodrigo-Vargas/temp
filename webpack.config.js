@@ -11,7 +11,7 @@ module.exports = {
       polyfills: path.resolve(__dirname, './src/js/polyfills.js'),
       main: path.resolve(__dirname, './src/sass/main.scss'),
       tailwind: path.resolve(__dirname, './src/sass/tailwind.scss'),
-      //resume: path.resolve(__dirname, './src/sass/resume.scss'),
+      resume: path.resolve(__dirname, './src/sass/resume.scss'),
    },
    devServer: {
       contentBase: path.join(__dirname, '_site'),

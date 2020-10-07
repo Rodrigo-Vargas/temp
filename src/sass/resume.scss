@@ -1,101 +1,106 @@
-// @import "functions";
-// @import "theme/variables";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "theme/variables";
 
-// body {
-//    font-size: 16px;
-// }
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
 
-// .web-resume {
-//    background-color: #fff;
-//    border: 1px solid #ccc;
-//    color: #222;
-//    font-family: 'Lato', sans-serif;
-//    padding: 20px 0 0 0;
+body {
+   font-size: 16px;
+}
 
-//    .fa-stack {
-//       font-size: 20px;
-//    }
+.web-resume {
+   background-color: #fff;
+   border: 1px solid #ccc;
+   color: #222;
+   font-family: 'Lato', sans-serif;
+   padding: 20px 0 0 0;
 
-//    h1 {
-//       color: #222;
-//       font-size: 32px;
-//       font-weight: bold;
-//       margin: 0;
-//    }
+   .fa-stack {
+      font-size: 20px;
+   }
 
-//    h2 {
-//       color: #222;
-//    }
+   h1 {
+      color: #222;
+      font-size: 32px;
+      font-weight: bold;
+      margin: 0;
+   }
 
-//    h3 {
-//       color: #222;
-//       font-size: 20px;
-//       margin: 10px 0;
-//    }
+   h2 {
+      color: #222;
+   }
 
-//    .section {
-//       margin-right: $spacer-3;
+   h3 {
+      color: #222;
+      font-size: 20px;
+      margin: 10px 0;
+   }
 
-//       >.title {
-//          border-bottom: 1px solid #ccc;
-//          color: #444;
-//          margin: 15px 0;
-//       }
+   .section {
+      margin-right: $spacer-3;
+
+      >.title {
+         border-bottom: 1px solid #ccc;
+         color: #444;
+         margin: 15px 0;
+      }
       
-//       &> .title > * {
-//          display: inline-block;
-//          vertical-align: middle;
-//       }
+      &> .title > * {
+         display: inline-block;
+         vertical-align: middle;
+      }
    
-//       &> .title h2 {
-//          font-size: 22px;
-//          font-weight: bold;
-//          line-height: 22px;
-//          vertical-align: sub;
-//       }
+      &> .title h2 {
+         font-size: 22px;
+         font-weight: bold;
+         line-height: 22px;
+         vertical-align: sub;
+      }
    
-//       .info {
-//          margin: 0 0 15px 0;
-//       }
+      .info {
+         margin: 0 0 15px 0;
+      }
    
-//       .info label {
-//          display: block;
-//          font-weight: bold;
-//       }
+      .info label {
+         display: block;
+         font-weight: bold;
+      }
    
-//       .item {
-//          margin-bottom: 25px;
-//       }
+      .item {
+         margin-bottom: 25px;
+      }
    
-//       .date {
-//          display: inline-block;
-//          font-weight: bold;
-//          vertical-align: top;
-//          width: 30%;
-//       }
+      .date {
+         display: inline-block;
+         font-weight: bold;
+         vertical-align: top;
+         width: 30%;
+      }
    
-//       .description {
-//          display: inline-block;
-//          width: 69%;
-//       }
+      .description {
+         display: inline-block;
+         width: 69%;
+      }
    
-//       .job-title {
-//          font-weight: bold;
-//          margin: 0;
-//       }
+      .job-title {
+         font-weight: bold;
+         margin: 0;
+      }
 
-//       .job-address {
-//          font-size: 0.75rem;
-//       }
-//    }
+      .job-address {
+         font-size: 0.75rem;
+      }
+   }
 
-//    .col {
-//       &.left {
-//          max-width: 30%;
-//       }
+   .col {
+      &.left {
+         max-width: 30%;
+      }
    
-//       &.right {
-//          max-width: 70%;
-//       }
-//    }
-// }
+      &.right {
+         max-width: 70%;
+      }
+   }
+}
