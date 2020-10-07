@@ -2,18 +2,31 @@
    layout: default 
 ---
 
-<div class="layout-home">
-   <div class="tw-bg-primary-600 tw-w-80 tw-fixed tw-h-full">
-      <div class="tw-relative tw-h-full">
-         <div class="tw-p-5">
-            <div class="tw-rounded-full tw-border-4 tw-border-white tw-mb-5 tw-w-40 tw-h-40 tw-bg-center tw-bg-cover tw-mx-auto" style="overflow: hidden; background-image: url('/assets/img/avatar.jpg')">
+<div class="layout-home tw-relative">
+   <div class="tw-bg-primary-600 tw-fixed tw-w-full lg:tw-w-80 lg:tw-h-full tw-z-10">
+      <section id="mobile-header" class="lg:tw-hidden tw-flex tw-flex-wrap tw-items-center">
+         <div class="tw-py-5 tw-w-1/6">
+            <div class="tw-rounded-full tw-border-4 tw-border-white tw-w-20 tw-h-20 tw-bg-center tw-bg-cover tw-mx-auto" style="overflow: hidden; background-image: url('/assets/img/avatar.jpg')">
                <img class="lazy img-fluid tw-hidden" data-src="/assets/img/avatar.jpg" alt="">
             </div>   
          </div>
          
-         <div class="tw-text-center tw-p-5">
-            <h2 class="h1 tw-text-gray-100 tw-text-3xl">Rodrigo Vargas</h2>
-            <h3 class="h6 tw-text-primary-400 tw-mb-5">Full Stack Web Developer</h3>
+         <div>
+            <h2 class="tw-text-gray-100 tw-text-3xl tw-block">Rodrigo Vargas</h2>
+            <h3 class="tw-text-primary-400 tw-mb-5 tw-block">Full Stack Web Developer</h3>
+         </div>
+      </section>
+
+      <aside class="tw-relative tw-h-full tw-hidden lg:tw-block">
+         <div class="tw-p-5 tw-hidden lg:tw-block">
+            <div class="tw-rounded-full tw-border-4 tw-border-white tw-w-32 tw-h-32 tw-bg-center tw-bg-cover tw-mx-auto" style="overflow: hidden; background-image: url('/assets/img/avatar.jpg')">
+               <img class="lazy img-fluid tw-hidden" data-src="/assets/img/avatar.jpg" alt="">
+            </div>   
+         </div>
+         
+         <div class="tw-text-center tw-p-5 tw-hidden lg:tw-block">
+            <h2 class="tw-text-gray-100 tw-text-3xl">Rodrigo Vargas</h2>
+            <h3 class="tw-text-primary-400 tw-mb-5">Full Stack Web Developer</h3>
          </div>
       
          {% if jekyll.environment != "development" %}
@@ -70,9 +83,9 @@
          </ul>
       
          <div class="tw-bg-primary-800 social-media tw-mx-auto tw-d-block tw-text-center tw-absolute tw-bottom-0 tw-w-full">
-            <ul class="nav tw-block tw-p-5">
+            <ul class="tw-py-3 tw-flex tw-flex-wrap tw-justify-center">
                <li class="nav-item tw-mx-2">
-                  <a class="tw-btn btn-social-media" href="http://github.com/Rodrigo-Vargas"
+                  <a class="tw-btn btn-social-media tw-items-center tw-justify-center" href="http://github.com/Rodrigo-Vargas"
                      target="_blank"
                      rel="noopener"
                      title="GitHub">
@@ -94,14 +107,18 @@
                </li>
             </ul>
          </div>
-      </div>
-
-
+      </aside>
    </div>
 
-   <div class="content tw-pl-80">
-      <div class="home-content tw-bg-gray-100 tw-p-2">
-         <div class="hero tw-w-full">
+   <section id="mobile-nav-controls" class="tw-fixed tw-bottom-0 tw-right-0 tw-z-10 tw-w-1/6 tw-block lg:tw-hidden">
+      <a href="#" data-side-nav-toggler class="tw-justify-center tw-h-10 tw-w-10 tw-text-white tw-text-xl tw-shadow-2xl tw-rounded-full tw-bg-primary-500 tw-m-10 tw-flex tw-items-center">
+         <i class="fa fa-bars"></i>
+      </a>
+   </section>
+
+   <div class="content lg:tw-pl-80">
+      <div class="home-content tw-bg-gray-100">
+         <div class="hero tw-w-full tw-p-5">
             <div class="w-pl-5 tw-pr-5 inner">
                <h1 class="tw-font-black tw-text-primary-800 tw-text-6xl tw-mb-5">Rodrigo <span class="tw-text-gray-600">Vargas</span></h1>
       
@@ -123,14 +140,16 @@
    </div>
 </div>
 
-<!-- {% include home/vcard.html %}-->
-
 <style>
    footer {
       display: none;
    }
    
    header {
+      display: none;
+   }
+
+   .alert {
       display: none;
    }
 </style>
