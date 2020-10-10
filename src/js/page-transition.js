@@ -20,11 +20,12 @@ export default class PageTransition {
             setTimeout(() => {
                if (body.classList.contains('page-transitioning'))
                {
-                  console.log('> Navigating');
-                  if (e.target.parentElement.href)
-                     window.location = e.target.parentElement.href
-                  else   
-                     window.location = e.target.href;
+                  var targetElement = e.target;
+
+                  while (targetElement.href == null)
+                     targetElement = targetElement.parentElement;
+
+                  window.location = targetElement.href;
                }
                else
                {

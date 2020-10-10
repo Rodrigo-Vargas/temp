@@ -3,22 +3,9 @@
    layout: internal
 ---
 
-<link rel="stylesheet" href="{{ site.data.manifest['main.css'] }}">
-
-<div class="article-detail">
-   <aside class="bg-white" data-aside-nav>
-      <div class="aside-body">
-         <h4 class="gray-500">Sumário</h4>
-         <ul class="subtitles"></ul>
-      </div>
-
-      <a class="toggle-button" data-aside-toggle>
-         <i class="fas fa-chevron-left"></i>
-      </a>
-   </aside>
-
+<div class="article-detail article-with-subtitles">
    <article>
-      <ul class="box-with-shadow article-body">            
+      <div class="box-with-shadow article-body">            
          {{ page.content }}
       </div>
    

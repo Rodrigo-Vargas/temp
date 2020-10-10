@@ -12,10 +12,6 @@ body.aside-closed {
    }
 }
 
-.page-meta {
-   padding: 150px 0;
-}
-
 .article-detail {
    position: relative;
 
@@ -126,53 +122,5 @@ body.aside-closed {
 
    h2 {
       margin-top: 2.5rem;
-   }
-}
-
-@media(min-width: map-get($grid-breakpoints, sm)) {
-   .article-detail {
-      article {
-         max-width: 540px;
-      }
-   }
-}
-
-@media(min-width: map-get($grid-breakpoints, md)) {
-   .article-detail {
-      article {
-         padding-left: 400px;
-         max-width: 720px;
-      }
-   }
-}
-
-@media(min-width: map-get($grid-breakpoints, lg)) {
-   .article-detail {
-      article {
-         padding-left: 400px;
-         max-width: 1360px;
-      }
-   }
-
-   body.aside-closed {
-      article {
-         padding-left: 0px;
-         max-width: 1560px;
-      }
-   }
-}
-
-@media(min-width: map-get($grid-breakpoints, xl)) {
-   .article-detail {
-      article {
-         max-width: 1540px;
-      }
-   }
-
-   body.aside-closed {
-      article {
-         padding-left: 0;
-         max-width: 1740px;
-      }
    }
 }

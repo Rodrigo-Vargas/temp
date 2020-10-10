@@ -1,12 +1,7 @@
 $utilities: () !default;
 
 $utilities: map-merge(
-  (
-   "background-color": (
-      property: background-color,
-      class: bg,
-      values: $bg-colors
-    ),    
+  (  
     "color": (
       property: color,
       class: text,

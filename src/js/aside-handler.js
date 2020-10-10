@@ -91,7 +91,10 @@ export default class AsideHandler {
    }
 
    buildSubtitles(aside) {
-      var subtitles = document.querySelectorAll("h2");
+      let articleContainerSelector = aside.getAttribute('data-aside-nav-container');
+
+      let articleContainer = document.querySelector(articleContainerSelector);
+      var subtitles = articleContainer.querySelectorAll("h2");
       var context = this;
 
       for (let x = 0; x < subtitles.length; x++) {

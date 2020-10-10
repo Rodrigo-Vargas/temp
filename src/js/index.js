@@ -93,7 +93,7 @@ function send() {
 }
 
 new LazyImageLoad();
-new AsideHandler();
+//new AsideHandler();
 new TopNavHandler();
 new SideNavHandler();
 new LanguageDetector();

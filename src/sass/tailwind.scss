@@ -78,3 +78,30 @@
 
    @apply tw-bg-primary-500 tw-absolute tw-top-0 tw-z-10
 }
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,.h1,.h2,.h3,.h4 {
+   margin-bottom: .5rem;
+   font-weight: 500;
+   line-height: 1.2
+}
+
+h1,.h1,.h1 {
+   font-size: 2.5rem
+}
+
+h2,.h2,.h2 {
+   font-size: 2rem
+}
+
+pre {
+   display: block;
+   margin-top: 0;
+   margin-bottom: 1rem;
+   overflow: auto;
+   -ms-overflow-style: scrollbar;
+ 
+   code {
+     color: inherit;
+     word-break: normal;
+   }
+ }

@@ -13,9 +13,9 @@
 {% assign articles = site.articles | sort: 'date' | reverse %}
 {% assign posts = site.posts | where:"lang", page.lang %}
 
-<div class="container">
+<div class="px-3">
    <div class="blog-list">
-      <div class="row">
+      <div class="tw-flex tw-flex-wrap">
          {% for article in posts %}
             {% include blog/card.html %}
          {% endfor %}

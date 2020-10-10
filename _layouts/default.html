@@ -2,8 +2,6 @@
    layout: base
 ---
 
-<!-- {% include header.html %} -->
-
 <div class="tw-relative">
    <div class="tw-bg-primary-600 tw-fixed tw-w-full lg:tw-w-80 lg:tw-h-full tw-z-20 tw-top-0 tw-bottom-0">
       <section id="mobile-header" class="lg:tw-hidden tw-flex tw-flex-wrap tw-items-center">
@@ -62,6 +60,10 @@
                vertical-align: -0.125em;
             }
          </style>
+
+         <div data-aside-nav data-aside-nav-container=".article-with-subtitles">
+            <ul></ul>
+         </div>
    
          <ul class="flex-column tw-mb-5 tw-p-5">
             <li>
@@ -150,9 +152,3 @@
    <h4 class="h4">There is a english version of this website!</h4>
    <span><a href="/en">Click here</a> to checkout</span>
 </div>
-
-<footer class="bg-dark">
-   <span>Build with Jekyll and
-      <i class="fas fa-heart"></i>
-   </span>
-</footer>

@@ -1,5 +1,5 @@
-<div class="col">
-    <a href="{{ article.url }}" class="card blog mb-5">
+<div class="tw-w-1/2">
+    <a href="{{ article.url }}" class="card blog mb-5 tw-mx-2">
         {% if article.cover_url %} 
             {% assign cover_url = article.cover_url %} 
          {% else %} 
@@ -17,7 +17,7 @@
         </div>
 
         <div class="card-body">
-            <h3 class="font-weight-bold">{{ article.title }}</h3>
+            <h3 class="tw-text-primary-600 tw-font-bold">{{ article.title }}</h3>
             <span class="meta mb-3">
                 {{ article.date | date: "%d/%m/%Y" }}
             </span>

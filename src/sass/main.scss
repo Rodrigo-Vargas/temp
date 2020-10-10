@@ -13,19 +13,8 @@
 /*********************************************************
    Boostrap Files
 **********************************************************/
-@import "../../node_modules/bootstrap/scss/root";
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/containers";
-@import "../../node_modules/bootstrap/scss/grid";
-@import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/transitions";
-@import "../../node_modules/bootstrap/scss/badge";
-@import "../../node_modules/bootstrap/scss/alert";
-@import "../../node_modules/bootstrap/scss/list-group";
-@import "../../node_modules/bootstrap/scss/close";
-@import "../../node_modules/bootstrap/scss/toasts";
-
+  
 /* Helpers */
 @import "../../node_modules/bootstrap/scss/helpers";
 
@@ -35,17 +24,15 @@
 /*********************************************************
   Theme Files
 **********************************************************/
-@import "theme/components/blog-list";
 @import "theme/components/project-list";
 @import "theme/components/card";
 @import "theme/components/article";
 @import "theme/components/breadcrumb";
-/* @import "theme/components/syntax-highlighting"; */
+@import "theme/components/syntax-highlighting";
 @import "theme/components/header";
 @import "theme/components/alert";
 @import "theme/components/bookshelf";
 @import "theme/components/vcard";
-@import "theme/components/type";
 
 a {
   text-decoration: none;
