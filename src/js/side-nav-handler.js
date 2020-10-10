@@ -6,6 +6,9 @@ export default class SideNavHandler {
    init() {
       var toggler = document.querySelector('[data-side-nav-toggler');
 
+      if (!toggler)
+         return;
+
       toggler.addEventListener('click', () => {
          document.querySelector('body').classList.toggle('side-nav-opened');
       });

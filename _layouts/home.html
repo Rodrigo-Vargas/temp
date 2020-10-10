@@ -2,141 +2,20 @@
    layout: default 
 ---
 
-<div class="layout-home tw-relative">
-   <div class="tw-bg-primary-600 tw-fixed tw-w-full lg:tw-w-80 lg:tw-h-full tw-z-10">
-      <section id="mobile-header" class="lg:tw-hidden tw-flex tw-flex-wrap tw-items-center">
-         <div class="tw-py-5 tw-w-1/6">
-            <div class="tw-rounded-full tw-border-4 tw-border-white tw-w-20 tw-h-20 tw-bg-center tw-bg-cover tw-mx-auto" style="overflow: hidden; background-image: url('/assets/img/avatar.jpg')">
-               <img class="lazy img-fluid tw-hidden" data-src="/assets/img/avatar.jpg" alt="">
-            </div>   
-         </div>
-         
-         <div>
-            <h2 class="tw-text-gray-100 tw-text-3xl tw-block">Rodrigo Vargas</h2>
-            <h3 class="tw-text-primary-400 tw-mb-5 tw-block">Full Stack Web Developer</h3>
-         </div>
-      </section>
+<div class="home-content tw-bg-gray-100">
+   <div class="hero tw-w-full tw-p-5">
+      <div class="w-pl-5 tw-pr-5 inner">
+         <h1 class="tw-font-black tw-text-primary-800 tw-text-6xl tw-mb-5">Rodrigo <span class="tw-text-gray-600">Vargas</span></h1>
 
-      <aside class="tw-relative tw-h-full tw-hidden lg:tw-block">
-         <div class="tw-p-5 tw-hidden lg:tw-block">
-            <div class="tw-rounded-full tw-border-4 tw-border-white tw-w-32 tw-h-32 tw-bg-center tw-bg-cover tw-mx-auto" style="overflow: hidden; background-image: url('/assets/img/avatar.jpg')">
-               <img class="lazy img-fluid tw-hidden" data-src="/assets/img/avatar.jpg" alt="">
-            </div>   
-         </div>
-         
-         <div class="tw-text-center tw-p-5 tw-hidden lg:tw-block">
-            <h2 class="tw-text-gray-100 tw-text-3xl">Rodrigo Vargas</h2>
-            <h3 class="tw-text-primary-400 tw-mb-5">Full Stack Web Developer</h3>
-         </div>
-      
-         {% if jekyll.environment != "development" %}
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- Side Nav -->
-            <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-5054926892647194"
-               data-ad-slot="6621408239"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
-            <script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-         {% endif %}
-   
-         <ul class="flex-column tw-mb-5 tw-p-5">
-            <li>
-               <a class="nav-link" href="/">
-                  <i class="fas fa-home"></i>
-                  Home
-               </a>
-            </li>
-            <li>
-               <a class="nav-link" href="/projetos">
-                  <i class="fas fa-flask"></i>
-                  Projetos
-               </a>
-            </li>
-            <li>
-               <a class="nav-link" href="/blog">
-                  <i class="fas fa-edit"></i>
-                  Blog
-               </a>
-            </li>
-            <li>
-               <a class="nav-link" href="/series">
-                  <i class="fas fa-layer-group"></i>
-                  Series
-               </a>
-            </li>
-            <li>
-               <a class="nav-link" href="/contato">
-                  <i class="fas fa-paper-plane"></i>
-                  Contato
-               </a>
-            </li>
-            <li>
-               <a class="nav-link" href="/sobre">
-                  <i class="fas fa-user"></i>
-                  Sobre mim
-               </a>
-            </li>
-         </ul>
-      
-         <div class="tw-bg-primary-800 social-media tw-mx-auto tw-d-block tw-text-center tw-absolute tw-bottom-0 tw-w-full">
-            <ul class="tw-py-3 tw-flex tw-flex-wrap tw-justify-center">
-               <li class="nav-item tw-mx-2">
-                  <a class="tw-btn btn-social-media tw-items-center tw-justify-center" href="http://github.com/Rodrigo-Vargas"
-                     target="_blank"
-                     rel="noopener"
-                     title="GitHub">
-                     <i class="fab fa-github"></i>
-                  </a>
-               </li>
-               <li class="nav-item tw-mx-2">
-                  <a class="tw-btn btn-social-media" href="https://www.linkedin.com/in/rodrigo-vargas-894a3637/" 
-                        target="_blank"
-                        rel="noopener"
-                        title="Linkedin">
-                     <i class="fab fa-linkedin"></i>
-                  </a>
-               </li>
-               <li class="nav-item tw-mx-2">
-                  <a class="tw-btn btn-social-media" href="mailto:rodrigovargas123@gmail.com" title="E-mail">
-                     <i class="fas fa-envelope"></i>
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </aside>
-   </div>
+         <p class="font-size-8">
+            Olá! Eu sou um desenvolvedor Full Stack com mais de 7 anos de experiência em desenvolvimento de aplicações Web. 
+            Hoje trabalhando principalmente com <a href="#" class="text-primary-900 font-weight-bold">.Net</a>, <a href="#" class="text-primary-900 font-weight-bold">JavaScript</a> e <a href="#" class="text-primary-900 font-weight-bold">React</a>
+         </p>
 
-   <section id="mobile-nav-controls" class="tw-fixed tw-bottom-0 tw-right-0 tw-z-10 tw-w-1/6 tw-block lg:tw-hidden">
-      <a href="#" data-side-nav-toggler class="tw-justify-center tw-h-10 tw-w-10 tw-text-white tw-text-xl tw-shadow-2xl tw-rounded-full tw-bg-primary-500 tw-m-10 tw-flex tw-items-center">
-         <i class="fa fa-bars"></i>
-      </a>
-   </section>
+         <p class="font-size-8">Caso queira conhecer mais sobre o meu trabalho, dê uma olhada na seção de <a href="#" class="text-primary-900 font-weight-bold">projetos</a></p>
 
-   <div class="content lg:tw-pl-80">
-      <div class="home-content tw-bg-gray-100">
-         <div class="hero tw-w-full tw-p-5">
-            <div class="w-pl-5 tw-pr-5 inner">
-               <h1 class="tw-font-black tw-text-primary-800 tw-text-6xl tw-mb-5">Rodrigo <span class="tw-text-gray-600">Vargas</span></h1>
-      
-               <p class="font-size-8">
-                  Olá! Eu sou um desenvolvedor Full Stack com mais de 7 anos de experiência em desenvolvimento de aplicações Web. 
-                  Hoje trabalhando principalmente com <a href="#" class="text-primary-900 font-weight-bold">.Net</a>, <a href="#" class="text-primary-900 font-weight-bold">JavaScript</a> e <a href="#" class="text-primary-900 font-weight-bold">React</a>
-               </p>
-      
-               <p class="font-size-8">Caso queira conhecer mais sobre o meu trabalho, dê uma olhada na seção de <a href="#" class="text-primary-900 font-weight-bold">projetos</a></p>
-      
-               <p class="font-size-8">No meu <a href="#" class="text-primary-900 font-weight-bold">blog</a>, você encontrará posts e tutoriais com tecnologias que aprendi ou estou estudando no momento.</p>
-            </div>
-         </div>
+         <p class="font-size-8">No meu <a href="/blog" class="text-primary-900 font-weight-bold">blog</a>, você encontrará posts e tutoriais com tecnologias que aprendi ou estou estudando no momento.</p>
       </div>
-
-      <!-- {% include home/blog.html %}
-
-      {% include home/portfolio.html %}  -->
    </div>
 </div>
 

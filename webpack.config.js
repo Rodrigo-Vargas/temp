@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const isProduction = process.env.NODE_ENV === 'production'
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -9,6 +10,7 @@ module.exports = {
    entry: {
       index: path.resolve(__dirname, './src/js/index.js'),
       polyfills: path.resolve(__dirname, './src/js/polyfills.js'),
+      //sw: path.resolve(__dirname, './src/js/sw.js'),
       main: path.resolve(__dirname, './src/sass/main.scss'),
       tailwind: path.resolve(__dirname, './src/sass/tailwind.scss'),
       resume: path.resolve(__dirname, './src/sass/resume.scss'),
@@ -20,8 +22,15 @@ module.exports = {
       port: 9000,
       watchContentBase: true,
       writeToDisk: true,
-      hot: true
+      hot: true,
+      http2: true,
+      https: {
+         key: fs.readFileSync('./private.key'),
+         cert: fs.readFileSync('./private.crt'),
+         ca: fs.readFileSync('./private.pem'),
+      }
    },
+   devtool: 'source-map',
    output: {
       path: path.resolve(__dirname, './dist/'),
       filename: isProduction ? '[name].[hash].js' : '[name].js',

@@ -64,3 +64,17 @@
       display: block !important;
    }
 }
+
+.page-transitioning {
+   .transition-block {
+      left: 0;
+   }
+}
+
+.transition-block {
+   height: 100%;
+   left: -100vw;
+   width: 100%;
+
+   @apply tw-bg-primary-500 tw-absolute tw-top-0 tw-z-10
+}

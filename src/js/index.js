@@ -4,6 +4,7 @@ import AsideHandler from "./aside-handler";
 import TopNavHandler from "./top-nav-handler";
 import SideNavHandler from './side-nav-handler';
 import LanguageDetector from "./language-detector";
+import PageTransition from './page-transition';
 
 /* Font Awesome */
 
@@ -81,8 +82,19 @@ if (new RetroCompat().Check()) {
    new RetroCompat().loadScript("/assets/js/polyfills.js", main);
 }
 
+if ('serviceWorker' in navigator)
+   send();
+
+function send() {
+   navigator.serviceWorker
+      .register('/sw.js')
+      .then(console.log('send'))
+      .catch(console.error);
+}
+
 new LazyImageLoad();
 new AsideHandler();
 new TopNavHandler();
 new SideNavHandler();
 new LanguageDetector();
+new PageTransition()

@@ -12,14 +12,15 @@
 
    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico" />
 
-   {% capture styles %}
-   {% include main.css %}
-   {% endcapture %}
-
    <link rel="stylesheet" href="{{ site.data.manifest['tailwind.css'] }}">
 </head>
 
-<body>
+<body class="">
+   <script type="text/javascript">
+      if (document.referrer && document.referrer !== document.location.href)
+         document.querySelector("body").classList.add('page-transitioning');
+   </script>
+
    <!-- Jekyll Env: {{ jekyll.environment }} -->
    {{ content }}
    {% if jekyll.environment != "development" %}
@@ -39,11 +40,16 @@
 
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700" rel="stylesheet">
 
-   <script src="https://kit.fontawesome.com/2d492f8cc2.js" crossorigin="anonymous"></script>
-
    <script data-ad-client="ca-pub-5054926892647194" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
    <script type="text/javascript" src="/dist/index.js" async=""></script>
+
+   <script type="text/javascript">
+      var styleEl = document.createElement('style');
+      document.head.appendChild(styleEl);
+      styleEl.sheet.insertRule('.transition-block { transition: left 0.5s; }', 0);
+      document.querySelector("body").classList.remove('page-transitioning');
+   </script>
 </body>
 
 </html>
