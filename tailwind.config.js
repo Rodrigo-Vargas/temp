@@ -37,6 +37,9 @@ module.exports = {
         '80': '20rem'
       }
     },
+    fontFamily: {
+      'sans': ['Open Sans', 'sans-serif'],
+    }
   },
   variants: {},
   plugins: [],

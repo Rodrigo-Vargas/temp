@@ -6,3 +6,5 @@ node_modules
 _drafts
 private*
 ssl.conf
+dist/*.map
+dist/*.hot-update*
