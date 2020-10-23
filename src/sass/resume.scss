@@ -1,106 +1,50 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "theme/variables";
-
-@import "../../node_modules/bootstrap/scss/containers";
-@import "../../node_modules/bootstrap/scss/grid";
-
 body {
    font-size: 16px;
 }
 
+
+/* Variables */
+$side-nav-bg: #e5d6d3;
+$top-nav-bg: #3d333c;
+$main-bg: #f9f9f9;
+
+body {
+  margin: 0mm 0mm 0mm 0mm;
+}
+
+.resume-main-bg {
+   background-color: $main-bg;
+}
+
+.bg-resume-side-nav {
+   background-color: $side-nav-bg;
+}
+
+.bg-resume-top-nav {
+   background-color: $top-nav-bg;
+}
+
+.info {
+   @apply tw-flex tw-flex-wrap tw-flex-row tw-mb-4
+}
+
+.icon {
+   @apply tw-h-8 tw-w-8 tw-rounded-full tw-text-white bg-resume-top-nav tw-justify-center tw-items-center tw-flex
+}
+
+.resume-avatar {
+   @apply tw-rounded-full tw-h-48 tw-w-48 tw-mx-auto tw-mb-4
+}
+
 .web-resume {
-   background-color: #fff;
-   border: 1px solid #ccc;
-   color: #222;
+   color: $top-nav-bg;
    font-family: 'Lato', sans-serif;
-   padding: 20px 0 0 0;
-
-   .fa-stack {
-      font-size: 20px;
-   }
-
-   h1 {
-      color: #222;
-      font-size: 32px;
-      font-weight: bold;
-      margin: 0;
-   }
 
    h2 {
-      color: #222;
-   }
-
-   h3 {
-      color: #222;
-      font-size: 20px;
-      margin: 10px 0;
+      @apply tw-uppercase tw-text-2xl tw-mb-3 tw-border-b-4 tw-border-b tw-border-gray-800
    }
 
    .section {
-      margin-right: $spacer-3;
-
-      >.title {
-         border-bottom: 1px solid #ccc;
-         color: #444;
-         margin: 15px 0;
-      }
-      
-      &> .title > * {
-         display: inline-block;
-         vertical-align: middle;
-      }
-   
-      &> .title h2 {
-         font-size: 22px;
-         font-weight: bold;
-         line-height: 22px;
-         vertical-align: sub;
-      }
-   
-      .info {
-         margin: 0 0 15px 0;
-      }
-   
-      .info label {
-         display: block;
-         font-weight: bold;
-      }
-   
-      .item {
-         margin-bottom: 25px;
-      }
-   
-      .date {
-         display: inline-block;
-         font-weight: bold;
-         vertical-align: top;
-         width: 30%;
-      }
-   
-      .description {
-         display: inline-block;
-         width: 69%;
-      }
-   
-      .job-title {
-         font-weight: bold;
-         margin: 0;
-      }
-
-      .job-address {
-         font-size: 0.75rem;
-      }
-   }
-
-   .col {
-      &.left {
-         max-width: 30%;
-      }
-   
-      &.right {
-         max-width: 70%;
-      }
+      @apply tw-mr-3
    }
 }

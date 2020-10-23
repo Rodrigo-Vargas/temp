@@ -1,21 +1,12 @@
 <div id="technical-skills" class="section">
-   <div class="title">
-      <span class="fa-stack fa-lg">
-         <i class="fa fa-circle fa-stack-2x"></i>
-         <i class="fa fa-desktop fa-stack-1x fa-inverse"></i>
-      </span>
-      <h2>{{ site.data.t[page.lang].skills }}</h2>
-   </div>
+   <h2>{{ site.data.t[page.lang].skills }}</h2>
 
    {% for skill in page.skills %}
-      <div class="info">
-         <label>{{ skill.title }}</label>
-         <span>
-            {% for i in (1..skill.stars) %}
-               <i class="fa fa-star"></i>
-            {% endfor %}
-            ({{ skill.star_title }})
-         </span>
+      <div class="tw-mb-3">
+         <label class="tw-font-bold">{{ skill.title }}</label>
+         <div>
+            <span class="tw-text-sm tw-text-gray-700">({{ skill.description }})</span>
+         </div>
       </div>
    {% endfor %}
 </div>

@@ -1,21 +1,24 @@
 <div id="projects" class="section">
-   <div class="title">
-      <span class="fa-stack fa-lg">
-         <i class="fa fa-circle fa-stack-2x"></i>
-         <i class="fa fa-lightbulb fa-stack-1x fa-inverse"></i>
-      </span>
-      <h2>Projetos Independentes</h2>
-   </div>
+   <h2>Projetos Independentes</h2>
+
    {% assign projects = site.projects | sort: 'date' | reverse %}
    {% for project in projects %}
-   <div class="item">
-      <div class="date">
-         <span>{{ project.period }}</span>
-      </div>
+   <div class="tw-mb-5">
       <div class="description">
-         {{ project.title }}
+         <span class="tw-text-gray-700 tw-text-xl">{{ project.title }}</span>
          <div>
-            <span class="small">{{ project.link }}</span>
+            <span class="tw-text-xs">{{ project.link }}</span>
+         </div>
+
+         <div>
+            <span>{{ project.excerpt }}</span>
+         </div>
+
+         <div>
+            <span class="tw-font-bold tw-text-sm">Worked on:</span>
+            {% for skill in project.skills %}
+               <span>{{ skill }},</span>
+            {% endfor %}
          </div>
       </div>
    </div>

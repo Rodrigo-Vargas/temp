@@ -1,21 +1,21 @@
-<div id="languages" class="section">
+<div id="languages" class="section tw-mb-10">
     <div class="title">
-       <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
-       </span>
        <h2>{{ site.data.t[page.lang].languages }}</h2>
     </div>
 
     {% for language in page.languages %}
-      <div class="info">
-         <label>{{ language.title }}</label>
-         <span>
-            {% for i in (1..language.stars) %}
-               <i class="fa fa-star"></i>
-            {% endfor %}
-         </span>
-         <span>({{ language.description }})</span>
+      <div class="tw-mb-5">
+         <div>
+            <label>{{ language.title }}</label>
+         </div>
+         <div>
+            <span>
+               {% for i in (1..language.stars) %}
+                  <i class="fa fa-star"></i>
+               {% endfor %}
+            </span>
+            <span>({{ language.description }})</span>
+         </div>
       </div>
     {% endfor %}
  </div>

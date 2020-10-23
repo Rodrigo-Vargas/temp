@@ -2,57 +2,77 @@
    layout: base
 ---
 
-<link rel="stylesheet" href="/dist/resume.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+<div class="web-resume resume-main-bg">
+   <div class="row">
+      <div class="tw-w-1/3 bg-resume-side-nav tw-px-20 tw-py-10">
+         <img class="resume-avatar" src="{{ site.author_avatar }}" alt="{{ site.author_name }}">
 
-<div class="web-resume">
-   <div class="container">
-      <div class="row">
-         <div class="col left">
-            <h1>{{ site.author_name }}</h1>
-
-            <div class="about">
-               {{ site.data.t[page.lang].author_job_position }}
-            </div>         
-         </div>
-
-         <div class="col right">
-            <div id="personal-info" class="section">
-               <div class="info">
+         <div id="personal-info" class="section tw-mb-10">
+            <h2>{{ site.data.t[page.lang].contact }}</h2>
+            <div class="info">
+               <div class="icon">
                   <i class="fa fa-phone"></i>
-                  <span>+55 51 997838846</span>
                </div>
+               <span class="tw-flex tw-pl-2">{{ site.author_phone }}</span>
+            </div>
 
-               <div class="info">
+            <div class="info">
+               <div class="icon">
                   <i class="fa fa-envelope"></i>
-                  <span>rodrigovargas123@gmail.com</span>
                </div>
+               <span class="tw-flex tw-pl-2">{{ site.email }}</span>
+            </div>
 
-               <div class="info">
+            <div class="info">
+               <div class="icon">
                   <i class="fa fa-link"></i>
-                  <span>http://rodrigovargas.com.br</span>
                </div>
+               <span class="tw-flex tw-pl-2">{{ site.url }}</span>
+            </div>
 
-               <div class="info">
+            <div class="info">
+               <div class="icon">
                   <i class="fab fa-linkedin"></i>
-                  <span>linkedin.com/in/rodrigo-vargas-894a3637/</span>
                </div>
+               <span class="tw-flex tw-pl-2 tw-w-10">{{ site.author_linkedin }}</span>
             </div>
          </div>
+
+         {% include resume/education.html %}
+
+         {% include resume/languages.html %}
       </div>
 
-      <div class="row">
-         <div class="col left">
-            {% include resume/skills.html %}
+      <div class="tw-w-2/3 ">
+         <div class="top-nav bg-resume-top-nav tw-p-10">
+            <h1 class="tw-text-white">{{ site.author_name }}</h1>
 
-            {% include resume/languages.html %}
+            <div class="about">
+               <h3 class="tw-text-white">{{ site.data.t[page.lang].author_job_position }}</h3>
+            </div>
          </div>
 
-         <div class="col right">
-            {% include resume/experience.html %}
+         <div class="tw-p-3">
+            <div class="personal-statement tw-mb-10">
+               <h2 class="tw-text-lg">{{ site.data.t[page.lang].personal_statement }}</h2>
+               {{ page.personal_statement }}
+            </div>
 
-            {% include resume/education.html %}
-            
+            <div>
+               {% include resume/experience.html %}
+            </div>
+
+            <div class="row">
+               <div class="tw-w-1/2">
+                  {% include resume/projects.html %}
+               </div>
+   
+               <div class="tw-w-1/2">
+                  {% include resume/skills.html %}
+               </div>
+            </div>
          </div>
       </div>
    </div>

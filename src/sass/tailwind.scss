@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "resume.scss";
+
 .nav-link {
    &:hover {
       @apply tw-text-white
@@ -108,4 +110,8 @@ pre {
 
 .article-detail {
    @apply tw-text-gray-900
+}
+
+.row {
+   @apply tw-flex tw-flex-wrap
 }
