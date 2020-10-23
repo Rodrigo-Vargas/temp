@@ -10,10 +10,8 @@ module.exports = {
    entry: {
       index: path.resolve(__dirname, './src/js/index.js'),
       polyfills: path.resolve(__dirname, './src/js/polyfills.js'),
-      //sw: path.resolve(__dirname, './src/js/sw.js'),
       main: path.resolve(__dirname, './src/sass/main.scss'),
-      tailwind: path.resolve(__dirname, './src/sass/tailwind.scss'),
-      resume: path.resolve(__dirname, './src/sass/resume.scss'),
+      tailwind: path.resolve(__dirname, './src/sass/tailwind.scss')
    },
    devServer: {
       contentBase: path.join(__dirname, '_site'),
@@ -63,16 +61,27 @@ module.exports = {
             test: /\.scss$/,
             use: [
                MiniCssExtractPlugin.loader,
-               'css-loader',
+               { loader: 'css-loader', options: { importLoaders: 1 } },
+               {
+                  loader: 'postcss-loader'                        
+               }, 
                {
                   loader: 'sass-loader',
                   options: {
-                     sourceMap: true
+                     sourceMap: true,
+                     plugins: () => [autoprefixer()]
                   }
-               },
-               'postcss-loader'
+               }
             ]
-         }
+         },
+         {
+            test: /\.css$/,
+            use: [
+               MiniCssExtractPlugin.loader,
+               { loader: 'css-loader', options: { importLoaders: 1 } },
+               { loader: 'postcss-loader' }
+            ]
+         },
       ]
    }
 };
