@@ -8,3 +8,11 @@ private*
 ssl.conf
 dist/*.map
 dist/*.hot-update*
+dist/index.js
+dist/main.css
+dist/main.js
+dist/polyfills.js
+dist/resume.css
+dist/resume.js
+dist/tailwind.css
+dist/tailwind.js
