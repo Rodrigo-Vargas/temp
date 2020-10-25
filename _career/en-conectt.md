@@ -5,23 +5,20 @@
   name: Conectt
   period: "2013 - Current"
   position: "Senior Developer"
-  skills:   [  "Sharepoint (2007, 2010, 2013, Online)",
-               "Nintex Workflows for Sharepoint",
+  skills:   [  "Sharepoint",
                "C# MVC and Web Forms",
-               "HTML(5) / CSS(3)",
-               "Angular.js",
-               "jQuery",
-               "Javascript",
-               "Web Center and Lucene"]
+               "HTML/CSS/Javascript",
+               "React.js",
+               "jQuery"]
   slug: conectt
   highlights: [ 
                 "Junior developer to lead developer in about 3 years",
-                "Fullstack developer for Sharepoint and C# plataforms.", 
-                "Lead developer on two projects",
                 "Promoter of good practices across local team members",
                 "Responsible for technical interview of new candidates",
-                "Delivered about 6 successfull projects as developer team member",
-                "Member of maintenance team with high customer satisfaction"
+                "Reduced the loading time of the UnimedPOA project by 60% through frontend optimization techniques",
+                "Rescue of old contract through good crisis management, interpersonal relationship with the key person and problem solving analysis",
+                "Contributed to the front-end methodology code guide of the company",
+                "Award employee of the year from the directors board in 2015"
               ]
   year: 2013
 ---

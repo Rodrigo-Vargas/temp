@@ -6,10 +6,9 @@
   position: Desenvolvedor Cobol
   logo_url: "/assets/img/career/imediata.jpg"
   highlights: [
-                "I achieved a full-time position after 8-month internship",
-                "Helped to develop a driver that enable MySQL database access from Cobol File System API",
-                "In the internship, I generated value for the company right after the first weeks of work",
-                "I gained the trust of the team to provide outsourcing service to clients after 3 months of internship"
+                "Achieved a full-time position after 8-month internship",
+                "Contributed to develop a driver that enable MySQL database access from Cobol File System API",
+                "Achieved the trust of the team to provide outsourcing service to clients just after 3 months of internship"
               ]
   skills: [
             "Cobol",
