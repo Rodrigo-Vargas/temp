@@ -53,8 +53,6 @@ collections:
   series:
     output: true
     permalink: /series/:path
-  skills:
-    output: false
   education:
     output: false
   career:
