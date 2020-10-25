@@ -5,22 +5,22 @@
   name: Conectt
   period: "2013 - Atual"
   position: "Desenvolvedor Sênior"
-  skills:   [  "Sharepoint (2007, 2010, 2013, Online)",
-               "Nintex Workflows for Sharepoint",
-               "C# MVC and Web Forms",
-               "HTML(5) / CSS(3)",
-               "Angular.js",
-               "jQuery",
-               "Javascript",
-               "Web Center and Lucene"]
+  skills:   [
+               "Sharepoint",
+               "C# MVC/Web Forms",
+               "HTML/CSS/JavaScript",
+               "React.js",
+               "jQuery"
+            ]
   slug: conectt
   highlights: [ 
-                "Desenvolvedor júnior para líder técnico em cerca de 3 anos",
-                "Desenvolvedor Fullstack para plataformas Sharepoint e C #.",
-                "Evangelista de boas práticas entre os membros da equipe local",
-                "Responsável pela entrevista técnica de novos candidatos",
-                "Entrega de mais de 10 projetos bem sucedidos como membro da equipe de desenvolvedores, entre esses, dois desses como líder técnico",
-                "Membro da equipe de manutenção com alta satisfação do cliente"
+                  "Desenvolvedor júnior para líder técnico em cerca de 3 anos",
+                  "Evangelista de boas práticas entre os membros da equipe",
+                  "Responsável pela entrevista técnica de novos candidatos",
+                  "Redução de 60% no tempo de carregamento do projeto UnimedPOA atraves de técnicas de otimizacao de frontend",
+                  "Resgate de antigo contrato através de um bom gerenciamento de crise, relação interpessoal com a pessoa chave e análise resolução do problema",
+                  "Contribuiu para a padronização da metodologia de front-end da empresa",
+                  "Recebeu o prêmio de destaque da diretoria no ano de 2015"
               ]
   year: 2013
 ---

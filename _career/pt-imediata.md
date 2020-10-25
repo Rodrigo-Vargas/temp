@@ -6,10 +6,9 @@
   position: Desenvolvedor Cobol
   logo_url: "/assets/img/career/imediata.jpg"
   highlights: [
-                "Conquistei um cargo em período integral após estágio de 8 meses na faculdade",
-                "Ajudei a desenvolver um driver para acesso ao banco MySQL para Cobol",
-                "No estágio, gerei valor para a empresa logo após as primeiras semanas de trabalho",
-                "Conquistei a confiança da equipe para realizar atendimento outsourcing nos clientes após 3 meses de estágio"
+                  "Conquistei um cargo em período integral após estágio de 8 meses",
+                  "Contribui no desenvolvimento de um driver para acesso ao banco MySQL para Cobol",
+                  "Conquistei a confiança da equipe para realizar atendimento outsourcing nos clientes após 3 meses de estágio"
               ]
   skills: [
             "Cobol",

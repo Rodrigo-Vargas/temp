@@ -12,11 +12,13 @@
   categories: [HTML, Jekyll]
   cover_url: "/cdn/images/projects/blog/home.png"
   date: 2015-01-01
+  excerpt: Desde 2015, eu gerencia e desenvolvo meu site pessoal. Já construi várias versões dele utilizando diferentes plataformas, com o objetivo de saber qual a mais produtiva e confortável para usar. A primeira versão foi desenvolvida em Wordpress, para depois migrar para Jekyll, um gerador de sites estáticos escrito em Ruby.
   featured: true
   layout: project
   lang: pt
   link: https://rodrigovargas.com.br
   period: 2015 - Atual
+  skills: [HTML, Jekyll, Webpack, Tailwind.css]
   title: Site pessoal
   year: 2015
 ---

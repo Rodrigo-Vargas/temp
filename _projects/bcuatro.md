@@ -11,11 +11,13 @@
     ]
     categories: [HTML, Wordpress]
     cover_url: "/cdn/images/projects/bcuatro/home.png"
+    excerpt: Criação da presença online da marca sob a ótica de website
     featured: true
     lang: pt
     layout: project
     link: http://bcuatro.com.br
     period: 2018
+    skills: [HTML, Wordpress]
     title: B Cuatro Comunicação Visual
 ---
 

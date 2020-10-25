@@ -2,7 +2,6 @@
    lang: en
    layout: resume
    permalink: /en/resume
-
    languages:
       - 
          description: Native
@@ -15,24 +14,25 @@
 
    skills:
       -
-         stars: 5
-         star_title: 7+ years
-         title: C#
+         title: Web Development
+         description: HTML/CSS/JavaScript
       -
-         stars: 5
-         star_title: 7+ years
-         title: HTML/CSS
+         title: Backend Languages
+         description: Node.js, C#, PHP, Ruby
       -
-         stars: 5
-         star_title: 7+ years
-         title: Javascript
+         title: Frontend JavaScript Frameworks
+         description: React/Redux
       -
-         stars: 4
-         star_title: 3+ years - 2 freelances
-         title: WordPress
+         title: CMS
+         description: SharePoint, WordPress
       -
-         stars: 3
-         star_title: 1 side project
-         title: React
+         title: UI/UX Design
+         description: Adobe XD
+   education:
+      -
+         name: Universidade de Santa Cruz do Sul
+         title: Bachelor on Computer Engineering
+         period: 2008 - 2012
+   personal_statement: I consider myself a very motivated person who likes challenges. I like to learn about new areas of knowledgment, because that, I learned to enjoy developing frontend applications, as well as taking a chance on design and UX. My goal is to change ideas and experiences with people who also have these interests, as well as create work partnerships, to those skills could help these projects achieve success and impact as many people as possible.
 ---
 
