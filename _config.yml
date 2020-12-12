@@ -6,15 +6,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rodrigovargas.com.br"
 
 # Uncomment the section below to add items on your top navigation
-# header_items:
-#   - Work:
-#     title: Work
-#     href: "#work"
-#   - contact.md
-#   - Resume:
-#     title: Resume
-#     href: https://drive.google.com
-#     featured: true
+header_items:
+  -
+    title: Projects
+    href: "#projects"
+  -
+    title: Posts
+    href: "#last-posts"
 
 waterfall:
   author:
