@@ -48,11 +48,15 @@ collections:
     permalink: /series/:path
 
 defaults:
-  -scope:
-    path: "/blog"
-    type: "articles"
-  values:
-    layout: article
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 exclude:
   - src
