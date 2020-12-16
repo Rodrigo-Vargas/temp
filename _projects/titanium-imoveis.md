@@ -15,5 +15,6 @@
   lang: pt
   link: http://titaniumimoveis.com
   skills: [React.js, Redux, Bootstrap, .NET Core, Webpack, UX]
+  thumbnail: /cdn/images/projects/titanium/home.png
   title: Titanium Imoveis
 ---

@@ -10,12 +10,12 @@
         }
     ]
     categories: ["PHP", "Laravel", "HTML"]
-    cover_url: "/cdn/images/projects/favorita-veiculos/thumb-home.png"
     excerpt: Desenvolvimento de sistema de gerenciamento de veículos utilizando PHP + Laravel, assim como construção de novo layout
     lang: pt
     link: http://favoritaveiculos.com.br
     featured: true
     period: 2018
+    thumbnail: "/cdn/images/projects/favorita-veiculos/thumb-home.png"
     skills: ["PHP", "Laravel", "HTML"]
     title: "Favorita Veículos"
 ---
