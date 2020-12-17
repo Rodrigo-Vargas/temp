@@ -33,7 +33,7 @@ GEM
       sassc (> 2.0.1, < 3.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    jekyll-waterfall (0.7.0)
+    jekyll-waterfall (0.9.0)
       jekyll (~> 4.1)
     kramdown (2.3.0)
       rexml
@@ -64,7 +64,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.1.1)
-  jekyll-waterfall (~> 0.7)
+  jekyll-waterfall (~> 0.9)
 
 BUNDLED WITH
    2.1.4

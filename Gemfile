@@ -1,5 +1,4 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.1.1"
-gem "jekyll-waterfall", "~> 0.7"
-
+gem "jekyll-waterfall", "~> 0.9"
