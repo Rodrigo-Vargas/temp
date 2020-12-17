@@ -5,14 +5,17 @@ description:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rodrigovargas.com.br"
 
+enable_multi_language: true
+lang: &LANG "pt"
+
 # Uncomment the section below to add items on your top navigation
 header_items:
   -
-    title: Projects
-    href: "#projects"
+    title: Portfolio
+    href: /projects
   -
-    title: Posts
-    href: "#last-posts"
+    title: Blog
+    href: /blog
 
 waterfall:
   author:
@@ -23,6 +26,9 @@ waterfall:
     github: Rodrigo-Vargas    
     linkedin: rodrigo-vargas-894a3637
     email: rodrigovargas123@gmail.com
+
+  home:
+    last_posts_items: 6
 
 # Build settings
 markdown: kramdown
@@ -53,7 +59,13 @@ defaults:
       layout: "post"
   - scope:
       path: ""
+      type: "projects"
     values:
+      layout: "project"
+  - scope:
+      path: ""
+    values:
+      lang: *LANG
       layout: "default"
 
 exclude:
