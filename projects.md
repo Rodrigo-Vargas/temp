@@ -1,0 +1,4 @@
+---
+   collection: projects
+   layout: collection
+---
