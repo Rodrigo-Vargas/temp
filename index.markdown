@@ -1,6 +1,13 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+   header_items:
+   -
+      title: Projects
+      href: "#projects"
+   -
+      title: Posts
+      href: "#last-posts"
+   layout: home
+   posts:
+      see_more_label: Veja mais
+      url: /blog
 ---
