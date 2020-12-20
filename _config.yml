@@ -7,6 +7,7 @@ url: "https://rodrigovargas.com.br"
 
 enable_multi_language: true
 lang: &LANG "pt"
+permalink: /:title:output_ext
 
 # Uncomment the section below to add items on your top navigation
 header_items:
@@ -30,6 +31,9 @@ waterfall:
   home:
     last_posts_items: 6
 
+analytics:
+  tracking_id: "GTM-TW3SM7Q"
+
 # Build settings
 markdown: kramdown
 theme: jekyll-waterfall
@@ -42,6 +46,9 @@ compress_html:
   profile: false
 
 collections:
+  posts:
+    output: true
+    permalink: /blog/:title:output_ext
   projects:
     output: true
   books:

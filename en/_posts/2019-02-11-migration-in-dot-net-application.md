@@ -6,6 +6,7 @@
    date: 2019-02-11
    excerpt: Using Entity Framework, we gonna work a database on a .Net Core MVC application
    lang: en
+   permalink: /en/blog/migration-in-dot-net-application
    title: Migrations in .Net Core MVC application
 ---
 

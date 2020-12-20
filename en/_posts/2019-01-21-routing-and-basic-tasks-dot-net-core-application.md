@@ -6,6 +6,7 @@
    date: 2019-01-21
    excerpt: First steps into the basic concepts of a .NET Core application
    lang: en
+   permalink: /en/blog/routing-and-basic-tasks-dot-net-core-application
    title: Routing and basic concepts in a .NET Core Application
 ---
 
