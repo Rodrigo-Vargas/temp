@@ -35,7 +35,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    jekyll-waterfall (0.10.1)
+    jekyll-waterfall (0.10.2)
       jekyll (~> 4.1)
     kramdown (2.3.0)
       rexml
@@ -67,7 +67,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.1.1)
   jekyll-sitemap
-  jekyll-waterfall (~> 0.10.1)
+  jekyll-waterfall (~> 0.10.2)
 
 BUNDLED WITH
    2.1.4
