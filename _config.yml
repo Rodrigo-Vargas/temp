@@ -32,6 +32,9 @@ waterfall:
     last_posts_items: 6
 
 analytics:
+  tracking_id: ""
+
+google_tag_manager:
   tracking_id: "GTM-TW3SM7Q"
 
 # Build settings
