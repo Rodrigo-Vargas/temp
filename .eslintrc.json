@@ -3,6 +3,9 @@
     "react-app",
     "airbnb"
   ],
+  "rules": {
+    "react/jsx-props-no-spreading": "off"
+  },
   "plugins": [
     "react",
     "react-hooks"
