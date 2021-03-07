@@ -24,6 +24,10 @@ const theme = {
     primary800: '#3730a3',
     primary900: '#312e81',
   },
+  font: {
+    family:
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+  },
 };
 
 const Theme = ({ children }) => (
