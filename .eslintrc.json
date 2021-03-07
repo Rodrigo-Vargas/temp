@@ -3,9 +3,6 @@
     "react-app",
     "airbnb"
   ],
-  "rules": {
-    "react/jsx-filename-extension": "off"
-  },
   "plugins": [
     "react",
     "react-hooks"
