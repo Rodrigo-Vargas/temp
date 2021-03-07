@@ -1,8 +1,8 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import PropTypes from 'prop-types';
 
 import Header from '../Header';
+
+import headerPropType from '../Header/propTypes';
 
 const Main = ({ header }) => (
   <>
@@ -12,8 +12,9 @@ const Main = ({ header }) => (
 );
 
 Main.propTypes = {
-  header: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
+  header: headerPropType,
 };
+
 Main.defaultProps = {
   header: [],
 };
