@@ -1,10 +1,8 @@
-import * as React from 'react';
-import Header from '../components/Header';
+import React from 'react';
+import Main from '../components/Main';
 
-const IndexPage = () => (
-  <div>
-    <Header />
-  </div>
+const Home = () => (
+  <Main />
 );
 
-export default IndexPage;
+export default Home;
