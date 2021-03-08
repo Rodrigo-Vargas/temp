@@ -2,6 +2,7 @@ import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
+    border-width: 0;
     box-sizing: inherit;
   }
 
@@ -20,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     height: auto;
   }
 
-  @font-face {
+  /* @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
@@ -32,10 +33,10 @@ const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-display: swap;
-    src: local('Poppins Regular'), local('Poppins-Regular'),
-        url('assets/fonts/Poppins-regular.woff2') format('woff2');
+    src: local('Poppins Medium'), local('Poppins-Medium'),
+        url('assets/fonts/Poppins-Medium.woff2') format('woff2');
   }
 
   @font-face {
@@ -45,10 +46,11 @@ const GlobalStyles = createGlobalStyle`
     font-display: swap;
     src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
         url('assets/fonts/Poppins-SemiBold.woff2') format('woff2');
-  }
+  } */
 
   ${({ theme }) => css`
     html {
+      background-color: ${theme.colors.gray100};
       box-sizing: border-box;
       font-size: 16px;
     }
