@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Container } from '../../styles/common';
+import { Container } from '../Grid';
 
 export const Logo = styled.div`
   ${({ theme }) => css`
@@ -81,6 +81,7 @@ export const HeaderWrapper = styled.header`
     position: fixed;
     width: 100%;
     transition: all 0.5s;
+    top: 0;
     z-index: 10;
   `}
 `;

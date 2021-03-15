@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Container } from '../../styles/common';
+import { Container } from '../Grid';
 
 export const HeroWrapper = styled.div`
   align-items: center;

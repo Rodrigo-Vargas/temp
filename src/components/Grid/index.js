@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   margin-left: auto;
@@ -32,4 +32,18 @@ export const Container = styled.div`
   }
 `;
 
-export const Another = {};
+export const Row = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -${theme.spacers.p3};
+    margin-right: -${theme.spacers.p3};
+  `}
+`;
+
+export const Col = styled.div`
+  ${({ theme }) => css`
+      padding-left: ${theme.spacers.p3};
+    padding-right: ${theme.spacers.p3};
+  `}
+`;

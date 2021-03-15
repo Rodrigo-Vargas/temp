@@ -3,7 +3,7 @@ import { createGlobalStyle, css } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
     border-width: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -19,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  .w-50 {
+    width: 50%;
   }
 
   /* @font-face {

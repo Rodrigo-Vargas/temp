@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Wrapper, TagList, Tag, Title, Link,
+  Wrapper, TagList, Tag, Title, Link, ImageBox, Image,
 } from './styles';
 
 const ProjectCard = ({
@@ -15,11 +15,11 @@ const ProjectCard = ({
         <Tag>Wordpress</Tag>
       </TagList>
       <Title>{title}</Title>
-      <div className="absolute bottom-0">
-        <div className="h-36 overflow-hidden w-4/5 mx-auto">
+      <ImageBox>
+        <Image>
           <img src={img} alt={title} />
-        </div>
-      </div>
+        </Image>
+      </ImageBox>
     </Link>
   </Wrapper>
 );
