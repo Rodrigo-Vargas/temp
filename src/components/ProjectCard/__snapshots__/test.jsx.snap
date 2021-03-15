@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectCard /> should render correclty 1`] = `
+<div
+  class="col w-full sm:w-1/2"
+>
+  <a
+    class="card featured"
+    data-testid="project-link"
+    href="/projects/sample-post"
+  >
+    <div
+      class="py-5 pt-2"
+    >
+      <span
+        class="text-gray-300 text-sm pr-5 py-1"
+      >
+        HTML
+      </span>
+      <span
+        class="text-gray-300 text-sm pr-5 py-1"
+      >
+        Wordpress
+      </span>
+    </div>
+    <h2
+      class="text-gray-800 text-2xl mb-3"
+    >
+      Sample Post
+    </h2>
+    <div
+      class="absolute bottom-0"
+    >
+      <div
+        class="h-36 overflow-hidden w-4/5 mx-auto"
+      >
+        <img
+          alt="Sample Post"
+          src="https://source.unsplash.com/user/willianjusten/300x140"
+        />
+      </div>
+    </div>
+  </a>
+</div>
+`;
