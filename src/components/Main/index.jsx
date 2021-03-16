@@ -2,26 +2,22 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 
-import Header from '../Header';
 import Hero from '../Hero';
 
-import headerPropType from '../Header/propTypes';
 import heroPropType from '../Hero/propTypes';
+import Base from '../../templates/Base';
 
-const Main = ({ header, hero }) => (
-  <>
-    <Header items={header} />
+const Main = ({ hero }) => (
+  <Base>
     <Hero title={hero.title} description={hero.description} />
-  </>
+  </Base>
 );
 
 Main.propTypes = {
-  header: headerPropType,
   hero: PropTypes.shape(heroPropType),
 };
 
 Main.defaultProps = {
-  header: [],
   hero: {},
 };
 
