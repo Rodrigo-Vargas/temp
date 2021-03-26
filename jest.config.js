@@ -2,6 +2,10 @@ module.exports = {
   transform: {
     '^.+\\.jsx?$': '<rootDir>/jest-preprocess.js',
   },
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  moduleNameMapper: {
+    '^.+\\.css?$': '<rootDir>/jest-preprocesscss.js',
+  },
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.js'],
   collectCoverage: true,
