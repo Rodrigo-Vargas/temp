@@ -36,14 +36,14 @@ export const Row = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-wrap: wrap;
-    margin-left: -${theme.spacers.p3};
-    margin-right: -${theme.spacers.p3};
+    margin-left: -${theme.spacings.md};
+    margin-right: -${theme.spacings.md};
   `}
 `;
 
 export const Col = styled.div`
   ${({ theme }) => css`
-      padding-left: ${theme.spacers.p3};
-    padding-right: ${theme.spacers.p3};
+      padding-left: ${theme.spacings.md};
+    padding-right: ${theme.spacings.md};
   `}
 `;

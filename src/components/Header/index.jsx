@@ -1,5 +1,4 @@
 import React from 'react';
-import TransitionLink from 'gatsby-plugin-transition-link';
 import headerPropType from './propTypes';
 
 import {
@@ -11,13 +10,7 @@ import {
   NavGroup,
   NavWrapper,
   NavItem,
-  NavItemText,
 } from './styles';
-
-const Box = posed.div({
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-});
 
 const Header = ({ items }) => (
   <HeaderWrapper data-collapse="scroll" data-collapse-trigger-height="100">
@@ -31,18 +24,9 @@ const Header = ({ items }) => (
           <NavWrapper>
             {items?.map((link) => (
               <li key={link.title} className="pl-5">
-                <TransitionLink
-                  to={link.href}
-                  exit={{
-                    trigger: ({ exit, node }) => console.log(exit, node),
-                    lenght: 1,
-                  }}
-                  entry={{
-                    delay: 0.6,
-                  }}
-                >
-                  <NavItemText>{link.title}</NavItemText>
-                </TransitionLink>
+                <NavItem cover direction="left" duration={1} bg="#4338ca" to={link.href}>
+                  {link.title}
+                </NavItem>
               </li>
             ))}
           </NavWrapper>

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { Container } from '../Grid';
 
@@ -64,14 +65,16 @@ export const NavWrapper = styled.ul`
   justify-content: center;
 `;
 
-export const NavItem = styled.a`
-  display: block;
-  padding-left: 1rem;
-`;
-
-export const NavItemText = styled.span`
+export const NavItem = styled(AniLink)`
   ${({ theme }) => css`
     color: ${theme.colors.gray500};
+    display: block;
+    padding-left: 1rem;
+    text-decoration: none;
+
+    &:hover {
+      color: ${theme.colors.primary500};
+    }
   `}
 `;
 

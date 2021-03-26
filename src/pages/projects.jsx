@@ -18,6 +18,8 @@ export const query = graphql`
           }
           frontmatter {
             title
+            link
+            skills
             cover {
               url
             }

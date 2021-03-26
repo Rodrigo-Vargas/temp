@@ -2,37 +2,37 @@
 
 exports[`<ProjectCard /> should render correclty 1`] = `
 <div
-  class="col w-full sm:w-1/2"
+  class="sc-bdfBwQ kagcwz"
 >
   <a
-    class="card featured"
+    class="sc-eCssSg gmIpZc"
     data-testid="project-link"
     href="/projects/sample-post"
   >
     <div
-      class="py-5 pt-2"
+      class="sc-gsTCUz kztfLt"
     >
       <span
-        class="text-gray-300 text-sm pr-5 py-1"
+        class="sc-dlfnbm bfyAnX"
       >
         HTML
       </span>
       <span
-        class="text-gray-300 text-sm pr-5 py-1"
+        class="sc-dlfnbm bfyAnX"
       >
         Wordpress
       </span>
     </div>
     <h2
-      class="text-gray-800 text-2xl mb-3"
+      class="sc-hKgILt eAWUsl"
     >
       Sample Post
     </h2>
     <div
-      class="absolute bottom-0"
+      class="sc-jSgupP fWRBzk"
     >
       <div
-        class="h-36 overflow-hidden w-4/5 mx-auto"
+        class="sc-gKsewC fbEfuh"
       >
         <img
           alt="Sample Post"

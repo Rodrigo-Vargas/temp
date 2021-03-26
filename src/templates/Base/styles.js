@@ -1,9 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    margin-top: ${theme.spacers.p28};
+    margin-top: ${theme.spacings.xxxl};
   `}
 `;
-
-export const Another = {};

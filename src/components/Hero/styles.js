@@ -3,9 +3,11 @@ import styled, { css } from 'styled-components';
 import { Container } from '../Grid';
 
 export const HeroWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  min-height: 100vh;
+  ${({ theme }) => css`
+    align-items: center;
+    display: flex;
+    min-height: calc(100vh - ${theme.spacings.xxl});
+  `}
 `;
 
 export const HeroHeading = styled.h1`
