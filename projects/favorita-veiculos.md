@@ -11,7 +11,6 @@
     ]
     categories: ["PHP", "Laravel", "HTML"]
     excerpt: Desenvolvimento de sistema de gerenciamento de veículos utilizando PHP + Laravel, assim como construção de novo layout
-    lang: pt
     link: http://favoritaveiculos.com.br
     featured: true
     period: 2018
@@ -21,6 +20,3 @@
     title: "Favorita Veículos"
 ---
 
-<div class="carousel pl-5 pr-5 pt-2">
-  <img src="/cdn/images/projects/favorita-veiculos/home-mockup.png" class="img-fluid mb-3" alt="Favorita veículos Home" />
-</div>

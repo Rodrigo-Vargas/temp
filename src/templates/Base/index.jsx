@@ -6,7 +6,7 @@ import { Content } from './styles';
 const Base = ({ children }) => {
   const headerItems = [
     { title: 'Home', href: '/' },
-    { title: 'Works', href: '/works' },
+    { title: 'Works', href: '/projects' },
   ];
 
   return (
