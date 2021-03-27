@@ -12,30 +12,29 @@ import {
   PageDescription,
   SkillFilterItem,
   SkillFilter,
+  SelectedFilterDisplay,
 } from './styles';
 
 const ProjectsTemplate = ({ items }) => {
   const [skills, setSkills] = useState([]);
+  const [selectedFilter, setSelectedFilter] = useState(null);
 
   useEffect(() => {
     let itemSkills = [];
     items.forEach(({ node }) => {
       node.frontmatter.skills.forEach((skill) => {
-        itemSkills.push({
-          name: skill,
-          active: false,
-        });
+        itemSkills.push(skill);
       });
     });
 
     itemSkills = itemSkills.sort((a, b) => {
-      if (a.name < b.name) return -1;
-      if (a.name > b.name) return 1;
+      if (a < b) return -1;
+      if (a > b) return 1;
       return 0;
     });
 
     itemSkills = itemSkills.reduce((accumulator, currentValue) => {
-      const index = accumulator.findIndex((item) => currentValue.name === item.name);
+      const index = accumulator.findIndex((item) => currentValue === item);
       if (index < 0) {
         accumulator.push(currentValue);
       }
@@ -43,34 +42,60 @@ const ProjectsTemplate = ({ items }) => {
       return accumulator;
     }, []);
 
-    itemSkills.splice(0, 0, {
-      name: 'All',
-      active: true,
-    });
+    itemSkills.splice(0, 0, 'All');
 
     setSkills(itemSkills);
   }, [items]);
+
+  const handleFilterClick = (category) => {
+    if (category === 'All') {
+      setSelectedFilter(null);
+      return;
+    }
+    setSelectedFilter(category);
+  };
 
   return (
     <Theme>
       <GlobalStyles />
       <Base>
         <Container>
-          <Title>Portfolio</Title>
+          <Title>Works</Title>
           <PageDescription>
-            Some projects that I made on my spare time to make some profit and learn new skills
+            Some examples of my work that I made on my spare time to make some profit and learn new skills
           </PageDescription>
 
           <SkillFilter>
             {
-              skills.map((category, i) => (
-                <SkillFilterItem key={i} active={category.active} href="">{category.name}</SkillFilterItem>
+              skills.map((category) => (
+                <SkillFilterItem
+                  key={category}
+                  active={category === selectedFilter || (category === 'All' && !selectedFilter)}
+                  onClick={() => handleFilterClick(category)}
+                >
+                  {category}
+                </SkillFilterItem>
               ))
+            }
+
+            {
+              selectedFilter
+              && (
+                <SelectedFilterDisplay>
+                  <span>
+                    Showing projects of
+                    {' '}
+                    {selectedFilter}
+                  </span>
+                </SelectedFilterDisplay>
+              )
             }
           </SkillFilter>
 
           <Row>
-            {items.map(({ node }, i) => (
+            {(selectedFilter ? items.filter(
+              ({ node }) => node.frontmatter.skills.filter((skill) => skill == selectedFilter).length > 0,
+            ) : items).map(({ node }, i) => (
               <Col key={node.fields.slug} className="w-50">
                 <ProjectCard
                   title={node.frontmatter.title}

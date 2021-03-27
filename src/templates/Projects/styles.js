@@ -26,16 +26,17 @@ export const SkillFilter = styled.div`
 
 export const SkillFilterItem = styled.a`
   ${({ theme }) => css`
-    border: 1px solid #4338ca;
-    padding: 5px 20px 5px 40px;
-    border-radius: 20px;
-    position: relative;
     background: #fff;
-    color: #4338ca;
-    text-decoration: none;
-    margin-right: 10px;
+    border: 1px solid ${theme.colors.primary700};;
+    border-radius: 20px;
+    color: ${theme.colors.primary700};
+    cursor: pointer;
+    position: relative;
     margin-bottom: 10px;
-    transition: all 0.5s;
+    margin-right: 10px;
+    padding: 5px 20px 5px 40px;
+    text-decoration: none;
+    transition: all 0.4s;
 
     &:before {
       content: "";
@@ -46,6 +47,7 @@ export const SkillFilterItem = styled.a`
       left: 5px;
       border-radius: 50%;
       top: calc(50% - 10px);
+      transition: all 0.4s 0.5s;
     }
 
     &:after {
@@ -58,6 +60,7 @@ export const SkillFilterItem = styled.a`
       content: "";
       border-radius: 50%;
       top: calc(50% - 4px);
+      transition: all 0.4s 0.5s;
     }
 
     &:hover {
@@ -85,5 +88,13 @@ export const SkillFilterItem = styled.a`
         background-color: #4338ca;
       }
     `}
+  `}
+`;
+
+export const SelectedFilterDisplay = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.gray500};
+    margin-top: ${theme.spacings.lg};
+    width: 100%
   `}
 `;
