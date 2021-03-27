@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Theme from '../../styles/theme';
+import ThemeProvider from '../../styles/theme-provider';
 import GlobalStyles from '../../styles/global';
 
 import { Container, Row, Col } from '../../components/Grid';
@@ -22,7 +22,7 @@ const ProjectsTemplate = ({ items }) => {
   useEffect(() => {
     let itemSkills = [];
     items.forEach(({ node }) => {
-      node.frontmatter.skills.forEach((skill) => {
+      node.frontmatter.skills.forEach(skill => {
         itemSkills.push(skill);
       });
     });
@@ -34,7 +34,7 @@ const ProjectsTemplate = ({ items }) => {
     });
 
     itemSkills = itemSkills.reduce((accumulator, currentValue) => {
-      const index = accumulator.findIndex((item) => currentValue === item);
+      const index = accumulator.findIndex(item => currentValue === item);
       if (index < 0) {
         accumulator.push(currentValue);
       }
@@ -47,7 +47,7 @@ const ProjectsTemplate = ({ items }) => {
     setSkills(itemSkills);
   }, [items]);
 
-  const handleFilterClick = (category) => {
+  const handleFilterClick = category => {
     if (category === 'All') {
       setSelectedFilter(null);
       return;
@@ -56,46 +56,47 @@ const ProjectsTemplate = ({ items }) => {
   };
 
   return (
-    <Theme>
+    <ThemeProvider>
       <GlobalStyles />
       <Base>
         <Container>
           <Title>Works</Title>
           <PageDescription>
-            Some examples of my work that I made on my spare time to make some profit and learn new skills
+            Some examples of my work that I made on my spare time to make some
+            profit and learn new skills
           </PageDescription>
 
           <SkillFilter>
-            {
-              skills.map((category) => (
-                <SkillFilterItem
-                  key={category}
-                  active={category === selectedFilter || (category === 'All' && !selectedFilter)}
-                  onClick={() => handleFilterClick(category)}
-                >
-                  {category}
-                </SkillFilterItem>
-              ))
-            }
+            {skills.map(category => (
+              <SkillFilterItem
+                key={category}
+                active={
+                  category === selectedFilter ||
+                  (category === 'All' && !selectedFilter)
+                }
+                onClick={() => handleFilterClick(category)}
+              >
+                {category}
+              </SkillFilterItem>
+            ))}
 
-            {
-              selectedFilter
-              && (
-                <SelectedFilterDisplay>
-                  <span>
-                    Showing projects of
-                    {' '}
-                    {selectedFilter}
-                  </span>
-                </SelectedFilterDisplay>
-              )
-            }
+            {selectedFilter && (
+              <SelectedFilterDisplay>
+                <span>Showing projects of {selectedFilter}</span>
+              </SelectedFilterDisplay>
+            )}
           </SkillFilter>
 
           <Row>
-            {(selectedFilter ? items.filter(
-              ({ node }) => node.frontmatter.skills.filter((skill) => skill == selectedFilter).length > 0,
-            ) : items).map(({ node }, i) => (
+            {(selectedFilter
+              ? items.filter(
+                  ({ node }) =>
+                    node.frontmatter.skills.filter(
+                      skill => skill == selectedFilter
+                    ).length > 0
+                )
+              : items
+            ).map(({ node }, i) => (
               <Col key={node.fields.slug} className="w-50">
                 <ProjectCard
                   title={node.frontmatter.title}
@@ -109,7 +110,7 @@ const ProjectsTemplate = ({ items }) => {
           </Row>
         </Container>
       </Base>
-    </Theme>
+    </ThemeProvider>
   );
 };
 
@@ -117,7 +118,7 @@ ProjectsTemplate.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-    }),
+    })
   ).isRequired,
 };
 

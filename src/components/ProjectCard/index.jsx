@@ -16,15 +16,11 @@ import {
   MetaLink,
 } from './styles';
 
-const ProjectCard = ({
-  title, img, slug, index, link,
-}) => (
+const ProjectCard = ({ title, img, slug, index, link }) => (
   <CardWrapper key={index}>
     <CardHeader>
       <LinkTitle href={`/projects${slug}`} data-testid="project-link">
-        <Title>
-          {title}
-        </Title>
+        <Title>{title}</Title>
       </LinkTitle>
       <Meta>
         {link && (

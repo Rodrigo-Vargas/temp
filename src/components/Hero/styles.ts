@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components';
-
 import { Container } from '../Grid';
 
 export const HeroWrapper = styled.div`
   ${({ theme }) => css`
     align-items: center;
     display: flex;
-    min-height: calc(100vh - ${theme.spacings.xxl});
+    min-height: calc(100vh - ${theme.spacings.xxxl});
   `}
 `;
 

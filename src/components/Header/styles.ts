@@ -5,7 +5,7 @@ import { Container } from '../Grid';
 
 export const Logo = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.colors.gray50};
+    background-color: ${theme.colors};
     border-left: solid 3px ${theme.colors.primary700};
     border-right: solid 3px ${theme.colors.primary700};
     height: 28.87px;
@@ -13,9 +13,10 @@ export const Logo = styled.div`
     position: relative;
     width: 50px;
 
-    &:before, &:after {
+    &:before,
+    &:after {
       background-color: inherit;
-      content: "";
+      content: '';
       height: 35.36px;
       left: 4.3223px;
       position: absolute;

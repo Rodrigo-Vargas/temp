@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Theme from '../../styles/theme';
+import Theme from '../../styles/theme-provider';
 import Base from '../Base';
 import { Container } from '../../components/Grid';
 import GlobalStyles from '../../styles/global';
