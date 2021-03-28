@@ -3,26 +3,51 @@ import { graphql } from 'gatsby';
 
 import ProjectsTemplate from '../templates/Projects';
 
-const Projects = ({ data, ...anotherProps }) => (
+interface ProjectsPageProps {
+  data: {
+    allMarkdownRemark: {
+      edges: [
+        {
+          node: {
+            fields: {
+              slug: string;
+            };
+            frontmatter: {
+              categories: Array<string>;
+              cover: {
+                url: string;
+              };
+              link: string;
+              skills: string;
+              title: string;
+            };
+          };
+        }
+      ];
+    };
+  };
+}
+
+const Projects: React.FC<ProjectsPageProps> = ({ data, ...anotherProps }) => (
   <ProjectsTemplate items={data.allMarkdownRemark.edges} {...anotherProps} />
 );
 
 export const query = graphql`
   query {
     allMarkdownRemark {
-      totalCount
       edges {
         node {
           fields {
             slug
           }
           frontmatter {
-            title
+            categories
+            cover {
+              publicURL
+            }
             link
             skills
-            cover {
-              url
-            }
+            title
           }
         }
       }

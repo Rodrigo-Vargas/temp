@@ -39,7 +39,7 @@ interface ProjectTemplateProps {
     next: {
       frontmatter: {
         cover: {
-          url: string;
+          publicURL: string;
         };
         title: string;
       };
@@ -68,7 +68,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ pageContext }) => {
               {frontmatter.link && (
                 <Button href={frontmatter.link} target="_blank">
                   <Icons.ExternalLink />
-                  <span>Live Demo</span>
+                  <span>Visit the website</span>
                 </Button>
               )}
 
@@ -120,12 +120,14 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ pageContext }) => {
                   </Button>
                 </Col>
 
-                <Col className="w-50">
-                  <img
-                    src={next.frontmatter.cover.url}
-                    alt={next.frontmatter.title}
-                  />
-                </Col>
+                {next.frontmatter.cover && (
+                  <Col className="w-50">
+                    <img
+                      src={next.frontmatter.cover.publicURL}
+                      alt={next.frontmatter.title}
+                    />
+                  </Col>
+                )}
               </Row>
             </Container>
           </NextProjectWrapper>
