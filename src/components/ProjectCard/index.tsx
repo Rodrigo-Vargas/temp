@@ -16,8 +16,22 @@ import {
   MetaLink,
 } from './styles';
 
-const ProjectCard = ({ title, img, slug, index, link }) => (
-  <CardWrapper key={index}>
+interface ProjectCardProps {
+  categories: Array<string>;
+  img: string;
+  link: string;
+  slug: string;
+  title: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  categories,
+  img,
+  link,
+  slug,
+  title,
+}) => (
+  <CardWrapper>
     <CardHeader>
       <LinkTitle href={`/projects${slug}`} data-testid="project-link">
         <Title>{title}</Title>
@@ -31,8 +45,9 @@ const ProjectCard = ({ title, img, slug, index, link }) => (
       </Meta>
 
       <TagList>
-        <Tag>HTML</Tag>
-        <Tag>Wordpress</Tag>
+        {categories?.map((category, i) => (
+          <Tag key={i}>{category}</Tag>
+        ))}
       </TagList>
     </CardHeader>
     <ImageBox>
