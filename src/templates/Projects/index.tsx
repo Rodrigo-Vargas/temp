@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 
 import ThemeProvider from '../../styles/theme-provider';
 import GlobalStyles from '../../styles/global';
@@ -15,14 +14,35 @@ import {
   SelectedFilterDisplay,
 } from './styles';
 
-const ProjectsTemplate = ({ items }) => {
-  const [skills, setSkills] = useState([]);
+interface ProjectsTemplateProps {
+  items: [
+    {
+      node: {
+        fields: {
+          slug: string;
+        };
+        frontmatter: {
+          categories: Array<string>;
+          cover: {
+            publicURL: string;
+          };
+          link: string;
+          skills: Array<string>;
+          title: string;
+        };
+      };
+    }
+  ];
+}
+
+const ProjectsTemplate: React.FC<ProjectsTemplateProps> = ({ items }) => {
+  const [categories, setCategories] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState(null);
 
   useEffect(() => {
-    let itemSkills = [];
+    let itemSkills: Array<string> = [];
     items.forEach(({ node }) => {
-      node.frontmatter.skills.forEach(skill => {
+      node.frontmatter.categories?.forEach(skill => {
         itemSkills.push(skill);
       });
     });
@@ -33,21 +53,24 @@ const ProjectsTemplate = ({ items }) => {
       return 0;
     });
 
-    itemSkills = itemSkills.reduce((accumulator, currentValue) => {
-      const index = accumulator.findIndex(item => currentValue === item);
-      if (index < 0) {
-        accumulator.push(currentValue);
-      }
+    itemSkills = itemSkills.reduce(
+      (accumulator: Array<string>, currentValue: string) => {
+        const index = accumulator.findIndex(item => currentValue === item);
+        if (index < 0) {
+          accumulator.push(currentValue);
+        }
 
-      return accumulator;
-    }, []);
+        return accumulator;
+      },
+      []
+    );
 
     itemSkills.splice(0, 0, 'All');
 
-    setSkills(itemSkills);
+    setCategories(itemSkills);
   }, [items]);
 
-  const handleFilterClick = category => {
+  const handleFilterClick = (category: string) => {
     if (category === 'All') {
       setSelectedFilter(null);
       return;
@@ -67,7 +90,7 @@ const ProjectsTemplate = ({ items }) => {
           </PageDescription>
 
           <SkillFilter>
-            {skills.map(category => (
+            {categories.map(category => (
               <SkillFilterItem
                 key={category}
                 active={
@@ -96,12 +119,12 @@ const ProjectsTemplate = ({ items }) => {
                     ).length > 0
                 )
               : items
-            ).map(({ node }, i) => (
+            ).map(({ node }) => (
               <Col key={node.fields.slug} className="w-50">
                 <ProjectCard
                   title={node.frontmatter.title}
-                  index={i}
-                  img={node.frontmatter.cover.url}
+                  categories={node.frontmatter.categories}
+                  img={node.frontmatter.cover?.publicURL}
                   slug={node.fields.slug}
                   link={node.frontmatter.link}
                 />
@@ -112,14 +135,6 @@ const ProjectsTemplate = ({ items }) => {
       </Base>
     </ThemeProvider>
   );
-};
-
-ProjectsTemplate.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-    })
-  ).isRequired,
 };
 
 export default ProjectsTemplate;

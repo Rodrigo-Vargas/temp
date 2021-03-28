@@ -27,7 +27,7 @@ export const SkillFilter = styled.div`
 export const SkillFilterItem = styled.a`
   ${({ theme }) => css`
     background: #fff;
-    border: 1px solid ${theme.colors.primary700};;
+    border: 1px solid ${theme.colors.primary700};
     border-radius: 20px;
     color: ${theme.colors.primary700};
     cursor: pointer;
@@ -39,7 +39,7 @@ export const SkillFilterItem = styled.a`
     transition: all 0.4s;
 
     &:before {
-      content: "";
+      content: '';
       height: 20px;
       width: 20px;
       background-color: #4338ca;
@@ -57,7 +57,7 @@ export const SkillFilterItem = styled.a`
       position: absolute;
       left: 11px;
       z-index: 6;
-      content: "";
+      content: '';
       border-radius: 50%;
       top: calc(50% - 4px);
       transition: all 0.4s 0.5s;
@@ -76,7 +76,9 @@ export const SkillFilterItem = styled.a`
       }
     }
 
-    ${({ active }) => active && `
+    ${({ active }) =>
+      active &&
+      `
       background-color: #4338ca;
       color: #fff;
 
@@ -95,6 +97,6 @@ export const SelectedFilterDisplay = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.gray500};
     margin-top: ${theme.spacings.lg};
-    width: 100%
+    width: 100%;
   `}
 `;
