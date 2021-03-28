@@ -1,16 +1,24 @@
 ---
   categories: ["PHP", "Laravel", "HTML"]
-  excerpt: Desenvolvimento de sistema de gerenciamento de veículos utilizando PHP + Laravel, assim como construção de novo layout
+  cover: './cover.png'
+  excerpt: Website built on top of Laravel Framework with a car management system
   images: [
     './home.png'
   ]
   link: http://favoritaveiculos.com.br
   featured: true
   period: 2018
-  cover:
-    url: "/cover.png"
-  skills: ["PHP", "Laravel", "HTML"]
+  skills: [
+    "UI/UX Design",
+    "HTML5 - semantic",
+    "CSS3 - preprocessed with SASS + Node SASS",
+    "Laravel",
+    "Blade",
+    "MySQL",
+    "Gulp",
+    "Webpack"
+  ]
   title: "Favorita Veículos"
 ---
 
-Desde 2015, eu gerencia e desenvolvo meu site pessoal. Já construi várias versões dele utilizando diferentes plataformas, com o objetivo de saber qual a mais produtiva e confortável para usar. A primeira versão foi desenvolvida em Wordpress, para depois migrar para Jekyll, um gerador de sites estáticos escrito em Ruby.
+Project developed as a contractor for Favorita veículos, a car dealership located in Santa Cruz do Sul/RS. At the time, it was develop on top of a PHP framework called Laravel, storing data in a MySQL database.This website has a frontend crafted with some jQuery components and using SCSS as CSS preprocessor. Also, I was responsible for craft the layout, altough that is not my main role, so, I'm in a constant evolution in this area. Apart from the public area, it has a admin area that is focused on input new vehicles, brands, and some other related information.

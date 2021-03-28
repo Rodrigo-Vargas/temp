@@ -28,6 +28,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               slug
             }
             frontmatter {
+              categories
               excerpt
               images {
                 publicURL
@@ -42,7 +43,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           next {
             frontmatter {
               cover {
-                url
+                publicURL
               }
               title
             }

@@ -1,11 +1,10 @@
 ---
   categories: [HTML, Wordpress]
+  cover: './cover.png'
   excerpt: Criação da presença online da marca sob a ótica de website
   link: http://bcuatro.com.br
   period: 2018
   skills: [HTML, Wordpress]
-  cover:
-    url: "https://rodrigovargas.com.br/cdn/images/projects/bcuatro/home.png"
   title: B Cuatro Comunicação Visual
 ---
 

@@ -6,7 +6,5 @@
   link: http://titaniumimoveis.com
   published: false
   skills: [React.js, Redux, Bootstrap, .NET Core, Webpack, UX]
-  cover:
-    url: https://rodrigovargas.com.br/cdn/images/projects/titanium/home.png
   title: Titanium Imoveis
 ---
