@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -14,7 +15,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
-  const projectTemplate = require.resolve('./src/templates/Project/index.jsx');
+  const projectTemplate = require.resolve('./src/templates/Project/index.tsx');
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -23,6 +24,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
+            frontmatter {
+              excerpt
+              images {
+                publicURL
+              }
+              link
+              sourceUrl
+              skills
+              title
+            }
+            html
+          }
+          next {
+            frontmatter {
+              cover {
+                url
+              }
+              title
+            }
             fields {
               slug
             }
@@ -36,13 +59,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild('Error while running GraphQL query.');
     return;
   }
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMarkdownRemark.edges.forEach(({ node, next }) => {
     createPage({
       path: `projects${node.fields.slug}`,
       component: projectTemplate,
       context: {
-        // additional data can be passed via context
-        slug: node.fields.slug,
+        next,
+        node,
       },
     });
   });
