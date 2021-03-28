@@ -25,33 +25,6 @@ const GlobalStyles = createGlobalStyle`
     width: 50%;
   }
 
-  /* @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Poppins Light'), local('Poppins-Light'),
-        url('assets/fonts/Poppins-Light.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Poppins Medium'), local('Poppins-Medium'),
-        url('assets/fonts/Poppins-Medium.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
-        url('assets/fonts/Poppins-SemiBold.woff2') format('woff2');
-  } */
-
   ${({ theme }) => css`
     html {
       background-color: ${theme.colors.gray100};

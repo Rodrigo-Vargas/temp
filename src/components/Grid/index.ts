@@ -43,7 +43,7 @@ export const Row = styled.div`
 
 export const Col = styled.div`
   ${({ theme }) => css`
-      padding-left: ${theme.spacings.md};
+    padding-left: ${theme.spacings.md};
     padding-right: ${theme.spacings.md};
   `}
 `;
