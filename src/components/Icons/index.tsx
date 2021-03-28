@@ -1,24 +1,29 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 
 import { Svg, Circle } from './styles';
 
-export const Github = ({ style }) => (
+interface GithubPropTypes extends HTMLAttributes<SVGElement> {
+  showCircle?: boolean;
+}
+
+export const Github: React.FC<GithubPropTypes> = ({ showCircle }) => (
   <Svg
     aria-hidden="true"
     focusable="false"
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 448 512"
-    style={style}
   >
-    <Circle
-      cx="225"
-      cy="230"
-      r="220"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="10"
-    />
+    {showCircle && (
+      <Circle
+        cx="225"
+        cy="230"
+        r="220"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="10"
+      />
+    )}
 
     <path
       fill="currentColor"
@@ -28,7 +33,11 @@ export const Github = ({ style }) => (
   </Svg>
 );
 
-export const ExternalLink = () => (
+interface ExternalLinkProps extends HTMLAttributes<SVGElement> {
+  showCircle?: boolean;
+}
+
+export const ExternalLink: React.FC<ExternalLinkProps> = ({ showCircle }) => (
   <Svg
     aria-hidden="true"
     focusable="false"
@@ -39,18 +48,37 @@ export const ExternalLink = () => (
     viewBox="0 0 448 512"
     className="svg-inline--fa fa-external-link fa-w-16"
   >
-    <Circle
-      cx="225"
-      cy="230"
-      r="220"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="10"
-    />
+    {showCircle && (
+      <Circle
+        cx="225"
+        cy="230"
+        r="220"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="10"
+      />
+    )}
+
     <path
       fill="currentColor"
       d="M497.6,0,334.4.17A14.4,14.4,0,0,0,320,14.57V47.88a14.4,14.4,0,0,0,14.69,14.4l73.63-2.72,2.06,2.06L131.52,340.49a12,12,0,0,0,0,17l23,23a12,12,0,0,0,17,0L450.38,101.62l2.06,2.06-2.72,73.63A14.4,14.4,0,0,0,464.12,192h33.31a14.4,14.4,0,0,0,14.4-14.4L512,14.4A14.4,14.4,0,0,0,497.6,0ZM432,288H416a16,16,0,0,0-16,16V458a6,6,0,0,1-6,6H54a6,6,0,0,1-6-6V118a6,6,0,0,1,6-6H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V304A16,16,0,0,0,432,288Z"
       transform="scale(0.4), translate(300, 300)"
     />
+  </Svg>
+);
+
+export const ChevronRight: React.FC = () => (
+  <Svg
+    aria-hidden="true"
+    focusable="false"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 320 512"
+    style={{ transform: 'scale(0.5)' }}
+  >
+    <path
+      fill="currentColor"
+      d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+    ></path>
   </Svg>
 );
