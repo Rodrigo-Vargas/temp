@@ -1,13 +1,24 @@
 ---
   categories: [HTML, Wordpress]
   cover: './cover.png'
-  excerpt: Criação da presença online da marca sob a ótica de website
+  excerpt: Website built on top of WordPress, to be the introduction of the brand on digital workspace
+  images: [
+    './home.png',
+    './portfolio.png',
+    './contato.png',
+  ]
   link: http://bcuatro.com.br
   period: 2018
-  skills: [HTML, Wordpress]
+  skills: [
+    HTML,
+    CSS3,
+    Wordpress,
+  ]
   title: B Cuatro Comunicação Visual
 ---
 
-A B Cuatro é uma empresa de comunicação visual com sede em Santa Cruz do Sul.
+Project developed as a contractor for BCuatro Comunicação Visual, a Custom retail signage company, based in Santa Cruz do Sul/RS
 
-Acompanhando o crescimento da presença da marca nas redes sociais, o projeto do site foi focado em complementar esta estratégia, sendo uma das fontes de captação de leads da empresa, assim como o portfólio da empresa.
+Complemeting the beginning of the brand's web presence, the website project was focused on supporting this strategy, being one of the sources of lead capture for the company, as well as the company's portfolio.
+
+It was develop using WordPress, based on this reliability, friendly UI and large support of the community, with the plugins. Also had a great focus on performance, to achieve a better SEO, since there is not so much content.

@@ -98,7 +98,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ pageContext }) => {
             </ProjectContent>
 
             <TechUsedWrapper>
-              <SecondaryTitle>Technology Used</SecondaryTitle>
+              <SecondaryTitle>Technologies Used</SecondaryTitle>
               {frontmatter.skills?.map((skill, i) => (
                 <li key={i}>{skill}</li>
               ))}
