@@ -114,8 +114,8 @@ const ProjectsTemplate: React.FC<ProjectsTemplateProps> = ({ items }) => {
             {(selectedFilter
               ? items.filter(
                   ({ node }) =>
-                    node.frontmatter.skills.filter(
-                      skill => skill == selectedFilter
+                    node.frontmatter.categories.filter(
+                      skill => skill === selectedFilter
                     ).length > 0
                 )
               : items

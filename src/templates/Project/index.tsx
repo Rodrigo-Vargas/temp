@@ -80,13 +80,15 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ pageContext }) => {
               )}
             </ButtonsWrapper>
 
-            <Slider>
-              {frontmatter.images?.map((image, i) => (
-                <div key={i}>
-                  <img src={image.publicURL} alt={frontmatter.title} />
-                </div>
-              ))}
-            </Slider>
+            {frontmatter.images && (
+              <Slider>
+                {frontmatter.images?.map((image, i) => (
+                  <div key={i}>
+                    <img src={image.publicURL} alt={frontmatter.title} />
+                  </div>
+                ))}
+              </Slider>
+            )}
 
             <SecondaryTitle>About this project</SecondaryTitle>
 
