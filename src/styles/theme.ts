@@ -52,14 +52,17 @@ const theme = {
   },
   spacings: {
     none: '0px',
-    xxsm: '0.5rem',
-    xsm: '0.75rem',
+    xxsm: '0.25rem',
+    xsm: '0.5rem',
     sm: '0.75rem',
     md: '1rem',
     lg: '1.5rem',
     xl: '2.5rem',
-    xxl: '3rem',
+    xxl: '4rem',
     xxxl: '6rem',
+    hg: '10rem',
+    xhg: '16rem',
+    xxhg: '24rem',
   },
 };
 
