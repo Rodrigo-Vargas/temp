@@ -81,6 +81,6 @@ Após modificar o arquivo, volte para o terminal e execute o comando:
 
 Um servidor de arquivos será inicializado na sua máquina, e com isso, podemos acessar a url [http://localhost:8080](http://localhost:8080) e ver nossa aplicação exibindo um "Hello World".
 
-![Hello World em React](/cdn/images/react/hello-world-react.png)
+![Hello World em React](/images/react/hello-world-react.png)
 
 No próximo post, iremos ver os conceitos básicos do React para o desenvolvimento de aplicações. Vejo você lá.

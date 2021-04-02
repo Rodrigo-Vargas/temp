@@ -8,7 +8,7 @@
    title: Tarefas Básicas e Roteamento em uma aplicação .Net Core
 ---
 
-[web-app-started]: /cdn/images/basic-tasks-net-mvc-application/web-app-started.png 'Webapp Started'
+[web-app-started]: /images/basic-tasks-net-mvc-application/web-app-started.png 'Webapp Started'
 
 Primeiramente, após criar a nossa solution my.blog, vamos criar o projeto web MVC que conterá a estrutura da nossa aplicação, para isso, abra o terminal e digite o comando:
 

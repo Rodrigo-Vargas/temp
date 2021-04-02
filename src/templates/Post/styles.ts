@@ -19,6 +19,12 @@ export const Article = styled.article`
       margin-top: 2.5rem;
     }
 
+    img {
+      display: block;
+      margin: 0 auto;
+      padding: ${theme.spacings.xl};
+    }
+
     p {
       color: ${theme.colors.gray500};
       font-weight: 300;

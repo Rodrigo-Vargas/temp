@@ -32,7 +32,7 @@ Vamos então criar uma pasta com o nome do nosso tema, no caso "uphealth", dentr
 
 Dentro desta pasta, crie os dois arquivos necessários, index.php e style.css. Criados os arquivos, vamos acessar o dashboard do WordPress na seção de temas (/wp-admin/themes.php) para ativar o nosso tema. O mesmo deve se estar desta maneira na sua página:
 
-<figure class="wp-block-image"><img src="/cdn/images/getting-started-wp-theme-preview.png" alt="" class="wp-image-50"/></figure>
+<figure class="wp-block-image"><img src="/images/getting-started-wp-theme-preview.png" alt="" class="wp-image-50"/></figure>
 
 A esquerda temos o tema ativo, no meu caso é o "Twenty Nineteen", e a esquerda o nosso tema. Se clicarmos em "Detalhes do Tema", iremos para uma tela onde são apresentadas mais informações do tema. Estas informações são lidas de um cabeçalho especial que podemos colocar no arquivo <strong>style.css</strong>. Vamos adicionar então o trecho abaixo de código no arquivo style.css.
 
@@ -53,7 +53,7 @@ A esquerda temos o tema ativo, no meu caso é o "Twenty Nineteen", e a esquerda 
 Se atualizarmos a página, veremos algumas das informações que colocamos acima, disponibilizadas na página de detalhes do tema.
 
 <figure class="wp-block-image">
-    <img src="/cdn/images/getting-started-wp-theme-details.png" alt="" class="wp-image-53"/>
+    <img src="/images/getting-started-wp-theme-details.png" alt="" class="wp-image-53"/>
 </figure>
 
 Podemos agora clicar em "Ativar" e depois olhar como está a home do nosso site. Como não escrevemos nada nela ainda, veremos apenas uma página em branco. Vamos adicionar um "Hello World" nela. Abra o arquivo index.php, e coloque o trecho de código abaixo:
