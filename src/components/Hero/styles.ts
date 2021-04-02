@@ -5,7 +5,10 @@ export const HeroWrapper = styled.div`
   ${({ theme }) => css`
     align-items: center;
     display: flex;
-    min-height: calc(100vh - ${theme.footer.height} - ${theme.header.height});
+    min-height: calc(
+      100vh - ${theme.footer.height} - ${theme.header.height} -
+        ${theme.spacings.xxl} * 2
+    );
   `}
 `;
 
