@@ -8,6 +8,7 @@ const Base = ({ children }) => {
   const headerItems = [
     { title: 'Home', href: '/' },
     { title: 'Works', href: '/projects' },
+    { title: 'Blog', href: '/blog' },
   ];
 
   return (
