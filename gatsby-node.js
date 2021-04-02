@@ -71,3 +71,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 };
+
+  exports.onCreateWebpackConfig = ({ actions }) => {
+    actions.setWebpackConfig({
+      resolve: {
+        alias: {
+          '@templates': path.resolve(__dirname, 'src/templates'),
+          '@styles': path.resolve(__dirname, 'src/styles'),
+          '@components': path.resolve(__dirname, 'src/components'),
+        },
+      },
+    });
+};

@@ -1,11 +1,23 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
+    "paths": {
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@templates/*": [
+        "templates/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ]
+    },
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "target": "es5",
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
