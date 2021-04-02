@@ -33,5 +33,11 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-TW3SM7Q'
+      }
+    }
   ],
 };

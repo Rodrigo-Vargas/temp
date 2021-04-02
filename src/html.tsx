@@ -9,6 +9,8 @@ interface HTMLProps {
   headComponents: Array<any>;
   preBodyComponents: Array<any>;
   postBodyComponents: Array<any>;
+  htmlAttributes: any;
+  bodyAttributes: any;
 }
 
 const HTML: React.FC<HTMLProps> = ({
@@ -16,8 +18,10 @@ const HTML: React.FC<HTMLProps> = ({
   headComponents,
   preBodyComponents,
   postBodyComponents,
+  htmlAttributes,
+  bodyAttributes,
 }) => (
-  <html lang="EN">
+  <html {...htmlAttributes}>
     <head>
       <meta
         name="viewport"
@@ -29,7 +33,7 @@ const HTML: React.FC<HTMLProps> = ({
       />
       {headComponents}
     </head>
-    <body>
+    <body {...bodyAttributes}>
       {preBodyComponents}
       <ThemeProvider theme={Theme}>
         <div
