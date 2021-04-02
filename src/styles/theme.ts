@@ -40,6 +40,12 @@ const theme = {
       bold: 600,
     },
   },
+  footer: {
+    height: '75px',
+  },
+  header: {
+    height: '99px',
+  },
   shadows: {
     card: '5px 10px 10px rgba(0, 0, 0, 0.3)',
   },

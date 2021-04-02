@@ -5,14 +5,14 @@ export const HeroWrapper = styled.div`
   ${({ theme }) => css`
     align-items: center;
     display: flex;
-    min-height: calc(100vh - ${theme.spacings.xxxl});
+    min-height: calc(100vh - ${theme.footer.height} - ${theme.header.height});
   `}
 `;
 
 export const HeroHeading = styled.h1`
   ${({ theme }) => css`
     color: ${theme.colors.primary700};
-    font-size: ${theme.font.sizes['4xl']};
+    font-size: ${theme.font.sizes.hg};
     margin-bottom: 2rem;
   `}
 `;

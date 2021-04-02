@@ -94,6 +94,7 @@ export const HeaderGroup = styled.div`
   ${({ theme }) => css`
     border-color: ${theme.colors.gray200};
     border-style: solid;
+    height: ${theme.header.height};
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     border-bottom-width: 1px;
