@@ -5,7 +5,7 @@ import { getAllPosts, getPostBySlug } from 'lib/blog';
 import Post, { PostTemplateProps } from 'templates/Post';
 
 export default function Index(props: PostTemplateProps) {
-  return (<Post {...props} />)
+  return <Post {...props} />
 }
 
 export async function getStaticProps({ params }) {

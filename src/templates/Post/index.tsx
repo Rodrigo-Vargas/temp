@@ -10,7 +10,7 @@ export type PostTemplateProps = {
   content: string;
 }
 
-const PostTemplate: React.FC<PostTemplateProps> = ({ frontmatter, content }) => (
+const PostTemplate = ({ frontmatter, content }) => (
   <Base>
     <Container>
       <Article>

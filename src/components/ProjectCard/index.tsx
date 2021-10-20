@@ -28,42 +28,39 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
   slug,
   title,
-}) => {
-  console.log(img);
-  return(
-    <CardWrapper>
-      <CardHeader>
-        <LinkTitle href={`/projects/${slug}`} data-testid="project-link">
-          <Title>{title}</Title>
-        </LinkTitle>
-        <Meta>
-          {link && (
-            <MetaLink target="_blank" href={link}>
-              <Icons.ExternalLink style={{ transform: 'scale(0.8)' }} />
-            </MetaLink>
-          )}
-        </Meta>
+}) => (
+  <CardWrapper>
+    <CardHeader>
+      <LinkTitle href={`/projects/${slug}`} data-testid="project-link">
+        <Title>{title}</Title>
+      </LinkTitle>
+      <Meta>
+        {link && (
+          <MetaLink target="_blank" href={link}>
+            <Icons.ExternalLink style={{ transform: 'scale(0.8)' }} />
+          </MetaLink>
+        )}
+      </Meta>
 
-        <TagList>
-          {categories?.map((category, i) => (
-            <Tag key={i}>{category}</Tag>
-          ))}
-        </TagList>
-      </CardHeader>
-      <ImageBox>
-        <ImageWrap>
-          {
-            (img) &&
-              (
-                <img src={img} alt={title} />
-              )
-          }
+      <TagList>
+        {categories?.map((category, i) => (
+          <Tag key={i}>{category}</Tag>
+        ))}
+      </TagList>
+    </CardHeader>
+    <ImageBox>
+      <ImageWrap>
+        {
+          (img) &&
+            (
+              <img src={img} alt={title} />
+            )
+        }
 
-        </ImageWrap>
-      </ImageBox>
-    </CardWrapper>
-  )
-};
+      </ImageWrap>
+    </ImageBox>
+  </CardWrapper>
+);
 
 export type ProjectCard = {
   index: number,

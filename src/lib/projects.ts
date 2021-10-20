@@ -11,8 +11,32 @@ export function getProjectBySlug(slug) {
   const { data, content } = matter(fileContents);
 
   const cover = `/images/projects/${realSlug}/${data.cover}`;
+  const imagePaths = data.images;
+  const images = [];
 
-  return { slug: realSlug, frontmatter: { ...data, cover }, content };
+  imagePaths?.forEach(imagePath => {
+    images.push(`/images/projects/${realSlug}/${imagePath}`);
+  });
+
+  return { slug: realSlug, frontmatter: { ...data, cover, images }, content };
+}
+
+export function getNextProjectBySlug(slug) {
+  const allProjects = getAllProjects();
+  let nextSlug = '';
+  let nextSlugIndex = -1;
+
+  for (let x = 0; x < allProjects.length; x++) {
+    if (allProjects[x].slug == slug)
+    {
+      nextSlugIndex = x + 1;
+      break;
+    }
+  }
+
+  nextSlug = allProjects[nextSlugIndex].slug;
+
+  return getProjectBySlug(nextSlug);
 }
 
 export function getAllProjects() {
