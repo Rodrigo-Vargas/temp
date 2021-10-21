@@ -78,7 +78,7 @@ export const MetaLink = styled.a`
     border-radius: 50%;
     color: ${theme.colors.primary600};
     display: flex;
-    font-size: ${theme.font.sizes.md};
+    font-size: ${theme.font.sizes.base};
     height: ${theme.spacings.xl};
     justify-content: center;
     transition: border 0.5s;

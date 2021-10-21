@@ -18,9 +18,7 @@ export type ProjectsTemplateProps = {
       slug: string;
       frontmatter: {
         categories: Array<string>;
-        cover: {
-          publicURL: string;
-        };
+        cover: string;
         link: string;
         skills: Array<string>;
         title: string;

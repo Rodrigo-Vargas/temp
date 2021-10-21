@@ -5,7 +5,7 @@ export const Title = styled.h1`
     color: ${theme.colors.primary700};
     font-size: ${theme.font.sizes.xhg};
     font-weight: ${theme.font.weight.bold};
-    margin-bottom: ${theme.spacings.xsm};
+    margin-bottom: ${theme.spacings.xs};
     padding-top: ${theme.spacings.xl};
   `}
 `;

@@ -59,7 +59,7 @@ const theme = {
    spacings: {
      none: '0px',
      xxsm: '0.25rem',
-     xsm: '0.5rem',
+     xs: '0.5rem',
      sm: '0.75rem',
      md: '1rem',
      lg: '1.5rem',

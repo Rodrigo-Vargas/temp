@@ -34,6 +34,9 @@ export function getNextProjectBySlug(slug) {
     }
   }
 
+  if (nextSlugIndex >= allProjects.length)
+    return null;
+
   nextSlug = allProjects[nextSlugIndex].slug;
 
   return getProjectBySlug(nextSlug);

@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+type SkillFilterItemProps = {
+  active: boolean
+}
+
 export const Title = styled.h1`
   ${({ theme }) => css`
     color: ${theme.colors.primary700};
@@ -24,8 +28,8 @@ export const SkillFilter = styled.div`
   margin-bottom: 25px;
 `;
 
-export const SkillFilterItem = styled.a`
-  ${({ theme }) => css`
+export const SkillFilterItem = styled.a<SkillFilterItemProps>`
+  ${({ theme, active }) => css`
     background: #fff;
     border: 1px solid ${theme.colors.primary700};
     border-radius: 20px;
@@ -76,9 +80,8 @@ export const SkillFilterItem = styled.a`
       }
     }
 
-    ${({ active }) =>
-      active &&
-      `
+    ${active &&
+      css`
       background-color: #4338ca;
       color: #fff;
 
