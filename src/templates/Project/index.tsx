@@ -21,6 +21,7 @@ export type ProjectTemplateProps = {
     frontmatter: {
       excerpt: string;
       images: Array<string>;
+      hidePortfolio
       link: string;
       sourceUrl: string;
       skills: Array<string>;
@@ -64,7 +65,7 @@ const ProjectTemplate = (props: ProjectTemplateProps) => {
             )}
           </ButtonsWrapper>
 
-          {frontmatter.images && (
+          {frontmatter.images && !frontmatter.hidePortfolio && (
             <Slider>
               {frontmatter.images?.map((image, i) => (
                 <div key={i}>

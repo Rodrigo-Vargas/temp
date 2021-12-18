@@ -72,6 +72,10 @@ export const ProjectContent = styled.div`
       color: ${theme.colors.gray500};
       font-weight: ${theme.font.weight.light};
     }
+
+    & img {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    }
   `}
 `;
 

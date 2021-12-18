@@ -68,6 +68,11 @@ const GlobalStyles: GlobalStyleComponent<
     body {
       font-family: ${theme.font.family};
     }
+
+    p {
+      margin-bottom: ${theme.spacings.lg};
+    }
+    
   `}
 `
 export default GlobalStyles
