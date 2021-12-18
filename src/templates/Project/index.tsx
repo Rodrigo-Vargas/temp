@@ -26,7 +26,7 @@ export type ProjectTemplateProps = {
       skills: Array<string>;
       title: string;
     };
-    html: string;
+    content: string;
   };
   next: {
     frontmatter: {
@@ -39,7 +39,7 @@ export type ProjectTemplateProps = {
 
 const ProjectTemplate = (props: ProjectTemplateProps) => {
   const { node, next } = props;
-  const { frontmatter, html } = node;
+  const { frontmatter, content } = node;
 
   return (
     <Base>
@@ -79,7 +79,7 @@ const ProjectTemplate = (props: ProjectTemplateProps) => {
           <ProjectContent>
             <div
               className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
+              dangerouslySetInnerHTML={{ __html: content }}
             />
           </ProjectContent>
 
