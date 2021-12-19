@@ -74,7 +74,9 @@ export const ProjectContent = styled.div`
     }
 
     & img {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin: 0 auto;
     }
   `}
 `;
