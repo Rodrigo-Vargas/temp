@@ -18,7 +18,7 @@ export function getProjectBySlug(slug) {
     images.push(`/images/projects/${realSlug}/${imagePath}`);
   });
 
-  return { slug: realSlug, frontmatter: { ...data, period: data.period, cover, images }, content };
+  return { slug: realSlug, frontmatter: { ...data, date: data.date, cover, images }, content };
 }
 
 export function getNextProjectBySlug(slug) {
@@ -47,11 +47,11 @@ export function getAllProjects() {
   let projects = slugs.map((slug) => getProjectBySlug(slug));
 
   projects = projects.sort((a, b) => {
-    if (a.frontmatter.period < b.frontmatter.period) {
+    if (a.frontmatter.date < b.frontmatter.date) {
       return 1;
     }
 
-    if (a.frontmatter.period > b.frontmatter.period) {
+    if (a.frontmatter.date > b.frontmatter.date) {
       return -1;
     }
 

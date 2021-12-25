@@ -1,5 +1,6 @@
 ---
   categories: ["PHP", "Laravel", "HTML"]
+  date: '2018-01-01'
   cover: './cover.png'
   excerpt: Website built on top of Laravel Framework with a car management system
   images: [

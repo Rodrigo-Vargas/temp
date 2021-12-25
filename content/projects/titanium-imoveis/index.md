@@ -1,6 +1,7 @@
 ---
   categories: [React, .NET Core]
   cover: 'admin_condominio.png'
+  date: '2020-01-01'
   excerpt: Website fully customized using an API written in .NET Core with a React + Redux frontend
   images: [
     './admin_home.png',

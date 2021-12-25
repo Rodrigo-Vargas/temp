@@ -1,5 +1,6 @@
 ---
   categories: [HTML, Wordpress]
+  date: '2018-01-01'
   cover: './cover.png'
   excerpt: Website built on top of WordPress, to be the introduction of the brand on digital workspace
   images: [
