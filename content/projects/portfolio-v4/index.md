@@ -6,7 +6,7 @@
   ]
   cover: './home-desktop.png'
   date: '2017-04-01'
-  excerpt: Third version of my portfolio
+  excerpt: Forth version of my portfolio
   featured: true
   hidePortfolio: true
   period: 2017
