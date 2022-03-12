@@ -9,6 +9,7 @@
     './contato.png',
   ]
   link: http://bcuatro.com.br
+  locale: pt
   period: 2018
   skills: [
     HTML,

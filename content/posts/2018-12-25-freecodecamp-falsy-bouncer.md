@@ -1,7 +1,8 @@
 ---
-   title: FreeCodeCamp Falsy Bouncer Algorhytm
-   excerpt: My solution to that algorhytm
    date: '2018-12-25'
+   excerpt: My solution to that algorhytm
+   locale: en
+   title: FreeCodeCamp Falsy Bouncer Algorhytm
 ---
 
 ## Introduction

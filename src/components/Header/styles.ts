@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import theme from 'styles/theme';
 import { Container } from '../Grid';
 
 export const Logo = styled.div`
@@ -35,6 +36,10 @@ export const Logo = styled.div`
       border-left: solid 4.2426px ${theme.colors.primary700};
     }
   `}
+`;
+
+export const LanguageSelector = styled.a`
+  padding-right: ${theme.spacings.lg};
 `;
 
 export const LogoText = styled.a`
@@ -102,4 +107,8 @@ export const HeaderGroup = styled.div`
 
 export const HeaderContainer = styled(Container)`
   display: flex;
+`;
+
+export const Separator = styled.span`
+  padding: 0 ${theme.spacings.lg};
 `;

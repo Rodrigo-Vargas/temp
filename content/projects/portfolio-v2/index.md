@@ -9,6 +9,7 @@
   excerpt: Second version of my portfolio rewritten in Jekyll
   featured: true
   hidePortfolio: true
+  locale: pt
   period: 2016
   skills: [
     Jekyll,

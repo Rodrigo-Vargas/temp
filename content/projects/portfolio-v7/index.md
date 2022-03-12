@@ -9,6 +9,7 @@
   excerpt: Seventy version of my portfolio
   featured: true
   hidePortfolio: true
+  locale: pt
   period: 2020
   skills: [
     Jekyll,

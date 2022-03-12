@@ -3,6 +3,7 @@
   date: '2019-06-24'
   excerpt: Criando um tema WordPress do zero
   cover_url: "getting-started-wp-theme.png"
+  locale: pt
   title: Criando um tema WordPress do zero
 ---
 

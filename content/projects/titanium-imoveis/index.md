@@ -9,6 +9,7 @@
     './admin_condominio.png',
   ]
   link: http://titaniumimoveis.com
+  locale: pt
   period: 2020
   skills: [
     React.js,

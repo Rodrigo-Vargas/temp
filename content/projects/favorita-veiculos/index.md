@@ -10,6 +10,7 @@
     './admin_vehicles.png',
   ]
   link: http://favoritaveiculos.com.br
+  locale: pt
   period: 2018
   skills: [
     "UI/UX Design",

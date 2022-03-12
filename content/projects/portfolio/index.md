@@ -10,6 +10,7 @@
   excerpt: This portfolio has some versions overtime, actually is built on top of Gatsby.JS with styled components using TDD
   featured: true
   link: https://rodrigovargas.com.br
+  locale: pt
   period: 2019
   skills: [
     HTML,

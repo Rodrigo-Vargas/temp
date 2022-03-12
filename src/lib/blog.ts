@@ -1,7 +1,8 @@
-import matter from 'gray-matter'
-import { parseISO, format } from 'date-fns'
-import fs from 'fs'
-import { join } from 'path'
+import matter from 'gray-matter';
+import { parseISO, format } from 'date-fns';
+import fs from 'fs';
+import { join } from 'path';
+import { useRouter } from 'next/router';
 
 const postsDirectory = join(process.cwd(), 'content', 'posts')
 
@@ -15,7 +16,14 @@ export function getPostBySlug(slug) {
 
   const date = format(parsedDate, 'dd/MM/yyyy');
 
-  return { slug: realSlug, frontmatter: { ...data, date }, content };
+  return {
+    slug: realSlug,
+    frontmatter: {
+      ...data, date,
+      locale: data.locale
+    },
+    content
+  };
 }
 
 export function getAllPosts() {

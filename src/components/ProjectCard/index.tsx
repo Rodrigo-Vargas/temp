@@ -18,7 +18,7 @@ interface ProjectCardProps {
   categories: Array<string>;
   img: string;
   link: string;
-  slug: string;
+  url: string;
   title: string;
 }
 
@@ -26,12 +26,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   categories,
   img,
   link,
-  slug,
+  url,
   title,
 }) => (
   <CardWrapper>
     <CardHeader>
-      <LinkTitle href={`/projects/${slug}`} data-testid="project-link">
+      <LinkTitle href={url} data-testid="project-link">
         <Title>{title}</Title>
       </LinkTitle>
       <Meta>

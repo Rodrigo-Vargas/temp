@@ -3,6 +3,7 @@
    cover_url: handling-forms-in-react.png
    date: '2020-02-09'
    excerpt: Prosseguindo no desenvolvimento com React, vamos ver como podemos fazer operações com formulários usando esta biblioteca
+   locale: pt
    title: Manipulando formulários com React
 ---
 

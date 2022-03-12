@@ -9,6 +9,7 @@
   excerpt: First version of my portfolio written in Ruby on Rails
   featured: true
   hidePortfolio: true
+  locale: pt
   period: 2015
   skills: [
     Ruby on Rails,

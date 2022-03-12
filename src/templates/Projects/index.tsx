@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 import { Container, Row, Col } from '../../components/Grid';
 import ProjectCard from 'components/ProjectCard';
@@ -20,6 +21,7 @@ export type ProjectsTemplateProps = {
         categories: Array<string>;
         cover: string;
         link: string;
+        locale: string;
         skills: Array<string>;
         title: string;
       };
@@ -28,6 +30,7 @@ export type ProjectsTemplateProps = {
 }
 
 const ProjectsTemplate: React.FC<ProjectsTemplateProps> = ({ items }) => {
+  const { defaultLocale } = useRouter();
   const [categories, setCategories] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState(null);
 
@@ -109,17 +112,24 @@ const ProjectsTemplate: React.FC<ProjectsTemplateProps> = ({ items }) => {
                   ).length > 0
               )
             : items
-          ).map((item) => (
-            <Col key={item.slug} className="w-50">
-              <ProjectCard
-                title={item.frontmatter.title}
-                categories={item.frontmatter.categories}
-                img={item.frontmatter.cover}
-                slug={item.slug}
-                link={item.frontmatter.link}
-              />
-            </Col>
-          ))}
+          ).map((item) => {
+            const localizedUrl =
+              item.frontmatter.locale == defaultLocale ? '' : `${item.frontmatter.locale}/`;
+
+            const projectUrl = `/${localizedUrl}blog/${item.slug}`;
+
+            return (
+              <Col key={item.slug} className="w-50">
+                <ProjectCard
+                  title={item.frontmatter.title}
+                  categories={item.frontmatter.categories}
+                  img={item.frontmatter.cover}
+                  url={projectUrl}
+                  link={item.frontmatter.link}
+                />
+              </Col>
+            )
+          })}
         </Row>
       </Container>
     </Base>

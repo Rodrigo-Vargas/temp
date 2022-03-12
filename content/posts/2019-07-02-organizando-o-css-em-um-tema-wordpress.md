@@ -3,6 +3,7 @@
     cover_url: handling-css-wp-theme.png
     date: '2019-07-02'
     excerpt: Como gosto de organizar o front-end dos meus projetos.
+    locale: pt
     title: Organizando o CSS em um tema WordPress
 ---
 

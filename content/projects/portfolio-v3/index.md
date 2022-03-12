@@ -9,6 +9,7 @@
   excerpt: Third version of my portfolio
   featured: true
   hidePortfolio: true
+  locale: pt
   period: 2016
   skills: [
     Jekyll,
