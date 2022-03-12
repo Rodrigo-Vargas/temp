@@ -116,7 +116,7 @@ const ProjectsTemplate: React.FC<ProjectsTemplateProps> = ({ items }) => {
             const localizedUrl =
               item.frontmatter.locale == defaultLocale ? '' : `${item.frontmatter.locale}/`;
 
-            const projectUrl = `/${localizedUrl}blog/${item.slug}`;
+            const projectUrl = `/${localizedUrl}projects/${item.slug}`;
 
             return (
               <Col key={item.slug} className="w-50">

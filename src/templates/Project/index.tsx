@@ -101,7 +101,7 @@ const ProjectTemplate = (props: ProjectTemplateProps) => {
                 <NextProjectSubTitle>NEXT PROJECT</NextProjectSubTitle>
                 <NextProjectTitle>{next.frontmatter.title}</NextProjectTitle>
 
-                <Button href={`/projects${next.slug}`}>
+                <Button href={`/projects/${next.slug}`}>
                   <Icons.ChevronRight />
                   <span>View Project</span>
                 </Button>
