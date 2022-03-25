@@ -6,6 +6,22 @@ export const CardTitle = styled.span`
   `}
 `;
 
+export const CardDescription = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.gray400};
+  `}
+`;
+
+export const EventTitle = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.gray700};
+    font-size: ${theme.font.sizes.lg};
+    font-weight: ${theme.font.weight.bold};
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+  `}
+`;
+
 export const Content = styled.section`
   ${({ theme }) => css`
     height: 800px;
@@ -23,7 +39,7 @@ export const Content = styled.section`
     }
 
     .timeline {
-      grid-template-columns: repeat(5, 340px) calc(1vw + 0.25rem);
+      grid-template-columns: repeat(7, 340px) calc(1vw + 0.25rem);
       height: 97.5%;
     }
 
@@ -37,19 +53,20 @@ export const Content = styled.section`
     }
 
     .event {
-      background-color: ${theme.colors.gray100};
-      border: none;
-      box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.4);
+      background-color: ${theme.colors.white};
+      border-radius: 4px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);      
+      font-size: 0.875rem;
+      padding: 1em;
     }
     
     .event-list-wrapper {
-      background: ${theme.colors.primary600};
+      background: ${theme.colors.gray100};
       border-radius: 3px;
       bottom: 0;
       position: absolute;
       left:0;
       overflow-y: auto;
-      padding: 0.75em;
       right: 0;
       top: 2.5rem;
     }
@@ -95,18 +112,10 @@ export const Content = styled.section`
     .timeline img {
       margin-bottom: 0.5rem;
     }
-    .event {
-      border: 1px solid ${theme.colors.gray300};
-      padding: 1em;
-      border-radius: 4px;
-      font-size: 0.875rem;
-    }
-    .event-title {
-      line-height: 1.2;
-      margin-bottom: 0.25rem;
-      font-variation-settings: "wght" 600;
-      font-weight: normal;
-    }
+
+
+
+
 
     .event-icon {
       height: 1em;

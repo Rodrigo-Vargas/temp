@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap, faRocket } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap, faMapMarkerAlt, faRocket } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 import Base from "templates/Base";
 
-import { CardTitle, Content } from './styles';
+import { CardDescription, CardTitle, Content, EventTitle } from './styles';
 
 export type AboutTemplateProps = {
   data: Array<YearData>;
@@ -30,6 +30,8 @@ const AboutTemplate = ({ data } : AboutTemplateProps) => {
     {
       case 'job':
         return <FontAwesomeIcon icon={faRocket} />
+      case 'travel':
+          return <FontAwesomeIcon icon={faMapMarkerAlt} />
       default:
           return <FontAwesomeIcon icon={faGraduationCap} />    
     }
@@ -66,13 +68,13 @@ const AboutTemplate = ({ data } : AboutTemplateProps) => {
                       {
                         year.items.map((card, i) => (
                           <li key={i} className="event icon-rocket">
-                            <h3 className="event-title">
+                            <EventTitle className="event-title">
                               { renderIcon(card.category) }
       
                               <CardTitle>{ card.title }</CardTitle>
-                            </h3>
+                            </EventTitle>
   
-                            <div className="description">
+                            <CardDescription>
                               {
                                 card.image && (
                                   <Image
@@ -87,7 +89,7 @@ const AboutTemplate = ({ data } : AboutTemplateProps) => {
                                   <p>{ card.description }</p>
                                 )
                               }
-                            </div>
+                            </CardDescription>
       
                             <time className="meta">{ card.date }</time>
                           </li>

@@ -16,6 +16,7 @@ const Base = ({ children }) => {
     { title: 'Home', href: getLocalizedLink('') },
     { title: 'Works', href: getLocalizedLink('projects') },
     { title: 'Blog', href: getLocalizedLink('blog') },
+    { title: 'About', href: getLocalizedLink('about') },
   ];
 
   return (

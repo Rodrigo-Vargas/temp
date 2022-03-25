@@ -20,6 +20,7 @@ const theme = {
      primary700: '#4338ca',
      primary800: '#3730a3',
      primary900: '#312e81',
+     white: '#ffffff'
    },
    font: {
      family:
