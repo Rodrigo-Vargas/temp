@@ -46,8 +46,8 @@ Para iniciar uma aplicação React, nós temos duas maneiras:
 
 **Caso você não queira ler todo o artigo para saber quais os pacotes, pode executar o seguinte comando:**
 
-```
-   npm install react react-dom webpack webpack-cli webpack-dev-server babel-loader @babel/core sass-loader --save-dev
+```bash
+npm install react react-dom webpack webpack-cli webpack-dev-server babel-loader @babel/core sass-loader --save-dev
 ```
 
 Os primeiros pacotes que iremos instalar, são o **React** e o **ReactDOM**. O primeiro deles, se refere a biblioteca React propriamente dito, com todas as suas classes e componentes.
@@ -59,7 +59,7 @@ Quando fazemos um SPA (Single Page Application), que será o caso desta série, 
 Enfim, para instalar estes dois pacotes o comando é:
 
 ```bash
-   npm install react react-dom --save-dev
+npm install react react-dom --save-dev
 ```
 
 ## Instalando o webpack e seus utilitários
@@ -73,7 +73,7 @@ O Webpack possui vários "utilitários", que são úteis para acelerarmos o work
 Para instalar todos os pacotes relacionados ao webpack, execute o comando abaixo:
 
 ```bash
-   npm install webpack webpack-cli webpack-dev-server --save-dev
+npm install webpack webpack-cli webpack-dev-server --save-dev
 ```
 
 ## Arquivo de configuração do Webpack
@@ -109,35 +109,35 @@ Além de instalados, os loaders precisam ser configurados no arquivo de configur
 Para instalar o **babel-loader** e suas dependências, execute este comando:
 
 ```bash
-   npm install babel-loader @babel/core --save-dev
+npm install babel-loader @babel/core --save-dev
 ```
 
 Após instalado, adicione a seção chamada **modules**, abaixo de **"devServer"**, conforme no exemplo abaixo:
 
 ```javascript
-   devServer: {
-      contentBase: './public',
-      publicPath: '/assets'
-   },
-   module: {
-      rules: [
-         {
-            test: /\.(jsx)$/,
-            exclude: /node_modules/,
-            use: ['babel-loader']
-         }
-      ]
-   },
+devServer: {
+   contentBase: './public',
+   publicPath: '/assets'
+},
+module: {
+   rules: [
+      {
+         test: /\.(jsx)$/,
+         exclude: /node_modules/,
+         use: ['babel-loader']
+      }
+   ]
+},
 ```
 
 O Babel conta com vários presets, que são configurações específicas para cada formato de escrita do JS. Existe uma específica que é chamada **preset-react**, que instalamos com os outros pacotes relacionados ao Babel. Como configuração final do Babel, temos que criar um arquivo chamado _.babelrc_ na raiz do projeto com o seguinte conteúdo:
 
 ```javascript
-   {
-      "presets": [
-         "@babel/preset-react"
-      ]
-   }
+{
+   "presets": [
+      "@babel/preset-react"
+   ]
+}
 ```
 
 ## Adicionando suporte a SASS
@@ -147,29 +147,29 @@ Como a nossa aplicação irá utilizar SASS/SCSS para o desenvolvimento do CSS, 
 Por fim, para facilitar o desenvolvimento, instalaremos mais dois loaders relacionados a CSS que são o [css-loader](https://github.com/webpack-contrib/css-loader){:_target_="\_blank"} e o [style-loader](https://github.com/webpack-contrib/style-loader){:_target_="\_blank"}, para que o nosso arquivo CSS gerado seja imediatamente aplicado ao DOM, agilizando a visualização do resultado do que estamos desenvolvendo. Todos estes pacotes podem ser instalados com o comando abaixo:
 
 ```bash
-   npm install node-sass sass-loader css-loader style-loader --save-dev
+npm install node-sass sass-loader css-loader style-loader --save-dev
 ```
 
 Após instalar o pacote acima, adicione a regra no arquivo _webpack.config.js_ para que o Webpack possa saber quais loaders utilizar para os arquivos .scss que iremos desenvolver.
 
 ```javascript
-   module: {
-      rules: [
-         {
-            test: /\.(jsx)$/,
-            exclude: /node_modules/,
-            use: ['babel-loader']
-         },
-         {
-            test: /\.scss$/,
-            use: [
-               'style-loader',
-               'css-loader',
-               'sass-loader'
-            ]
-         }
-      ]
-   },
+module: {
+   rules: [
+      {
+         test: /\.(jsx)$/,
+         exclude: /node_modules/,
+         use: ['babel-loader']
+      },
+      {
+         test: /\.scss$/,
+         use: [
+            'style-loader',
+            'css-loader',
+            'sass-loader'
+         ]
+      }
+   ]
+},
 ```
 
 Ufa, enfim terminamos! É bastante coisa para iniciar um projeto, mas veja por outro lado, este esforço será feito uma única vez no projeto e aumentará a sua produtividade daqui para a frente. Toda esta aplicação está disponível no GitHub para consultar, [dê uma olhada lá](https://github.com/Rodrigo-Vargas/bills-hub){:_target_="\_blank"}

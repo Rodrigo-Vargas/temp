@@ -1,4 +1,27 @@
 {
   "presets": ["next/babel"],
-  "plugins": [["styled-components", { "ssr": true }]]
+  "plugins": [
+    [
+      "styled-components", { "ssr": true }
+    ],
+    [
+      "prismjs",
+      {
+        "languages": [
+          "jsx",
+          "js",
+          "shell",
+          "html",
+          "c#",
+          "bash",
+          "php",
+          "javascript",
+          "scss"
+        ],
+        "plugins": ["line-numbers"],
+        "theme": "tomorrow",
+        "css": true
+      }
+    ]
+  ]
 }

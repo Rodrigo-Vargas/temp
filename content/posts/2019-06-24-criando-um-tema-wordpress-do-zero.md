@@ -38,17 +38,17 @@ Dentro desta pasta, crie os dois arquivos necessários, index.php e style.css. C
 A esquerda temos o tema ativo, no meu caso é o "Twenty Nineteen", e a esquerda o nosso tema. Se clicarmos em "Detalhes do Tema", iremos para uma tela onde são apresentadas mais informações do tema. Estas informações são lidas de um cabeçalho especial que podemos colocar no arquivo <strong>style.css</strong>. Vamos adicionar então o trecho abaixo de código no arquivo style.css.
 
 ```css
-    Theme Name: UpHealth
-    Theme URI:
-    Author: Rodrigo Vargas
-    Author URI: rodrigovargas.com.br
-    Description: A theme for hospital and doctor clinical proposes
-    Requires at least: WordPress 5.2.2
-    Version: 0.0.1
-    License:
-    License URI:
-    Text Domain: uphealth
-    Tags:
+Theme Name: UpHealth
+Theme URI:
+Author: Rodrigo Vargas
+Author URI: rodrigovargas.com.br
+Description: A theme for hospital and doctor clinical proposes
+Requires at least: WordPress 5.2.2
+Version: 0.0.1
+License:
+License URI:
+Text Domain: uphealth
+Tags:
 ```
 
 Se atualizarmos a página, veremos algumas das informações que colocamos acima, disponibilizadas na página de detalhes do tema.

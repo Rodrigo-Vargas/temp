@@ -72,6 +72,13 @@ const GlobalStyles: GlobalStyleComponent<
     p {
       margin-bottom: ${theme.spacings.lg};
     }
+
+    blockquote {
+      background-color: ${theme.colors.primary100};
+      border-color: ${theme.colors.primary500};
+      color: ${theme.colors.primary500};
+      padding: ${theme.spacings.md};
+    }
     
   `}
 `

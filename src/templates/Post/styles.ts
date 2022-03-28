@@ -31,5 +31,16 @@ export const Article = styled.article`
       letter-spacing: 0.025em;
       line-height: 2.25rem;
     }
+
+    li {
+      
+      color: ${theme.colors.gray500};
+      font-weight: 300;
+      letter-spacing: 0.025em;
+      line-height: 2.25rem;
+      margin-bottom: ${theme.spacings.md};
+      list-style: circle;
+      margin-left: ${theme.spacings.md};
+    }
   `}
 `;

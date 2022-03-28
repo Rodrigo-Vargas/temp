@@ -210,7 +210,7 @@ A última modificação foi na função "default", adicionamos o browserSync, co
 Também precisaremos adicionar a nova dependência (browser-sync) ao nosso package.json:
 
 ```bash
-    npm install browser-sync --save-dev
+npm install browser-sync --save-dev
 ```
 
 Tudo configurado, podemos conferir se está tudo certo, executando o comando "gulp" no terminal. Note agora que ao modificar algum arquivo SCSS, as alterações surgem imediatamente na página.

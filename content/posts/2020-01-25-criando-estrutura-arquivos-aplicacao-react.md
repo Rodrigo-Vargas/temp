@@ -76,7 +76,7 @@ Se ficar com alguma dúvida sobre aonde colocar o código, consulte o código-fo
 
 Após modificar o arquivo, volte para o terminal e execute o comando:
 
-```
+```bash
    npm run dev
 ```
 

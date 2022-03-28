@@ -21,29 +21,42 @@ Em seguida, iremos fazer o download de uma box vagrant que servirá como base pa
 
 Para baixar a box utilize o comando:
 
-<pre>vagrant box add ubuntu/trusty64</pre>
+```bash
+  vagrant box add ubuntu/trusty64
+```
 
 Aguarde o término do download da máquina. Após baixar, use o comando abaixo para iniciar uma nova instância do vagrant.
 
-<pre>vagrant init ubuntu/trusty64</pre>
+```bash
+  vagrant init ubuntu/trusty64
+```
 
 Este comando irá criar um arquivo chamado VagrantFile no diretório atual. Abra este arquivo e iremos ver algumas linhas do mesmo. Na linha “config.vm.box” temos o nome da box que este arquivo irá iniciar, certifique-se que o valor do mesmo seja:
 
-<pre>config.vm.box = "ubuntu/trusty64"</pre>
+
+```bash
+  config.vm.box = "ubuntu/trusty64"
+```
 
 Localize a linha:
 
-<pre>  # config.vm.network "private_network", ip: "192.168.33.10"</pre>
+```bash
+  # config.vm.network "private_network", ip: "192.168.33.10"
+```
 
 Esta linha deve ser descomentada, retirando o ‘#’ na frente da mesma. Assim habilitamos uma rede interna, para que possamos acessar a máquina virtual a partir da nossa. para quem tiver interesse, existem outras configurações intessantes neste arquivo, no momento não irei cita-las, talvez em outra série.
 
 Salve o arquivo e feche-o. Em seguida, volte ao terminal e execute o comando:
 
-<pre>vagrant up</pre>
+```bash
+  vagrant up
+```
 
 Após rodar este comando, uma nova máquina será criada e iniciada. Após o término da criação, utilize o comando abaixo, para fazer uma conexão SSH com a vm.
 
-<pre>vagrant ssh</pre>
+```bash
+  vagrant ssh
+```
 
 Dentro do ambiente de desenvolvimento, temos o diretório /vagrant, que será um espelho do conteúdo do diretório que criamos anteriormente, inclusive você verá os arquivos “Vagrantfile” no interior do mesmo.
 
@@ -51,15 +64,19 @@ Dentro do ambiente de desenvolvimento, temos o diretório /vagrant, que será um
 
 Inicialmente, vamos começar atualizando os pacotes de software da VM. Utilize o comando:
 
-<pre>sudo apt-get update</pre>
+```bash
+sudo apt-get update
+```
 
 Após vamos instalar as dependências necessárias para que os compiladores do rails funcionem. Execute o comando abaixo:
 
-<pre>sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev -y</pre>
+```bash
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev -y
+```
 
 Após tudo instalado, estamos prontos para baixar o rbenv, um gerenciador de versões para o ruby.
 
-<pre>
+```bash
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
@@ -67,7 +84,7 @@ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
-</pre>
+```
 
 Estes comandos irão baixar o rbenv, e configurar as váriaveis de ambiente necessárias.
 
@@ -75,42 +92,58 @@ Estes comandos irão baixar o rbenv, e configurar as váriaveis de ambiente nece
 
 Após a instalação do rbenv, é bastante simples instalar versões do ruby, irei instalar a versão mais recente do ruby atualmente, a 2.2.3
 
-<pre>rbenv install -v 2.2.3</pre>
+```bash
+rbenv install -v 2.2.3
+```
 
 Após fazer a instalação da versão é necessário ainda dizer ao rbenv qual a versão do ruby usada atualmente, com o subcomando global.
 
-<pre>rbenv global 2.2.3</pre>
+```bash
+rbenv global 2.2.3
+```
 
 Deste modo, conseguimos fazer a instalação de várias versões do ruby, e depois alterar facilmente entre elas usando o global.
 Após isso, podemos ainda rodar o comando abaixo para verificar a versão ativa do ruby.
 
-<pre>ruby -v</pre>
+```bash
+ruby -v
+```
 
 Para finalizar, vamos definir que não queremos que o ruby baixe toda a documentação a cada gem instalada, visto que isto pode ser bastante demorada. Para isso vamos executar:
 
-<pre>echo "gem: --no-document" > ~/.gemrc</pre>
+```bash
+echo "gem: --no-document" > ~/.gemrc
+```
 
 Após instale o gerenciador de gems bundler, para controlar as dependencias dos aplicativos.
 
-<pre>gem install bundler</pre>
+```bash
+gem install bundler
+```
 
 ## Instalando o Rails
 
 Iremos finalmente instalar a gem Rails, para isto execute o comando abaixo (poderá ser adicionado o parâmetro -v para baixar uma versão em especifico)
 
-<pre>gem install rails</pre>
+```bash
+gem install rails
+```
 
 Toda vez que for instalada uma nova versão do ruby ou de uma gem que forneça comandos, será necessário rodar o comando:
 
-<pre>rbenv rehash</pre>
+```bash
+rbenv rehash
+```
 
 Ao final, verifique se ocorreu tudo corretamente executando o comando:
 
-<pre>
+```bash
+
 rails -v
 
 #Rails 4.2.4
-</pre>
+
+```
 
 ## Instalando o Javascript Runtime
 
@@ -118,42 +151,57 @@ Como no pipeline dos no rails, o mesmo faz uso de coffeescripts e miniaturaizaç
 
 Para isso primeiramente adicione o repositório dele através do comando:
 
-<pre>sudo add-apt-repository ppa:chris-lea/node.js</pre>
+```bash
+sudo add-apt-repository ppa:chris-lea/node.js
+```
 
 E em seguida faça o update dos pacotes do apt-get e a instalação do nodejs.
 
-<pre>
+```bash
+
 sudo apt-get update
 sudo apt-get install nodejs
-</pre>
+
+```
 
 ## Instalação do Mysql
 
 O Rails suporta vários tipos de bancos, irei instalar agora o mysql, que será usado nos tutoriais desta série. Caso sinta-se a vontade, você poderá instalar outros bancos. Execute o comando abaixo para instalar os pacotes referentes ao mysql.
 
-<pre>sudo apt-get install mysql-server mysql-client libmysqlclient-dev</pre>
+```bash
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+```
 
 Após instale a gem mysql2, responsável por fornecer as funções do mysql nas aplicações ruby.
 
-<pre>gem install mysql2</pre>
+```bash
+gem install mysql2
+```
 
 Com isso o ambiente está configurado. Vamos criar uma aplicação de testes para verificar se tudo está funcionando. Para isso execute o comando:
 
-<pre>rails new testapp -d mysql</pre>
+```bash
+rails new testapp -d mysql
+```
 
 Isto irá criar um novo app utilizando o banco de dados mysql por padrão.
 Acesse o diretório criado testapp
 Devido a uma incompatibilidade da versão 4.2.4 do rails com a gem mysql2, devemos editar o arquivo Gemfile, para buscar uma versão mais antiga desta gem. Para isto localize a linha:
 
-<pre>gem 'mysql2'</pre>
+```bash
+gem 'mysql2'
+```
 
 E substitua por:
 
-<pre> gem 'mysql2', '~> 0.3.18'</pre>
+```bash
+ gem 'mysql2', '~> 0.3.18'
+ ```
 
 Caso você tenha definido uma senha para o banco de dados, você deve informa-la no arquivo config/database.yml preenchendo o valor do campo password:
 
-<pre>
+```bash
+
   default: &default
   adapter: mysql2
   encoding: utf8
@@ -161,11 +209,14 @@ Caso você tenha definido uma senha para o banco de dados, você deve informa-la
   username: root
   password:
   socket: /var/run/mysqld/mysqld.sock
-</pre>
+
+```
 
 Após, execute o comando abaixo para criar o banco de dados:
 
-<pre>rake db:create</pre>
+```bash
+rake db:create
+```
 
 Para visualizar a aplicação no ar, acesse o endereço da máquina (que pode ser obtido através do comando ifconfig) na porta 3000, no meu caso é http://192.168.33.10:3000/.
 

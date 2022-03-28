@@ -13,7 +13,7 @@ Continuando a nossa série sobre React, nos últimos episódios damos inicio a c
 
 Vamos começar analizando o arquivo _index.jsx_ que criamos no post passado:
 
-```javascript
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -28,7 +28,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 Iniciamente, temos o import de duas bibliotecas do React, a **React** e a **ReactDOM**. A primeira vocês já devem ter deduzido que se trata do core da biblioteca, a segunda, um pouco menos óbvia, é o pacote responsável por fazer interagir o React interagir diretamente com o DOM da página. Ele é utilizado principalmente quando vamos adicionar a nossa aplicação a um elemento HTML já existente, que no nosso caso é a div **root**, que declaramos no arquivo _index.html_.
 
-Note que criamos uma classe chamada _App_ que herda de React.Component, devido a esta herança, podemos declarar o componente como o mesmo fosse um elemento HTML (&lt;App />, o que nos permite criar componentes que podem ser aninhados uns aos outros, exatamente como fazemos com <div>, <h1>, <table>, etc.
+Note que criamos uma classe chamada _App_ que herda de React.Component, devido a esta herança, podemos declarar o componente como o mesmo fosse um elemento HTML (&lt;App />, o que nos permite criar componentes que podem ser aninhados uns aos outros, exatamente como fazemos com &lt;div&gt;, &lt;h1&gt;, &lt;table&gt;, etc.
 
 ## Entendendo o método Render
 
