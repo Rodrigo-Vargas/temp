@@ -7,7 +7,12 @@ import { useRouter } from 'next/router';
 let locale;
 let defaultLocale;
 
-const Base = ({ children }) => {
+export type BaseTemplateProps = {
+  children: React.ReactNode;
+  showShell?: boolean;
+};
+
+const Base = ({ children, showShell }: BaseTemplateProps) => {
   const routerProps = useRouter();
   locale = routerProps.locale;
   defaultLocale = routerProps.defaultLocale;
@@ -21,9 +26,17 @@ const Base = ({ children }) => {
 
   return (
     <div>
-      <Header items={headerItems} />
+      {
+        showShell && (
+          <Header items={headerItems} />
+        )
+      }
       <Content>{children}</Content>
-      <Footer />
+      {
+        showShell && (
+          <Footer />
+        )
+      }
     </div>
   );
 };
