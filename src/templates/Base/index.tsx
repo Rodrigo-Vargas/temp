@@ -9,10 +9,10 @@ let defaultLocale;
 
 export type BaseTemplateProps = {
   children: React.ReactNode;
-  showShell?: boolean;
+  hideShell?: boolean;
 };
 
-const Base = ({ children, showShell }: BaseTemplateProps) => {
+const Base = ({ children, hideShell }: BaseTemplateProps) => {
   const routerProps = useRouter();
   locale = routerProps.locale;
   defaultLocale = routerProps.defaultLocale;
@@ -27,13 +27,13 @@ const Base = ({ children, showShell }: BaseTemplateProps) => {
   return (
     <div>
       {
-        showShell && (
+        !hideShell && (
           <Header items={headerItems} />
         )
       }
-      <Content>{children}</Content>
+      <Content hideShell={hideShell}>{children}</Content>
       {
-        showShell && (
+        !hideShell && (
           <Footer />
         )
       }

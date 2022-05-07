@@ -4,7 +4,13 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 import Base from 'templates/Base';
-import { ExperienceItem, Meta, SubTitle, Title } from './styles';
+import Experience from 'components/Resume/Experience';
+import Projects from 'components/Resume/Projects';
+import { Content, Meta, SectionTitle, SideNav, SubTitle, Title } from './styles';
+import { FluidContainer, Row } from 'components/Grid';
+import Education from 'components/Resume/Education';
+import Skill from 'components/Resume/Skill';
+import { Description } from 'components/Resume/Skill/style';
 
 type ExperienceType = {
   company: string;
@@ -39,8 +45,8 @@ export type ResumeTemplateProps = {
 
 const ResumeTemplate = ({data}: ResumeTemplateProps) => {
   return (
-    <Base showShell={false}>
-      <div>
+    <Base hideShell={true}>
+      <FluidContainer>
         <Title>{data.name}</Title>
         <SubTitle>{data.title}</SubTitle>
 
@@ -65,69 +71,26 @@ const ResumeTemplate = ({data}: ResumeTemplateProps) => {
             <span>{data.github}</span>
           </div>
         </Meta>
+        <Row>
+          <Content>
+            <Experience data={data} />
 
-        <div>
-          <h2>Relevant Experience</h2>
+            <div>
+              <SectionTitle>Interests</SectionTitle>
+              <Description>{data.interests}</Description>
+            </div>
+          </Content>
 
-          {
-            data.experiences.map((item, key) => (
-              <ExperienceItem key={key}>
-                <span>{item.title} @ {item.company}</span>
-                <span>{item.period} // {item.location}</span>
-                <ul>
-                  {
-                    item.highlights.map((highlight, index) => (
-                      <li key={index}>{highlight}</li>
-                    ))
-                  }
-                </ul>
-              </ExperienceItem>
-            ))
-          }
-        </div>
+          <SideNav>
+            <Skill data={data} />
 
-        <div>
-          <h2>Projects</h2>
-          {
-            data.projects.map((project, index) => (
-              <div key={index}>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-            ))
-          }
-        </div>
+            <Education data={data} />
 
-        <div>
-          <h2>Skills</h2>
-          {
-            data.skills.map((skill, index) => (
-              <div key={index}>
-                <h3>{skill.title}</h3>
-                <p>{skill.description}</p>
-              </div>
-            ))
-          }
-        </div>
+            <Projects data={data} />
 
-        <div>
-          <h2>Education</h2>
-          {
-            data.education.map((educationItem, index) => (
-              <div key={index}>
-                <h3>{educationItem.title}</h3>
-                <p>{educationItem.description}</p>
-              </div>
-            ))
-          }
-        </div>
-
-        <div>
-          <h2>Interests</h2>
-          {data.interests}
-        </div>
-
-      </div>
+          </SideNav>
+        </Row>
+      </FluidContainer>
     </Base>
   );
 }

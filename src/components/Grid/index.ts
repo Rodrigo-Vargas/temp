@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components';
 
+export const FluidContainer = styled.div`
+  padding-right: 1rem;
+  padding-left: 1rem;
+`;
+
 export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
